@@ -17,7 +17,11 @@
 \renewcommand{\listtablename}{فهرست جدول‌ها}
 \renewcommand{\listfigurename}{فهرست شکل‌ها و نمودارها}
 \renewcommand{\bibname}{فهرست منابع}
-
+\newcommand{\en}[1]{\lr{#1}}
+\newcommand{\rng}[2]{\lr{$#1$\textendash$#2$}}
+\newcommand{\hl}[1]{\colorbox{yellow!35}{\strut #1}}
+\newcommand{\unclear}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+\newcommand{\sourcepage}[2]{\clearpage\section*{صفحهٔ #1}\begingroup\footnotesize\en{#2}\par\endgroup}
 
 \newcommand{\FrontMatterNumbering}{\pagenumbering{harfi}\pagestyle{thesis}}
 \newcommand{\MainMatterNumbering}{\pagenumbering{arabic}\pagestyle{thesis}}
