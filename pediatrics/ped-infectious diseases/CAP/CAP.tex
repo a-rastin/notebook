@@ -9,7 +9,6 @@
 % pic05.jpg = 20261010_052050440.jpg; 1bBxeIlFMaSuaD2TOKWD75fKDjDWgBhxQ
 % pic06.jpg = 20261010_052057841.jpg; 1be2-HIZ52rH9XPVELzLgUQaWr0AicFVy
 % pic07.jpg = 20261010_052102313.jpg; 1ONJC9zNa4fg168Ov5jDjVKrG2jGKJHKP
-% The image destination spelling is intentional: ped-infectioud diseases.
 \ifdefined\CAPInNotebook
   \let\CAPfinish\relax
 \else
@@ -258,10 +257,10 @@ pro & \(<3\) gr/dL & \\
 \clearpage
 \section*{پیوست: هفت تصویر کامل منبع}
 تمام حاشیه‌ها، سربرگ‌ها، اصلاحات و جدول اصلی در تصاویر زیر محفوظ‌اند.
-% Compile from CAP/ or the repository root. Both paths preserve the requested spelling.
-\IfFileExists{../../ped-infectioud diseases/CAP/images/pic01.jpg}{%
-  \def\CAPimagebase{../../ped-infectioud diseases/CAP/images/}}{%
-  \def\CAPimagebase{pediatrics/ped-infectioud diseases/CAP/images/}}
+% Compile from CAP/ or the repository root. Both paths use the corrected directory name.
+\IfFileExists{../../ped-infectious diseases/CAP/images/pic01.jpg}{%
+  \def\CAPimagebase{../../ped-infectious diseases/CAP/images/}}{%
+  \def\CAPimagebase{pediatrics/ped-infectious diseases/CAP/images/}}
 \newcommand{\CAPoriginal}[2]{%
   \clearpage\subsection*{اصل تصویر #1: \lr{\texttt{pic#2.jpg}}}%
   \begin{center}
