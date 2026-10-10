@@ -1,0 +1,252 @@
+% !TeX program = xelatex
+% UTF-8. Compile directly, or \input after loading xepersian.
+% For \input mode, load xcolor before xepersian in the parent preamble.
+% Transcription of eight handwritten pages, in handwritten page order.
+% Medical statements, spellings, abbreviations and doses are retained as written.
+% In particular, page 7 writes amoxicillin Max: 1200 mg and Amp for
+% cephalexin/clindamycin; these have not been silently corrected.
+\ifdefined\settextfont
+  \def\PharingitisStandalone{0}
+\else
+  \def\PharingitisStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,graphicx,xcolor,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\phhl}[1]{\colorbox{yellow!35}{\strut #1}}
+\newcommand{\phunclear}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+\newcommand{\phpage}[3]{%
+  \clearpage\section*{صفحهٔ #1}
+  {\footnotesize\en{#2 — #3}\par
+  \en{Subject: 103\quad Date: / /\quad YASHA}\par}\medskip}
+\ifnum\PharingitisStandalone=1 \begin{document}\fi
+
+\phpage{۱}{pic01.jpg}{20261010\_191452329.jpg}
+\begin{center}
+  {\Large\bfseries\en{103 -- Pharyngitis}}
+\end{center}
+{\footnotesize هایلایت‌ها از اصل حفظ شده‌اند. عبارت قرمز، خوانش نامطمئن دست‌خط است.\par}
+\subsection*{اتیولوژی}
+\begin{itemize}
+\item \phhl{ویروس‌ها} شایع‌ترین عامل فارنژیت هستند.
+\item \phhl{استرپتوکوک گروه \en{A}} مهم‌ترین باکتری عامل فارنژیت است: استرپ پیوژنز.
+\item \en{GAS}: فارنژیت، تونسیلیت، تب اسکارلت.
+\item مونونوکلئوز: \en{EBV}، \en{CMV}.
+\item کلامیدوفیلا نومونیا: درگیر دستگاه تنفسی تحتانی می‌شود ولی می‌تواند گلودرد هم ایجاد کند.
+\item مایکوپلاسما نومونیه: \phhl{پنومونی آتیپیک} ایجاد می‌کند؛ فارنژیت خفیف.
+\item بسیاری از ویروس‌ها می‌توانند فارنژیت بدهند ولی در \phhl{آدنوویروس‌ها} فارنژیت تظاهر اصلی است.
+\end{itemize}
+\subsection*{اپیدمیولوژی}
+\begin{itemize}
+\item گلودرد علامت اولیه در \en{1/3} بیماری‌های دستگاه تنفسی فوقانی است.
+\end{itemize}
+
+\phpage{۲}{pic02.jpg}{20261010\_191502207.jpg}
+\begin{itemize}
+\item فارنژیت استرپتوکوکی \phhl{در سن زیر \en{2--3} سال بسیار ناشایع} است.
+\item در \phhl{سنین مدرسه} شایع می‌شود سپس دوباره کاهش می‌یابد.
+\item فارنژیت استرپتوکوکی به سرعت به هم‌کلاسی‌ها، خواهر و برادر منتقل می‌شود.
+\item عفونت‌های ویروسی عمدتاً از طریق \en{Close Contact} منتقل می‌شوند.
+\item مونونوکلئوز ناشی از \en{EBV}، \en{CMV}: فارنژیت ممکن است تنها تظاهر اصلی بیماری باشد.
+\item در بزرگسالان، \en{young adults}، شایع‌تر است.
+\end{itemize}
+\subsection*{تظاهر بالینی}
+\begin{itemize}
+\item التهاب فارنکس: سرفه، گلودرد، دیسفاژی، تب.
+\item اگر درگیری تانسیل‌ها بارز باشد: تانسیلوفارنژیت.
+\item فارنژیت استرپتوکوکی:
+  \begin{itemize}
+  \item \phhl{\en{Rapid onset}}.
+  \item گلودرد بارز (\en{prominent}).
+  \item \phhl{تب متوسط تا شدید}.
+  \item سردرد، تهوع، استفراغ، درد شکمی: شایع است.
+  \end{itemize}
+\end{itemize}
+
+\phpage{۳}{pic03.jpg}{20261010\_191509461.jpg}
+\begin{itemize}
+\item در مشاهده:
+  \begin{itemize}
+  \item ناحیهٔ فارنکس قرمز و اریتماتو است.
+  \item تانسیل‌ها بزرگ شده‌اند.
+  \item ممکن است اگزودای زرد یا قرمز دیده شود.
+  \item پتشی در کام نرم و فارنکس خلفی.
+  \item \en{Uvula}: قرمز، متورم، \en{Stipled}.
+  \item \phhl{لنف‌نودهای قدامی گردن}: بزرگ شده، تندر.
+  \end{itemize}
+\item \phhl{شروع فارنژیت ویروسی نسبت به استرپتوکوکی تدریجی‌تر است}.
+  \begin{itemize}
+  \item معمولاً رینوره، سرفه، اسهال وجود دارد.
+  \item کونژنکتیویت، کوریزا، زخم‌های دهان.
+  \end{itemize}
+\item یافته‌های بالینی نمی‌توانند بین ویروسی و استرپتوکوکی افتراق بگذارند.
+\item تب اسکارلت: در برخی بیماران فارنژیت استرپتوکوکی.
+\end{itemize}
+\begin{latin}
+\begin{itemize}
+\item Circumoral pallor.
+\item \phhl{Strawberry tongue}: 1) White\quad 2) Red.
+\item Fine diffuse erythematous maculopapular \phhl{rash}.
+\end{itemize}
+\end{latin}
+این علائم در \en{A} همولیتیک نیز دیده می‌شود.
+% The source's last line reads "A همولیتیک"; no organism name is added.
+
+\phpage{۴}{pic04.jpg}{20261010\_191519264.jpg}
+\begin{latin}
+\begin{itemize}
+\item HSV-1: Gingivostomatitis.
+\item Herpangina:
+  \begin{itemize}
+  \item Enteroviral infection.
+  \item Sudden onset of: High fever; Vomiting; headache.
+  \item Poor intake; Sore throat; Dysphagia.
+  \item Oral lesions: pinpoint vesicular lesions; Erythematous base.
+  \item For several days.
+  \end{itemize}
+\end{itemize}
+\end{latin}
+\begin{itemize}
+\item \phhl{کوکساکی‌ویروس}: ضایعات مشابه بیماری دست پا (\phhl{\en{HFAMD}}).
+\end{itemize}
+\subsection*{ارزیابی آزمایشگاهی}
+\begin{itemize}
+\item چالش اصلی افتراق فارنژیت استرپتوکوکی از ویروسی است.
+\end{itemize}
+\begin{latin}
+Tests:
+\begin{itemize}
+\item Rapid Streptococcal antigen test.
+\item Throat Culture.
+\end{itemize}
+\end{latin}
+\begin{itemize}
+\item تست سریع: حساسیت \en{$\downarrow$} است.
+% The sensitivity arrow is connected to the rapid antigen test in the source.
+\item \phhl{اگر \en{Rapid test} منفی شد}، \phhl{باید توسط کشت یا \en{PCR} تأیید شود}.
+\item ۲۰\% موارد کشت مثبت به علت حامل میکروب بودن است، نه عفونت حاد.
+\item \phhl{\en{WBC, CRP, ESR}}: \phhl{کمک‌کننده نیستند}.
+\end{itemize}
+
+\phpage{۵}{pic05.jpg}{20261010\_191519264.jpg}
+% This is a different image from pic04 despite the identical Drive filename.
+\begin{itemize}
+\item \phhl{در مونونوکلئوز عفونی}: در \en{WBC} غلبه با \phhl{لنفوسیت آتیپیک} است.
+\end{itemize}
+\subsection*{تشخیص افتراقی}
+\begin{itemize}
+\item عفونت‌های موضعی حفرهٔ دهان: آبسهٔ رتروفارنژیال.
+  \begin{itemize}
+  \item بی‌هوازی‌ها.
+  \item \en{S.} اورئوس.
+  \item استرپتوکوک.
+  \end{itemize}
+\item دیفتری (اگر واکسن دریافت نکرده باشد).
+\item اپی‌گلوتیت.
+\item موکوزیت نوتروپنیک: لوسمی، آنمی آپلاستیک.
+\item زخم‌های خودایمنی: \en{SLE}، بهجت.
+\item کاوازاکی.
+\item سندرم رتروویروسی حاد نیز می‌تواند فارنژیت ایجاد کند.
+\end{itemize}
+\begin{latin}
+\begin{itemize}
+\item Vincent angina; \phhl{Trench mouth}:
+  \begin{itemize}
+  \item Anaerobic gingivitis + pharingitis.
+  \item Gray pseudomembranes on the tonsils.
+  \end{itemize}
+\item \phhl{Lemierre Syndrome}:
+  \begin{itemize}
+\item \phhl{Acute pharingitis} + Suppurative \phhl{thrombophlebitis} of the int.\ jugular
+        \newline + \phhl{Septic pulmonary emboli}.
+  \end{itemize}
+\end{itemize}
+\end{latin}
+توسط باسیل گرم منفی بی‌هوازی.
+
+\phpage{۶}{pic06.jpg}{20261010\_191536037.jpg}
+\begin{latin}
+\begin{itemize}
+\item \phhl{Ludwig angina}:
+  \begin{itemize}
+  \item Mixed anaerobic bacterial cellulitis: Submandibular; Sublingual.
+  \item Due to spreading from an abscess.
+  \end{itemize}
+\item \phhl{(PFAPA)}: Syndrome of periodic fever, aphthous stomatitis, pharyngitis, cervical adenitis.
+  \begin{itemize}
+  \item Recurrent fever in children.
+  \item \phhl{Usually begins $<5$ age}.
+  \item Episodes \phhl{$\sim 5$ days}, 28 days between.
+  \end{itemize}
+\end{itemize}
+\end{latin}
+\begin{itemize}
+\item \phhl{پردنیزون خوراکی} طول اپیزود را کم می‌کند.
+\item به \phhl{\en{NSAID} یا \en{AB} جواب نمی‌دهد}.
+\item سکل به جا نمی‌گذارد.
+\end{itemize}
+\subsection*{درمان}
+\begin{itemize}
+\item حتی در صورت عدم درمان اکثر موارد فارنژیت استرپتوکوکی ظرف چند روز خوب می‌شوند.
+\item درمان زودهنگام با \en{AB}: علائم بالینی را \en{24--48} ساعت جلو می‌اندازد.
+\item مهم‌ترین فایدهٔ \en{AB}: جلوگیری از تب روماتیسمی است.
+\item درمان با \en{AB} \phhl{ظرف ۹ روز} از شروع بیماری به طور کامل از تب روماتیسمی جلوگیری می‌کند.
+\end{itemize}
+
+\phpage{۷}{pic07.jpg}{20261010\_191543023.jpg}
+\subsection*{به چه کسانی درمان \en{AB} می‌دهیم؟}
+\begin{itemize}
+\item \en{Rapid Test} مثبت.
+\item کشت مثبت.
+\item \en{PCR} مثبت.
+\item \phhl{تشخیص تب اسکارلت}.
+\item فارنژیت علامت‌دار + سابقهٔ تب روماتیسمی.
+\item فارنژیت علامت‌دار + سابقهٔ خانوادگی اخیر تب روماتیسمی.
+\item فارنژیت علامت‌دار + خواهر/برادر با عفونت استرپتوکوکی (حتمی).
+\end{itemize}
+\subsection*{خط اول درمان}
+\phhl{پنی‌سیلین یا آموکسی‌سیلین}.
+\begin{latin}
+\begin{itemize}
+\item Oral penicillin V: 250--500 mg/dose, BD, TDS $\times$ 10 days.
+\item Amp penicillin G, IM, Single dose:
+  \begin{itemize}
+  \item For $\leq 27$ kg: 600,000 U.
+  \item Larger children: 1.2 million U.
+  \end{itemize}
+\item Oral \phhl{Amoxicillin}: 50 mg/kg; Max: 1200 mg, OD $\times$ 10 days.
+\end{itemize}
+
+\noindent Allergy to penicillin
+\begin{itemize}
+\item Amp Cephalexin: 25 mg/kg/dose, BD; MAX: 500 mg/dose $\times$ 10 days.
+\item Amp Clindamycin: 6--7 mg/kg/dose, TDS; MAX: 300 mg/dose $\times$ 10 days.
+\end{itemize}
+
+\noindent Allergy to $\beta$-lactams
+\begin{itemize}
+\item Azithromycin: 12 mg/kg (Max: 500 mg/dose) on day 1, followed by
+      6 mg/kg/dose (Max: 250 mg), OD on day 2--5.
+\end{itemize}
+\end{latin}
+
+\phpage{۸}{pic08.jpg}{20261010\_191550602.jpg}
+\begin{itemize}
+\item درمان \en{Carrier}های استرپتوکوک: \phhl{آموکسی‌کلاو یا کلیندامایسین}.
+\item پیگیری:
+  \begin{itemize}
+\item اندیکاسیون: \phunclear{پس از یک اپیزود} تب روماتیسمی حاد برای جلوگیری از تکرار.
+  \item پروفیلاکسی \en{AB}: پنی‌سیلین \en{V} خوراکی روزانه.
+  \end{itemize}
+\end{itemize}
+% The words before "تب روماتیسمی حاد" are uncertain; see pic08.
+\ifnum\PharingitisStandalone=1
+  \let\PharingitisEnd\enddocument
+\else
+  \let\PharingitisEnd\relax
+\fi
+\PharingitisEnd
