@@ -1,0 +1,372 @@
+% UTF-8; compile directly with XeLaTeX, or input after loading xepersian.
+% Faithful transcription; clinical statements have not been updated or corrected.
+% Source images are preserved at neurology/neurology/images/pic01.jpg ... pic17.jpg.
+\ifdefined\documentclass
+  \ifdefined\XeTeXversion\else\errmessage{This file requires XeLaTeX}\fi
+\fi
+\ifdefined\settextfont
+  \def\MeningitisStandalone{0}
+\else
+  \def\MeningitisStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,graphicx,xcolor,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\providecommand{\unclear}[1]{[خوانش نامطمئن: #1]}
+\newcounter{menimage}
+\newcommand{\menpage}[2]{\stepcounter{menimage}\clearpage\section*{صفحهٔ #1}\noindent\en{#2}\par\smallskip
+\ifnum\value{menimage}<9
+  \noindent\en{Subject: 100\quad Date: / /\quad YASHA}\par
+\else
+  \noindent\en{Date: / /\quad Sat. Sun. Mon. Tue. Thu. Wed. Fri.}\par
+  \noindent\en{Subject:} مننژیت\par
+\fi\medskip}
+\newcommand{\menitem}[2]{\item[#1.] #2}
+\ifnum\MeningitisStandalone=1 \begin{document}\fi
+\menpage{۱}{pic01.jpg — 20261010\_053144594.jpg}
+\section*{مننژیت — \en{chapter 100 -- Meningitis}}
+\begin{description}
+\menitem{۱}{التهاب لپتومننژ: باکتری، ویروس، قارچ (نادر)، انگل.}
+\menitem{۲}{مننژیت آسپتیک: مننژیت ویروسی؛ کشت \en{CSF} منفی برای باکتری.}
+\end{description}
+\begin{itemize}
+\item \en{Lyme disease; Syphilis; TB}.
+\item عفونت‌های پارامننژیال: آبسهٔ مغزی، آبسهٔ اپی‌دورال، آمپیم ساب‌دورال.
+\item داروها: \en{NSAID}، \en{IVIG}.
+\item اختلالات خودایمنی.
+\item بیماری کاوازاکی: واسکولیت عروق متوسط.
+\end{itemize}
+\begin{description}
+\menitem{۳}{ارگانیسم‌های شایع قبل از واکسیناسیون: هموفیلوس آنفلوانزا، استرپ پنومونیه، نایسریا مننژیتیدیس.}
+\end{description}
+
+\menpage{۲}{pic02.jpg — 20261010\_053155765.jpg}
+\begin{description}
+\menitem{۴}{مننژیت استافیلوکوکی: \en{NICU} در نوزادان؛ ترومای نافذ به سر؛ جراحی نوروسرجری.}
+\menitem{۵}{عوامل شایع مننژیت باکتریال:}
+\end{description}
+\begin{itemize}
+\item نوزادان: \en{GBS}، \en{E. coli}، باسیل‌های گرم منفی روده‌ای.
+\item ۱ تا ۳ ماه: استرپ پنومونیه، باسیل گرم منفی، \en{GBS}.
+\item بالای ۳ ماه: استرپ پنومونیه، نایسریا مننژیتیدیس.
+\end{itemize}
+\begin{description}\menitem{۶}{\en{Partially treated meningitis}}
+\end{description}
+\begin{latin}\begin{itemize}
+\item Bacterial meningitis $\to$ AB therapy before LP $\to$ Negative CSF culture.
+\item Although other CSF findings suggestive of bacterial infection. $\to$ PCR of CSF.
+\end{itemize}\end{latin}
+\begin{description}\menitem{۷}{شایع‌ترین ویروس‌ها: انتروویروس، پارکوویروس؛ \en{HSV, EBV, CMV, HIV, LCMV}؛ \en{Mumps} در افرادی که واکسن نزده‌اند.}\end{description}
+
+\menpage{۳}{pic03.jpg — 20261010\_053202786.jpg}
+\begin{description}\menitem{۸}{\en{Less frequent infections causing meningitis}}\end{description}
+\begin{latin}\begin{itemize}
+\item Lyme disease (Borrelia burgdorferi).
+\item Cat-scratch disease (Bartonella henselae).
+\item TB.
+\item Toxoplasma.
+\item Fungi: Cryptococcus; Histoplasma.
+\item Parasites: Angiostrongylus cantonensis; Naegleria fowleri.
+\end{itemize}\end{latin}
+\begin{description}
+\menitem{۹}{آسپلنی آناتومیک یا عملکردی: \en{RF} مننژیت باکتریال.}
+\menitem{۱۰}{\en{Crowding}: \en{RF} مننژیت باکتریال.}
+\menitem{۱۱}{شکستگی قاعدهٔ جمجمه: \en{RF} مننژیت ناشی از استرپ پنومونیه.}
+\menitem{۱۲}{مننژیت ممکن است به دنبال علائم دستگاه تنفس فوقانی رخ دهد.}
+\menitem{۱۳}{علائم التهاب مننژ: سردرد، تحریک‌پذیری، تهوع و استفراغ؛ خواب‌آلودگی، فتوفوبی، سفتی گردن؛ معمولاً تب وجود دارد.}
+\end{description}
+\begin{latin}\begin{itemize}\item Kernig Sign; Brudzinski Sign: older than 12 months.\end{itemize}\end{latin}
+
+\menpage{۴}{pic04.jpg — 20261010\_053212967.jpg}
+\begin{description}
+\menitem{۱۴}{در شیرخواران زیر ۱ سال علائم تحریک مننژ جزئی است.}
+\end{description}
+\begin{latin}\noindent Irritability, Depressed Mental Status; Poor feeding.\end{latin}
+بقیهٔ علائم عصبی هم با شیوع کمتر ممکن است دیده شوند.
+\begin{description}
+\menitem{۱۵}{علائم افزایش \en{ICP} ممکن است دیده شود (در شیرخواران): \en{Bulging fontanelle}؛ \en{Diplopia, Ptosis}.}
+\menitem{۱۶}{ادم پاپیل ناشایع است مگر: انسداد سینوس‌های وریدی، آمپیم ساب‌دورال، آبسهٔ مغزی.}
+\menitem{۱۷}{شک به مننژیت باکتریال: \en{LP}. کنتراندیکاسیون: افزایش \en{ICP}؛ \en{Plt} زیر ۲۰٬۰۰۰؛ ناپایداری قلبی عروقی؛ آپنه.}
+\menitem{۱۸}{\en{CSF Examination}: \en{WBC count and diff}؛ \en{Pr, Glucose level}؛ \en{Gram stain}؛ \en{Culture}؛ \en{if needed: PCR}.}
+\end{description}
+
+\menpage{۵}{pic05.jpg — 20261010\_053219366.jpg}
+\begin{description}
+\menitem{۱۹}{لکوسیتوز محیطی در مننژیت شایع است. \en{BC} ممکن است مثبت باشد.}
+\menitem{۲۰}{\en{LP} باید قبل از درمان آنتی‌باکتریال انجام شود. اگر امکان \en{LP} نیست \en{AB} را به تعویق نمی‌اندازیم.}
+\menitem{۲۱}{در مننژیت مننگوکوکی \en{CSF} حتی بعد از یک دوز \en{AB} و ظرف ۲–۱ ساعت استریل می‌شود؛ در استرپ پنومونیه چند ساعت.}
+\menitem{۲۲}{\en{NL CSF}:}
+\end{description}
+\begin{latin}\begin{itemize}
+\item P: $10$--$20\ \mathrm{cm\,H_2O}$.
+\item $20$--$45\ \mathrm{mg/dl}$ pro.
+\item $>50\%$ of serum glucose.
+\item Up to $10$--$30\ \mathrm{WBC}/\mu\mathrm{L}$ is NL in neonates.
+\item $\mathrm{WBC}<5$.
+\end{itemize}\end{latin}
+ارجحیت لنفوسیت.
+\begin{description}\menitem{۲۳}{\en{CSF in Acute Bacterial Meningitis}:}\end{description}
+\begin{latin}\begin{itemize}
+\item P: $>25\ \mathrm{cm\,H_2O}$.
+\item Pro: $100$--$500\ \mathrm{mg/dl}$.
+\item Glucose: $<40\ \mathrm{mg/dl}$ or $<40\%$ serum glucose.
+\item $\mathrm{WBC}>100$, PMN predominant.
+\end{itemize}\end{latin}
+
+\menpage{۶}{pic06.jpg — 20261010\_053229304.jpg}
+\begin{description}
+\menitem{۲۴}{هدف درمان در مننژیت باکتریال: استریل کردن \en{CSF}؛ حفظ پرفیوژن بافت مغز.}
+\menitem{۲۵}{درمان امپایریک مننژیت باکتریال: نسل ۳ سفالوسپورین + ونکومایسین.}
+\end{description}
+\begin{itemize}
+\item ونکومایسین: \en{S. pneumoniae}.
+\item سفتازیدیم، سفپیم، سفتریاکسون: \en{N. meningitidis, Hi, E. coli}.
+\item برای شیرخواران زیر ۲ ماه: آمپی‌سیلین هم می‌دهیم؛ \en{Listeria monocytogenes}.
+\end{itemize}
+\begin{description}
+\menitem{۲۶}{طول درمان: ۵–۷ روز برای نایسریا؛ ۷–۱۰ روز برای \en{Hi}؛ ۱۰–۱۴ روز برای \en{S} پنومونیه.}
+\menitem{۲۷}{داروی انتخابی:}
+\end{description}
+\begin{itemize}
+\item نوزاد: \en{Cefta + Ampicillin $\pm$ Genta} یا \en{Ampicillin + Genta}.
+\item ۱ ماه تا ۴ سال: \en{Ceftria + Vanco} یا \en{Cefepime + Vanco}.
+\item ۵ تا ۱۲ سال: \en{Ceftria + Vanco} یا \en{Cefepime + Vanco}.
+\end{itemize}
+
+\menpage{۷}{pic07.jpg — 20261010\_053234720.jpg}
+\begin{description}
+\menitem{۲۸}{مننژیت ناشی از باسیل گرم منفی باید حداقل تا ۲۱ روز یا ۱۴ روز بعد از اولین کشت منفی \en{CSF} درمان شود. هر کدام که طولانی‌تر بود.}
+\menitem{۲۹}{دگزامتازون را با دوز اول \en{AB} شروع می‌کنیم: \en{$\downarrow$ Hearing loss from Hi}.}
+\menitem{۳۰}{\en{Supportive therapy for}: \en{Dehydration, shock, DIC, SIADH, Seizure, $\uparrow$ ICP, Apnea, Arrhythmias, Coma}.}
+\menitem{۳۱}{از بین نرفتن تب طی درمان شایع است.}
+\menitem{۳۲}{اگر حال عمومی بیمار ظرف ۴۸ ساعت بعد از درمان بهتر نشد \en{LP} مجدد انجام می‌دهیم؛ برای مننژیت‌های گرم منفی؛ بیماری که ایمنی‌اش سرکوب می‌شود.}
+\menitem{۳۳}{اگر کودک علائم یا نشانه‌های فوکال نورولوژیک داشت و کشت مثبت پایدار: \en{CNS Imaging $\to$ CT with contrast / MRI}؛ افیوژن ساب‌دورال، آبسهٔ مغزی.}
+\end{description}
+
+\menpage{۸}{pic08.jpg — 20261010\_053246080.jpg}
+\begin{description}
+\menitem{۳۴}{هر بیماری مننژیت قبل از ترخیص: بررسی شنوایی.}
+\menitem{۳۴}{عود مننژیت در ۳–۱۴ روز بعد از درمان شایع‌تر است. شک به یک ضعف سیستم ایمنی یا آناتومیک.}
+\menitem{۳۵}{\en{Poor prognosis}: \en{young age, long duration, Seizure, Coma, shock, low CSF WBC in the presence of bacteria}.}
+\menitem{۳۶}{افراد ناقل باید \en{AB} دریافت کنند: \en{Rifampine, Ciprofloxacin, Azithro, Ceftria}. نفوذ خیلی بالا [حاشیه: سل، بروسلوز].}
+\menitem{۳۷}{کورتون نفوذ سفو به \en{CNS} کم می‌کند.}
+\menitem{۳۸}{اگر کشت منفی بود: حداقل ۱۰ روز باید درمان شود.}
+\menitem{۳۹}{اگر سفالوسپورین نگرفته باشد: باید بگیرد بعد از ترخیص.}
+\menitem{۴۰}{اگر \en{SIADH}: $2/3$ مینیتننس مایع می‌دهیم.}
+\end{description}
+
+\menpage{۹}{pic09.jpg — 20261010\_053251011.jpg؛ شمارهٔ دست‌نویس: ۱۰}
+\section*{مننژیت}
+\begin{itemize}
+\item ارگانیسم‌های شایع مننژیت باکتریال اکتسابی از جامعه: استرپ پنومونیه (۵۰\%)، نایسریا مننژیتیدیس (۲۵\%)، استرپ گروه \en{B} (۱۵\%)، لیستریا مونوسایتوژن (۱۰\%).
+\item استرپ گروه \en{B} (آگالاکتیه): مننژیت در نوزادان، افراد بالای ۵۰ سال یا بیماری زمینه‌ای.
+\item لیستریا مونوسیتوژن: مننژیت نوزادان، زنان باردار، سن بالای ۶۰، نقص ایمنی.
+\item استرپ پنومونیه: شایع‌ترین عامل مننژیت در افراد بالای ۲۰ سال.
+\end{itemize}
+\subsection*{استرپ پنومونیه}
+\begin{itemize}
+\item دیپلوکوک گرم مثبت.
+\item \en{RF}: پنومونی پنوموکوکی (مهم‌ترین \en{RF})؛ \en{OM} پنوموکوکی حاد و مزمن؛ الکلیسم؛ سینوزیت پنوموکوکی حاد و مزمن؛ \en{DM}؛ اسپلنکتومی؛ هایپوگاما؛ نقص کمپلمان؛ تروما به سر همراه با شکستگی \en{base} و نشت \en{CSF}.
+\end{itemize}
+\subsection*{نایسریا مننژیتیدیس}
+\begin{itemize}
+\item کوکسی گرم منفی هوازی.
+\item واکسن آن: سروگروه \en{B} که عامل $1/3$ موارد است را شامل نمی‌شود.
+\item واکسن سروگروه \en{B} مننگوکوک برای افراد ۱۶ تا ۲۳ سال توصیه می‌شود.
+\item واکسن گروه \en{B} حاملین نازوفارنژیال را کاهش نمی‌دهد؛ در حالی که واکسن گروه \en{A, C, Y, W} حاملین نازوفارنژیال را کاهش می‌دهد.
+\item عفونت ممکن است از کلونیزاسیون نازوفارنکس شروع شود.
+\item بالینی کاراکتریستیک: پتشی و پورپورا.
+\item \en{RF}: نقص در اجزای کمپلمان (\unclear{\en{C5--C9}}، پروپردین).
+\item سیر بالینی: برق‌آسا؛ می‌تواند ظرف چند ساعت منجر به مرگ شود.
+\end{itemize}
+
+\menpage{۱۰}{pic10.jpg — 20261010\_053302370.jpg؛ شمارهٔ دست‌نویس در تصویر دیده نمی‌شود}
+\section*{مننژیت؛ علائم بالینی}
+\begin{itemize}
+\item تب، سردرد، سفتی گردن، کاهش سطح هوشیاری؛ تهوع و استفراغ، فتوفوبی.
+\item کرنیگ، برودزینسکی: نشانه‌های تحریک مننژ.
+\item تریاد مننژیت: ۱. تب، ۲. سردرد، ۳. سفتی گردن.
+\item سفتی گردن نشانهٔ پاتوگنومونیک تحریک مننژ است.
+\item کاهش سطح هوشیاری از لتارژی تا کما: در ۷۵\% بیماران.
+\item افزایش \en{ICP} از عوارض مننژیت است: بدتر شدن یا کاهش سطح هوشیاری، ادم پاپی، مردمک میدریاتیک با واکنش ضعیف به نور، فلج عصب ۶، وضعیت دسربره، رفلکس کوشینگ (۱. برادی‌کاردی، ۲. \en{$\uparrow$ BP}، ۳. تنفس نامنظم).
+\item عامل اصلی آبتوندیشن و کما در بیمار مننژیت؛ مهم‌ترین عارضهٔ آن: هرنی مغزی.
+\end{itemize}
+\subsection*{آنالیز \en{CSF} در مننژیت باکتریال}
+\begin{itemize}
+\item فشار \en{CSF}: بیشتر از \en{$180\ \mathrm{mm\,H_2O}$}؛ گلوکز: \en{$<40\ \mathrm{mg/dl}$}.
+\item \en{WBC}: ۱۰۰–۱۰٬۰۰۰ در هر \en{$\mu\mathrm{L}$} با ارجحیت نوتروفیل.
+\item \en{RBC}: نباید باشد؛ \en{LP} تروماتیزه.
+\item پروتئین: \en{$>45\ \mathrm{mg/dl}$}.
+\item رنگ‌آمیزی گرم: در بیش از ۶۰\% موارد مثبت.
+\item کشت: در بیش از ۸۰\% موارد مثبت.
+\item \en{PCR}: کشف \en{DNA} باکتری.
+\item نسبت قند \en{CSF} به سرم: نسبت \en{$<0.4$} به نفع مننژیت باکتریال حاد؛ سایر \en{DX}: مننژیت قارچی، سلی، کارسینوماتوز.
+\end{itemize}
+
+\menpage{۱۱}{pic11.jpg — 20261010\_053310987.jpg؛ شمارهٔ دست‌نویس: ۳}
+\section*{مننژیت؛ برخورد و درمان تجربی}
+\begin{itemize}
+\item وقتی علائم بالینی به نفع مننژیت باکتریال است: سریعاً نمونهٔ کشت خون گرفته شود؛ شروع \en{AB} تجربی + دگزامتازون.
+\item اورژانس است: \en{AB} باید ظرف ۶۰ دقیقه آغاز شود.
+\item کدام بیماران قبل از \en{LP} نیاز به تصویربرداری دارند؟ ترومای اخیر به سر؛ نقص ایمنی؛ علائم فوکال نورولوژیک؛ ادم پاپی؛ کاهش سطح هوشیاری.
+\end{itemize}
+\subsection*{آنتی‌بیوتیک تجربی در مننژیت}
+\begin{itemize}
+\item شیرخوار پره‌ترم و نوزاد: آمپی‌سیلین + سفوتاکسیم.
+\item شیرخوار ۱–۳ ماه: آمپی‌سیلین + سفتریاکسون یا سفوتاکسیم.
+\item اطفال بالای ۳ ماه و بالغین زیر ۵۵ سال با ایمنی طبیعی: سفوتاکسیم یا سفتریاکسون یا سفپیم + ونکومایسین (\en{MRSA}).
+\item بالای ۵۵ سال یا سوءمصرف الکل یا وجود بیماری‌های ناتوان‌کننده: آمپی‌سیلین + سفوتاکسیم یا سفتریا یا سفپیم (سودومونا) + ونکومایسین (\en{MRSA}).
+\item عفونت بیمارستانی، پس از نوروسرجری، پس از تروما به سر، مبتلایان به \unclear{نوتروپنی}، اختلال ایمنی سلولی به هر علت: آمپی‌سیلین + سفتا یا مروپنم (سودومونا) + ونکومایسین (\en{MRSA}).
+\item انسفالیت هرپسی در رأس \en{DDX} مننژیت باکتریال است: آسیکلوویر در همهٔ درمان‌های تجربی.
+\item عوارض سفپیم: تشنج، میوکلونوس، انسفالوپاتی؛ اگر علائم وجود داشت سفپیم نمی‌دهیم.
+\end{itemize}
+
+\menpage{۱۲}{pic12.jpg — 20261010\_053320834.jpg؛ شمارهٔ دست‌نویس: ۴}
+\section*{مننژیت؛ انتخاب آنتی‌بیوتیک}
+\begin{itemize}
+\item اگر پاتوژن احتمالی: استرپ پنومونیه، هموفیلوس آنفلوانزا، لیستریا مونوسایتوژن، باسیل‌های گرم منفی هوازی (سودومونا، \en{E. coli}): ونکو + مروپنم.
+\item مروپنم را هیچ‌وقت به تنهایی نمی‌دهیم [حاشیه: سفتریا + ونکو].
+\item شایع‌ترین عامل مننژیت در بیماران بدون طحال: استرپ پنومونیه.
+\item مواردی که آمپی‌سیلین جهت پوشش لیستریا به درمان اضافه می‌شود: زیر ۳ ماه، بالای ۵۵ سال، شک به نقص ایمنی سلولی در اثر بیماری‌های مزمن، پیوند عضو، بارداری، بدخیمی، سرکوب ایمنی.
+\item مواردی که مترونیدازول جهت پوشش بی‌هوازی و باسیل گرم منفی به درمان اضافه می‌شود: اوتیت، سینوزیت، ماستوئیدیت.
+\end{itemize}
+\subsection*{درمان مننژیت مننگوکوکی}
+\begin{itemize}
+\item کوکسی گرم منفی هوازی؛ پتشی و پورپورا.
+\item نایسریا: گونه‌های حساس: پنی‌سیلین \en{G}؛ گونه‌های مقاوم: سفتریا یا سفوتاکسیم؛ طول مدت درمان ۱ هفته.
+\end{itemize}
+\subsection*{پروفیلاکسی مننژیت مننگوکوکی}
+\begin{itemize}
+\item در بیمار و تمام افرادی که تماس نزدیک با بیمار داشته‌اند.
+\item ریفامپین: \en{$600\ \mathrm{mg}$ BD} برای ۲ روز؛ \en{$10\ \mathrm{mg/kg}$ BID} برای ۲ روز در کودک بالای ۱ سال.
+\item تماس نزدیک: بوسیدن، اسباب‌بازی مشترک، نوشیدن و سیگار مشترک.
+\item پروفیلاکسی حاملگی: ریفامپین ممنوع است؛ آزیترومایسین \en{$500\ \mathrm{mg}$} تک‌دوز؛ سفتریا \en{$250\ \mathrm{mg}$} تک‌دوز.
+\end{itemize}
+
+\menpage{۱۳}{pic13.jpg — 20261010\_053325513.jpg؛ شمارهٔ دست‌نویس: ۵}
+\section*{درمان مننژیت پنوموکوکی}
+\begin{itemize}
+\item یک سفالوسپورین (سفتریا یا سفوتاکسیم یا سفپیم) + ونکومایسین.
+\item طول درمان ۲ هفته وریدی.
+\item تکرار \en{LP}، ۲۴–۳۶ ساعت پس از شروع درمان برای اطمینان از استریل شدن \en{CSF}.
+\item [خط‌خورده:] \en{RF}: \unclear{پنومونی پنوموکوکی (مهم‌ترین)}.
+\end{itemize}
+\subsection*{درمان مننژیت لیستریایی}
+\begin{itemize}
+\item آمپی‌سیلین (اگر بیمار بدحال: + جنتامایسین).
+\item طول درمان ۳ هفته.
+\item آلرژی به پنی‌سیلین: \en{TMP-SMX} (کوتریموکسازول).
+\item \en{RF} (مواردی که آمپی‌سیلین باید به درمان اضافه شود): زیر ۳ ماه، بالای ۵۵ سال، شک به نقص ایمنی سلولی در اثر بیماری مزمن، پیوند عضو، بارداری، بدخیمی، سرکوب ایمنی.
+\item یک باسیل گرم مثبت هوازی متحرک است.
+\item غذاهای آلوده: سالاد کلم، شیر، پنیر، غذاهای سریع آماده‌شده، سوسیس خوب پخته‌نشده، گوشت به‌میزان کافی پخته‌نشده.
+\end{itemize}
+\subsection*{دگزامتازون در مننژیت باکتریال}
+\begin{itemize}
+\item ۲۰ دقیقه قبل یا حداقل همزمان با شروع اولین دوز \en{AB}.
+\item اگر بیش از ۶ ساعت از \en{AB} گذشته باشد دیگر اثر ندارد.
+\item بیشترین اثر بر مننژیت پنوموکوکی.
+\item کاهش عوارض نورولوژیک، کری حسی–عصبی، مرگ.
+\end{itemize}
+
+\menpage{۱۴}{pic14.jpg — 20261010\_053336054.jpg؛ شمارهٔ دست‌نویس: ۶}
+\section*{ریسک‌فاکتورهای مرگ ناشی از مننژیت}
+\begin{itemize}
+\item سطح هوشیاری پایین در بدو ورود؛ تشنج ظرف ۲۴ ساعت اول؛ نشانه‌های \en{$\uparrow$ ICP}؛ شیرخوارگی و سن بالای ۵۰ سال؛ شوک یا نیاز به ونتیلاسیون؛ تأخیر در شروع درمان.
+\item گلوکز \en{CSF}: \en{$<40\ \mathrm{mg/dl}$} و پروتئین \en{CSF}: \en{$>300\ \mathrm{mg/dl}$}: پیش‌آگهی بد.
+\end{itemize}
+\subsection*{مننژیت ویروسی حاد}
+\begin{itemize}
+\item سردرد، تب، علائم تحریک مننژ، نمای \en{CSF} التهابی.
+\item سردرد معمولاً در ناحیهٔ فرونتال یا رترواربیت است، با فتوفوبی و درد در حرکات چشم همراهی دارد.
+\item ریجید گردن خفیف است، فقط در انتهای \en{ROM} رخ می‌دهد.
+\item بیماران اغلب هوشیار هستند؛ کاهش سطح هوشیاری بیشتر در انسفالیت ویروسی دیده می‌شود.
+\item تشنج و نشانه‌های فوکال نورولوژیک وجود ندارد.
+\end{itemize}
+\subsection*{آنالیز \en{CSF}: مهم‌ترین تست در مننژیت ویروسی}
+\begin{itemize}
+\item پلئوسیتوز لنفوسیتی: ۲۵–۵۰۰ سلول در میکرولیتر.
+\item پروتئین طبیعی یا اندکی بالا؛ گلوکز طبیعی.
+\item \en{Opening P}: طبیعی یا کمی بالا (۱۰۰–۳۵۰).
+\item ارگانیسمی یافت نمی‌شود.
+\item مهم‌ترین تست تشخیص ویروس‌ها \en{PCR} است؛ در \en{HSV}، انتروویروس روش انتخابی است.
+\item \en{PCR} مدفوع در انتروویروس کمک‌کننده است.
+\end{itemize}
+
+\menpage{۱۵}{pic15.jpg — 20261010\_053340605.jpg؛ شمارهٔ دست‌نویس: ۷}
+\section*{مننژیت ویروسی}
+\begin{itemize}
+\item کشت ویروس حساسیت پایینی دارد.
+\end{itemize}
+\subsection*{انتروویروس‌ها}
+\begin{itemize}
+\item شایع‌ترین مننژیت‌های ویروسی؛ بیشتر تابستان و پاییز.
+\item در کودکان زیر ۱۵ سال شایع‌تر است.
+\item تب، سردرد، سفتی گردن، استفراغ، بی‌اشتهایی، اسهال، فارنژیت، میالژی.
+\item \en{CSF}: پلئوسیتوز لنفوسیتی، گلوکز طبیعی، \en{pro} طبیعی یا اندکی بالا.
+\item روش انتخابی تشخیص: \en{RT-PCR} بر روی \en{CSF}.
+\item بیشترین حساسیت در ۴۸ ساعت اول؛ قابل انجام تا ۵ روز.
+\item بر روی نمونهٔ گلو و مدفوع تا هفته‌ها مثبت.
+\item درمان: حمایتی است.
+\item در نوزادان و افراد هایپوگاما: عفونت مزمن و شدید.
+\end{itemize}
+\subsection*{هرپس سیمپلکس}
+\begin{itemize}
+\item دومین علت مننژیت ویروسی؛ در زنان شایع‌تر است.
+\item عامل اصلی مننژیت \en{HSV-2}؛ عامل اصلی انسفالیت \en{HSV-1}.
+\item \en{PCR} مایع \en{CSF} (\en{CSF} کلاسیک ویروس).
+\item مننژیت \en{Mollaret}: مننژیت آسپتیک یا ویروسی راجعه؛ اکثراً علت \en{HSV}.
+\item درمان هرپس: آسیکلوویر، فامسیکلوویر.
+\end{itemize}
+
+\menpage{۱۶}{pic16.jpg — 20261010\_053349895.jpg؛ شمارهٔ دست‌نویس: ۸}
+\section*{مننژیت اوریونی}
+\begin{itemize}
+\item اواخر زمستان و اوایل بهار؛ در مردها شایع‌تر.
+\item همراه با پاروتیت، اورکیت، اوفوریت، پانکراتیت، افزایش آمیلاز و لیپاز.
+\item \en{CSF}: پلئوسیتوز با بیش از ۱۰۰۰ سلول؛ ۷۵\% لنفوسیت.
+\item در ۱۰–۳۰\% موارد گلوکز کاهش می‌یابد (هایپوگلیکوراکی).
+\end{itemize}
+\subsection*{درمان مننژیت ویروسی}
+\begin{itemize}
+\item درمان علامتی: مسکن، تب‌بر، ضد استفراغ؛ اصلاح آب و الکترولیت‌ها.
+\item اندیکاسیون بستری: نقص ایمنی، اختلال هوشیاری، تشنج، علائم فوکال نورولوژیک، \en{CSF} آتیپیک.
+\end{itemize}
+\subsection*{مننژیت تحت‌حاد}
+\begin{itemize}
+\item سل، قارچ (کریپتوکوکوس نئوفورمنس)، سیفلیس (شایع‌ترین).
+\item اعصاب کرانیال ۷ و ۸ هستند.
+\item علائم برای روزها و هفته‌ها: سردرد، سفتی گردن، تب \en{low grade}، \unclear{بی‌قراری}.
+\item ممکن است اختلالات اعصاب کرانیال و تعریق شبانه هم داشته باشد.
+\end{itemize}
+\subsection*{مننژیت سلی}
+\begin{itemize}
+\item \en{CSF}: افزایش \en{Opening Pressure}؛ پلئوسیتوز لنفوسیتی (۱۰۰–۵۰۰)؛ افزایش میزان \en{pro} (۱–۵ \en{g/L})؛ کاهش گلوکز (۲۰–۴۰ \en{mg/dl}).
+\item استاندارد طلایی تشخیص: کشت.
+\item آخرین لولهٔ \en{LP} بهترین نمونه برای اسمیر \en{AFB} است.
+\end{itemize}
+\subsection*{مننژیت قارچی}
+\begin{itemize}
+\item \en{CSF}: پلئوسیتوز مونونوکلئر یا لنفوسیتی، \en{$\uparrow$ pro}، \en{$\downarrow$} گلوکز.
+\item تشخیص: اسمیر \en{India ink}.
+\end{itemize}
+
+\menpage{۱۷}{pic17.jpg — 20261010\_053354881.jpg؛ شمارهٔ دست‌نویس: ۹}
+\section*{مننژیت؛ تشخیص و درمان}
+\begin{itemize}
+\item در مننژیت \en{C. immitis}: ائوزینوفیل در \en{CSF}.
+\item تست آنتی‌ژن پلی‌ساکارید کریپتوکوکی: بسیار حساس و اختصاصی.
+\item مننژیت سیفلیسی: تشخیص: \en{FTA-ABS} سرم یا \en{MHA-TP} سرم مثبت بوده و در \en{CSF} پلئوسیتوز لنفوسیتی و \en{$\uparrow$ pro} دیده شود یا \en{VDRL} مایع \en{CSF} مثبت شود.
+\end{itemize}
+\subsection*{درمان}
+\begin{itemize}
+\item سل: ایزونیازید، ریفامپین، اتامبوتول، پیرازینامید.
+\item در بیماران \en{HIV} مثبت مننژیت سلی: دگزا هم می‌دهیم.
+\item قارچ: در بیمار \en{HIV} منفی و غیرپیوندی: آمفوتریسین \en{B} + فلوسیتوزین برای ۴ هفته؛ اگر عارضهٔ نورولوژیک: برای ۶ هفته.
+\item بیماران پیوندی: آمفوتریسین لیپوزومال + فلوسیتوزین.
+\item سیفلیس: پنی‌سیلین.
+\end{itemize}
+\ifnum\MeningitisStandalone=1 \expandafter\enddocument\fi
