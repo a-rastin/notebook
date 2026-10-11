@@ -1,0 +1,136 @@
+% !TeX program = xelatex
+% UTF-8. Compile directly with XeLaTeX, or \input after loading xepersian.
+% Transcription of the three photographs in Google Drive: Notebook/encephalitis.
+% Source order (also the handwritten page order):
+% pic01.jpg = 20261011_184128329.jpg (page 1)
+% pic02.jpg = 20261011_184139356.jpg (page 2)
+% pic03.jpg = 20261011_184147114.jpg (page 3)
+% Medical statements and abbreviations are transcribed, not revised.
+\ifdefined\settextfont
+  \def\EncephalitisStandalone{0}
+\else
+  \def\EncephalitisStandalone{1}
+  \documentclass[11pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,graphicx,xcolor,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \setlist[itemize]{itemsep=2pt,topsep=3pt,parsep=0pt}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\encmark}[1]{\ifdefined\colorbox\colorbox{yellow!35}{\strut #1}\else\textbf{#1}\fi}
+\newcommand{\encarrow}{\ensuremath{\leftarrow}}
+\newcommand{\encpage}[2]{%
+  \clearpage\section*{انسفالیت — صفحهٔ #1}
+  {\footnotesize\noindent\en{#2}\par
+  \noindent\en{Subject:} ۱۰۱ ـ انسفالیت\hfill
+  \en{Year: \quad Month: \quad Date:}\par}
+  \medskip}
+\ifnum\EncephalitisStandalone=1 \begin{document}\fi
+
+\encpage{۱}{pic01.jpg — 20261011\_184128329.jpg}
+\begin{itemize}
+  \item انسفالیت \encarrow{} التهاب پارانشیم مغز.
+  \item \encmark{تب + سردرد + \en{MSC}}.
+  \item می‌تواند منتشر یا لوکالیزه باشد.
+  \item مکانیسم‌ها:
+  \begin{itemize}
+    \item عفونت مستقیم پارانشیم.
+    \item پاسخ ایمنی پس از عفونت.
+    \item خودایمنی.
+  \end{itemize}
+  علل متابولیک، توکسیک، نئوپلاستیک.
+  \item از چند روز تا چند هفته پس از علائم عفونت شروع می‌شود.
+  \item شایع‌ترین ویروس‌ها \encarrow{} انتروویروس‌ها، آربوویروس‌ها، هرپس‌ویروس‌ها.
+  \item \en{HIV} می‌تواند انسفالیت تحت‌حاد ایجاد کند.
+\end{itemize}
+
+\subsection*{\en{Acute Disseminated Encephalomyelitis (ADEM)}}
+\begin{latin}
+\begin{itemize}
+  \item \encmark{Abrupt, multiple neurologic signs}.
+  \item Brain and Spine.
+\end{itemize}
+\end{latin}
+\begin{itemize}
+  \item به دنبال یک عفونت ویروسی \encarrow{} \encmark{سرخک، آبله‌مرغان}.
+  \item از نظر بالینی شبیه \en{MS}.
+\end{itemize}
+
+\subsection*{انسفالیت خودایمن}
+\begin{latin}
+\begin{itemize}
+  \item Anti-N-methyl-D-aspartate receptor Ab.
+  \item Anti myelin oligodendrocyte glycoprotein Ab.
+\end{itemize}
+\end{latin}
+\begin{itemize}
+  \item علائم معمولاً \encmark{تحت‌حاد} است.
+  \item علائم سایکولوژیک، اختلال کوگنیشن، اختلال حرکتی، اختلال اتونوم، تشنج.
+\end{itemize}
+
+\encpage{۲}{pic02.jpg — 20261011\_184139356.jpg}
+\begin{itemize}
+  \item انسفالیت \en{HSV} در نوزادان می‌تواند با یا بدون ضایعات پوستی باشد.
+  \item انتقال پری‌ناتال یا پست‌ناتال.
+\end{itemize}
+
+\subsection*{تظاهرات بالینی انسفالیت عفونی حاد}
+\begin{itemize}
+  \item پرودروم \encarrow{} چند روز علائم غیراختصاصی:
+  گلودرد، تب، سردرد، درد شکم.
+  \item علائم پیش‌رونده \encarrow{} آمنزی، تغییرات رفتاری، ضعف نورولوژیک.
+  \item \encmark{تشنج} در پرزنتیشن بیماری شایع است.
+\end{itemize}
+
+\subsection*{تشخیص انسفالیت}
+\begin{itemize}
+  \item علائم نورولوژیک، اپیدمیولوژی، \en{LP}، \en{EEG}، تصویربرداری مغزی.
+  \item انسفالیت ناشی از بیماری متابولیک = انسفالوپاتی.
+  \item \en{LP} در انسفالیت ویروسی \encarrow{}
+  \encmark{پلئوسیتوز با غلبهٔ لنف}، \en{$\uparrow$} جزئی پروتئین، گلوکز \en{NL}.
+  \begin{itemize}
+    \item می‌تواند \en{NL} باشد.
+  \end{itemize}
+  \item \en{$\uparrow$} شدید پروتئین، \en{$\downarrow$} گلوکز \encarrow{}
+  \en{TB}، عفونت کریپتوکوکی، بدخیمی.
+  \item \encmark{\en{MRI}} تصویربرداری بهتر برای انسفالیت است.
+  \item \en{EEG} در انسفالیت هرپسی \encarrow{} شایع‌ترین نقطهٔ درگیر \encmark{لوب تمپورال} است.
+  \begin{itemize}
+    \item تصویربرداری در انسفالیت \encmark{هرپسی} \encarrow{} شایع‌ترین نقطهٔ درگیر لوب تمپورال.
+  \end{itemize}
+  \item باید نمونهٔ خون و \en{CSF} از نظر اتوآنتی‌بادی بررسی شوند.
+\end{itemize}
+
+\subsection*{درمان}
+\begin{itemize}
+  \item اغلب بیماران انسفالیت باید در \en{ICU} بستری شوند.
+  \item درمان \en{HSV} و \en{VZV} \encarrow{} \encmark{آسیکلوویر \en{IV}}.
+\end{itemize}
+
+\encpage{۳}{pic03.jpg — 20261011\_184147114.jpg}
+\begin{itemize}
+  \item \en{CMV} در بیمار نقص ایمنی \encarrow{} گانسیکلوویر.
+  \item \en{HHV-6} در بیماران \en{BMT} \encarrow{} گانسیکلوویر یا فوسکارنت.
+  \item \en{HIV} \encarrow{} آنتی‌رترووایرال ترکیبی.
+  \item مایکوپلاسما پنومونیه \encarrow{} داکسی‌سایکلین، فلوروکینولون، ماکرولید.
+  \item درمان \en{ADEM} \encarrow{} \encmark{کورتیکواستروئید} \en{IV} های‌دوز.
+  \item انسفالیت خودایمن \encarrow{} استروئید، \en{IVIG}، ریتوکسیمب.
+\end{itemize}
+
+\subsection*{سیر بیماری}
+\begin{itemize}
+  \item علائم پس از بهبودی ظرف چند روز تا ۳ هفته رفع می‌شوند.
+  \item \en{ADEM} در ۱۴\% موارد ظرف ۱ سال دوباره با همان علائم عود می‌کند.
+  \item \en{ADEM} راجعه در کودکان می‌تواند نشان‌دهندهٔ شروع \en{MS} باشد.
+\end{itemize}
+
+\subsection*{پیشگیری}
+\begin{itemize}
+  \item پیشگیری از \en{Reye-Syndrom} \encarrow{} عدم مصرف \encmark{آسپرین} در کودکان است.
+\end{itemize}
+
+% Printed notebook line markers on each source page: 1,2,3,4,5,6,7,8,9.
+% Handwritten source-page numbers: 1, 2, 3. Blank date fields remain blank.
+\ifnum\EncephalitisStandalone=1 \expandafter\enddocument\fi
