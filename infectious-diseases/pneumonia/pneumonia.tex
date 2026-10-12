@@ -1,0 +1,461 @@
+% !TeX program = xelatex
+% UTF-8 transcription; handwritten wording and medical claims retained.
+% pic01.jpg = 20261012_195615289.jpg (handwritten page 1)
+% pic02.jpg = 20261012_195622357.jpg (handwritten page 2)
+% pic03.jpg = 20261012_195629276.jpg (handwritten page 3)
+% pic04.jpg = 20261012_195635473.jpg (handwritten page 4)
+% pic05.jpg = 20261012_195642853.jpg
+% pic06.jpg = 20261012_195649589.jpg
+% pic07.jpg = 20261012_195655381.jpg
+% pic08.jpg = 20261012_195701984.jpg
+% pic09.jpg = 20261012_195708726.jpg
+% pic10.jpg = 20261012_195716946.jpg
+% pic11.jpg = 20261012_195727660.jpg
+% pic12.jpg = 20261012_195735460.jpg
+% pic13.jpg = 20261012_195742237.jpg
+% Standalone XeLaTeX document, also usable with \input in a xepersian document.
+\ifdefined\settextfont
+  \def\PneumoniaStandalone{0}
+\else
+  \def\PneumoniaStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcounter{PneumoniaSourcePage}
+\newcommand{\pneumoniapage}[2]{\clearpage\stepcounter{PneumoniaSourcePage}\section*{صفحهٔ #1}%
+ {\footnotesize\en{Subject:} #2\quad
+ \ifnum\value{PneumoniaSourcePage}<5 \en{Year: \ldots\quad Month: \ldots}\quad\fi
+ \en{Date: \ldots}\par}}
+\newcommand{\pneumonianote}[1]{\textit{[خوانش نامطمئن: #1]}}
+\ifnum\PneumoniaStandalone=1 \begin{document}\fi
+
+\pneumoniapage{۱}{۱۱۰ ـ پنومونی}
+\begin{itemize}
+\item عفونت مجاری تنفسی تحتانی: برونشیت، برونشیولیت، پنومونی یا هر سه.
+\item پنومونی اینترستیشیال: دیوارهٔ آلوئول‌ها، آلوئولار ساک، داکت، برونشیول‌ها؛ کاراکتریستیک عفونت ویروسی حاد.
+\item استرپ پنومونیه: شایع‌ترین باکتری عامل پنومونی؛ پنومونی لوبار ایجاد می‌کند.
+\item شایع‌ترین علل پنومونی آتیپیکال: مایکوپلاسما پنومونیه، کلامیدوفیلا پنومونیه.
+\item پنومونی در بیمار \en{CF}: در شیرخواران استاف اورئوس؛ سودومونا، بورخولدریا.
+\end{itemize}
+\subsection*{پنومونی در نوزادان}
+\begin{itemize}
+\item پاتوژن شایع: استرپ گروه \en{B}، \en{E. coli}، استرپ پنومونیه.
+\item درمان سرپایی ممنوع است.
+\item بستری: ۱۰--۱۴ روز؛ آمپی‌سیلین + سفتازیدیم.
+\item \en{ICU}: مشابه.
+\end{itemize}
+\subsection*{پنومونی شیرخوار ۱--۳ ماهه}
+\begin{itemize}
+\item تب‌دار: \en{RSV}، ویروس‌های تنفسی، استرپ پنومونیه، \en{H.} آنفلوآنزا.
+  \begin{itemize}
+  \item درمان بستری است: آموکسی یا آمپی‌سیلین.
+  \item \en{ICU}: سفتریاکسون + نافسیلین.
+  \end{itemize}
+\item بدون تب: کلامیدیا، مایکوپلاسما، پرتوزیس، \en{CMV}.
+  \begin{itemize}
+  \item درمان سرپایی: ۷--۱۰ روز؛ اریترو، آزیتر.
+  \item درمان بستری، \en{ICU}: اریترو یا آزیتر.
+  \end{itemize}
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۱\par}
+
+\pneumoniapage{۲}{۱۱۰ ـ پنومونی}
+\subsection*{پنومونی در ۳ ماه تا ۵ سال}
+\begin{itemize}
+\item \en{RSV}، آنفلوآنزا، استرپ پنومونیه، \en{H.} آنفلوآنزا.
+\item سرپایی: آموکسی + اریترو یا آزیتر.
+\item بستری: آمپی‌سیلین؛ \en{ICU}: سفتریاکسون + آزیتر.
+\end{itemize}
+\subsection*{پنومونی ۵ تا ۱۸ سال}
+\begin{itemize}
+\item مایکوپلاسما، استرپ پنومونیه، کلامیدوفیلا پنومونیه.
+\item سرپایی: ۷--۱۰؛ آموکسی + ماکرولید.
+\item بستری: ۱۰--۱۴؛ آمپی‌سیلین + ماکرولید.
+\item \en{ICU}: سفتریا + ماکرولید.
+\end{itemize}
+\subsection*{پنومونی ۱۸ سال به بالا}
+\begin{itemize}
+\item مایکوپلاسما، کرونا، آدنوویروس، آنفلوآنزا.
+\item سرپایی: آموکسی یا ماکرولید.
+\item بستری: آمپی‌سیلین + ماکرولید.
+\item \en{ICU}: سفتریا + ماکرولید (مثل آزیتر).
+\end{itemize}
+\subsection*{علائم پنومونی}
+\begin{itemize}
+\item نوزاد: تب، هایپوترمی / \en{R/E} منفی؛ تشخیص دشوارتر.
+\item شیرخوار کوچک: آپنه ممکن است اولین علامت باشد (تب، لرز، تاکی‌پنه، سرفه).
+\item پنومونی وایرال: سرفه، ویزینگ، استریدور شایع‌تر است؛ تب نسبت به باکتریال پایین‌تر است.
+\item احتقان و التهاب مجاری تنفسی فوقانی: به نفع ویروسی.
+\item پنومونی آتیپیک: شروع تدریجی دارد.
+\item پنومونی کلامیدیا: کونژکتیویت همراه پنومونی.
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۲\par}
+
+\pneumoniapage{۳}{۱۱۰ ـ پنومونی}
+\begin{itemize}
+\item \en{WBC}:
+  \begin{itemize}
+  \item پنومونی وایرال: \en{N/L} یا اندکی افزایش؛ غلبهٔ \en{lymph}.
+  \item پنومونی باکتریال: بالای \en{15--20 k}؛ غلبهٔ \en{Neutro}.
+  \end{itemize}
+\item ائوزینوفیلی خفیف: کاراکتریستیک پنومونی کلامیدیا تراکوماتیس شیرخوار.
+\item کشت خون: در بیماری متوسط تا شدید درخواست می‌شود.
+\item اگر پلورال افیوژن یا آمپیم وجود داشت: توراسنتز باید انجام شود.
+\item گرافی فرونتال و لترال باید گرفته شود: در بیماران بستری.
+\item لنفادنوپاتی هیلار: در پنومونی باکتریال ناشایع است؛ \en{TB}، خودایمنی، بدخیمی، مایکوزیس اندمیک.
+\item برای بررسی مایع آزاد و پلورال افیوژن: سونوگرافی یا گرافی دکوبیتوس.
+\item بررسی آبسه، برونشکتازی، بیماری‌های \pneumonianote{خطرناک}: \en{CT} اسکن.
+\item اگر در آبسهٔ ریه شک به جسم خارجی داشتیم: برونکوسکوپی.
+\item درمان \en{AB} آبسهٔ ریه: کلیندامایسین یا آمپی‌سیلین ـ سولباکتام.
+\item شواهد رادیولوژیک پنومونی ۸--۹ هفته بعد رفع می‌شوند.
+\item اگر علائم بالینی پنومونی بیش از ۱ ماه طول بکشد:
+  \begin{itemize}
+  \item بررسی از نظر نقص ایمنی و \en{CF}.
+  \item برونکوسکوپی: بررسی رد اشکال آناتومیک.
+  \item باریوم سوالو: \en{GERD}.
+  \end{itemize}
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۳\par}
+
+\pneumoniapage{۴}{۱۱۰ ـ پنومونی}
+\subsection*{برونشیولیت اوبلیترانز}
+\begin{itemize}
+\item به دنبال پنومونی آدنوویروس شدید.
+\item پروسهٔ التهابی تحت حاد.
+\item جایگزینی راه‌های هوایی کوچک با بافت اسکار.
+\item کاهش حجم و کمپلیانس ریه.
+\end{itemize}
+\begin{itemize}
+\item پیشگیری از عفونت \en{RSV}: \en{Palivizumab} در بیماران \en{high risk}.
+\item سودومونا: سفتازیدیم ± آمینوگلیکوزید، سیپروفلوکساسین.
+\item \en{MRSA}: کلیندامایسین یا ونکومایسین.
+\item مایکوپلاسما: آزیترومایسین.
+\item هموفیلوس آنفلوآنزا: آمپی‌سیلین، آموکسی‌سیلین / سفتریا یا کوآموکسی.
+\item استرپ گروه \en{A} و \en{B}: پنی‌سیلین یا آمپی‌سیلین یا آموکسی‌سیلین.
+\item استرپ پنومونیه: آمپی‌سیلین یا آموکسی / سفتریا یا لووفلوکساسین.
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۴\par}
+
+\pneumoniapage{۵}{پنومونی}
+\begin{itemize}
+\item ۵--۱۵\% موارد \en{CAP} به علت پنومونی آسپیراسیون است.
+\item ریسک‌فاکتورهای عفونت با \en{MRSA} و سودومونا آئروژینوزا:
+  \begin{itemize}
+  \item ایزولاسیون قبلی ارگانیسم به‌ویژه از سیستم تنفسی در طی سال گذشته.
+  \item بستری و درمان با یک دورهٔ \en{AB} طی ۹۰ روز گذشته.
+  \end{itemize}
+\end{itemize}
+\subsection*{\en{CAP}}
+\begin{itemize}
+\item شایع‌ترین باکتری: استرپ پنومونیه (دیپلوکوک گرم مثبت).
+\item باکتری‌های تیپیک:
+  \begin{itemize}
+  \item استرپ پنومونیه.
+  \item هموفیلوس آنفلوآنزا.
+  \item استاف اورئوس.
+  \item باسیل‌های گرم منفی: کلبسیلا پنومونیه، سودومونا آئروژینوزا.
+  \end{itemize}
+\item باکتری‌های آتیپیک:
+  \begin{itemize}
+  \item مایکوپلاسما پنومونیه.
+  \item کلامیدیا پنومونیه.
+  \item لژیونلا (در بیماران بستری).
+  \end{itemize}
+\item ویروس‌های تنفسی:
+  \begin{itemize}
+  \item آنفلوآنزا؛ آدنوویروس.
+  \item متاپنوموویروس انسانی (\en{hMPV}).
+  \item \en{RSV}؛ کروناویروس‌ها.
+  \end{itemize}
+\item شایع‌ترین ویروس عامل پنومونی: آنفلوآنزا، پاراآنفلوآنزا، \en{RSV}.
+\item استاف اورئوس:
+  \begin{itemize}
+  \item پنومونی آن عارضهٔ آنفلوآنزا است.
+  \item پنومونی نکروزان ایجاد می‌کند (ایجاد لوکوپنی).
+  \item \en{MRSA} هم عامل \en{HAP} و هم \en{CAP} است.
+  \item حفره و پنوماتوسل در \en{CXR} (کاویتهٔ کوچک با جدار نازک).
+  \item هموپتیزی \en{Gross} (نکروز).
+  \end{itemize}
+\end{itemize}
+{\footnotesize\en{GNOTE}\quad شمارهٔ دست‌نویس: ۱\par}
+
+\pneumoniapage{۶}{پنومونی}
+\subsection*{ریسک‌فاکتورهای \en{CAP}}
+\begin{itemize}
+\item الکلیسم.
+\item آسم.
+\item ضعف ایمنی.
+\item اقامت در \en{daycare}.
+\item سن بالای ۷۰ سال: کاهش سرفه، کاهش رفلکس \en{gag}، کاهش پاسخ‌های آنتی‌بادی، \en{Toll-like receptor}.
+\end{itemize}
+\subsection*{زمینه و پاتوژن‌ها}
+\begin{itemize}
+\item الکلیسم: استرپ پنومونیه، بی‌هوازی دهان، کلبسیلا پنومونیه، آسینتوباکتر، \en{TB}.
+\item \en{COPD} و سیگار: هموفیلوس آنفلوآنزا، سودومونا، لژیونلا، استرپ پنومونیه، موراکسلا کاتارالیس، کلامیدیا پنومونیه.
+\item اختلالات ساختاری ریه (برونشکتازی؛ \en{CF}، \en{COPD} شدید): سودومونا، بورخولدریا سپاسیا، استاف اورئوس.
+\item دمانس، سکتهٔ مغزی، افت سطح هوشیاری: بی‌هوازی دهان، گرم منفی روده‌ای.
+\item آبسهٔ ریه: \en{CA-MRSA}، بی‌هوازی دهان، قارچ اندمیک، \en{TB}، مایکوباکتریوم‌ها.
+\item اقامت در هتل و کشتی تفریحی در دو هفتهٔ اخیر: لژیونلا.
+\item سفر به جنوب شرق آسیا: آنفلوآنزا، بورخولدریا سودومالئی.
+\item شیوع آنفلوآنزا در منطقه: آنفلوآنزا، استرپ پنومونیه، استاف اورئوس.
+\item تماس با افراد عفونی: \en{SARS-CoV-2}.
+\item تماس با پرندگان: کلامیدیا پسیتاسی، هیستوپلاسما کپسولاتوم.
+\item تماس با خرگوش: فرانسیلا تولارنسیس.
+\item تماس با گوسفند، بز یا گربهٔ حامله: کوکسیلا بورنتی.
+\end{itemize}
+\subsection*{ریسک‌فاکتورهای لژیونلا}
+\begin{itemize}
+\item دیابت.
+\item بدخیمی‌های هماتولوژیک.
+\item کنسر.
+\item \en{ESRD}.
+\item \en{HIV}.
+\item سیگار.
+\item جنس مذکر.
+\item اقامت در هتل.
+\item مصرف داروی سرکوب ایمنی.
+\end{itemize}
+{\footnotesize\en{GNOTE}\quad شمارهٔ دست‌نویس: ۲\par}
+
+\pneumoniapage{۷}{پنومونی}
+\subsection*{علائم بالینی پنومونی}
+\begin{itemize}
+\item تب، تاکی‌کاردی.
+\item لرز، تعریق، سرفه: بدون خلط / خلط‌دار؛ موکوئیدی، چرکی، خونی.
+\item هموپتیزی \en{Gross}: پنومونی نکروزان؛ \en{CA-MRSA}.
+\item ناتوانی در ادای کامل جملات، نفس‌های کوتاه.
+\item درد پلورتیک قفسهٔ سینه، آرترالژی، میالژی، سردرد، خستگی.
+\item تهوع، استفراغ، اسهال در ۲۰\% بیماران.
+\item کنفیوژن (در افراد مسن).
+\item در صورت شوک سپتیک: کاهش \en{BP}.
+\end{itemize}
+\subsection*{معاینهٔ فیزیکی}
+\begin{itemize}
+\item سمع رال و صداهای تنفسی برونشیال.
+\item \en{Dullness} در دق.
+\item اگوفونی.
+\item افزایش \en{Tactile fremitus}.
+\item پکتوریلوکی نجوایی.
+\end{itemize}
+\begin{itemize}
+\item اگوفونی: بیمار \en{EEE}، معاینه سمع \en{AAA}؛ نشانهٔ کانسالیدیشن و پنومونی.
+\item پکتوریلوکی نجوایی: \en{Whispers} در بیمار آهسته صحبت می‌کند؛ در مناطقی که پرشدگی آلوئولی وجود دارد افزایش انتقال صدا از جدار قفسهٔ سینه رخ می‌دهد؛ نشان‌دهندهٔ کانسالیدیشن.
+\end{itemize}
+{\footnotesize\en{GNOTE}\quad شمارهٔ دست‌نویس: ۳\par}
+
+\pneumoniapage{۸}{پنومونی}
+\subsection*{پنومونی تیپیک}
+\begin{itemize}
+\item الگوی لوبار: استرپ پنومونیه، هموفیلوس آنفلوآنزا، استاف اورئوس، باسیل گرم منفی.
+\item تب، تاکی‌کاردی، تعریق، لرز، سرفه: شروع ناگهانی.
+\end{itemize}
+\subsection*{پنومونی آتیپیک}
+\begin{itemize}
+\item علائم خفیف‌تر.
+\item مایکوپلاسما پنومونیه، کلامیدیا پنومونیه، لژیونلا، ویروس‌های تنفسی.
+\item تدریجی، به صورت \en{patchy} (برونکوپنومونی).
+\item \pneumonianote{واژهٔ خط‌خوردهٔ زیر این بند: «لوبار»}.
+\end{itemize}
+\subsection*{تشخیص \en{CAP}}
+\begin{itemize}
+\item سرفه، خلط چرکی، تب، تنگی نفس + یک انفیلتراسیون جدید در \en{CXR}.
+\item بهترین تست برای ارزیابی اولیهٔ پنومونی: \en{CXR}.
+\item پنوماتوسل در \en{CXR}: استاف اورئوس.
+\item کاویته در لوب فوقانی: \en{TB}.
+\item در بیماران سرپایی: ارزیابی بالینی و \en{CXR}، سپس شروع درمان تجربی.
+\item درمان تجربی: پنوموکوک و پاتوژن‌های آتیپیک را باید پوشش دهد.
+\item بررسی آنتی‌ژن ادرار: پنوموکوک، لژیونلا.
+  \begin{itemize}
+  \item در کودکان می‌تواند مثبت کاذب شود.
+  \item تا هفته‌ها بعد از شروع \en{AB} هم در ادرار باقی می‌ماند.
+  \end{itemize}
+\item نمونهٔ خلط مناسب جهت کشت: بیش از ۲۵ نوتروفیل و کمتر از ۱۰ سلول اپی‌تلیال سنگفرشی در هر \en{LPF}.
+\end{itemize}
+{\footnotesize\en{GNOTE}\quad شمارهٔ دست‌نویس: ۴\par}
+
+\pneumoniapage{۹}{پنومونی}
+% Source sheet additionally prints: Sat. Sun. Mon. Tue. Thu. Wed. Fri.
+{\footnotesize\en{Sat.\quad Sun.\quad Mon.\quad Tue.\quad Thu.\quad Wed.\quad Fri.}\par}
+\begin{itemize}
+\item رنگ‌آمیزی و کشت خلط: بیماران بستری مبتلا به \en{CAP}، به‌ویژه بیماری شدید یا بیماران با خطر \en{MRSA} و سودومونا آئروژینوزا.
+\end{itemize}
+\subsection*{کرایتریای \en{CURB-65}}
+هر کدام ۱ امتیاز (جمعاً ۵).
+\begin{itemize}
+\item \en{C}: کنفیوژن.
+\item \en{U}: اوره بالاتر از \en{7 mmol/L}.
+\item \en{R}: \en{$RR > 30$}.
+\item \en{B}: \en{$SBP \leq 90$} یا \en{$DBP \leq 60$}.
+\item \en{65}: سن بالای ۶۵ سال.
+\item امتیاز صفر: مرگ‌ومیر ۳۰ روزه ۱٫۵\%؛ درمان سرپایی.
+\item امتیاز ۱--۲: بستری؛ مثلاً فقط سن بالای ۶۵ باشد.
+\item امتیاز ۳--۵: میزان مرگ‌ومیر ۳۰ روزه ۲۲\%، ممکن است نیاز به \en{ICU}.
+\end{itemize}
+\begin{itemize}
+\item سایر اندیکاسیون‌های بستری: عدم تحمل \en{PO}، \en{$SpO_2 < 92\%$}، عدم کمپلیانس درمان.
+\item کاهش خفیف هوشیاری معادل کنفیوژن نیست.
+\end{itemize}
+\subsection*{اندیکاسیون \en{ICU}}
+\begin{itemize}
+\item معیارهای ماژور:
+  \begin{itemize}
+  \item شوک سپتیک نیازمند وازوپرسور.
+  \item نارسایی حاد تنفسی و نیاز به انتوباسیون.
+  \end{itemize}
+\item وجود ۳ معیار از ۹ معیار مینور: پنومونی شدید \en{CAP}.
+\item معیارهای مینور:
+  \begin{itemize}
+  \item \en{$RR > 30$}.
+  \item \en{$PaO_2/FiO_2 \leq 250$}.
+  \item انفیلتراسیون مولتی‌لوبار.
+  \item کنفیوژن و دیس‌اورینتیشن.
+  \item \en{$BUN \geq 20\,\mathrm{mg/dl}$}.
+  \item \en{$WBC < 4000$}.
+  \item \en{$Plt < 100{,}000$}.
+  \item \en{$T < 36\,^{\circ}\mathrm{C}$}.
+  \item هایپوتانسیون نیازمند درمان تهاجمی با مایعات.
+  \end{itemize}
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۵\par}
+
+\pneumoniapage{۱۰}{پنومونی}
+{\footnotesize\en{Sat.\quad Sun.\quad Mon.\quad Tue.\quad Thu.\quad Wed.\quad Fri.}\par}
+\subsection*{درمان اولیهٔ بیماران سرپایی \en{CAP}}
+\begin{itemize}
+\item بدون وجود بیماری‌های همراه یا ریسک‌فاکتورهای مقاومت \en{AB} (مصرف \en{AB} طی ۳ ماه گذشته، تماس با سیستم درمان):
+  \begin{itemize}
+  \item \en{a)} آموکسی‌سیلین (یک گرم، \en{TDS}) + یک ماکرولید یا داکسی (\en{100 BD}).
+  \item \en{b)} داکسی‌سایکلین (\en{100 mg, BD}).
+  \item \en{c)} ماکرولید (آزیتر، کلاریتر، کلاریترومایسین \en{ER}).
+  \end{itemize}
+\item وجود بیماری‌های همراه با یا بدون ریسک‌فاکتور مقاومت به آنتی‌بیوتیک:
+  \begin{itemize}
+  \item \en{a)} کوآموکسی‌کلاو (\en{500/125 TDS} یا \en{875/125 BD}) یا یک سفالوسپورین (سفپودوکسیم، سفوروکسیم) + یک ماکرولید یا داکسی.
+  \item \en{b)} فلوروکینولون تنفسی (لوو، موکسی، جمی‌فلوکساسین).
+  \end{itemize}
+\item مبتلایان به \en{CAP} با تست آنفلوآنزا مثبت، صرف‌نظر از تکمیل طول درمان، علاوه بر \en{AB} باید اوسلتامیویر نیز دریافت کنند.
+\end{itemize}
+\subsection*{درمان اولیهٔ بیماران بستری: غیرشدید}
+\begin{itemize}
+\item بدون \en{RF}:
+  \begin{itemize}
+  \item یک بتالاکتام (آمپی‌سیلین/سولباکتام) + یک ماکرولید (آزیتر، کلاریتر).
+  \item فلوروکینولون تنفسی.
+  \end{itemize}
+\item جداسازی تنفسی \en{MRSA} و سودومونا ظرف ۱ سال اخیر:
+  \begin{itemize}
+  \item اضافه کردن پوشش \en{MRSA} (لینزولاید یا ونکو).
+  \item اضافه کردن پوشش سودومونا (تازوسین یا سفپیم یا سفتازیدیم یا ایمی‌پنم یا مروپنم؛ آزترئونام).
+  \end{itemize}
+\item بستری اخیر / \en{AB} سه ماه اخیر + ریسک لوکال:
+  \begin{itemize}
+  \item اضافه کردن پوشش \en{MRSA} و سودومونا تنها اگر کشت مثبت شود.
+  \end{itemize}
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۶\par}
+
+\pneumoniapage{۱۱}{پنومونی}
+{\footnotesize\en{Sat.\quad Sun.\quad Mon.\quad Tue.\quad Thu.\quad Wed.\quad Fri.}\par}
+\subsection*{درمان اولیهٔ بیماران بستری: شدید}
+\begin{itemize}
+\item بدون \en{RF}:
+  \begin{itemize}
+  \item یک بتالاکتام + یک ماکرولید.
+  \item یک بتالاکتام + فلوروکینولون تنفسی.
+  \end{itemize}
+\item جداسازی تنفسی \en{MRSA} و سودومونا ظرف یک سال اخیر: اضافه کردن پوشش برای \en{MRSA} یا سودومونا.
+\item بستری اخیر / \en{AB} سه ماه اخیر + ریسک لوکال:
+  \begin{itemize}
+  \item کشت و یا \en{PCR} برای \en{MRSA}.
+  \item اضافه کردن پوشش برای \en{MRSA} یا سودومونا.
+  \end{itemize}
+\item بیماری‌های زمینه‌ای ریه (برونشکتازی، \en{COPD} خیلی شدید، \en{CF}) ریسک‌فاکتور سودومونا هستند.
+\item استاف مقاوم به متی‌سیلین اکتسابی از جامعه (\en{CA-MRSA}): \en{TMP-SMX}، کلیندامایسین، تتراسایکلین، ونکومایسین، لینزولاید.
+\item \en{MRSA}: ونکو، لینزولاید / لینزولاید ارجح است.
+\end{itemize}
+\subsection*{عدم بهبود بیمار (شکست درمان)}
+\begin{itemize}
+\item بیمار باید از نظر رژیم درمان ارزیابی مجدد شود.
+\item بیماری‌های غیرعفونی در \en{DX} پنومونی: ادم ریوی، \en{PE} (آمبولی)، کارسینوم ریه، پنومونیت ناشی از رادیاسیون، پنومونیت افزایش حساسیتی، بیماری بافت همبند یا \pneumonianote{التهاب ریه}.
+\item عدم پاسخ به درمان یا بدتر شدن شرایط: \en{CT} یا برونکوسکوپی.
+\end{itemize}
+\subsection*{اندیکاسیون درناژ پلورال افیوژن پاراپنومونیک}
+\begin{itemize}
+\item \en{pH} مایع پلور زیر ۷٫۲.
+\item گلوکز زیر ۶۰ (\en{3.3 mmol/L}).
+\item \en{LDH} بالاتر از ۱۰۰۰.
+\item مشاهدهٔ باکتری یا کشت مثبت.
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۷\par}
+
+\pneumoniapage{۱۲}{پنومونی}
+{\footnotesize\en{Sat.\quad Sun.\quad Mon.\quad Tue.\quad Thu.\quad Wed.\quad Fri.}\par}
+\subsection*{پیگیری درمان در \en{CAP}}
+\begin{itemize}
+\item تب و لکوسیتوز به ترتیب طی ۲ و ۴ روز نرمالیزه می‌شوند.
+\item یافته‌های فیزیکی مثل کراکل بیشتر ادامه پیدا می‌کند.
+\item یافته‌های \en{CXR} ظرف ۴--۱۲ هفته محو می‌شوند؛ سرعت آن وابسته به سن بیمار و بیماری ریوی زمینه‌ای است.
+\item سیگار، بستری به علت پنومونی: \en{CXR} مجدد ۴--۶ هفته بعد.
+\item در بیماران سرپایی، در صورت عدم شرایط زیر، نیاز به \en{CXR} پیگیری نیست:
+  \begin{itemize}
+  \item غیرسیگاری، از لحاظ قبلی سالم، بهبودی علائم طی ۵--۷ روز.
+  \end{itemize}
+\item اگر پنومونی در همان مکان مکرراً عود کند: شک به نئوپلاسم زمینه‌ای؛ \en{CT} یا برونکوسکوپی.
+\end{itemize}
+\subsection*{علل \en{VAP}}
+\begin{itemize}
+\item کلونیزاسیون اوروفارنکس با میکروارگانیسم‌های پاتوژن.
+\item آسپیراسیون این ارگانیسم‌ها.
+\item اختلال در مکانیسم‌های دفاعی طبیعی میزبان.
+\end{itemize}
+\subsection*{ریسک‌فاکتورهای \en{VAP}}
+\begin{itemize}
+\item لولهٔ داخل تراشه (\en{ET}): مهم‌ترین ریسک‌فاکتور.
+\item مصرف \en{AB}: سودومونا کمترین در بیمارانی که سابقهٔ مصرف \en{AB} ندارند بیماری ایجاد می‌کند.
+\item فلج ایمنی: هایپرگلیسمی، ترانسفیوژن‌های مکرر.
+\item بیمار دیالیزی مستعد \en{MRSA} است: \en{AB} در صورت نیاز، ونکومایسین.
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۸\par}
+
+\pneumoniapage{۱۳}{پنومونی}
+{\footnotesize\en{Sat.\quad Sun.\quad Mon.\quad Tue.\quad Thu.\quad Wed.\quad Fri.}\par}
+\subsection*{درمان تجربی \en{HAP} و \en{VAP}}
+\begin{itemize}
+\item بدون \en{RF} برای پاتوژن‌های گرم منفی مقاوم: تازوسین، سفپیم، لووفلوکساسین.
+\item وجود ریسک‌فاکتور (\en{AB} قبلی، سابقهٔ بستری، آنتی‌بیوگرام محلی):
+  \begin{itemize}
+  \item تازوسین، سفپیم، سفتازیدیم، ایمی‌پنم، مروپنم.
+  \item + آمیکاسین، جنتا، توبرامایسین، سیپرو، لوو، کلیستین، پلی‌میکسین \en{B}.
+  \end{itemize}
+\item وجود \en{RF} برای \en{MRSA} (\en{AB} قبلی، بستری قبلی، کلونیزاسیون قبلی \en{MRSA}، شیوع بالای منطقه):
+  \begin{itemize}
+  \item لینزولاید، ونکو با دوز تعدیل‌شده.
+  \end{itemize}
+\end{itemize}
+\subsection*{پیشگیری از \en{VAP}}
+\begin{itemize}
+\item اجتناب از \en{ET} و به حداقل رساندن مدت انتوباسیون (مهم‌ترین اقدام).
+\item پرهیز از \en{Sedation} زیاد و مداوم.
+\item پروفیلاکسی با \en{AB}: دورهٔ کوتاه \en{AB} در بیماران \en{Coma}.
+\item حداقل رساندن میکروآسپیراسیون اطراف کاف لولهٔ داخل تراشه.
+\item سر تخت در زاویهٔ ۴۵.
+\item ایجاد \en{PEEP} پروفیلاکتیک ۵--۸ سانتی‌متر.
+\item اجتناب از انتقال بیماران به خارج از \en{ICU}.
+\end{itemize}
+\subsection*{در کدام بیماران داروهای کاهندهٔ اسید معده نمی‌دهیم؟}
+\begin{itemize}
+\item گیرندگان پیوند کبد، انجام جراحی داخل شکمی، مبتلایان به انسداد روده.
+\end{itemize}
+{\footnotesize شمارهٔ دست‌نویس: ۹\par}
+
+\ifnum\PneumoniaStandalone=1
+  \def\PneumoniaFinish{\end{document}}
+\else
+  \let\PneumoniaFinish\relax
+\fi
+\PneumoniaFinish
