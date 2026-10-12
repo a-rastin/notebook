@@ -1,0 +1,231 @@
+% !TeX program = xelatex
+% UTF-8 transcription; source wording and medical claims are preserved.
+% pic01.jpg = 20261012_102738415.jpg (handwritten page 1)
+% pic02.jpg = 20261012_102745727.jpg (handwritten page 2)
+% pic03.jpg = 20261012_102752050.jpg (handwritten page 3)
+% pic04.jpg = 20261012_102802639.jpg (handwritten page 4)
+% pic05.jpg = 20261012_102808885.jpg (handwritten page 5)
+% pic06.jpg = 20261012_102814719.jpg (handwritten page 6)
+% Compile directly with XeLaTeX, or input into a document using xepersian.
+\ifdefined\settextfont
+  \def\SepticArthritisStandalone{0}
+\else
+  \def\SepticArthritisStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\septicpage}[1]{\clearpage\section*{آرتریت سپتیک --- صفحهٔ #1}%
+  {\footnotesize\en{Date \ldots\quad Subject \ldots}\par}}
+\newcommand{\septicfooter}[1]{{\footnotesize\en{GNOTE}\quad #1\par}}
+\ifnum\SepticArthritisStandalone=1 \begin{document}\fi
+
+\septicpage{۱}
+\subsection*{ارگانیسم‌ها}
+\begin{itemize}
+\item \textbf{استاف اورئوس}: شایع‌ترین ارگانیسم غیر گنوکوکی در بزرگسالان.
+  \begin{itemize}
+  \item پس از \textbf{عمل جراحی یا تروما نافذ}: استاف اورئوس.
+  \item سالمندان، خصوصاً آن‌هایی که بیماری زمینه‌ای دارند: باسیل گرم منفی، پنوموکوک، استرپ \en{B}، هموفیلوس.
+  \item آرتروسکوپی، جراحی تعویض مفصل: استاف کوآگولاز منفی.
+  \item نفوذ جسم تیز به داخل کفش پا: سودومونا آئروژینوزا.
+  \item کمبود اولیهٔ ایمونوگلوبولین: مایکوپلاسما.
+    \begin{itemize}
+    \item آرتریت مایکوپلاسما: \textbf{تجویز سریع تتراسایکلین، \en{IVIG}}.
+    \item در غیر این صورت \textbf{تخریب دائمی} مفصل و غضروف.
+    \end{itemize}
+  \item \en{DM}، آرتروز، همودیالیز، بدخیمی: استاف اورئوس، باسیل گرم منفی.
+  \item درمان \en{RA} با مهارکنندهٔ \en{TNF} (\textbf{آباتاسپت، اینفلیکسیمب}): مایکوباکتریایی.
+  \item الکلی‌ها، اختلالات ایمنی هومورال، هموگلوبینوپاتی‌ها: \textbf{پنوموکوک}.
+  \item \en{IVDU}: استاف، استرپ، سودومونا، گرم منفی‌ها.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{الگوی درگیری}
+\begin{itemize}
+\item آرتریت عفونی: در ۹۰\% موارد مونوآرتیکولار است.
+  \begin{itemize}
+  \item \textbf{زانو شایع‌ترین}، سپس هیپ.
+  \item معتادان تزریقی: ستون مهره‌ها، مفصل ساکروایلیاک، استرنوکلاویکولار.
+  % Small marginal annotation beside the sternoclavicular entry is unclear.
+  \item یادداشت حاشیه کنار استرنوکلاویکولار: [خوانش نامطمئن: الگو]، با پیکان.
+  \end{itemize}
+\item عفونت ویروسی: اغلب درگیری پلی‌آرتیکولار.
+\item عفونت باکتریایی: اغلب مونوآرتیکولار یا الیگوآرتیکولار.
+\item \textbf{آرتریت عفونی پلی‌آرتیکولار در \en{RA}} شایع است.
+\end{itemize}
+\septicfooter{۱}
+
+\septicpage{۲}
+\subsection*{علائم}
+\begin{itemize}
+\item \textbf{درد که با حرکت تشدید می‌شود}.
+\item تورم و اریتم و افیوژن.
+\item درد، ناراحتی متوسط تا شدید در اطراف مفصل.
+\item اسپاسم عضلانی، \en{$\mathrm{ROM}\downarrow$}.
+\item تب ۳۸٫۳ تا ۳۸٫۹ و گاهی بالاتر.
+\item در چه افرادی ممکن است تب وجود نداشته باشد؟
+  \begin{itemize}
+  \item \en{RA}، نارسایی کلیه، نارسایی کبد، سرکوب ایمنی.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{بررسی‌ها}
+\begin{itemize}
+\item \textbf{قبل از شروع \en{AB}: نمونهٔ خون، مفصل، مایع سینوویال}.
+\item در آنالیز مایع مفصلی: \textbf{\en{LDH} بالا، گلوکز پایین}.
+\item مایع مفصلی باید حتماً از نظر \textbf{کریستال} بررسی شود: \en{gout}، \en{pseudogout}.
+\item \en{ESR} و \en{CRP} بسیار بالا است. پروکلسیتونین: حساسیت ۸۰\%.
+\item اگر کشت منفی شد ولی شک عفونی بالا بود: اسپکترومتری به روش \textbf{\en{MALDI-TOF}}.
+\item رادیوگرافی:
+  \begin{itemize}
+  \item تورم بافت نرم، افزایش فضای مفصلی، جابه‌جایی عضلات بافتی.
+  \item کاهش فضای مفصل، اروژن استخوان: پس از آن می‌آید.
+  \end{itemize}
+\item \textbf{سونو}: برای بررسی افیوژن \textbf{هیپ}.
+\item \textbf{\en{MRI}، \en{CT}}: برای مفاصل \textbf{ساکروایلیاک، استرنوکلاویکولار، ستون فقرات}.
+\end{itemize}
+\septicfooter{۲}
+
+\septicpage{۳}
+\subsection*{آنالیز مایع سینوویال}
+\begin{itemize}
+\item هدف آنالیز مایع سینوویال:
+  \begin{itemize}
+  \item ۱. التهابی یا غیرالتهابی.
+  \item ظاهر، شمارش سلولی، ویسکوزیته.
+  \item \en{WBC}، ۱۰۰٬۰۰۰ در هر \en{\(\mu\mathrm{L}\)} (\textbf{۲۵٬۰۰۰--۲۵۰٬۰۰۰})، با بیش از ۹۰\% \en{PMN}: عفونت باکتریال.
+  \end{itemize}
+\item شایع‌ترین بیماری زمینه‌ای برای آرتریت سپتیک: \textbf{\en{RA}}؛ \textbf{اغلب استاف اورئوس}.
+\end{itemize}
+
+\subsection*{شروع درمان}
+\begin{itemize}
+\item بلافاصله پس از نمونهٔ خون و مایع سینوویال: \en{AB} امپریکال.
+\item تجویز \en{AB} وریدی باکتریوسیدال.
+\item تزریق \en{AB} داخل مفصلی اندیکاسیون ندارد.
+\end{itemize}
+
+\subsection*{آنتی‌بیوتیک بر اساس اسمیر}
+\begin{itemize}
+\item کوکسی گرم مثبت: ونکومایسین وریدی.
+\item اگر \en{MRSA} نامحتمل باشد: \textbf{سفازولین، اگزاسیلین، نفس‌سیلین}.
+\item باسیل گرم منفی: سفالوسپورین نسل ۳ وریدی؛ سفوتاکسیم، سفتریاکسون.
+\item در \en{IVDU} و بیماران مشکوک به سودومونا: سفپیم، \textbf{سفتازیدیم}.
+  \begin{itemize}
+  \item یادداشت حاشیه: گرم منفی.
+  \end{itemize}
+\item بیمار شدیداً \en{ill}: پوشش سودومونا با \textbf{سفالوسپورین، سیپرو} یا آمینوگلیکوزید.
+\end{itemize}
+
+\subsection*{درمان اختصاصی بر اساس کشت}
+\begin{itemize}
+\item استافیلوکوک: ۴ هفته؛ سفازولین، اگزاسیلین، نفس‌سیلین، ونکومایسین.
+  \begin{itemize}
+  \item اگر شواهد اندوکاردیت نباشد: ۲ هفته \en{IV}، بقیه \en{PO}.
+  \end{itemize}
+\item پنوموکوک و استرپتوکوک حساس به پنی‌سیلین: ۲ هفته / پنی‌سیلین \en{G} (۲ میلیون هر ۴ ساعت \en{IV}).
+\item هموفیلوس آنفلوآنزا، استرپ پنومونیه مقاوم به پنی‌سیلین: ۲ هفته؛ \textbf{سفوتاکسیم، سفتریاکسون}.
+\end{itemize}
+\septicfooter{۳}
+
+\septicpage{۴}
+\subsection*{ادامهٔ درمان اختصاصی}
+\begin{itemize}
+\item گرم منفی روده‌ای: ۳--۴ هفته / سفالوسپورین نسل ۲ یا ۳ \en{IV}، یا فلوروکینولون مثل لوو \en{IV} یا \en{PO}.
+\item سودومونا آئروژینوزا:
+  \begin{itemize}
+  \item حداقل ۲ هفته / آمینوگلیکوزید + پنی‌سیلین وسیع‌الطیف (پیپراسیلین).
+  \item یا سفتازیدیم (سفالوسپورین ضد سودومونا).
+  \item یا فلورو مثل سیپرو + پنی‌سیلین یا سفالوسپورین.
+  \item اگر بعد از ۲ هفته خوب نشد: ۲ هفته تمدید درمان.
+  \end{itemize}
+\item اساس درمان آرتریت باکتریایی: تجویز سریع \en{AB} سیستمیک + \textbf{درناژ چرک} (اگر لازم شد مکرر).
+\item \textbf{آرتروتومی} در \textbf{آرتریت هیپ} خیلی خوب جواب می‌دهد.
+\item تا زمان رفع التهاب، وزن خود را بر روی مفصل \textbf{قرار ندهد}.
+\item \textbf{حرکات مکرر پاسیو} در مفصل درگیر انجام شود.
+\item بی‌حرکت نمودن مفصل لازم نیست.
+\end{itemize}
+
+\subsection*{عفونت گنوکوکی منتشر (\en{DGI})}
+\begin{itemize}
+\item تب، لرز، بثورات جلدی، علائم مفصلی.
+\item پوسچول‌های هموراژیک بر روی تنه، سطح اکستنسور، قسمت انتهایی اندام‌ها.
+\item \textbf{آرتریت مهاجر}.
+\item تنوسینوویت زانو، دست، مچ دست و پا، پا.
+\item علائم پوستی و مفصلی در \en{DGI}: فعل و انفعال ایمنی و رسوب کمپلکس ایمنی ایجاد می‌شود.
+  \begin{itemize}
+  \item \textbf{کشت مایع مفصلی همواره منفی}.
+  \item کشت خون در بیش از ۴۵\% مثبت می‌شود.
+  \end{itemize}
+\item آسپیراسیون مایع مفصلی در \en{DGI} منفی است و ۱۰٬۰۰۰ تا ۲۰٬۰۰۰ سلول دارد.
+\end{itemize}
+\septicfooter{۴}
+
+\septicpage{۵}
+\subsection*{آرتریت سپتیک گنوکوکی}
+\begin{itemize}
+\item \textbf{همواره متعاقب \en{DGI}} رخ می‌دهد.
+\item درگیری \textbf{مونوآرتیکولار}: هیپ، زانو، مچ پا، مچ دست.
+\item مایع سینوویال: \textbf{\en{$\mathrm{WBC}>50{,}000$}}.
+\item \textbf{کشت خون همواره منفی}، کشت مایع مفصلی در ۴۰\% مثبت.
+  \begin{itemize}
+  \item محیط کشت مناسب برای گنوکوک: \textbf{آگار--تایر--مارتین}.
+  \end{itemize}
+\item تشخیص \en{DNA} گنوکوک در مایع سینوویال بر اساس \textbf{\en{NAA}}: بسیار حساس.
+\item زنان در هنگام قاعدگی یا \textbf{حاملگی} بیشترین ریسک ابتلا به \en{DGI} و آرتریت گنوکوکی.
+\item درمان اولیه: \textbf{سفتریاکسون} / ۷ روز درمان.
+\item بیمار \en{DGI} باید درمان کلامیدیا تراکوماتیس را نیز دریافت کند مگر اینکه \en{R/O} شده باشد: \textbf{آزیترومایسین}.
+\item شریک جنسی هم آزمایش و درمان باید شود.
+\end{itemize}
+
+\subsection*{آرتریت سلی}
+\begin{itemize}
+\item آرتریت سلی (در ۱\% موارد سل و ۱۰\% موارد سل خارج ریوی).
+\item \textbf{مونوآرتریت گرانولوماتوز مزمن}: شایع‌ترین تظاهر؛ از چند ماه قبل.
+\item \textbf{سندرم \en{Poncet}}: پلی‌آرتریت مفاصل واکنشی.
+\item مفاصل بزرگ \en{weight bearing}: \textbf{هیپ، زانو، مچ پا}.
+\item سل ریوی فعال هم‌زمان ناشایع است.
+\item در بیماران نقص ایمنی شایع‌تر است.
+\item کشت بافت سینوویال با بیوپسی: در ۹۰\% موارد مثبت است.
+  \begin{itemize}
+  \item \en{Report}: \textbf{التهاب گرانولوماتوز}.
+  \end{itemize}
+\item تشخیص: \textbf{\en{NAA}} (\en{CPR}).
+  % The source explicitly writes CPR, retained without changing it to PCR.
+\item کشت مایع سینوویال در ۸۰\% موارد مثبت؛ ۵۰\% هم \en{PMN}.
+\item رنگ‌آمیزی اسید--فست در ۲۰\% موارد مثبت.
+\end{itemize}
+\septicfooter{۵}
+
+\septicpage{۶}
+\subsection*{یافته‌های رادیوگرافیک آرتریت سلی}
+\begin{latin}
+Peripheral Erosions, Periarticular osteopenia, Joint space narrowing
+\end{latin}
+
+\subsection*{درمان عفونت در مفاصل مصنوعی}
+\begin{itemize}
+\item اغلب نیاز به \textbf{تعویض پروتز}.
+\item \textbf{\en{AB} وریدی ۴--۶ هفته پیش از جراحی} تعویض مفصل باید داده شود.
+\item چه زمانی نیاز به تعویض نیست؟
+  \begin{itemize}
+  \item عفونت استرپ یا پنوموکوک در صورتی که شل‌شدگی پروتز در گرافی دیده نشود.
+  \item آرتروتومی یا آرتروسکوپی.
+  \end{itemize}
+\item \en{AB} در استاف: ریفامپین خوراکی + کینولون یا پنی‌سیلین ضد استاف یا ونکو.
+\item \en{AB} پروفیلاکسی برای اقدامات دندان‌پزشکی و اورولوژی در بیمار با تعویض مفصل اندیکاسیون ندارد.
+\item سنگ‌شکنی و جراحی روده: پروفیلاکسی با \textbf{سفازولین}؛ برای \en{MSSA}.
+\end{itemize}
+\septicfooter{۶}
+
+\ifnum\SepticArthritisStandalone=1
+  \let\SepticArthritisEnd\enddocument
+\else
+  \let\SepticArthritisEnd\relax
+\fi
+\SepticArthritisEnd
