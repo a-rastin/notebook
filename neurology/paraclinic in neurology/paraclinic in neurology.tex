@@ -1,0 +1,196 @@
+% !TeX program = xelatex
+% UTF-8 transcription; numerical values and abbreviations follow the notes.
+% pic01.jpg = 20261012_211920204.jpg (page 1)
+% pic02.jpg = 20261012_211926338.jpg (page 2)
+% pic03.jpg = 20261012_211931934.jpg (page 3)
+% pic04.jpg = 20261012_211936588.jpg (page 4)
+% Compile directly with XeLaTeX or input into a XePersian book.
+\newif\ifParaclinicStandalone
+\ifdefined\settextfont
+  \ParaclinicStandalonefalse
+\else
+  \ParaclinicStandalonetrue
+\fi
+\ifParaclinicStandalone
+  \documentclass[a4paper,12pt]{extbook}
+  \usepackage[margin=2.5cm]{geometry}
+  \usepackage{xcolor}
+  \usepackage{amsmath}
+  \usepackage{enumitem}
+  \usepackage{xepersian}
+  \settextfont{Amiri}
+  \setlatintextfont{FreeSerif}
+  \pagestyle{plain}
+\fi
+\ifParaclinicStandalone
+  \begin{document}
+\fi
+\begingroup
+\emergencystretch=3em
+\newcommand{\PCen}[1]{\lr{#1}}
+\newcommand{\PCmath}[1]{\lr{$#1$}}
+\ifdefined\colorbox
+  \newcommand{\PChl}[1]{\colorbox{yellow!35}{\strut #1}}
+\else
+  \newcommand{\PChl}[1]{\textbf{#1}}
+\fi
+\newcommand{\PCunclear}[1]{#1 [خوانش نامطمئن]}
+\newcommand{\PCpage}[1]{%
+  \clearpage\section*{صفحهٔ #1 ـ ۲ ـ پاراکلینیک در نورولوژی}%
+  {\footnotesize\noindent\PCen{Date: / /}\quad
+  \PCen{Sat. Sun. Mon. Tue. Thu. Wed. Fri.}\quad\PCen{Subject:}\par}\medskip}
+
+\chapter{پاراکلینیک در نورولوژی}
+
+\PCpage{۱}
+\section*{کنتراندیکاسیون‌های \PCen{LP}}
+\begin{itemize}
+\item \PChl{عفونت موضعی} محل پانکشن: \PChl{تنها کنتراندیکاسیون مطلق}.
+  \begin{itemize}
+  \item پانکشن از یک فضا بالاتر یا پایین‌تر؛ \PCunclear{نکردن، بهترین}.
+  \end{itemize}
+\item شک به تودهٔ داخل جمجمه: ریسک هرنی ترانس‌تنتوریال یا تونسیلار مخچه‌ای.
+  \begin{itemize}
+  \item \PChl{سردرد یا ادم پاپی}: \PCen{RF} برای وجود ضایعهٔ فضاگیر.
+  \item قبل از \PCen{LP}، \PChl{\PCen{CT} یا \PCen{MRI}}.
+  \end{itemize}
+\item شک به تودهٔ نخاع: باید قبلش تصویربرداری کرد.
+\item اختلال انعقادی: \PChl{\PCmath{plt < 20{,}000\text{--}50{,}000}}.
+  \begin{itemize}
+  \item اختلال عملکرد پلاکت (\PChl{الکلیسم، اورمی}).
+  \item کمبود فاکتورها (\PChl{\PCmath{INR > 1.4}}، \PChl{\PCmath{PT > 14}}).
+  \end{itemize}
+\end{itemize}
+
+\section*{عوارض \PCen{LP}}
+\begin{itemize}
+\item \PChl{سردرد: شایع‌ترین عارضه} / در \PCmath{\tfrac{1}{3}} / با ایستادن تشدید و با دراز کشیدن بهتر می‌شود.
+  \begin{itemize}
+  \item درمان با \PChl{\PCen{NSAID} یا کافئین}.
+  \item در صورت مقاومت به درمان: یک \PCen{Patch} از خون بیمار در فضای اپیدورال محل نشت \PCen{CSF}.
+  \end{itemize}
+\item \PChl{تجویز مایعات زیاد} یا خواباندن بیمار در بستر به مدت ۱–۲ ساعت احتمال سردرد را \PChl{کاهش نمی‌دهد}.
+\item خونریزی: جهت درمان اصلاح کوآگولوپاتی / گاهی خارج کردن لخته با جراحی.
+  \begin{itemize}
+  \item بررسی بیمار از نظر فشار بر نخاع، توسط هماتوم اپیدورال یا ساب‌دورال.
+  \end{itemize}
+\end{itemize}
+\section*{\PCen{CSF} خونی}
+\PCen{LP} تروماتیک / خونریزی ساب‌آراکنوئید (\PChl{\PCen{SAH}}).
+
+\PCpage{۲}
+\section*{موارد به نفع \PCen{LP} تروماتیک}
+\begin{enumerate}[label=\protect\PCen{\alph*)}]
+\item \PChl{فشار \PCen{CSF} طبیعی} (\PChl{\PCmath{100\text{--}180\ \mathrm{mmH_2O}}}).
+\item به‌تدریج خون کم شود.
+\item در نمونه‌های متوالی \PCen{RBC} کم شود.
+\item اگر هماتوکریت بالا باشد، ۱–۲ \PCen{WBC} به ازای هر ۱۰۰۰ \PCen{RBC}.
+\item اگر نمونهٔ \PCen{CSF} را بلافاصله سانتریفیوژ کنیم، موارد زیر به نفع:
+  \begin{itemize}
+  \item اگر بخش فوقانی نمونه بی‌رنگ باشد: \PCen{LP} تروماتیک.
+  \item وجود \PCunclear{اریتروکرومی} در ابتدا و سپس زانتوکرومی پس از ۲۴ ساعت: \PCen{SAH}.
+  \item سایر علل زانتوکرومی \PCen{CSF}:
+    \begin{itemize}
+    \item \PCunclear{\PCmath{Bil > 4\text{--}9\ \mathrm{mg/dl}}}.
+    \item \PCmath{pro > 150\ \mathrm{mg/dl}}.
+    \item وجود پیگمان کاروتن.
+    \end{itemize}
+  \end{itemize}
+% The handwritten list jumps from e to g; its lettering is preserved.
+\setcounter{enumi}{6}
+\item لخته شدن مایع \PCen{CSF}: به نفع \PCen{LP} تروماتیک است.
+\end{enumerate}
+
+\section*{آنالیز \PCen{CSF}}
+\begin{itemize}
+\item فشار \PCen{CSF}: در بالغین \PChl{\PCmath{100\text{--}180\ \mathrm{mmH_2O}}} / در کودکان \PChl{\PCmath{30\text{--}60\ \mathrm{mmH_2O}}}.
+\item \PChl{فشار \PCmath{>200\ \mathrm{mmH_2O}}}: \PCmath{ICP\uparrow}.
+  \begin{itemize}
+  \item توده‌های اینتراکرانیال، مننگوانسفالیت، \PCen{SAH}، سودوتومور سربری.
+  \end{itemize}
+\item ظاهر \PCen{CSF}: شفاف و بی‌رنگ.
+\item اگر \PChl{\PCmath{WBC > 300/\mathrm{mm}^3}}: \PChl{کدر} می‌شود.
+\item حداکثر \PChl{۵ لنفوسیت یا مونوسیت} در هر \PCmath{\mathrm{mm}^3}: \PChl{\PCen{PMN} نباید باشد}.
+\item علل \PCmath{WBC\uparrow}: عفونت، واسکولیت، نئوپلاسم، التهاب ایمونولوژیک، واکنش به خون، مواد شیمیایی.
+\end{itemize}
+
+\PCpage{۳}
+\section*{ادامهٔ آنالیز \PCen{CSF}}
+\begin{itemize}
+\item \PCen{pro} در \PCen{CSF}: در بالغین \PChl{\PCmath{25\text{--}45\ \mathrm{mg/dl}}} / در کودکان \PChl{\PCmath{<20\ \mathrm{mg/dl}}}.
+\item علل \PCmath{pro\uparrow}: \PChl{مننژیت باکتریال} (\PChl{\PCmath{>500}})، \PChl{عفونت ویروسی \PCen{CSF}} (\PChl{\PCmath{\leq200}})، تومورهای اطراف طناب، گیلن‌باره، انسداد در جریان \PCen{CSF}.
+\item علل \PCmath{pro\downarrow}: \PChl{هایپرتیروئیدی}، \PChl{\PCmath{ICP\downarrow}}.
+\item \PCen{pro} خاص در \PCen{CSF}:
+  \begin{itemize}
+  \item تائو پروتئین: آلزایمر.
+  \item \PChl{گاماگلوبولین: \PCen{MS}}.
+  \item \PCen{14-3-3}: بیماری پریون.
+  \end{itemize}
+\item گلوکز در \PCen{CSF}: \PChl{\PCmath{\tfrac{2}{3}} غلظت گلوکز سرم} / ۴۰–۸۰ / \PChl{مقادیر \PCmath{<35} غیرطبیعی}.
+  \begin{itemize}
+  \item نمونهٔ \PCen{CSF} و خون باید همزمان و ناشتا گرفته شود و یا نمونهٔ سرم ۲–۴ ساعت قبل از نمونهٔ \PCen{CSF} گرفته شود.
+  \end{itemize}
+\item علل \PChl{گلوکز \PCmath{\downarrow} + پلئوسیتوز}:
+  \begin{itemize}
+  \item مننژیت چرکی، سلی یا قارچی.
+  \item \PChl{مننژیت کارسینوماتوز}.
+  \item \PChl{سارکوئیدوز}.
+  \item \PChl{\PCen{SAH} در هفتهٔ اول}.
+  \end{itemize}
+\item عفونت‌های ویروسی سبب \PCmath{\downarrow} گلوکز نمی‌شوند.
+\end{itemize}
+
+\section*{\PCen{EEG}}
+\begin{itemize}
+\item مفیدترین تست تشخیصی در بیماران مشکوک به صرع.
+\item کاربرد تشخیصی: وجود فعالیت اپی‌لپتی‌فرم: قویاً به نفع صرع.
+  \begin{itemize}
+  \item در ۲\% افراد طبیعی نیز وجود دارد.
+  \end{itemize}
+\item کاربرد در تقسیم‌بندی صرع، انتخاب درمان مناسب، تعیین پیش‌آگهی، تصمیم برای قطع دارو، تشخیص استاتوس اپیلپتیکوس بدون حرکات تشنجی.
+\item \PChl{امواج فوکال آهسته} در \PCen{EEG} به نفع وجود \PChl{ضایعهٔ فوکال} است.
+\end{itemize}
+
+\PCpage{۴}
+\section*{ادامهٔ \PCen{EEG}}
+\begin{itemize}
+\item \PCen{EEG} در اختلال سطح هوشیاری: تغییرات \PCen{EEG} با توجه به اتیولوژی، غیراختصاصی است ولی با شدت اختلال سطح هوشیاری مرتبط است.
+  \begin{itemize}
+  \item کاربرد: بررسی علل متابولیک، لوکالیزاسیون فوکال یا منتشر بودن ضایعه؛ بررسی وجود استاتوس بدون حرکات، ارزیابی پیش‌آگهی.
+  \end{itemize}
+\item \PCen{EEG} در بیمار مرگ مغزی ایزوالکتریک است.
+\item امواج پریودیک در \PCen{EEG}:
+  \begin{itemize}
+  \item \PChl{پان‌انسفالیت اسکلروزان تحت حاد}، \PCen{SASPE}.
+  \item \PChl{بیماری کروتزفلد ـ یاکوب}.
+  \end{itemize}
+\end{itemize}
+
+\section*{\PCen{CT}}
+\begin{itemize}
+\item وضوح خون از ابتدای خونریزی در \PCen{CT} نسبت به \PCen{MRI} بهتر است.
+\item کلسیم، چربی، استخوان مخصوصاً در کف جمجمه و پرده‌ها در \PCen{CT} بهتر دیده می‌شوند.
+\item \PChl{در بیمار مشکوک به سکتهٔ مغزی حاد}، اولین اقدام تشخیصی \PChl{\PCen{CT} بدون کنتراست}.
+  \begin{itemize}
+  \item در موارد ایسکمیک تا \PCen{48h} اولیه چیزی دیده نمی‌شود.
+  \end{itemize}
+\end{itemize}
+
+\section*{موارد برتری \PCen{MRI}}
+\begin{itemize}
+\item افتراق بهتر مادهٔ سفید و خاکستری.
+\item ضایعات \PCunclear{کوچک}، ورتکس، حفرهٔ خلفی، نخاع، هیپوفیز.
+% One word before "ورتکس" has been overwritten in the source.
+\item تعیین پلاک‌های \PCen{MS}.
+\item تعیین ضایعات مولد صرع (\PChl{دیسپلازی کورتکس}).
+\item تشخیص سریع انفارکتوس مغز طی چند ساعت پس از آغاز و \PCunclear{مدت آن} (\PCen{DWI}).
+\item تعیین سیگنال‌های غیرطبیعی مادهٔ سفید.
+\item پاتولوژی‌های پارانشیم مغز و نخاع، تعیین اندازهٔ تومورها.
+\item امکان تصویر برداشتن چندسطحی.
+\item کشف ادم، التهاب \PCunclear{مفصل} و آبسه.
+\end{itemize}
+
+\endgroup
+\ifParaclinicStandalone
+  \expandafter\enddocument
+\fi
