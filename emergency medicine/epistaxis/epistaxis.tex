@@ -1,0 +1,180 @@
+% !TeX program = xelatex
+% UTF-8 transcription; source wording and doses are retained, not corrected.
+% pic01.jpg = 20261012_180426792.jpg (page 1)
+% pic02.jpg = 20261012_180433314.jpg (page 2)
+% pic03.jpg = 20261012_180439481.jpg (page 3)
+% pic04.jpg = 20261012_180444764.jpg (page 4)
+% pic05.jpg = 20261012_180449540.jpg (page 5)
+% Standalone XeLaTeX document; also usable with \input in a XePersian document.
+\ifdefined\settextfont
+  \def\EpistaxisStandalone{0}
+\else
+  \def\EpistaxisStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\epipage}[1]{\clearpage\section*{صفحهٔ #1}
+  {\footnotesize\en{Subject: \qquad Date: / /}\par}}
+\newcommand{\epiprint}{\par{\footnotesize\en{YASHA}\par}}
+\newcommand{\epiunclear}[1]{[خوانش نامطمئن: #1]}
+\ifnum\EpistaxisStandalone=1 \begin{document}\fi
+
+\epipage{۱}
+\section*{\en{Chapter 244 -- Epistaxis}}
+تینتالی
+\begin{itemize}
+\item ۶۰٪ مردم در طول عمر خود دچار اپیستاکسی می‌شوند.
+\item کدام بیماران اپیستاکسی به اورژانس می‌آیند؟ زیر ۱۰ سال / بالای ۵۰ سال.
+\end{itemize}
+\subsection*{علل شایع اپیستاکسی}
+\begin{itemize}
+\item \en{Digital Trauma}.
+\item انحراف سپتوم.
+\item خشکی مخاط بینی.
+\item رینوسینوزیت.
+\item نئوپلاسم.
+\item تحریک شیمیایی (کوکائین استنشاقی، آمونیاک).
+\end{itemize}
+\subsection*{علل سیستمیک که خطر خونریزی را بالا می‌برند}
+\begin{itemize}
+\item نارسایی مزمن کلیوی.
+\item الکلیسم.
+\item فشار خون.
+\item مالفورماسیون عروقی مثل \en{HHT} (هرِدیتری هموراژیک تلانژکتازی).
+\item کوآگولوپاتی‌ها.
+\item مصرف آنتی‌کوآگولان.
+\item بیماری فون ویلیبراند (\en{vWD}).
+\item هموفیلی.
+\end{itemize}
+\epiprint
+{\footnotesize شمارهٔ دست‌نویس: ۱.\par}
+
+\epipage{۲}
+\subsection*{آناتومی و پاتوفیزیولوژی}
+\begin{itemize}
+\item شاخهٔ سوپریور \en{labial} از شریان \en{facial}
+  + شاخهٔ انتریور اتموئیدال
+  + شاخهٔ ترمینال شریان اسفنوپالاتین
+  $\Leftarrow$ شبکهٔ کیسل‌باخ در انتریور نازال سپتوم.
+\item محل ۹۰٪ موارد اپیستاکسی است.
+\item در رینوسکوپی قدامی قابل مشاهده است.
+\item شایع‌ترین محل برای خونریزی‌های خلفی: شریان اسفنوپالاتین؛
+  شاخهٔ انتهایی شریان اینترنال ماگزیلاری؛ شاخهٔ اکسترنال کاروتید.
+\end{itemize}
+\subsection*{یافته‌ها بالینی}
+\begin{itemize}
+\item در شرح حال: الکل، دارو، \en{NSAID}، مواد مخدر، ضدانعقاد، ضدپلاکت؛
+  سابقهٔ تروما به بینی، جراحی قبلی بینی؛ شرح حال کوآگولوپاتی.
+\item برای معاینه بیمار باید به پرهیز \en{Sniffing} توصیه شود.
+\end{itemize}
+\subsection*{تشخیص}
+\begin{itemize}
+\item اپیستاکسی قدامی از خلفی را افتراق دهید.
+\item در اورژانس موارد خلفی را زمانی تشخیص می‌دهیم که دیگر موارد شکست بخورد.
+\item شواهد به نفع خونریزی خلفی:
+  \begin{itemize}
+  \item بیمار مسن با کوآگولوپاتی ارثی یا اکتسابی.
+  \item رؤیت خون حجیم در نازوفارنکس.
+  \item خونریزی دوطرفه.
+  \item عدم پاسخ به پک قدامی.
+  \end{itemize}
+\end{itemize}
+\epiprint
+{\footnotesize شمارهٔ دست‌نویس: ۲.\par}
+
+\epipage{۳}
+\subsection*{بررسی آزمایشگاهی}
+\begin{itemize}
+\item نیاز نیست مگر \epiunclear{هیچ بیمار به همودینامیک ناپایدار آن باشد}
+  یا خونریزی به سختی کنترل شود.
+% The clause after "مگر" is indistinct; its visible reading is retained above.
+\item اگر آزمایش خواستیم:
+  \begin{itemize}
+  \item \en{CBC}.
+  \item پنل انعقادی.
+  \item \en{BG} و کراس‌مچ.
+  \item پنل کامل متابولیک (ارزیابی کبدی).
+  \end{itemize}
+\end{itemize}
+\subsection*{درمان اولیه}
+\begin{itemize}
+\item \en{Rapid primary survey}: در اختلال در راه هوایی یا همودینامیک بیمار.
+\item \en{IV line} در بیمار با خونریزی شدید.
+\item کراس‌مچ اگر همودینامیک ناپایدار است.
+\item رفع کوآگولوپاتی به آنالیز آزمایش‌ها با دادن فرآوردهٔ خونی.
+\item پایین آوردن سریع \en{BP} در اپیستاکسی حاد توصیه نمی‌شود.
+\item زمانی \en{BP} را پایین می‌آوریم (کم و آهسته) که نیاز به \en{packing} یا
+  مداخلهٔ جراحی پیدا کند؛ کاهش فشار هیدرواستاتیک به تشکیل لخته کمک می‌کند.
+\end{itemize}
+\subsection*{فشار مستقیم بر روی بینی}
+\begin{itemize}
+\item در ابتدا می‌خواهیم که فین کند تا مخاط‌های زائد و لختهٔ کوچک‌ها پاک شود.
+\item از یک وازوکانستریکتور موضعی استفاده می‌کنیم:
+  \begin{itemize}
+  \item \en{Oxymetazolin 0.5\%}.
+  \item فنیل‌افرین.
+  \end{itemize}
+\item پرهیز \en{Sniffing}، رو به جلو \en{lean forward}.
+\item \en{10--15 min} بر روی بینی فشار وارد کند و با دهان تنفس کند.
+\end{itemize}
+\epiprint
+{\footnotesize شمارهٔ دست‌نویس: ۳.\par
+لبهٔ پایین تصویر، از صفحهٔ زیرین: خونریزی دوطرفه؛ عدم پاسخ به پک قدامی؛ ۲.\par}
+
+\epipage{۴}
+\subsection*{کاتتریزاسیون \en{chemical}}
+\begin{itemize}
+\item اگر ۲ نوبت تلاش با فشار دادن موفق نبود.
+\item \en{Silver Nitrate} قدم بعدی برای درمان اولیه است.
+\item در ابتدا گاز آغشته به نسبت \en{1:1}، \en{Oxy 0.05\%} و لیدو ۴٪
+  (۳ گاز) برای بی‌حسی ناحیه.
+\item اگر شریان خونریزی‌دهنده رؤیت شده است از این روش استفاده می‌کنیم.
+\item وقتی رگ شناسایی شد، چوب سیلور نیترات را به پروگزیمال رگ می‌زنیم.
+\item باید در محیط بدون خون باشد، وگرنه جواب نمی‌دهد.
+\item چند ثانیه آن را می‌گذاریم بعد برمی‌داریم.
+\item هرگز نباید دوطرفه انجام شود.
+\item تا ۴–۶ هفته بعد از یک اقدام، نباید دوباره تکرار گردد.
+\end{itemize}
+\subsection*{ژل‌ها ترومبوژنیک و ترانگزامیک اسید}
+\begin{itemize}
+\item \en{200 mg} از محلول \en{100 mg/ml}، \en{TXA} اتمایز شود در ناستریل.
+\item \en{500 mg TXA} در \en{5 cc NS} اتمایز در ناستریل.
+\item تامپون آغشته به \en{500 mg TXA} سپس داخل ناستریل.
+% The handwritten quantities above are transcribed verbatim.
+\end{itemize}
+\subsection*{پک قدامی بینی}
+\begin{itemize}
+\item اگر فشار مستقیم، کوتر شیمیایی، وازوکانستریکتور جواب نداد و
+  ژل و فوم ترومبوژنیک در دسترس نبود.
+\end{itemize}
+\epiprint
+{\footnotesize شمارهٔ دست‌نویس: ۴.\par}
+
+\epipage{۵}
+\subsection*{تعیین و فالوآپ}
+\begin{itemize}
+\item خونریزی کنترل، همودینامیک پایدار: بیش از ۱ ساعت در \en{ED}.
+\item بیمار با اپیستاکسی قدامی قابل ترخیص است.
+\item \en{ENT} فالوآپ ۴۸–۷۲ ساعت.
+\item بیمار روی وارفارین که \en{INR} در رنج مورد انتظار است:
+  ادامهٔ مصرف وارفارین.
+\item \en{NSAID} حداقل ۳–۴ روز قطع شود.
+\item اگر \en{pack} قرار گرفته است بیش از \en{48 h} بماند:
+  \en{ABT} برای کاوریج استاف؛ آموکسی‌کلاو.
+\item اگر بیمار \en{Posterior pack} شد: بستری.
+\end{itemize}
+\epiprint
+{\footnotesize شمارهٔ دست‌نویس: ۵.\par
+لبهٔ پایین تصویر، از صفحهٔ زیرین: ۴؛ باقی نوشته بریده و ناخواناست.\par}
+
+\ifnum\EpistaxisStandalone=1
+  \let\EpistaxisEnd\enddocument
+\else
+  \let\EpistaxisEnd\relax
+\fi
+\EpistaxisEnd
