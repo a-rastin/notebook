@@ -1,0 +1,92 @@
+% !TeX program = xelatex
+% UTF-8 transcription of the three handwritten source pages.
+% Source images, in page order:
+% images/pic01.jpg = 20261012_190226247.jpg
+% images/pic02.jpg = 20261012_190233342.jpg
+% images/pic03.jpg = 20261012_190238691.jpg
+% Source abbreviations (including DOE and CHADSV) are retained as written.
+% Compile standalone with XeLaTeX, or input into a XePersian document.
+\ifdefined\settextfont
+  \def\HCMStandalone{0}
+\else
+  \def\HCMStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\HCMpage}[1]{%
+  \clearpage
+  \section*{موضوع: براونوالد ـ ۵۴ ـ \en{HCM}}
+  {\footnotesize تاریخ: \en{/ /}\quad صفحهٔ #1\par}}
+\ifnum\HCMStandalone=1 \begin{document}\fi
+
+\HCMpage{۱}
+\begin{itemize}
+\item \en{HCM} یک اختلال اولیهٔ میوکارد است.
+  \begin{itemize}
+  \item \en{LVH} غیرقابل توجیه.
+  \end{itemize}
+\item شیوع \en{HCM} یک نفر در هر ۵۰۰ نفر است.
+\item پاتولوژی آن نقص در ژن‌های سارکومرها در میوکارد است.
+\item یک \en{DOE} است.
+  \begin{itemize}
+  \item ضخامت دیوارهٔ \en{LV}: \en{$\geq 15$} میلی‌متر.
+  \item اگر \en{FH+}: \en{$\geq 13$}.
+  \end{itemize}
+\item در فردی تشخیص \en{HCM} گرفت، اقوام درجهٔ اولش باید بررسی شوند.
+  \begin{itemize}
+  \item سپس در بزرگسالان هر ۵ سال.
+  \item نوجوانان و کودکان هر ۱–۲ سال.
+  \end{itemize}
+\item اپروچ به \en{HCM}:
+  \begin{itemize}
+  \item غربالگری خانواده.
+  \item تعیین ریسک برای \en{SCD}.
+  \item رفع علائم.
+  \end{itemize}
+\item \en{SCD} در کمتر از ۱\% بیماران \en{HCM} سالانه رخ می‌دهد.
+\end{itemize}
+
+\HCMpage{۲}
+\begin{itemize}
+\item اندیکاسیون \en{COR 1} برای \en{ICD}:
+  \begin{itemize}
+  \item ارست قلبی قبلی.
+  \item \en{Sustained VT}.
+  \end{itemize}
+\item هیچ دارویی سیر و تحول \en{HCM} را بهبود نمی‌دهد.
+\item هیچ مداخله‌ای سیر و تحول بیماران بدون علامت را بهبود نمی‌دهد.
+\item[$\ast$] بیمار بدون علامت نیازمند شروع هیچ درمانی نیست.
+\item علائم: دیسپنه، \en{CP}، پره‌سنکوپ؛ مکانیسم: \en{LVOTO}.
+\item بیمار علامت‌دار: \en{BB}، وراپامیل، دیلتیازم؛ هر ۳ اینوتروپ منفی.
+\item معیار پاسخ به درمان رفع علائم بیمار است، نه یافته‌های اکو.
+\item اگر به یک دارو پاسخ نداد: تعویض دارو.
+\item اگر باز هم پاسخ نداد: اضافه کردن دیزوپیرامید به دارو (\en{IN}).
+\item ۲۰\% بیماران \en{HCM} دچار \en{AF} می‌شوند.
+\end{itemize}
+
+\HCMpage{۳}
+\begin{itemize}
+\item هدف درمان \en{AF} در \en{HCM}: ریت کنترل و ریتم کنترل.
+  \begin{itemize}
+  \item ریت کنترل: \en{BB}، وراپامیل، دیلتیازم.
+  \item ریتم کنترل: آمیودارون، دوفتیلاید، سوتالول، دیزوپیرامید.
+  \end{itemize}
+\item از معیار \en{CHADSV} در \en{HCM} استفاده نمی‌شود.
+  \begin{itemize}
+  \item اگر \en{AF} رخ داد، به همه \en{OAC} می‌دهیم.
+  \end{itemize}
+\end{itemize}
+
+% Repeated subject/date labels and handwritten page numbers are reproduced above.
+% The printed notebook icon has no text.
+\ifnum\HCMStandalone=1
+  \let\HCMEnd\enddocument
+\else
+  \let\HCMEnd\relax
+\fi
+\HCMEnd
