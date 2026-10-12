@@ -1,0 +1,181 @@
+% !TeX program = xelatex
+% UTF-8 transcription of the five handwritten pages, retaining source terminology.
+% pic01.jpg = 20261012_204555439.jpg
+% pic02.jpg = 20261012_204601180.jpg
+% pic03.jpg = 20261012_204606399.jpg
+% pic04.jpg = 20261012_204611655.jpg
+% pic05.jpg = 20261012_204616881.jpg
+% Compile standalone with XeLaTeX, or input into an existing XePersian document.
+\ifdefined\settextfont
+  \def\PHTNStandalone{0}
+\else
+  \def\PHTNStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage[normalem]{ulem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\phtnuncertain}[1]{#1\,\textsuperscript{[خوانش نامطمئن]}}
+\newcommand{\phtnpage}[2]{\clearpage
+  \section*{موضوع: براونوالد ـ ۸۸ ـ \en{pHTN} #2}
+  {\footnotesize تاریخ: \en{/ /}\quad صفحهٔ #1\par}}
+\ifnum\PHTNStandalone=1 \begin{document}\fi
+
+\phtnpage{۱}{}
+\subsection*{شرح حال بیمار \en{pHTN}}
+\begin{itemize}
+\item تنگی نفس، خستگی، دیستنشن شکمی، ادم اندام تحتانی، ضعف، محدودیت فعالیت، سنکوپ.
+\item آنژین قلبی و سنکوپ: تظاهرات \en{high Risk}؛ \en{$\longrightarrow$ PAH Emergency}.
+\end{itemize}
+\subsection*{معاینهٔ فیزیکی}
+شواهد \en{Right sided pressure and Volume Overload}:
+\begin{itemize}
+\item \en{JVP} برجسته، کبد نبض‌دار، سمع \en{$S_3$}.
+\end{itemize}
+\subsection*{\en{Cor pulmonale}}
+دکامپنسی قلب راست مرحلهٔ انتهایی \en{RV-PA} است که در هر بیمار با \en{$\downarrow$ BP} و انتهاهای سرد که در حالت استراحت محدودیت شدید فعالیت و شواهد \en{HF} داشته، \phtnuncertain{آنگاه با \en{HSc} وارونه به آن شک کرد}.
+\subsection*{\en{PAH}}
+\begin{itemize}
+\item درمان: شروع درمان ۲ دارویی است.
+\end{itemize}
+\begin{latin}
+\noindent Ambrisentan + Tadalafil (PDE-V Inhibitor)\par
+\noindent Ambrisentan $\longrightarrow$ Selective Endothelin receptor, type A antagonist.
+\end{latin}
+\phtnuncertain{ارزیابی دقیق ریسک‌ها در بیمارانی که به درمان پاسخ می‌دهند} خیلی کمک‌کننده نیست.
+
+\phtnpage{۲}{}
+\begin{itemize}
+\item بیمارانی که پاسخ کافی به درمان دارویی نمی‌دهند باید کاندید پیوند ریه شوند.
+\item به بیمارانی که شرایط پیوند ندارند، با نیت \en{Palliation} می‌توان یک شانت راست به چپ ایجاد کرد:
+  \begin{itemize}
+  \item \en{Ballon Atrial Septostomy}.
+  \end{itemize}
+\end{itemize}
+\subsection*{کدام بیماران \en{PHTN} باید مشاورهٔ ژنتیک شوند؟}
+\begin{itemize}
+\item ایدیوپاتیک \en{PHTN}، \en{PHTN} خانوادگی.
+\item \en{Anorexigen-associated PAH}.
+\item \en{PVOD/PCH}.
+\item حتماً باید تست ژنتیک هم بدهند.
+\end{itemize}
+\subsection*{\en{chronic Thromboembolic PHTN (CTEPH)}}
+\begin{itemize}
+\item همهٔ بیماران \en{CTEPH} باید به لحاظ انجام جراحی پولمونری ترومبوآندآرترکتومی مشاوره شوند.
+  \begin{itemize}
+  \item مشابه جراحی \en{CABG} انجام می‌شود.
+  \end{itemize}
+\item اگر به هر دلیلی جراحی نشد:
+  \begin{itemize}
+  \item پرکوتانئوس بالون پولمونری آنژیوپلاستی (\en{BPA}).
+  \end{itemize}
+\end{itemize}
+
+\phtnpage{۳}{}
+\begin{itemize}
+\item اگر \en{BPA} نیز ممکن نباشد:
+\end{itemize}
+\begin{latin}
+\begin{itemize}
+\item Non-Selective ERA $\longrightarrow$ Macitentan.
+\item Guanylyl cyclase stimulator $\longrightarrow$ Riociguat.
+\end{itemize}
+\end{latin}
+\subsection*{\en{PHTN} به علت بیماری قلب چپ}
+\begin{itemize}
+\item جزء اصلی درمان، مدیریت بیماری زمینه‌ای است.
+\item درمان \en{COPD} و آپنهٔ خواب.
+\item اگر در زمینهٔ آن \en{MR} رخ داد که \en{$\mathrm{PASP}>50$} داشت، حتی اگر بدون علامت باشد باید دریچهٔ میترال تعویض یا ترمیم شود.
+\item اگر \en{PHTN} در زمینهٔ \en{HF (P,R)} باشد، درمان اصلی دیورتیک است.
+\end{itemize}
+\subsection*{درمان \en{PHTN (PAH)}}
+\begin{itemize}
+\item باید به صورت چندتیمی درمان انجام شود.
+\item درمان با دیورتیک لوپ و آنتاگون آلدسترون کمک‌کننده است.
+\item \en{MRA}ها کمک‌کننده هستند.
+\item دیگوکسین: افزایش \en{CO} در بیمار \en{RVF} به علت \en{PHTN}.
+\item نیاز به آنتی‌کوآگولان نیست.
+\item ورزش بیمار کمک‌کننده است.
+\end{itemize}
+
+\phtnpage{۴}{ـ \en{PAH}}
+\begin{itemize}
+\item اندیکاسیون درمان وریدی مداوم با پروستاسیکلین:
+  \begin{itemize}
+  \item شوک کاردیوژنیک، سنکوپ، \en{CP}.
+  \end{itemize}
+\item بیمار \en{CTEPH} باید تا آخر عمر آنتی‌کوآگولان مصرف کند.
+  \begin{itemize}
+  \item ترجیحاً وارفارین.
+  \end{itemize}
+\end{itemize}
+\subsection*{\en{CTEPH}}
+\begin{itemize}
+\item در هر بیماری با سابقهٔ \en{PE} یا \en{PHTN} یا دیسپنه با علت نامشخص باید به آن شک کرد.
+\item تصویربرداری‌ها:
+  \begin{itemize}
+  \item \en{CT} آنژیوگرافی.
+  \item \en{CT} با کنتراست.
+  \item تصویربرداری \en{V/Q}.
+  \end{itemize}
+\item برخی از این بیماران با تنگی نفس مراجعه می‌کنند؛ \phtnuncertain{شواهد رادیولوژیک قبلی در زمینهٔ \en{PE} را نیز دارند ولی \en{PE} ندارند}.
+\end{itemize}
+\subsection*{اپروچ تشخیصی به \en{PHTN}}
+\begin{itemize}
+\item قدم اول: \en{EKG}، \en{CXR}، اکوکاردیوگرافی.
+\item رد بیماری‌های قلبی ـ ریوی که می‌توانند علائم را توجیه کنند:
+  \begin{itemize}
+  \item \en{PFT + DLCO}.
+  \item \en{lung CT}.
+  \item \en{ABG}.
+  \item \en{6-MWD}، \en{CPET}.
+  \end{itemize}
+\end{itemize}
+
+\phtnpage{۵}{ـ \en{PAH}}
+\begin{itemize}
+\item تأیید تشخیص \en{PAH} و کلاس‌بندی و تعیین ریسک نیاز به انجام \en{RHC} (کاتتر قلب راست) دارد.
+{\footnotesize اصلاح دست‌نوشته: \en{\sout{CAH}} \en{$\longrightarrow$ RHC}.\par}
+\item در بیمار با دیسپنهٔ غیرقابل توجیه که کرایتریا همودینامیک \en{PH} را ندارد:
+  \begin{itemize}
+  \item \en{RHC} یا \en{iCPET} جهت ارزیابی وجود \en{HFpEF}.
+  \end{itemize}
+\item موارد زیر به نفع \en{HFpEF} هستند که اگر وجود داشته باشند دیگر نیاز به انجام ارزیابی تهاجمی نیست:
+  \begin{itemize}
+  \item سایز دهلیز چپ \en{$>4.4\,\mathrm{cm}$}، چاقی، \en{AF}.
+  \item سن \en{$>60$}، درمان \en{$\geq 2$} سال با داروی ضد فشار خون.
+  \item \en{$\mathrm{PASP}>35\,\mathrm{mmHg}$}.
+  \end{itemize}
+\end{itemize}
+\subsection*{یافته‌های \en{PH} در \en{EKG}}
+\begin{itemize}
+\item \en{RAE}، \en{RVH}:
+  \begin{itemize}
+  \item \en{$R/S>1$ in $V_1$ or $R>7$ in $V_1$}.
+  \end{itemize}
+\item در بیماری پیشرفته:
+  \begin{itemize}
+  \item \en{RV strain pattern ($\mathrm{RVH}+\mathrm{STD}(V_1\text{--}V_3)$)}.
+  \end{itemize}
+\end{itemize}
+\subsection*{یافته‌ها در \en{CXR}}
+\begin{itemize}
+\item در ۹۰\% بیماران \en{PAH} غیرطبیعی است.
+\item دیلاتاسیون شریان ریوی مرکزی.
+\item پریفرال \en{dearterization}.
+\item \en{RAE}، \en{RVE}.
+\end{itemize}
+
+% Repeated printed subject/date fields and handwritten page numbers appear above.
+% The printed notebook icon contains no text. Readings marked as uncertain
+% remain visible rather than being silently omitted or clinically corrected.
+\ifnum\PHTNStandalone=1
+  \let\PHTNEnd\enddocument
+\else
+  \let\PHTNEnd\relax
+\fi
+\PHTNEnd
