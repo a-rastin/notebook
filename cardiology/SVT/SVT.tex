@@ -1,0 +1,138 @@
+% !TeX program = xelatex
+% UTF-8 transcription of all four source images, in filename order.
+% pic01.jpg = 20261012_194852789.jpg (handwritten page 1)
+% pic02.jpg = 20261012_194859398.jpg (handwritten page 2)
+% pic03.jpg = 20261012_194903901.jpg (handwritten page 3)
+% pic04.jpg = 20261012_194915180.jpg (handwritten page 1, Harrison)
+% Compile standalone with XeLaTeX, or input into a XePersian document.
+\ifdefined\settextfont
+  \def\SVTStandalone{0}
+\else
+  \def\SVTStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\svtpage}[2]{\clearpage\section*{صفحهٔ #1}
+  موضوع: #2\hfill تاریخ: \en{/ /}\par\medskip}
+\ifnum\SVTStandalone=1 \begin{document}\fi
+
+\svtpage{۱}{\en{65 -- SVT}}
+\subsection*{تاکی‌کاردی فوق‌بطنی (\en{SVT})}
+\subsection*{تعریف}
+یک ترم کلی است. همهٔ تاکی‌کاردی‌هایی که:
+\begin{itemize}
+\item ریت دهلیز و/یا بطن بالای ۱۰۰ باشد.
+\item در مکانیسم آن، باندل هیس یا بالاتر درگیر باشد.
+\end{itemize}
+
+\subsection*{انواع \en{SVT}}
+\begin{itemize}
+\item \en{Sinus Tachy}
+\item \en{Atrial Tachy}: \en{FAT, MAT}
+\item ماکرو ری‌انترنت \en{AT}: فلاتر
+\item \en{JT}
+\item \en{AVNRT}
+\item \en{AVRT}
+\end{itemize}
+
+\subsection*{\en{PSVT}}
+یک سندرم بالینی است. یک ریتم رگولار با تاکی‌کاردی با شروع و ختم ناگهانی.
+
+\subsection*{اپروچ}
+\begin{itemize}
+\item بیمار با تپش قلب.
+\item شرح حال: سبکی سر، تنگی نفس، احساس بد در گلو، درد قفسهٔ سینه.
+\item سینوس تاکی‌کاردی علامت‌دار: در حدود ۱۳۰ تا ۲۲۰ است.
+\item \en{IAST}: علامت‌ها ناگهانی شروع می‌شوند ولی ممکن است تدریجی هم باشند.
+  \begin{itemize}
+  \item پایان همواره تدریجی است.
+  \item با تنگی نفس، سبکی سر، خستگی همراه است.
+  \end{itemize}
+\end{itemize}
+
+\svtpage{۲}{\en{65 -- SVT}}
+\begin{itemize}
+\item \en{SVT}: شروع اغلب ناگهانی، ریت بسیار بالا.
+  \begin{itemize}
+  \item شروع به دنبال یک حرکت خاص.
+  \item دویدن ناگهانی، خم شدن.
+  \item اپیزودها چند دقیقه تا چند ساعت.
+  \item پایان ناگهانی.
+  \end{itemize}
+\item معمولاً به مانور واگ جواب می‌دهد.
+\item معمولاً در شروع با سبکی سری همراه هستند که پره‌سنکوپ است. با این حال سنکوپ نامعمول است.
+\item اغلب با اضطراب همراه هستند.
+\item پلی‌اوری حین و بعد از \en{SVT} شایع است.
+\end{itemize}
+
+\subsection*{معاینهٔ فیزیکی}
+بررسی از نظر اختلالات دریچه‌ای، نارسایی قلبی، تیروتوکسیکوز.
+
+\subsection*{\en{EKG}}
+باید یک \en{EKG} دوازده‌لیدی بگیریم، در زمان ریتم سینوسی.
+\begin{itemize}
+\item بررسی از نظر ابنورمالیتی \en{P wave} و بلوک‌ها.
+\end{itemize}
+
+\subsection*{آزمایش‌ها}
+بیوشیمی، \en{TFT}، تروپونین (در اورژانس).
+
+\subsection*{اکوکاردیوگرافی}
+\begin{itemize}
+\item اختلالات دریچه‌ای.
+\item سایز حفره‌ها.
+\end{itemize}
+
+\svtpage{۳}{\en{65 -- SVT} ـ براونوالد}
+باید آریتمی بیمار را داکیومنت کنیم.
+\begin{itemize}
+\item اگر هر روز تکرار می‌شود: \en{Single 24 h Holter}.
+\end{itemize}
+
+\begin{itemize}
+\item \en{IAST}: ریت تدریجاً ظرف چند ثانیه تا چند دقیقه بالا می‌رود.
+\item \en{FAT}: ناگهانی و در لحظه به حداکثر ریت می‌رسد.
+\end{itemize}
+
+برای بیماران با علائم کلاسیک شروع و ختم ناگهانی یک تاکی‌کاردی که قویاً به نفع \en{SVT} باشد، داکیومنت کردن \en{SVT} ضروری نیست و می‌توان از همان ابتدا \en{EPS} انجام داد.
+
+\svtpage{۱}{۲۴۶ ـ اپروچ به \en{SVT} ـ هاریسون}
+\subsection*{\en{Pathologic SVT}}
+
+\subsubsection*{\en{A: Tachy Originating from Atrium}}
+\begin{itemize}
+\item \en{IAST}: سینوس تاکی‌کاردی بدون علت زمینه‌ای.
+\item \en{FAT}: از نقطه‌ای غیر \en{SA} منشأ می‌گیرد.
+\item \en{Atrial Flutter}: ریت بالای ۳۰۰ است.
+\item \en{AF}
+\item \en{MAT}: معمولاً بیماران ریوی حین تشدید بیماری.
+\end{itemize}
+
+\subsubsection*{\en{B: AVNRT: Paroxismal Regular Tachy}}
+\begin{latin}
+P waves at the end of the QRS or not visible at all
+\end{latin}
+
+\subsubsection*{\en{C: Tachy with accesory AV pathways}}
+\begin{latin}
+\begin{itemize}
+\item Orthodromic AV reciprocating tachy (AVRT)
+
+Paroxismal sustained tachy similar to AVNRT
+\item Preiexcited Tachy
+
+wide QRS tachy
+\end{itemize}
+\end{latin}
+
+\ifnum\SVTStandalone=1
+  \let\SVTEnd\enddocument
+\else
+  \let\SVTEnd\relax
+\fi
+\SVTEnd
