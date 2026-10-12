@@ -1,0 +1,175 @@
+% !TeX program = xelatex
+% UTF-8 transcription of all five images, including repeated material.
+% Source wording, abbreviations and medical claims are retained as written.
+% pic01.jpg = 20261012_102556339.jpg (handwritten page 1)
+% pic02.jpg = 20261012_102608520.jpg (handwritten page 2)
+% pic03.jpg = 20261012_102614267.jpg (handwritten page 3)
+% pic04.jpg = 20261012_102620060.jpg (handwritten page 1, second set)
+% pic05.jpg = 20261012_102626706.jpg (handwritten page 2, second set)
+% Compile directly with XeLaTeX, or input after loading xcolor and xepersian.
+\ifdefined\settextfont
+  \def\SinusitisStandalone{0}
+\else
+  \def\SinusitisStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,xcolor}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\sinhl}[1]{\colorbox{yellow!35}{\strut #1}}
+\newcommand{\sinunclear}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+\newcommand{\sinpage}[3]{%
+  \clearpage\section*{۱۰۴ ـ سینوزیت}
+  {\footnotesize تصویر #1؛ شمارهٔ دست‌نویس: #2\par
+  \en{#3}\par}}
+\ifnum\SinusitisStandalone=1 \begin{document}\fi
+
+\sinpage{۱}{۱}{pic01.jpg}
+{\footnotesize\en{Subject: 104\quad Year: \ldots\quad Month: \ldots\quad Date: \ldots}\par}
+\begin{itemize}
+\item سینوزیت به طور عمده کامپلیکیشن \en{URI} است.
+\item در زمان تولد فقط سینوس‌های ماگزیلاری و اتموئید وجود دارند.
+  \begin{itemize}
+  \item سینوس اسفنوئید در ۵ سالگی.
+  \item سینوس فرونتال در ۷ سالگی.
+  \end{itemize}
+\item مجرای تخلیهٔ سینوس‌ها قطر \en{1--3 mm} دارد؛ به مئاتوس میانی راه می‌یابد.
+\item در فرد \en{N/L} سینوس‌ها استریل هستند.
+\item پاتوژن‌های سینوزیت حاد:
+  \begin{itemize}
+  \item \sinhl{استرپ نومونیه}.
+  \item \sinhl{\en{nt-Hi}}.
+  \item \sinhl{ماروکسلا کاتارالیس}.
+  \end{itemize}
+\item پاتوژن‌های سینوزیت تحت حاد و مزمن:
+  \begin{itemize}
+  \item استاف اورئوس.
+  \item بی‌هوازی‌ها.
+  \end{itemize}
+\end{itemize}
+\subsection*{\en{RFs}}
+\en{URI}، رینیت آلرژیک، \en{CF}، نقص ایمنی، \en{HIV}،
+\en{NG,tube}، \en{NTT}، پولیپ‌های بینی، جسم خارجی،
+پرایمری سیلیاری دیسکینزی.
+\subsection*{علائم سینوزیت باکتریال حاد}
+\begin{itemize}
+\item رینوره، نازال کانجسشن، سرفه (خصوصاً در شب).
+\item علائم باید برای \sinhl{بیش از ۱۰ روز} پایدار باشند؛ برای افتراق از \en{URI}.
+\item علائم کم‌تر شایع سینوزیت باکتریال حاد:
+  \begin{itemize}
+  \item هالیتوزیس، سردرد، درد صورت، تورم و تندرنس.
+  \end{itemize}
+\end{itemize}
+% The small marginal stationery mark is not confidently legible.
+{\footnotesize حاشیه: \sinunclear{نوشتهٔ کوچک کنار خط‌کشی، «کی …»}.\par}
+
+\sinpage{۲}{۲}{pic02.jpg}
+{\footnotesize\en{Subject: 104\quad Year: \ldots\quad Month: \ldots\quad Date: \ldots}\par}
+\subsection*{تظاهر دیگر سینوزیت باکتریال حاد}
+\begin{itemize}
+\item تب بالا، ترشح چرکی بینی؛ برای \sinhl{حداقل ۳ روز}.
+\item یک بیماری بای‌فازیک:
+  \begin{itemize}
+  \item کودک ابتدا یک \en{URI} خفیف داشته، برای حدود یک هفته.
+  \item سپس علائم تشدید می‌شود و بیمار تب پیدا می‌کند.
+  \end{itemize}
+\end{itemize}
+\subsection*{سینوزیت مزمن}
+\begin{itemize}
+\item علائم تنفسی فوقانی برای \sinhl{بیش از ۳۰ روز}، اغلب همراه با گلودرد و سردرد.
+\item \sinhl{تب نادر است}.
+\end{itemize}
+\begin{itemize}
+\item کشت مخاط سینوس در سینوزیت: \sinhl{کمک‌کننده نیست}، مگر نقص ایمنی.
+\item در سینوزیت‌های غیرعارضه‌دار \sinhl{نیازی به تصویربرداری نیست}.
+\item تصویربرداری غیرطبیعی سینوس نمی‌تواند عفونت را از آلرژی افتراق دهد.
+\end{itemize}
+\subsection*{درمان}
+\begin{itemize}
+\item خط اول درمان سینوزیت بدون عارضه در کودکان:
+  \begin{latin}
+  \noindent Cap \sinhl{Amoxicillin} for 10--14 days.
+  \end{latin}
+\item اگر بعد از \en{2--3} روز جواب نداد: \sinhl{کوآموکسی‌کلاو}.
+\item سینوزیت عارضه‌دار باید \en{AB} وسیع‌الطیف وریدی دریافت کند.
+\item سینوزیت می‌تواند \sinhl{برونکواسپاسم در بیماران آسمی} فعال کند.
+\end{itemize}
+
+\sinpage{۳}{۳}{pic03.jpg}
+{\footnotesize\en{Subject: 104\quad Year: \ldots\quad Month: \ldots\quad Date: \ldots}\par}
+\begin{itemize}
+\item جدی‌ترین عارضهٔ سینوزیت: \sinhl{سلولیت اربیتال}.
+  \begin{itemize}
+  \item تورم و درد چشم‌ها، پروپتوز، دوبینی، کاهش حدت بینایی.
+  \item تأیید تشخیص با \sinhl{\en{CT}} است.
+  \item درمان: \sinhl{سفتریاکسون + ونکو، کلیندا}.
+  \end{itemize}
+\end{itemize}
+{\footnotesize حاشیه: \sinunclear{نوشتهٔ کوچک کنار خط‌کشی، «کی …»}.\par}
+
+\sinpage{۴}{۱}{pic04.jpg}
+{\footnotesize\en{Date: \ldots\quad Subject: 104}\par}
+\begin{itemize}
+\item شایع‌ترین فرم: به عنوان عارضهٔ یک \en{URI}.
+\item در بدو تولد فقط سینوس‌های ماگزیلاری و اتموئید وجود دارند.
+\item اسفنوئید: ۵ سالگی؛ فرونتال: ۷ سالگی.
+\item سینوس‌ها در حالت طبیعی استریل هستند.
+\item شایع‌ترین پاتوژن‌های سینوزیت حاد: استرپ نومونیه، هموفیلوس آنفولانزا \en{NT}، موراکسلا کاتارالیس.
+\item سینوزیت تحت حاد و مزمن: استاف اورئوس، بی‌هوازی‌ها.
+\end{itemize}
+\subsection*{تظاهرات بالینی}
+\begin{itemize}
+\item شایع‌ترین تظاهرات فرم حاد: رینوره، کانجسشن، سرفهٔ شبانه.
+\item علائم باید برای حداقل ۱۰ روز وجود داشته باشند.
+\item تظاهر دیگر سینوزیت حاد باکتریال: تب بالا، ترشح چرکی؛ برای حداقل ۳ روز.
+\item سینوزیت مزمن: ۳۰ روز طول بکشد علائم \en{UR} + گلودرد \en{$\pm$} سردرد.
+  \begin{itemize}
+  \item معمولاً تب ندارد.
+  \end{itemize}
+\end{itemize}
+\begin{itemize}
+\item کشت مخاط بینی کمک‌کننده نیست.
+\item تصویربرداری در موارد غیرعارضه‌دار توصیه نمی‌شود.
+  \begin{itemize}
+  \item تصویربرداری غیرطبیعی بین عفونت و آلرژی افتراق نمی‌گذارد.
+  \item تصویربرداری طبیعی سینوزیت باکتریال را \en{R/O} می‌کند.
+  \end{itemize}
+\end{itemize}
+{\footnotesize\en{GNOTE}\par
+حاشیه: \sinunclear{نوشتهٔ کوچک کنار خط‌کشی، «کی …»}.\par}
+
+\sinpage{۵}{۲}{pic05.jpg}
+\subsection*{درمان}
+\begin{itemize}
+\item آموکسی‌سیلین برای \en{10--14} روز: سینوزیت غیرعارضه‌دار در کودکان.
+\item اگر ظرف \en{2--3} روز پاسخ نداد: کوآموکسی‌کلاو.
+\item ظرف \en{1--3} ماه اخیر \en{AB} گرفته بود، مهدکودک می‌رود، سینوزیت مزمن،
+  یا وجود هم‌زمان تورم چشم.
+% The preceding source line is fragmentary; its missing connection is not supplied.
+\end{itemize}
+\subsection*{عوارض سینوزیت باکتریال}
+\begin{itemize}
+\item استئومیلیت سینوس فرونتال (\en{Pott puffy tumor}).
+\item مننژیت.
+\item آمپیم اپی‌دورال و ساب‌دورال.
+\item آبسهٔ مغزی.
+\end{itemize}
+\begin{itemize}
+\item سینوزیت می‌تواند آسم بیمار را تشدید کند.
+\item سلولیت اربیت:
+  \begin{itemize}
+  \item تشخیص با \en{CT}.
+  \item ونکو یا کلیندا + سفتریاکسون.
+  \end{itemize}
+\end{itemize}
+{\footnotesize\en{GNOTE}\par}
+
+\ifnum\SinusitisStandalone=1
+  \let\SinusitisEnd\enddocument
+\else
+  \let\SinusitisEnd\relax
+\fi
+\SinusitisEnd
