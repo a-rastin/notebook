@@ -243,10 +243,10 @@ Ibuprofen in children \(>6\) months old at 5--10 mg/kg/dose q8h
 
 \clearpage
 \section*{پیوست: شش تصویر کامل منبع}
-% Preserve the requested "ped-infectioud diseases" image-directory spelling.
-\IfFileExists{../../ped-infectioud diseases/fever/images/pic01.jpg}{%
-  \def\FeverImageBase{../../ped-infectioud diseases/fever/images/}}{%
-  \def\FeverImageBase{pediatrics/ped-infectioud diseases/fever/images/}}
+% Resolve images from the topic directory or repository root.
+\IfFileExists{../../ped-infectious diseases/fever/images/pic01.jpg}{%
+  \def\FeverImageBase{../../ped-infectious diseases/fever/images/}}{%
+  \def\FeverImageBase{pediatrics/ped-infectious diseases/fever/images/}}
 \providecommand{\FeverOriginal}[2]{%
   \clearpage\subsection*{اصل تصویر #1: \lr{\texttt{pic#2.jpg}}}%
   \begin{center}

@@ -225,10 +225,10 @@ MIS-C\quad Multi-system Inflammatory syndrome in-children
 
 \clearpage
 \section*{پیوست: پنج تصویر کامل منبع}
-% Preserve the user's requested "ped-infectioud diseases" image path.
-\IfFileExists{../../ped-infectioud diseases/fever in older children/images/pic01.jpg}{%
-  \def\FeverOlderImageBase{../../ped-infectioud diseases/fever in older children/images/}}{%
-  \def\FeverOlderImageBase{pediatrics/ped-infectioud diseases/fever in older children/images/}}
+% Resolve images from the topic directory or repository root.
+\IfFileExists{../../ped-infectious diseases/fever in older children/images/pic01.jpg}{%
+  \def\FeverOlderImageBase{../../ped-infectious diseases/fever in older children/images/}}{%
+  \def\FeverOlderImageBase{pediatrics/ped-infectious diseases/fever in older children/images/}}
 \providecommand{\FeverOlderOriginal}[2]{%
   \clearpage\subsection*{اصل تصویر #1: \lr{\texttt{pic#2.jpg}}}%
   \begin{center}
