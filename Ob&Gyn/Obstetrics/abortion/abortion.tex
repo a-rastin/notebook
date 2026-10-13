@@ -1,0 +1,224 @@
+% !TeX program = xelatex
+% UTF-8. Compile from this directory with XeLaTeX.
+% For inclusion in an existing XePersian document, define \AbortionInNotebook.
+% Sources: Google Drive Notebook/abortion, handwritten pages 1--6.
+% pic01.jpg = 20261013_024912294.jpg; pic02.jpg = 20261013_024920093.jpg
+% pic03.jpg = 20261013_024924458.jpg; pic04.jpg = 20261013_024935659.jpg
+% pic05.jpg = 20261013_024940370.jpg; pic06.jpg = 20261013_024944599.jpg
+\ifdefined\AbortionInNotebook
+  \let\Abortionfinish\relax
+\else
+  \def\Abortionfinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=22mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphicx}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{6pt}
+  \setlength{\emergencystretch}{3em}
+  \begin{document}
+\fi
+\providecommand{\Abortionpage}[1]{\clearpage\section*{صفحهٔ #1}}
+\providecommand{\Abortionmath}[1]{\lr{\(#1\)}}
+\providecommand{\Abortionunclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\providecommand{\Abortionimage}[1]{%
+  \IfFileExists{images/#1.jpg}{\includegraphics[width=\textwidth,height=.87\textheight,keepaspectratio]{images/#1.jpg}}%
+  {\includegraphics[width=\textwidth,height=.87\textheight,keepaspectratio]{Ob&Gyn/Obstetrics/abortion/images/#1.jpg}}}
+
+\begin{center}\Large\bfseries\lr{Abortion}\end{center}
+رونویسی تصاویر به ترتیب شمارهٔ صفحات. شاخه‌های فلش‌دار با فهرست نمایش داده شده‌اند؛ اعداد و عبارت‌های منبع حفظ شده‌اند. خوانش‌های نامطمئن مشخص شده‌اند. تصاویر اصلی در پیوست آمده‌اند. نوشته‌های کم‌رنگِ پشت کاغذ جزو متن روی صفحه نیستند.
+
+\Abortionpage{۱}
+\textbf{سربرگ:} \lr{Abortion} \Abortionmath{\longrightarrow 20}. اعداد حاشیه: ۱۹، ۳۷. سربرگ چاپی: \lr{Subject: Year. Month Date. ( )}؛ فیلدها خالی. شمارهٔ پایین صفحه: ۱.
+
+\lr{Abortion} نباید به عنوان یک روش \lr{Contraception} مورد استفاده قرار گیرد.
+
+\textbf{داروهای مورد استفاده در \lr{abortion}:}
+\begin{itemize}
+\item آنالوگ پروستاگلندین: میزوپروستول.
+\item آنتی‌پروژسترون: میفپریستون.
+\end{itemize}
+
+\lr{Womans place}: تا \lr{GA: 9w+6d} (طبق قانون \lr{Eng}؛ برخی جاها تا \lr{12w}). با میزوپروستول و میفپریستون در خانه.
+
+از زمان درخواست بیمار، بررسی‌ها و سقط حداکثر باید ظرف ۱ هفته انجام شوند.
+
+\Abortionunclear{شیوع اختلالات روانی} بعد از سقط افزایش نمی‌یابد، مثل افسردگی، ولی برخی بیماران دچار \Abortionunclear{استرسی} و مشکلات تطابقی می‌شوند.
+
+\subsection*{بررسی‌های پیش از سقط — \lr{Pre-abortion Investigations}}
+\begin{itemize}
+\item اگر \Abortionmath{10w < GA}: بررسی \lr{Rh}.
+\item اگر \Abortionmath{Rh^{-}} و \Abortionmath{GA \leq 10w}، در سقط سرپایی می‌توانیم بدهیم: \lr{anti-D Ig}.
+\item دوز \lr{anti-D Ig}:
+  \begin{itemize}
+  \item \Abortionmath{<20w}: \lr{250 IU}.
+  \item \Abortionmath{20w<}: \lr{500 IU}.
+  \end{itemize}
+\item تست‌های \lr{HIV, Syphilis}: همهٔ زنان.
+\item سایر ویروس‌ها، هموگلوبینوپاتی‌ها: به صورت سلکتیو.
+\item اندازه‌گیری \lr{Hb} دیگر ضروری نیست مگر شواهد آنمی.
+\end{itemize}
+
+\Abortionpage{۲}
+\textbf{سربرگ چاپی:} \lr{Subject: Year. Month Date. ( )}؛ فیلدها خالی. اعداد حاشیه: ۱۹، ۳۸. شمارهٔ پایین صفحه: ۲؛ بخشی از شمارهٔ ۱ صفحهٔ زیرین نیز دیده می‌شود.
+
+\textbf{تخمین سن بارداری:} \lr{Hx} یا \lr{Sono}.
+
+سونو روتین ضروری نیست.
+\begin{itemize}
+\item اگر \lr{GA} مشخص نباشد انجام می‌دهیم.
+\item اگر شک به \lr{EP} وجود داشته باشد.
+\item اگر خود شخص بخواهد.
+\end{itemize}
+
+\subsection*{جلوگیری از عفونت}
+پروفیلاکسی \lr{ABT} روتین لازم نیست.
+
+\textbf{چه زمانی پروفیلاکسی؟}
+\begin{itemize}
+\item ریسک فرد برای عفونت بالا باشد (مثلاً \Abortionunclear{دور دست}).
+\item شک قوی به \lr{STD}.
+\item ریسک بالای فرد برای \lr{STD}.
+\end{itemize}
+
+برخی گایدلاین‌ها بررسی روتین \lr{STD} را توصیه می‌کنند برای همه: کلامیدیا و نایسریا.
+
+\textbf{پروفیلاکسی:}
+\begin{latin}
+ABX \(\Longrightarrow\) Doxycycline 100 mg PO, BD for 3 days.
+\end{latin}
+
+اگر مترونیدازول بدهیم نباید به صورت پروفیلاکسی و یا همراه با داکسی داده شود.
+
+\Abortionpage{۳}
+\textbf{سربرگ چاپی:} \lr{Subject: Year. Month Date. ( )}؛ فیلدها خالی. اعداد حاشیه: ۲۰، ۳۹. شمارهٔ پایین صفحه: ۳.
+
+اگر فرد غربالگری روتین سیتولوژی سرویکس را انجام نداده است، باید در این ویزیت انجام شود.
+
+\subsection*{پروفیلاکسی \lr{VTE}}
+همهٔ بیماران از نظر ریسک \lr{VTE} بررسی شوند و در صورت نیاز پروفیلاکسی دریافت کنند: \lr{LMWH}.
+
+حداکثر سن بارداری که می‌توان \lr{abortion} انجام داد \lr{24w} است.
+
+میفپریستون خوراکی است و ۲۴–۴۸ ساعت بعد میزوپروستول واژینال، بوکال، \lr{SL}.
+
+ظرف چند ساعت بعد از میزوپروستول خونریزی شروع می‌شود، سپس انقباضات شروع می‌شوند و بقایا دفع می‌گردند.
+
+بیماران دردهایی مشابه درد قاعدگی احساس می‌کنند. اکثر بیماران به مسکن نیاز ندارند، ولی ۱۰–۲۰\% نیازمند \lr{Opiates} می‌شوند.
+
+خونریزی معمولاً تا \Abortionunclear{۱۴ روز؛ احتمال خوانش ۱۰ روز} بعد از سقط مدیکال ادامه می‌یابد.
+
+\subsection*{\lr{Early Medical Abortion (GA < 10w)}}
+\begin{itemize}
+\item در \Abortionmath{GA<7w} سقط مدیکال حتی از سرجیکال هم مؤثرتر است.
+\item می‌تواند در خانه نیز انجام شود.
+\item اگر می‌خواهیم در خانه انجام دهیم ممکن است \lr{hCG} نیز تجویز کنیم.
+\end{itemize}
+
+\Abortionpage{۴}
+\textbf{سربرگ چاپی:} \lr{Subject: Year. Month Date. ( )}؛ فیلدها خالی. اعداد حاشیه: \Abortionunclear{۲۱؛ رقم آخر بازنویسی شده}، ۴۰. شمارهٔ پایین صفحه: ۴؛ بخشی از شمارهٔ صفحهٔ زیرین نیز دیده می‌شود.
+
+\begin{itemize}
+\item تست \lr{hCG}، ۲–۳ هفته پس از سقط انجام می‌شود.
+\item \lr{Contraception} باید به صورت تمایل بیمار تجویز شود.
+\item \Abortionmath{\leq9^{+6}} در خانه \lr{OK}، ولی \Abortionmath{10\leq} حتماً در بیمارستان.
+\end{itemize}
+
+\subsection*{\lr{Medical Abortion} \Abortionmath{(10^{+1}\text{--}23^{+6})}}
+حتماً در بیمارستان.
+
+\subsection*{\lr{Surgical Abortion}}
+\begin{itemize}
+\item بیهوشی موضعی یا عمومی.
+\item زیر ۷ هفته منطقی نیست چون دارویی مؤثرتر است.
+\item \lr{Cervical priming} باید انجام شود: میزوپروستول \Abortionmath{400\,\mu g}.
+  \begin{itemize}
+  \item اگر واژینال: ۳ ساعت قبل از سقط.
+  \item اگر \lr{SL}: ۱ ساعت قبل از سقط.
+  \end{itemize}
+\item وکیوم آسپیراسیون دستی (\lr{MVA}) تحت بیهوشی موضعی.
+\item \lr{hCG} باید \lr{follow-up} شود.
+\end{itemize}
+
+\subsection*{\lr{Later Surgical Abortion} \Abortionmath{(14^{+0}\text{--}24^{+0})}}
+\begin{latin}
+Cervical prep + Dilatation and Evacuation (D and E).
+\begin{itemize}
+\item \(14^{+0}\text{--}16^{+0}\): Osmotic dilators or misoprostol (b,v,sl) or mifepristone (1 day before procedure).
+\item \(16^{+1}\text{--}19^{+0}\): Osmotic dilators or misoprostol (b,v,sl).
+\item \(19^{+1}\text{--}23^{+6}\): mifepristone (1 day before) and osmotic dilators at the same day.
+\end{itemize}
+\end{latin}
+
+\Abortionpage{۵}
+\textbf{سربرگ چاپی:} \lr{Subject: Year. Month Date. ( )}؛ فیلدها خالی. اعداد حاشیه: ۲۲، ۴۱. شمارهٔ پایین صفحه: ۵.
+
+\subsection*{\lr{Pharmacotherapy}}
+\begin{latin}
+\textbf{Early medical:}
+Tab. Mifepristone 200 mg PO stat + Misoprostol 800 \(\mu g\) vaginally 24--48 h later.
+
+\textbf{Medical \((10^{+1}\text{--}23^{+6})\):}
+Tab. Mifepristone 200 mg PO stat + Supp. Misoprostol 800 \(\mu g\) vaginally 36--48 h later + Misoprostol (V,SL,B) 400 \(\mu g\) q3h until abortion.
+
+\subsection*{Complications of Abortion}
+\textbf{Retained products of conception}
+\begin{itemize}
+\item In \(<5\%\) of women.
+\item More Common in medical.
+\item Most cases will pass the products spontaneously.
+\item ABX can be given until the tissue pass.
+\end{itemize}
+
+\textbf{Failure of Abortion}
+\begin{itemize}
+\item In \(<1\%\) of women.
+\item hCG urine test after abortion (2--3 weeks).
+\end{itemize}
+
+\textbf{Post-abortion Infections}
+\begin{itemize}
+\item Pelvic infections in up to 10\% of women.
+\item Pyrexia, Pain, Discharge.
+\end{itemize}
+\end{latin}
+
+\Abortionpage{۶}
+\textbf{سربرگ چاپی:} \lr{Subject: Year. Month Date. ( )}؛ فیلدها خالی. اعداد حاشیه: ۲۲، ۴۲. شمارهٔ پایین صفحه: ۶.
+
+\begin{latin}
+\textbf{Hemorrhage}
+\begin{itemize}
+\item Significant if \(500\,\mathrm{cc}<\).
+\item In 0.7\% of women in early abortion.
+\end{itemize}
+\end{latin}
+\Abortionunclear{رقم درصد خونریزی: \lr{0.7\%}؛ احتمال خوانش \lr{0.1\%}}.
+
+تاکنون هیچ ارتباطی بین سقط و ناباروری در آینده یافت نشده است.
+
+همچنین هیچ ارتباطی با \lr{EP} و پلاسنتا پرویا.
+
+بین \lr{later abortion} و \lr{miscarriage} و \lr{preterm del} ارتباط کمی وجود دارد.
+
+اثبات نشده است که \lr{abortion} خطر کنسر \lr{breast} را بالا می‌برد.
+
+نیاز به \lr{follow-up} روتین پس از سقط در منزل نیست.
+
+\clearpage
+\section*{پیوست: تصاویر کامل منبع}
+\begin{center}\textbf{\lr{pic01} — صفحهٔ ۱}\par\Abortionimage{pic01}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic02} — صفحهٔ ۲}\par\Abortionimage{pic02}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic03} — صفحهٔ ۳}\par\Abortionimage{pic03}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic04} — صفحهٔ ۴}\par\Abortionimage{pic04}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic05} — صفحهٔ ۵}\par\Abortionimage{pic05}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic06} — صفحهٔ ۶}\par\Abortionimage{pic06}\end{center}
+\Abortionfinish
