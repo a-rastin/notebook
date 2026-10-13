@@ -1,0 +1,124 @@
+% !TeX program = xelatex
+% UTF-8 transcription; source wording and highlighted points are preserved.
+% images/pic01.jpg = 20261013_064508163.jpg (page 1)
+% images/pic02.jpg = 20261013_064511934.jpg (page 2)
+% Compile directly with XeLaTeX, or input into a XePersian document.
+\newif\ifNephroticStandalone
+\ifdefined\settextfont
+  \NephroticStandalonefalse
+\else
+  \NephroticStandalonetrue
+\fi
+\ifNephroticStandalone
+  \documentclass[11pt,a4paper]{article}
+  \usepackage[margin=1.8cm]{geometry}
+  \usepackage{amsmath,amssymb,xcolor,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \begin{document}
+\fi
+\begingroup
+\emergencystretch=2em
+\ifdefined\setlist
+  \setlist[itemize]{nosep,topsep=3pt}
+\fi
+\newcommand{\NSen}[1]{\lr{#1}}
+\ifdefined\colorbox
+  \newcommand{\NShl}[1]{\colorbox{yellow!35}{\strut #1}}
+\else
+  \newcommand{\NShl}[1]{\textbf{#1}}
+\fi
+
+\section*{سندرم نفروتیک ـ صفحهٔ ۱}
+\subsection*{پروتئین‌اوری}
+\begin{itemize}
+\item پروتئین‌اوری نفروتیک در کودکان: دفع پروتئین
+  \NSen{$>40\,\mathrm{mg}/\mathrm{m}^{2}/\mathrm{hour}$}
+  یا \NSen{$U_{\mathrm{Pr}/\mathrm{Cr}}>2\,\mathrm{mg}/\mathrm{mg}$}.
+\item الگوهای پروتئین‌اوری: \NSen{Transient}، ارتواستاتیک، \NSen{Persistent}.
+\item سندرم نفروتیک یک پروتئین‌اوری \NSen{persistent} است.
+\end{itemize}
+
+\subsection*{\NSen{Transient}}
+\begin{itemize}
+\item در کودکان با \NShl{تب}، \NShl{دهیدریشن}، به دنبال \NShl{تشنج}، \NShl{ورزش شدید}.
+\item ظرف چند روز رفع می‌شود.
+\item \NShl{نیاز به ارزیابی اضافه ندارد}.
+\end{itemize}
+
+\subsection*{پروتئین‌اوری ارتواستاتیک}
+\begin{itemize}
+\item پروتئین‌اوری خفیف در زمان سرپا ایستادن.
+\item \NSen{$U_{\mathrm{Pr}/\mathrm{Cr}}=0.2\text{--}1\,\mathrm{mg}/\mathrm{mg}$}.
+\item در نوجوانان قدبلند و لاغر.
+\item با بیماری پیشروندهٔ کلیه همراهی ندارد.
+\end{itemize}
+
+\subsection*{\NSen{Persistent}}
+\begin{itemize}
+\item منشأ گلومرولار یا توبولار.
+\item گلومرولار:
+  \begin{itemize}
+  \item پروتئین با وزن‌های مولکولی \NShl{متفاوت}.
+  \item معمولاً \NShl{هماچوری}، \NShl{\NSen{RBC} کست}، \NShl{\NSen{HTN}} وجود دارد.
+  \end{itemize}
+\item توبولار:
+  \begin{itemize}
+  \item پروتئین با وزن مولکولی \NShl{پایین} دفع می‌شود.
+  \item ممکن است \NSen{dipstick} آن‌ها منفی باشد.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{\NShl{سندرم فانکونی}}
+\begin{itemize}
+\item \NShl{\NSen{RTA} تیپ ۲}، هایپوکالمی، فسفات‌اوری، آمینواسیداوری.
+\item پروتئین‌اوری توبولار + توبولار الکترولیت وستینگ + \NShl{گلوکوزاوری}.
+\item \NShl{پروگزیمال رنال توبولار اسیدوز}.
+\end{itemize}
+
+\subsection*{سندرم نفروتیک}
+\begin{itemize}
+\item پروتئین‌اوری بالای \NSen{$40\,\mathrm{mg}/\mathrm{m}^{2}/\mathrm{hour}$}.
+\item هایپوآلبومینمی: \NSen{$<3\,\mathrm{g}/\mathrm{dL}$}.
+\item هایپرکلسترولمی: \NSen{$>250\,\mathrm{mg}/\mathrm{dL}$}.
+\item ادم.
+\end{itemize}
+
+\clearpage
+\section*{سندرم نفروتیک ـ صفحهٔ ۲}
+\subsection*{\NSen{Minimal Change Nephrotic Syndrome (MCNS)}}
+\begin{itemize}
+\item شایع‌ترین فرم \NSen{NS} اولیه در کودکان.
+\item \NShl{مردان ۲ برابر زنان}.
+\item پیک سنی: \NShl{قبل از مدرسه}.
+\end{itemize}
+
+\subsection*{\NSen{Focal Segmental Glomerulosclerosis (FSGS)}}
+\begin{itemize}
+\item شدت پروتئین‌اوری از \NSen{MCNS} کمتر است.
+\item \NShl{بیش از ۲۵\% بیماران} به سمت \NShl{\NSen{ESRD}} می‌روند.
+\end{itemize}
+
+\subsection*{ممبرانوس نفروپاتی}
+\begin{itemize}
+\item نوجوانان، کودکان؛ عفونت مزمن (هپاتیت \NSen{B}، سفلیس، مالاریا).
+\item مواجهه با برخی داروها (پنی‌سیلامین، طلا)، \NSen{SLE}.
+\end{itemize}
+
+\subsection*{\NSen{NS} مادرزادی و شیرخواران}
+\begin{itemize}
+\item \NSen{NS} مادرزادی: ظرف \NShl{۳ ماه نخست} تولد به وجود می‌آید؛ وراثت \NSen{AR}.
+\item \NSen{NS} شیرخواران: ماه \NShl{۳ تا ۱۲}؛ ژنتیکی.
+\end{itemize}
+
+\medskip
+\noindent
+\NShl{در کودک با \NSen{NS}، سطح سرمی \NSen{$C_3\downarrow$}}
+\(\longleftarrow\)
+\NShl{علت \NSen{MCNS} نیست}.
+
+\endgroup
+\ifNephroticStandalone
+  \expandafter\enddocument
+\fi

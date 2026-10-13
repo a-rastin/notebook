@@ -1,0 +1,150 @@
+% !TeX program = xelatex
+% UTF-8 transcription, retaining source page order and medical wording.
+% images/pic01.jpg = 20261013_063915614.jpg (page 1)
+% images/pic02.jpg = 20261013_063921433.jpg (page 2)
+% images/pic03.jpg = 20261013_063926066.jpg (page 3)
+% images/pic04.jpg = 20261013_063929617.jpg (page 4)
+% Standalone XeLaTeX document; may also be input into an Xepersian document.
+\ifdefined\settextfont
+  \def\CyanoticStandalone{0}
+\else
+  \def\CyanoticStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+% Bold type reproduces yellow highlighting without unbreakable color boxes.
+\newcommand{\cyimportant}[1]{\textbf{#1}}
+\newcommand{\cypage}[2]{\clearpage\section*{صفحهٔ #1 ـ بیماری‌های قلبی سیانوتیک}
+  {\footnotesize منبع: \en{#2}؛ عنوان یادداشت: ۱۴۴.\par}}
+\ifnum\CyanoticStandalone=1 \begin{document}\fi
+
+\cypage{۱}{pic01.jpg}
+\begin{itemize}
+\item شانت راست به چپ \en{$\longrightarrow$} سیانوز.
+\item شایع‌ترین علل بیماری‌های قلبی سیانوتیک در نوزادی علامت‌دار می‌شوند:
+  \begin{itemize}
+  \item \en{Tetralogy of Fallot}
+  \item \en{Transposition of the great arteries}
+  \item \en{Tricuspid atresia}
+  \item \en{Truncus arteriosus}
+  \item \en{Total anomalous pulmonary venous return}
+  \end{itemize}
+\end{itemize}
+\subsection*{تترالوژی فالو}
+\begin{itemize}
+\item شایع‌ترین علت \en{CHD} سیانوتیک.
+\item \cyimportant{\en{VSD} + استنوز پولمونری + \en{Overriding aorta} + هایپرتروفی بطن راست}.
+\item \en{VSD} بزرگ شدن.
+\item استنوز پولمونری معمولاً ساب والولار یا اینفاندیبولار.
+\end{itemize}
+\subsubsection*{تظاهرات بالینی}
+\begin{itemize}
+\item می‌تواند آسیانوتیک باشد.
+\item \cyimportant{\en{Pulmonary stenosis murmur}}.
+\item \en{Right ventricular impulse at left sternal border}؛ \cyimportant{\en{Single $S_2$}}.
+\item ریسک افزایش‌یافتهٔ ترومبوز مغزی و آبسهٔ مغزی.
+\end{itemize}
+\subsubsection*{بررسی‌ها و نکات}
+\begin{itemize}
+\item \en{EKG}: \en{Right axis, Right Vent hypertrophy}.
+\item \en{CXR}: \cyimportant{\en{Boot-shaped heart}}.
+\item آنومالی‌های کرونری در ۵\% بیماران دیده می‌شود.
+\item \cyimportant{استنوز پولمونری و سیانوز به مرور زمان پیشرفت می‌کنند}.
+\item پوزیشن \cyimportant{\en{Knee-chest}} بازگشت وریدی را بیشتر می‌کند؛ بیمار راحت‌تر است.
+\item \en{Cyanotic spell}.
+\end{itemize}
+
+\cypage{۲}{pic02.jpg}
+\begin{itemize}
+\item تا ۶ ماهگی باید برای اندوکاردیت باکتریال تحت پروفیلاکسی مداخله شود.
+% The handwritten age digit is not fully distinct; preserve the tentative reading.
+  {\footnotesize [خوانش نامطمئنِ عدد سن: ۶ ماهگی].}
+\item تا زمانی که \en{VSD} وجود دارد باید پروفیلاکسی بگیرد.
+\end{itemize}
+\subsection*{ترنسپوزیشن آو گریت آرتریز (\en{dTGA})}
+\begin{itemize}
+\item \en{Ventriculoarterial discordance}.
+\item آئورت از بطن راست، پولمونری از بطن چپ.
+\item \cyimportant{نیز معمولاً \en{ASD} دارند}؛ برخی \en{VSD}؛ برایشان خوب است.
+\item وجود \en{PDA} کمک‌کننده است.
+\end{itemize}
+\subsubsection*{تظاهرات بالینی}
+\begin{itemize}
+\item \cyimportant{تاکی‌کاردی}، \cyimportant{\en{Single $S_2$}}، سیانوز.
+\item اگر \en{VSD} نداشته باشد، مرمر ندارند.
+\item اگر \en{VSD} بزرگ داشته باشد: \cyimportant{سیانوز کمتر ولی \en{HF} شدیدتر}.
+\end{itemize}
+\subsubsection*{بررسی‌ها و درمان}
+\begin{itemize}
+\item \en{EKG}: انحراف محور به \cyimportant{راست}، هایپرتروفی بطن راست.
+\item \en{CXR}: \cyimportant{\en{Egg on a string}}.
+\item درمان: پروستاگلاندین \en{$E_1$} می‌دهیم تا \en{PDA} بسته نشود.
+\item جراحی جابه‌جایی عروق در هفتهٔ دوم.
+\end{itemize}
+\subsection*{آترزی تری‌کاسپید}
+\begin{itemize}
+\item دریچهٔ تری‌کاسپید وجود ندارد؛ \cyimportant{بطن راست هایپوپلاستیک} می‌شود.
+\item باید \en{PDA} یا \en{VSD} وجود داشته باشد تا بیمار زنده بماند.
+\item بیماران \cyimportant{به شدت سیانوتیک} هستند؛ \cyimportant{\en{Single $S_2$}}.
+\end{itemize}
+
+\cypage{۳}{pic03.jpg}
+\subsection*{آترزی تری‌کاسپید ـ ادامه}
+\begin{itemize}
+\item اگر \en{VSD} وجود داشته باشد: \en{Murmur}.
+\item اغلب موارد \en{Murmur} وجود ندارد در آترزی تری‌کاسپید.
+\item \en{EKG}: هایپرتروفی بطن چپ، محور \en{QRS} فوقانی (۹۰− درجه).
+\item \en{CXR}: سایز قلب \en{NL} یا اندکی بزرگ است؛ جریان خون پولمونری کاهش‌یافته است.
+\end{itemize}
+\subsection*{ترانکوس آرتریوزوس}
+\begin{itemize}
+\item یک شریان از قلب خارج می‌شود.
+\item \cyimportant{\en{VSD} بزرگ}.
+\end{itemize}
+\subsubsection*{تظاهرات بالینی}
+\begin{itemize}
+\item درجات مختلف سیانوز؛ اگر بهبود پیدا نشود: \cyimportant{\en{HF}}.
+\item پس از \en{HF}: تاکی‌پنه، اختلال رشد.
+\item نبض‌های محیطی: \en{bounding}؛ \en{Single $S_2$}.
+\item \cyimportant{\en{Systolic murmur}} در \en{LSB}.
+\item \en{EKG}: \cyimportant{کاردیومگالی}، بزرگ شدن هر دو بطن.
+% The source labels cardiomegaly as EKG; retained without medical correction.
+\item \en{CXR}: افزایش فلو پولمونری.
+\end{itemize}
+\subsection*{\en{Total Anomalous Pulmonary Venous Return (TAPVR)}}
+\begin{itemize}
+\item اختلال اتصال وریدهای پولمونری به دهلیز چپ؛ به دهلیز راست می‌ریزند.
+\item باید \cyimportant{\en{ASD}} داشته باشد تا زنده بماند.
+\item \en{Right Vent impulse with widely split $S_2$}.
+\item \cyimportant{\en{Systolic ejection murmur}} \en{at LASB}.
+\item درمان: جراحی.
+\item گرافی: \cyimportant{\en{Snowman}}.
+\end{itemize}
+
+\cypage{۴}{pic04.jpg}
+\subsection*{\en{Hypoplastic left heart syndrome}}
+\begin{itemize}
+\item شایع‌ترین علت مرگ به دلیل نقص‌های قلبی در ماه اول است.
+\item اختلال در تکامل طبیعی دریچهٔ میترال یا آئورت.
+\item هایپوپلازی آئورت صعودی و قوس آئورت نیز وجود دارد.
+\item \cyimportant{باید \en{ASD} داشته باشد}.
+\item پس از تولد اگر \en{PDA} شروع به بسته شدن کند: سیانوز ممکن است زیاد نباشد.
+\item \cyimportant{\en{grayish color}} \en{to the cool, mottled skin because of low cardiac output}.
+\item \en{EKG}: \cyimportant{هایپرتروفی بطن راست}.
+\item \en{CXR}: کاردیومگالی، ادم ریوی.
+\item درمان: پروستاگلاندین \en{$E_1$}، جراحی، اصلاح اسیدوز.
+\end{itemize}
+
+% Printed Date fields are blank; notebook logos contain no medical content.
+% Original handwritten page numbers: 1, 2, 3, 4. Yellow highlights use bold.
+\ifnum\CyanoticStandalone=1
+  \let\CyanoticEnd\enddocument
+\else
+  \let\CyanoticEnd\relax
+\fi
+\CyanoticEnd

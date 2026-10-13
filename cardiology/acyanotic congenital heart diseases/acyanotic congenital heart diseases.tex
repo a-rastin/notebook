@@ -1,0 +1,201 @@
+% !TeX program = xelatex
+% UTF-8 transcription of six handwritten Persian/English pages, in source order.
+% images/pic01.jpg = 20261013_064128159.jpg
+% images/pic02.jpg = 20261013_064133892.jpg
+% images/pic03.jpg = 20261013_064142469.jpg
+% images/pic04.jpg = 20261013_064148717.jpg
+% images/pic05.jpg = 20261013_064156455.jpg
+% images/pic06.jpg = 20261013_064200477.jpg
+% Source terminology and apparent medical inconsistencies are retained.
+% Bold reproduces yellow highlighting; uncertain readings are marked inline.
+% Compile standalone with XeLaTeX, or input into an existing Xepersian document.
+\ifdefined\settextfont
+  \def\AcyanoticStandalone{0}
+\else
+  \def\AcyanoticStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\acimportant}[1]{\textbf{#1}}
+\newcommand{\acunclear}[1]{{\footnotesize [خوانش نامطمئن: #1]}}
+\newcommand{\acpage}[2]{\clearpage\section*{صفحهٔ #1 ـ بیماری‌های قلبی مادرزادی آسیانوتیک}
+  {\footnotesize منبع: \en{#2}\par}}
+\ifnum\AcyanoticStandalone=1 \begin{document}\fi
+
+\acpage{۱}{pic01.jpg}
+\subsection*{تقسیم‌بندی بیماری‌های قلبی مادرزادی}
+\begin{itemize}
+\item شایع‌ترین اختلال مادرزادی، بیماری قلبی مادرزادی (\en{CHD}) است.
+\item تقسیم‌بندی \en{CHD}:
+  \begin{itemize}
+  \item شانت‌ها چپ به راست.
+  \item شانت‌ها راست به چپ.
+  \item انسدادی‌ها و استنوتیک‌ها.
+  \end{itemize}
+\item استنوتیک‌ها: استنوز آئورت، استنوز پولمونری، کوآرکتاسیون آئورت.
+\item شانت راست به چپ: تترالوژی، ترنسپوزیشن، آترزی تری‌کاسپید.
+\item شانت چپ به راست: \en{ASD, VSD, PDA}.
+\item مِکس: ترانکوس، \en{TAPVR, HLH} (هایپوپلاستیک لفت هارت سیندروم).
+\item \en{CHD} آسیانوتیک: \acimportant{شانت‌ها چپ به راست} و \acimportant{انسدادی‌ها}.
+\end{itemize}
+\subsection*{\en{VSD}}
+\begin{itemize}
+\item \acimportant{شایع‌ترین \en{CHD}}؛ ۲۵\% تمام \en{CHDs}.
+\item شایع‌ترین فرم: \en{VSD} پری‌ممبرانوس؛ ۷۰\% موارد.
+\item \en{VSD}های بزرگ در زمان تولد علامت‌دار نیستند، چون فشار عروق ریوی بالاست؛ \acimportant{ظرف هفتهٔ ۸ تا ۹ علامت‌دار می‌شوند}.
+\item شواهد \en{VSD}:
+  \begin{itemize}
+  \item اگر کوچک باشد: \acimportant{\en{High frequency, loud murmur}}.
+  \item شنت‌های بزرگ: \acimportant{\en{HF}}، \acimportant{پولمونری آرتری هایپرتنشن}.
+  \end{itemize}
+\item یافتهٔ فیزیکال \en{VSD}: \acimportant{\en{Pansystolic murmur}} در \en{lower left sternal border}.
+\item اگر شانت بزرگ باشد: \acimportant{\en{Mid-diastolic murmur at apex}}.
+\end{itemize}
+
+\acpage{۲}{pic02.jpg}
+\subsection*{\en{VSD} ـ ادامه}
+\begin{itemize}
+\item \en{EKG, CXR} در \en{VSD} وابسته به سایز است.
+\item \en{VSD} بزرگ: والیوم اورلود برای قلب چپ.
+  \begin{itemize}
+  \item \en{EKG}: \acimportant{هایپرتروفی} و بزرگ شدن \acimportant{قلب چپ}.
+  \item \en{CXR}: \acimportant{کاردیومگالی}؛ \en{Increased pulmonary artery silhouette}.
+  \end{itemize}
+\item ممکن است \acimportant{\en{P-HTN}} رخ دهد: افزایش جریان، افزایش مقاومت عروق ریوی؛ هایپرتروفی و بزرگ شدن قلب راست.
+\item درمان \en{VSD}: \en{$1/2$} موارد خودبه‌خود بسته می‌شوند. \acunclear{کسرِ موارد بسته‌شونده: \en{$1/2$}}.
+\item درمان نهایی: جراحی.
+\item درمان اولیه: دیورتیک، دیگوکسین، کاهش افترلود.
+\end{itemize}
+\subsection*{\en{ASD}}
+\begin{itemize}
+\item ۱۰\% تمام موارد \en{CHD}.
+\item \acimportant{حتی در موارد بزرگ و شانت شدید اغلب بیماران علامت‌دار نمی‌شوند}.
+\item \acimportant{\en{Prominent Right Ventricular Impulse}} \en{at LLSB can be palpated}.
+\item \en{A soft (grade I or II)} \acimportant{\en{systolic ejection murmur}}.
+\item \en{Fixed split $S_2$}.
+\item اگر شانت بزرگ باشد: \acimportant{\en{Mid-diastolic murmur}} \en{at LLSB}.
+\item \en{EKG}: \acimportant{انحراف محور راست}، بزرگ شدن بطن راست.
+\item \en{CXR}: کاردیومگالی.
+\item معمولاً اندیکاسیون درمان ندارد، مگر \acimportant{شانت بزرگ در ۳ سالگی}.
+\item \acimportant{سوفل دیاستولیک همیشه غیرطبیعی است}.
+\end{itemize}
+
+\acpage{۳}{pic03.jpg}
+\subsection*{\en{PDA}}
+\begin{itemize}
+\item موارد خفیف بی‌علامت هستند.
+\item موارد متوسط تا شدید: \acimportant{\en{HF}}؛ به علت افزایش مقاومت عروق پولمونری، \acimportant{فاز دیاستولی جریان} می‌رود.
+  \acunclear{عبارتِ «فاز دیاستولی جریان می‌رود»}.
+\item \en{A} \acimportant{\en{continuous machine like murmur}} \en{at left infraclavicular area}؛ سوفل ممتد.
+\item اگر جریان عبوری از میترال زیاد شود: \acimportant{مرمر مید دیاستولیک} در \en{apex}.
+\item \en{Hyperdynamic precordium}.
+\item \en{CXR} در موارد متوسط تا شدید:
+  \begin{itemize}
+  \item \en{Full pulmonary artery silhouette}.
+  \item \en{Increased pulmonary vascularity}.
+  \end{itemize}
+\item \en{EKG}: هایپرتروفی بطن چپ؛ هایپرتروفی بطن راست اگر \en{P-HTN}.
+\item درمان: اگر ظرف چند هفتهٔ اول بسته نشود، بعید است به طور خودبه‌خودی بسته شود.
+\item دیورتیک، جراحی.
+\end{itemize}
+\subsection*{اندوکاردیال کوشن دیفکت (\en{ECD})}
+\begin{itemize}
+\item آتریوونتریکولار سپتال دفکت.
+\item \en{Complete, partial, transient}.
+% Source writes “transient”; retained as written.
+\item دیواره‌های دهلیزی ـ بطنی غیرطبیعی.
+\item \en{VSD, ASD}.
+\item دریچهٔ دهلیزی ـ بطنی مشترک.
+\item آنومالی دریچه‌های دهلیزی ـ بطنی.
+\end{itemize}
+
+\acpage{۴}{pic04.jpg}
+\subsection*{\en{ECD} ـ تظاهرات بالینی، تشخیص و درمان}
+\begin{itemize}
+\item \acimportant{علائم \en{HF} از هفتهٔ ۸ تا ۹}: به دنبال کاهش مقاومت عروق ریوی.
+\item \acimportant{\en{P-HTN}}: به دلیل افزایش جریان خون پولمونری.
+\item اگر \en{VSD} بزرگ وجود داشته باشد: \acimportant{\en{Single $S_2$}}.
+\item \acimportant{کندی رشد} در بیماران.
+\item \acimportant{شایع‌ترین \en{CHD} در بیماران تریزومی ۲۱ است}.
+\item تشخیص \en{ECD} با اکوکاردیوگرافی است.
+\item \en{CXR}: کاردیومگالی.
+\item \en{EKG}: انحراف محور به چپ، هایپرتروفی هر دو بطن.
+\item درمان \en{ECD}: دیورتیک، کاهش افترلود، جراحی.
+\end{itemize}
+\subsection*{استنوز پولمونری}
+\begin{itemize}
+\item \en{Valvular, Subvalvular, Supravalvular}.
+\item در موارد خفیف بی‌علامت است.
+\item موارد متوسط تا شدید: تنگی نفس فعالیتی، \acimportant{خستگی زودرس}.
+\item نوزادان در موارد شدید حتی ممکن است سیانوتیک شوند.
+\item \acimportant{\en{Systolic ejection murmur}} در دومین فضای بین‌دنده‌ای چپ؛ \acimportant{ارجاع به پشت}، \acimportant{وجود تریل}.
+\item \acimportant{\en{Split $S_2$}}.
+\item هایپرتروفی بطن راست: \en{Impulse at LLSB}.
+\item \acimportant{کلیکی که با تنفس تغییر می‌کند}؛ با دم کاهش می‌یابد.
+\item \en{EKG} موارد شدید: انحراف محور \acimportant{راست} و \acimportant{هایپرتروفی بطن راست}.
+\item \en{CXR}: \acimportant{اتساع شریان ریوی}.
+\item معمولاً شدت بیماری \acimportant{پیشرفت نمی‌کند}.
+\end{itemize}
+
+\acpage{۵}{pic05.jpg}
+\subsection*{استنوز آئورت}
+\begin{itemize}
+\item \en{Valvular, Subvalvular, Supravalvular}.
+\item موارد خفیف تا متوسط بدون علامت هستند.
+\item \acimportant{خستگی زودرس}، \en{CP} فعالیتی، سنکوپ.
+\item شیرخوار با تنگی شدید: \acimportant{\en{HF}}؛ کرونرها دچار ایسکمی می‌شوند. \acunclear{حاشیه‌نویسی دربارهٔ کرونرها: دچار ایسکمی می‌شوند}.
+\item \acimportant{ارجاع به گردن}؛ فضای بین‌دنده‌ای دوم راست:
+  \begin{itemize}
+  \item \acimportant{\en{Systolic ejection murmur}}.
+  \item \acimportant{\en{Systolic ejection click}}.
+  \end{itemize}
+\item جزء آئورتی \en{$S_2$} کاهش می‌یابد.
+\item \en{EKG, CXR}: هایپرتروفی بطن چپ.
+\item \en{CXR}: \acimportant{اتساع آئورت صعودی}.
+\item \acimportant{شدت استنوز آئورت به مرور زمان افزایش می‌یابد}.
+\item اندازه‌گیری فلو با اکوکاردیوگرافی داپلر.
+\item خط اول درمان: بالون؛ خط دوم: جراحی.
+\end{itemize}
+\subsection*{کوآرکتاسیون آئورت}
+\begin{itemize}
+\item \en{Almost always juxtaductal}.
+\item لومن آئورت در نزدیکی داکت نازک می‌شود.
+\item \en{Hypoplastic aortic arch}.
+\item اختلال دریچهٔ آئورتی؛ \en{VSD}.
+\item \acimportant{تفاوت \en{$\mathrm{SpO}_2$} در اندام فوقانی}.
+% Source specifies upper limbs here; retained without inferred correction.
+\item \en{PDA} برای آن‌ها خوب است.
+\item دیسترس تنفسی و شوک قلبی بعد از ۲ هفته.
+\item \acimportant{پالس فمورال ضعیف‌تر از \en{Right radial}}.
+\item \en{BP} در اندام تحتانی کمتر از اندام فوقانی است.
+\item معمولاً \acimportant{\en{$S_3$}} وجود دارد ولی \acimportant{\en{Murmur} وجود ندارد}.
+\end{itemize}
+
+\acpage{۶}{pic06.jpg}
+\subsection*{کوآرکتاسیون آئورت ـ ادامه}
+\begin{itemize}
+\item کودکان بزرگ‌تر: \acimportant{ناراحتی در پا به دنبال فعالیت}؛ سردرد، اپیستاکسی.
+\item \en{CXR, EKG}: هایپرتروفی و بزرگ شدن \acimportant{بطن راست}؛ \acimportant{کاردیومگالی شدید}، ادم ریوی.
+% Source explicitly says right ventricle on this page.
+\item \acimportant{\en{Rib notching}} در کودکان بالای \acimportant{۸ سال}.
+\item درمان:
+  \begin{itemize}
+  \item پروستاگلاندین \en{$E_1$} وریدی: باز کردن \en{PDA}.
+  \item داروهای اینوتروپ، دیورتیک.
+  \item بالون، جراحی.
+  \end{itemize}
+\end{itemize}
+
+% Handwritten page numbers 1--6 retained in section headings.
+% Blank printed Date/Subject fields and notebook logos have no medical text.
+\ifnum\AcyanoticStandalone=1
+  \let\AcyanoticEnd\enddocument
+\else
+  \let\AcyanoticEnd\relax
+\fi
+\AcyanoticEnd

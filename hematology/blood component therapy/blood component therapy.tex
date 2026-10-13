@@ -1,0 +1,71 @@
+% !TeX program = xelatex
+% UTF-8 transcription of the single handwritten Persian/English source page.
+% Source: Google Drive Notebook/blood component therapy.
+% images/pic01.jpg = 20261013_063707557.jpg.
+% Source wording, numerical values and yellow highlights are retained.
+% Compile directly with XeLaTeX, or input into a XePersian document.
+\newif\ifBCTStandalone
+\ifdefined\settextfont
+  \BCTStandalonefalse
+\else
+  \BCTStandalonetrue
+\fi
+\ifBCTStandalone
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=20mm]{geometry}
+  \usepackage{amsmath,xcolor}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \begin{document}
+\fi
+\begingroup
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\emergencystretch=3em
+\newcommand{\BCTen}[1]{\lr{#1}}
+\ifdefined\colorbox
+  \newcommand{\BCThl}[1]{\colorbox{yellow!35}{\strut #1}}
+\else
+  \newcommand{\BCThl}[1]{\textbf{#1}}
+\fi
+
+\section*{۱۵۲ ـ \BCTen{Blood component therapy}}
+\subsection*{واکنش‌های ترانسفیوژن}
+
+\subsubsection*{\BCTen{Acute Hemolytic Transfusion Reaction}}
+\begin{itemize}
+  \item علائم: \BCThl{شوک}، \BCThl{درد کمر}، تب، همولیز داخل عروق، هموگلوبینمی، هموگلوبین‌اوری (۵ روز بعد).
+  \item درمان: قطع ترانسفیوژن، مایع‌درمانی، اصلاح هایپرکالمی.
+\end{itemize}
+
+\subsubsection*{\BCTen{Delayed Hemolytic Transfusion Reaction}}
+\begin{itemize}
+  \item علائم: شروع \BCThl{\BCTen{7--14} روز بعد}؛ درد، تب، زردی، هموگلوبین‌اوری، افت هموگلوبین، رتیکولوسایتوز.
+  \item درمان: فقط \BCTen{RBC} آنتی‌ژن‌منفی دریافت کند.
+\end{itemize}
+
+\subsubsection*{\BCTen{Febrile nonhemolytic Transfusion Reaction}}
+\BCThl{۱ به هر ۱۰۰ مورد}
+\begin{itemize}
+  \item علائم: \BCThl{تب ظرف ۴ ساعت}، لرز.
+  \item درمان: تب‌بر، کشت خون، آنتی‌بیوتیک، عفونت.
+\end{itemize}
+
+\subsubsection*{\BCTen{Allergic Transfusion Reaction}}
+\BCThl{۱ به هر ۱۰۰ مورد}
+\begin{itemize}
+  \item علائم: \BCThl{کهیر}، خارش، راش ماکولوپاپولر، ادم، دیسترس تنفسی، افت \BCTen{BP}؛ \BCThl{ظرف ۴ ساعت}.
+  \item درمان: دیفن‌هیدرامین + هیدروکورتیزون.
+\end{itemize}
+
+\subsection*{آنمی تغذیه‌ای و \BCTen{Packed cell}}
+\begin{itemize}
+  \item \BCThl{برای درمان آنمی تغذیه‌ای بدون علامت} از \BCThl{\BCTen{packed cell} استفاده نمی‌کنیم}؛ خوراکی درمان می‌کنیم.
+  \item \BCTen{Packed cell}: مقدار \BCTen{10--15 mL/kg}؛ افزایش \BCTen{2--3 g/dL} عدد هموگلوبین.
+\end{itemize}
+
+\endgroup
+\ifBCTStandalone
+  \expandafter\enddocument
+\fi

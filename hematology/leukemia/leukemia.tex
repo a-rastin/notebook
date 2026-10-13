@@ -1,0 +1,188 @@
+% !TeX program = xelatex
+% UTF-8 transcription of four handwritten Persian/English pages.
+% Source: Google Drive notebook/leukemia (four-image folder).
+% pic01.jpg = 20261013_063535974.jpg; handwritten page 1.
+% pic02.jpg = 20261013_063542431.jpg; handwritten page 2.
+% pic03.jpg = 20261013_063546635.jpg; handwritten page 3.
+% pic04.jpg = 20261013_063551096.jpg; handwritten page 4.
+% Source statements, including differing age ranges, are retained.
+% Compile directly with XeLaTeX, or input into a XePersian document.
+\newif\ifHemLeukStandalone
+\ifdefined\settextfont
+  \HemLeukStandalonefalse
+\else
+  \HemLeukStandalonetrue
+\fi
+\ifHemLeukStandalone
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=20mm]{geometry}
+  \usepackage{amsmath,amssymb,array,xcolor}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \begin{document}
+\fi
+\begingroup
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\emergencystretch=3em
+\newcommand{\HemLeukEn}[1]{\lr{#1}}
+\newcommand{\HemLeukMath}[1]{\lr{\(#1\)}}
+\ifdefined\colorbox
+  \newcommand{\HemLeukHl}[1]{\colorbox{yellow!35}{\strut #1}}
+\else
+  \newcommand{\HemLeukHl}[1]{\textbf{#1}}
+\fi
+\newcommand{\HemLeukUnclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\newcommand{\HemLeukPage}[1]{\clearpage\section*{۱۵۵ ـ لوکمی؛ صفحهٔ #1}}
+
+\HemLeukPage{۱}
+\subsection*{عوامل خطر و ژنتیک}
+\begin{enumerate}
+\item افزایش خطر لوکمی حاد: سندرم داون، آنمی فانکونی، سندرم بلوم، آتاکسی ـ تلانژکتازی، سندرم ویسکوت ـ آلدریچ، \HemLeukEn{NF1}، سندرم‌های لوکمی خانوادگی.
+\item رادیوتراپی ریسک لوکمی را بالا می‌برد.
+\item درمان با \HemLeukEn{Etoposide} ریسک لوکمی را بالا می‌برد.
+\end{enumerate}
+کروموزوم فیلادلفیا (\HemLeukEn{Ph}): ترانس‌لوکاسیون ۹ و ۲۲؛ \HemLeukHl{\HemLeukEn{BCR--ABL}}؛ تیروزین کیناز بیش از حد بیان می‌شود.
+\begin{itemize}
+\item بیشتر \HemLeukHl{\HemLeukEn{CML}} / در همهٔ \HemLeukEn{Ph-positive ALL}.
+\end{itemize}
+
+\subsection*{لوکمی در اطفال}
+\begin{itemize}
+\item \HemLeukHl{در اطفال ۷۵\% تمام موارد لوکمی \HemLeukEn{ALL} است}؛ \HemLeukEn{AML}: ۲۰\%؛ \HemLeukEn{CML}: ۵\%.
+\item \HemLeukEn{ALL}:
+  \begin{itemize}
+  \item \HemLeukEn{T cell}: \HemLeukHl{در پسرها بسیار شایع‌تر}؛ سن \HemLeukHl{بالاتر از ۴ سال}.
+  \item \HemLeukEn{B cell}: در پسرها کمی شایع‌تر؛ سن \HemLeukHl{۲--۴ سال}.
+  \end{itemize}
+\item \HemLeukEn{ALL}: \HemLeukHl{بیشتر در سال اول زندگی} دیده می‌شود؛ \HemLeukEn{M = F}.
+\end{itemize}
+
+\subsection*{تظاهرات لوکمی حاد}
+به علت انفیلتراسیون سلول‌های لوکمیک به بافت \HemLeukEn{NL}:
+\begin{itemize}
+\item \HemLeukEn{BMF}: \HemLeukHl{آنمی، نوتروپنی، ترومبوسیتوپنی}؛ \HemLeukHl{لکوسیتوز}.
+\item \HemLeukHl{تهاجم به بافت‌ها}: گره‌های لنفاوی، کبد، طحال، مغز، استخوان، پوست، ریه، بیضه.
+\item علائم شایع لوکمی: \HemLeukHl{تب}، رنگ‌پریدگی، پتشی، اکیموز، آنورکسی، خستگی، درد اسکلتی ـ عضلانی.
+\item \HemLeukEn{Ph/E}: \HemLeukHl{لنفادنوپاتی}، \HemLeukHl{ارگانومگالی}.
+\item محل‌های شایع درگیری اکسترامدولاری در \HemLeukEn{ALL}: \HemLeukHl{مغز} و \HemLeukHl{بیضه}.
+\end{itemize}
+
+\HemLeukPage{۲}
+\subsection*{ادامهٔ تظاهرات}
+\begin{itemize}
+\item تظاهرات شایع \HemLeukEn{T-cell ALL}: \HemLeukHl{لکوسیتوز}، \HemLeukHl{تودهٔ مدیاستن قدامی} (آدنوپاتی / درگیری تیموس)، \HemLeukHl{ارگانومگالی}.
+\item درگیری اکسترامدولاری \HemLeukEn{AML} ممکن است \HemLeukHl{در هر نقطه‌ای} دیده شود.
+\end{itemize}
+
+\subsection*{تشخیص}
+\begin{itemize}
+\item تأیید تشخیص لوکمی حاد: دیدن \HemLeukHl{بلاست‌های نابالغ در \HemLeukEn{PBS} و \HemLeukEn{BMA}}.
+\item \HemLeukHl{آنمی و ترومبوسیتوپنی} یافته‌های شایع در لوکمی حاد هستند.
+\item ۲۰\% بیماران لوکمی حاد هایپرلکوسیتوز دارند: \HemLeukHl{\HemLeukMath{\mathrm{WBC}>100{,}000}}.
+\item تشخیص قطعی نوع لوکمی با بررسی مارکرهای سلولی: ایمونوفنوتایپ و سیتوژنتیک.
+\item در \HemLeukEn{B-cell ALL}:
+  \begin{itemize}
+  \item شایع‌ترین ترانس‌لوکاسیون \HemLeukMath{t(12,21)}؛ در ۲۰\%؛ پروگنوز مطلوب.
+  \item موتاسیون \HemLeukEn{Ph}: در ۳\%؛ پروگنوز بد.
+  \end{itemize}
+\item در \HemLeukEn{CML} و \HemLeukEn{Ph-positive ALL}: داروهای مهارکنندهٔ تیروزین کیناز (\HemLeukEn{TKI}).
+\item در زمان تشخیص لوکمی:
+  \begin{itemize}
+  \item \HemLeukHl{\HemLeukEn{LP}}: انجام می‌دهیم برای بررسی درگیری \HemLeukEn{CNS}.
+  \item \HemLeukHl{\HemLeukEn{CXR}}: برای بررسی \HemLeukEn{ant. mediastinal mass}.
+  \end{itemize}
+\item بررسی آزمایشگاهی \HemLeukEn{TLS}: \HemLeukHl{اوریک اسید، عملکرد کلیه، \HemLeukMath{K^{+}}، فسفر، \HemLeukMath{Ca^{2+}}}.
+\end{itemize}
+
+\subsection*{\HemLeukEn{DDX} لوکمی حاد}
+\begin{itemize}
+\item \HemLeukEn{non-malignant}: \HemLeukEn{Infection}؛ \HemLeukEn{EBV}.
+\item \HemLeukEn{AA}، \HemLeukEn{ITP}، \HemLeukEn{JIA}، هیستیوسیتوز.
+\item \HemLeukEn{malignant}.
+\end{itemize}
+% In the source, malignant and non-malignant are separate branches;
+% no specific malignant differential is written.
+
+\HemLeukPage{۳}
+\subsection*{کودکان سندرم داون}
+\HemLeukHl{\HemLeukEn{Transient Myeloproliferative Disorder}}:
+\begin{itemize}
+\item ترومبوسیتوپنی + بلاست در \HemLeukEn{PBS} + \HemLeukMath{\uparrow\mathrm{WBC}}.
+\item درمان خاصی ندارد؛ خودش رفع می‌شود.
+\item این کودکان ریسک بالای \HemLeukHl{\HemLeukEn{AML} و \HemLeukEn{ALL}} دارند؛ ظرف چند ماه تا چند سال.
+\end{itemize}
+
+\subsection*{درمان}
+\begin{itemize}
+\item \HemLeukEn{B-cell ALL}: \HemLeukEn{chT} با ۳ یا ۴ دارو.
+\item \HemLeukEn{T-cell ALL}: \HemLeukEn{chT} با ۴ دارو.
+\item پروگنوز خوب در \HemLeukEn{B-cell ALL}: سن \HemLeukHl{۱--۹ سال}؛ \HemLeukMath{\mathrm{WBC}<50{,}000}.
+\item \HemLeukEn{T-cell ALL}:
+  \begin{itemize}
+  \item بیماران \HemLeukEn{Standard Risk}: درمان ۴ هفته‌ای؛ \HemLeukEn{Vincristine + Cortico + Pegylated Asparaginase}.
+  \item بیماران \HemLeukEn{High-Risk}: درمان بالا + \HemLeukEn{Anthracycline (Daunorubicin)}.
+  \end{itemize}
+\item در صورت درگیری \HemLeukEn{CNS} لوکمی: درمان اینتراتکال با سیتارابین یا متوترکسات.
+\item بعد از اتمام فاز \HemLeukEn{Induction}: بیمار را \HemLeukEn{BMB} می‌کنیم؛ برای بررسی رمیژن.
+\item \HemLeukHl{تقریباً همهٔ بیماران \HemLeukEn{ALL} به رمیژن می‌رسند}.
+\end{itemize}
+% The Standard Risk/High-Risk branch is labelled T-cell ALL in pic03;
+% its source label and written drug list are transcribed without correction.
+
+\subsection*{عوارض درمان لوکمی}
+\begin{itemize}
+\item سرکوب مغز استخوان به دنبال \HemLeukEn{chT}: آنمی، خونریزی، نوتروپنی، عفونت.
+\item سرکوب ایمنی سلولی: ریسک عفونت با پنوموسیستیس جیرووسی.
+  \begin{itemize}
+  \item باید پروفیلاکسی \HemLeukEn{AB} بدهیم.
+  \item تری‌متوپریم ـ سولفامتوکسازول.
+  \end{itemize}
+\end{itemize}
+
+\HemLeukPage{۴}
+\subsection*{ادامهٔ درمان و عوارض}
+\begin{itemize}
+\item بیمار \HemLeukEn{AML}: پروفیلاکسی \HemLeukEn{AB} و آنتی‌فونگال؛ \HemLeukUnclear{اگر فاکتورهای خطر (\HemLeukEn{RF}) داشته باشد}.
+\item سکل‌های درمان لوکمی: بدخیمی ثانویه، \HemLeukUnclear{چاقی}، استئونکروز، اختلال قلبی، مشکلات عصبی ـ شناختی.
+\end{itemize}
+
+\subsection*{پروگنوز و عود}
+\begin{itemize}
+\item پروگنوز خوب در \HemLeukEn{ALL}:
+  \begin{itemize}
+  \item سن ۱--۱۰ سال؛ \HemLeukEn{B-cell}.
+  \item \HemLeukMath{\mathrm{WBC}<50{,}000} اولیه؛ \HemLeukMath{t(12,21)}.
+  \item عدم درگیری \HemLeukEn{CNS}.
+  \end{itemize}
+\item عود \HemLeukEn{ALL} بیشتر در مغز استخوان دیده می‌شود ولی در \HemLeukEn{CNS} و بیضه هم محتمل است.
+\item پروگنوز عود \HemLeukEn{AML} بد است.
+\end{itemize}
+
+\subsection*{پروگنوز در \HemLeukEn{ALL}}
+\begingroup
+\renewcommand{\arraystretch}{1.8}
+\begin{center}
+\begin{tabular}{|p{3.1cm}|p{5cm}|p{5cm}|}
+\hline
+معیار & خوب & بد \\
+\hline
+سن & \HemLeukHl{\HemLeukEn{1--10 year}} & \HemLeukMath{<1}\; یا \HemLeukMath{\geq10} \\
+\hline
+\HemLeukEn{WBC} اولیه & \HemLeukHl{\HemLeukMath{<50{,}000}} & \HemLeukMath{\geq50{,}000} \\
+\hline
+درگیری \HemLeukEn{CNS} & ندارد & دارد \\
+\hline
+ایمونوفنوتیپ & \HemLeukHl{\HemLeukEn{B cell}} & \HemLeukEn{T cell} \\
+\hline
+تعداد کروموزوم & هایپردیپلوئیدی \HemLeukMath{(>50)} & هایپودیپلوئیدی \HemLeukMath{(<44)} \\
+\hline
+\end{tabular}
+\end{center}
+\endgroup
+
+\endgroup
+\ifHemLeukStandalone
+  \expandafter\enddocument
+\fi

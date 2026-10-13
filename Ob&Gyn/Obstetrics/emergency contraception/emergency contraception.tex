@@ -1,0 +1,205 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% Standalone: compile this file with XeLaTeX.
+% To input into a XePersian document, first define \EmergencyContraceptionInNotebook.
+% Source: Google Drive notebook/emergency contraception, handwritten pages 1--4.
+% pic01.jpg = 20261013_070005694.jpg (page 1)
+% pic02.jpg = 20261013_070012787.jpg (page 2)
+% pic03.jpg = 20261013_070018998.jpg (page 3)
+% pic04.jpg = 20261013_070024030.jpg (page 4)
+% A transcription of the source, not an update of its medical recommendations.
+\ifdefined\EmergencyContraceptionInNotebook
+  \let\ECfinish\relax
+\else
+  \def\ECfinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=22mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+  \setlength{\emergencystretch}{3em}
+  \setlist[itemize]{itemsep=2pt,topsep=4pt}
+  \begin{document}
+\fi
+\providecommand{\ECunclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\providecommand{\ECmath}[1]{\lr{\(#1\)}}
+\providecommand{\ECpage}[1]{\clearpage\section*{صفحهٔ #1}}
+
+\begin{center}
+  \Large\bfseries\lr{Emergency Contraception}
+\end{center}
+\section*{صفحهٔ ۱}
+% Printed stationery headings and blank date fields are not medical content.
+% Arrows and braces in the handwritten notes are represented by nested lists.
+
+\subsection*{اندیکاسیون‌های \lr{EC}}
+\begin{itemize}
+  \item پس از رابطهٔ جنسی محافظت‌نشده.
+  \item پس از رخ‌دادن حوادث مثل عدم استفاده از پیشگیری.
+  \item اگر بیمار داروهایش را \lr{miss} کرده باشد.
+\end{itemize}
+
+تخمین ریسک بارداری اغلب دشوار است:
+\begin{itemize}
+  \item یک نوبت رابطهٔ جنسی محافظت‌نشده در اواسط سیکل: ۲۰–۳۰\% شانس بارداری دارد.
+  \item این شانس قبل از روز ۱۰، ۲\% و پس از روز ۱۷، ۳\% است.
+\end{itemize}
+
+\subsection*{روش‌های \lr{EC}}
+\begin{itemize}
+  \item \lr{Cu-IUD}.
+  \item \lr{LNG-EC} (لوونورژسترل): خوراکی.
+  \item \lr{UPA-EC} (یولیپریستال استات): خوراکی.
+\end{itemize}
+
+\subsection*{\lr{Cu-IUD}}
+\begin{itemize}
+  \item مؤثرترین روش \lr{EC} است.
+  \item روش انتخابی است.
+  \item تا ۵ روز بعد از \lr{UPSI} قابل استفاده است، یا تا ۵ روز پس از تخمک‌گذاری، اگر روز تخمک‌گذاری مشخص باشد.
+\end{itemize}
+
+اگر زنان ظرف ۳ ساعت پس از مصرف دارو استفراغ کنند: دوز دارو تکرار شود یا \lr{IUD} نصب شود.
+
+\subsection*{\lr{UPA}}
+\begin{itemize}
+  \item \lr{Progesterone-Receptor modulator}.
+  \item دوز: ۳۰ میلی‌گرم.
+  \item تا ۵ روز پس از \lr{UPSI}.
+  \item می‌تواند اوولاسیون را به تأخیر بیندازد.
+  \item با برخی داروها که مکانیسم تحریک آنزیم کبدی دارند تداخل دارد.
+  \item در بیماران آسمی که تحت درمان \lr{CS} خوراکی هستند توصیه نمی‌شود.
+  \item اگر زن شیرده است، نباید تا ۱ هفته شیر بدهد.
+  \item پس از مصرف \lr{UPA} باید تا ۵ روز برای شروع \lr{OCP} صبر کرد.
+  \item \lr{OCP} کارایی \lr{UPA} را کم می‌کند.
+  \item در این ۵ روز و تا زمانی که \lr{OCP} اثر کند (۲ روز برای \lr{POP} و ۷ روز برای ترکیبی)، نباید رابطه داشته باشد.
+  \item بارداری فعلی را متوقف نمی‌کند و بر جنین بی‌تأثیر است.
+  \item اگر در یک سیکل \lr{UPA} مصرف شده، می‌توان در همان سیکل در نوبت دوم باز هم مصرف نمود (پس از \lr{UPSI} مجدد).
+\end{itemize}
+
+\ECpage{۲}
+\subsection*{\lr{LNG-EC} — لوونورژسترل}
+\begin{itemize}
+  \item تا ۷۲ ساعت پس از \lr{UPSI} مؤثر است.
+  \item ۶۰–۸۰\% از زنانی که قرار بوده باردار شوند را جلوگیری می‌کند.
+  \item تک قرص \lr{1.5 mg} خوراکی.
+  \item در بیمارانی که داروهای محرک آنزیم کبدی مصرف می‌کنند، دوز \lr{3 mg} داده می‌شود.
+  \item بلافاصله با مصرف آن می‌توان \lr{OCP} را شروع کرد.
+  \item تا زمان رسیدن \lr{OCP} به اثربخشی: رابطه نداشته باشد.
+  \item اگر در یک سیکل مصرف شود و بیمار باز هم \lr{UPSI} داشته باشد، می‌تواند باز هم \lr{LNG-EC} مصرف کند.
+\end{itemize}
+
+\subsection*{\lr{Female Sterilization}}
+\begin{itemize}
+  \item به صورت لاپاروسکوپیک و از طریق \lr{tubal occlusion}: کلیپس‌ها، تیتانیوم، روی لولهٔ فالوپ.
+  \item ریسک بروز خطا و بارداری: ۱ در ۲۰۰ است.
+  \item قابل بازگشت است.
+  \item از طریق \lr{ligation} لولهٔ فالوپ نیز قابل انجام است، ولی ریسک شکست آن اندکی بالاتر است.
+  \item روش \lr{tubal cannulation} از طریق هیستروسکوپی تحت بی‌حسی موضعی انجام می‌شود.
+  \item نرخ شکست مشابه \lr{tubal occlusion} است.
+  \item برگشت‌ناپذیر است.
+  \item ۳ ماه طول می‌کشد تا کاملاً اثربخش باشد.
+  \item تأیید آن با \lr{HSG}: امروزه کمتر مورد استفاده واقع می‌شود.
+  \item این روش‌ها ریسک \lr{EP} را بالا می‌برند.
+  \item ارتباطی با خونریزی‌های شدید قاعدگی (\lr{HMB}) ندارند.
+\end{itemize}
+
+\subsection*{وازکتومی}
+\begin{itemize}
+  \item تحت بی‌حسی موضعی قابل انجام است.
+  \item تا حدی برگشت‌پذیر است.
+  \item باید آزواسپرمی در \lr{Sperm} تأیید شود: ۲۰ نوبت انزال نیاز است، ۱۲ هفته حداقل.
+  \item ریسک کنسر بیضه یا بیماری‌های قلبی را افزایش نمی‌دهد.
+  \item ممکن است درد مزمن بیضه ایجاد شود.
+  \item سطح تستوسترون، لیبیدو، ارکشن و ارگاسم را تغییر نمی‌کند.
+  \item نرخ شکست: ۱ در ۲۰۰۰.
+\end{itemize}
+
+\ECpage{۳}
+\subsection*{ریسک بارداری به دنبال \lr{UPI}}
+\textbf{\lr{Low risk}:}
+\begin{itemize}
+  \item یک اپیزود \lr{UPI} خارج از دورهٔ پنجرهٔ باروری.
+  \item \lr{Failure of a contraceptive method}:
+  \begin{itemize}
+    \item \lr{miss} کردن بیش از ۱ دوز \lr{OCP} خوراکی.
+    \item \lr{miss} کردن ۱ هفته در موعد تزریق دپو یا پچ.
+  \end{itemize}
+  \item پارگی کاندوم.
+\end{itemize}
+
+\textbf{\lr{High risk}:}
+\begin{itemize}
+  \item چند اپیزود \lr{UPI}.
+  \item \lr{UPI} در میانهٔ سیکل (۱۲ روز پیش از زمان مورد انتظار شروع \lr{menses}).
+  \item پریودهای نامنظم.
+\end{itemize}
+
+\subsection*{انتخاب روش \lr{EC}}
+\begin{itemize}
+  \item ریسک باردارشدن با \lr{IUD} لوونورژسترل و \lr{IUD} مسی زیر ۱\% است، ولی برای \lr{LNG} خوراکی حدود \lr{2.6\%} است.
+  \item در برخی افراد بهتر است از \lr{IUD} استفاده کنیم:
+  \begin{itemize}
+    \item \ECmath{\mathrm{BMI}\geq30}.
+    \item \lr{high risk} برای بارداری.
+  \end{itemize}
+  \item \lr{IUD} برای نصب نیاز به ویزیت شدن دارد، ولی روش خوراکی نیاز به ویزیت ندارد.
+\end{itemize}
+
+\subsection*{بررسی پیش از تجویز}
+قبل از نصب \lr{IUD-EC} تست بارداری انجام می‌دهیم:
+\begin{itemize}
+  \item تست منفی: نصب \lr{IUD}.
+  \item پس از نصب \lr{IUD} نیاز به تجویز \lr{OCP} ندارد. ظرف ۳–۴ هفته \lr{review} می‌شود. در صورت پریود نشدن: تست بارداری.
+  \item تست مثبت: مشاوره.
+\end{itemize}
+
+قبل از تجویز دارو برای \lr{EC} نیاز به تست بارداری نیست، ولی اگر آماده بود انجام می‌دهیم.
+
+\subsection*{داروهای قابل تجویز در \lr{EC}}
+\begin{itemize}
+  \item \lr{Ulipristal Acetate}:
+  \begin{itemize}
+    \item مؤثرتر از \lr{LNG}.
+    \item تا ۵ روز پس از \lr{UPI} قابل استفاده است.
+    \item اگر \ECmath{\mathrm{BMI}\geq30} ارجح است.
+    \item بیمار باید حداقل پنج روز صبر کند و سپس \lr{OCP} را شروع کند.
+  \end{itemize}
+  \item \lr{LNG}:
+  \begin{itemize}
+    \item تا ۳ روز پس از \lr{UPI} قابل استفاده است.
+    \item می‌توان \lr{OCP} را به صورت همزمان آغاز کرد.
+  \end{itemize}
+\end{itemize}
+
+\ECpage{۴}
+\subsection*{دوزها و پیگیری}
+\begin{itemize}
+  \item دوز \lr{Ulipristal Acetate}: تک‌دوز ۳۰ میلی‌گرم خوراکی.
+  \item دوز \lr{LNG}: تک‌دوز \lr{1.5} میلی‌گرم خوراکی.
+  \item علی‌رغم شروع همزمان \lr{OCP}، ولی تا ۷ روز کاندوم.
+  \item با داروی خوراکی، اگر بیمار تا ۳ هفته بعد پریود نشد: تست بارداری.
+\end{itemize}
+
+\subsection*{تداخلات دارویی}
+\begin{itemize}
+  \item داروهایی که اثربخشی \lr{LNG} را در صورت \ECunclear{دریافت} کاهش می‌دهند: دوز ۲ برابر \lr{LNG} می‌دهیم.
+  \begin{itemize}
+    \item فنی‌توئین، کاربامازپین، ریفامپین، \lr{efavirenz}.
+  \end{itemize}
+  \item ریفامپین اثر \lr{UPA} را نیز کاهش می‌دهد.
+\end{itemize}
+
+\subsection*{شیردهی و گزینهٔ دیگر}
+\begin{itemize}
+  \item مادر شیرده باید تا ۲۴ ساعت پس از شروع \lr{UPA} شیر را بدوشد و دور بریزد. سایر \lr{EC}ها منعی در شیردهی ندارند.
+  \item تجویز میفپریستون، ۱۰–۲۵ میلی‌گرم، به اندازهٔ \lr{LNG} در \lr{EC} مؤثر است.
+\end{itemize}
+
+% The source gives different breastfeeding intervals for UPA on pages 1 and 4;
+% both are retained in their original locations rather than silently reconciled.
+\ECfinish

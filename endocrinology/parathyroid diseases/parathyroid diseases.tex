@@ -1,0 +1,174 @@
+% !TeX program = xelatex
+% UTF-8 transcription of the three handwritten source pages.
+% Values, arrows and terminology are transcribed, not medically revised.
+% pic01.jpg: 20261013_064343400.jpg (source page 1)
+% pic02.jpg: 20261013_064350995.jpg (source page 2)
+% pic03.jpg: 20261013_064357476.jpg (source page 3)
+% Compile standalone with XeLaTeX, or input into a XePersian document.
+\ifdefined\settextfont
+  \def\ParathyroidStandalone{0}
+\else
+  \def\ParathyroidStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\ptarrow}{\en{$\longleftarrow$}}
+\newcommand{\ptmark}[1]{\textbf{#1}}
+\newcommand{\ptuncertain}[1]{#1\,\textsuperscript{[خوانش نامطمئن]}}
+\newcommand{\ptpage}[1]{\clearpage\section*{اختلالات پاراتیروئید ـ صفحهٔ #1}}
+\ifnum\ParathyroidStandalone=1 \begin{document}\fi
+
+\ptpage{۱}
+{\footnotesize عنوان دست‌نویس: ۱۷۴ ـ اختلالات پاراتیروئید، \ptuncertain{اندو}.\par}
+\begin{itemize}
+\item کاهش کلسیم یونیزهٔ سرم \ptarrow\ ترشح \en{PTH}.
+\item \en{PTH} در کلیه \ptarrow\ بازجذب کلسیم، ترشح فسفات.
+\item کمبود \en{PTH} در آزمایش \ptarrow\ \en{$\mathrm{Ca}\downarrow$}، فسفات \en{$\uparrow$}.
+\end{itemize}
+
+\subsection*{هایپوکلسمی}
+\begin{itemize}
+\item افزایش تحریک‌پذیری نوروموسکولار:
+  \begin{itemize}
+  \item کرامپ عضلانی، اسپاسم کارپوپدال، ضعف، پارستزی.
+  \item لارنگواسپاسم، تشنج.
+  \item \en{Chvostek sign} \ptarrow\ نشانهٔ شوستک؛ اسپاسم صورت.
+  \item \en{Trousseau sign} \ptarrow\ اسپاسم کارپال پس از \en{3--5} دقیقه؛ \en{15 mmHg} بالاتر از فشار سیستولیک.
+  \end{itemize}
+\item کلسیم در سرم:
+  \begin{itemize}
+  \item یونیزه.
+  \item متصل ـ آلبومین.
+  \end{itemize}
+\item هرچه \en{pH} بالاتر برود، اتصال کلسیم ـ آلبومین بیشتر می‌شود.
+\item \ptmark{در آلکالوز \ptarrow\ کلسیم یونیزه \en{$\downarrow$} \ptarrow\ علائم هایپوکلسمی}.
+\item هایپوپروتئینی \ptarrow\ کلسیم یونیزه \en{N/L} ولی توتال \en{$\downarrow$} است.
+\end{itemize}
+
+\subsection*{پرایمری هایپوپاراتیروئیدی}
+\begin{itemize}
+\item هایپوکلسمی رخ می‌دهد ولی راشیتیسم نه.
+\item اتیولوژی پرایمری هایپوپارا:
+  \begin{itemize}
+  \item مالفورمیشن‌های مادرزادی \ptarrow\ \ptmark{سندرم دی‌جورج}.
+  \item آسیب به دنبال جراحی.
+  \item خودایمنی.
+  \end{itemize}
+\end{itemize}
+
+\ptpage{۲}
+\subsection*{سودوهایپوپاراتیروئیدی}
+\noindent \en{$\mathrm{Ca}\downarrow$}، فسفات \en{$\uparrow$}.
+\begin{itemize}
+\item تیپ \en{Ia}: هورمون \en{PTH} زیاد است ولی نمی‌تواند گیرنده را تحریک کند.
+  \begin{latin}
+  \noindent $G_{s\alpha}$ protein $\times$, Adenylate cyclase $\checkmark$.
+  \end{latin}
+\item تیپ \en{Ib}: فنوتیپ \en{N/L}.
+  \begin{latin}
+  \noindent $G_{s\alpha}$ protein $\checkmark$, Adenylate cyclase $\times$.
+  \end{latin}
+\item تیپ \en{Ic}: فنوتیپ غیرطبیعی \ptarrow\ هر دو سالم ولی یک نقص دیگر جلوی اثر \en{PTH} را می‌گیرد.
+\item تیپ \en{II}: فنوتیپ \en{N/L} \ptarrow\ هر دو سالم، نقص پس از \ptuncertain{سنتز}.
+  \begin{itemize}
+  \item \ptuncertain{حاشیهٔ زیر شاخهٔ تیپ II: خیر}.
+  \end{itemize}
+\item سودوهایپوپارا \ptarrow\ وراثت \ptmark{\en{AD}}، تظاهر از تولد یا بعدتر.
+\item با بیماری زیر همراهی دارد: \ptmark{\en{Albright hereditary osteodystrophy}}.
+\end{itemize}
+\begin{latin}
+\begin{itemize}
+\item Short stature, stocky body habitus, round facies.
+\item \textbf{Short 4th and 5th metacarpals}.
+\item Calcification of basal ganglia, SubQ calcification, developmental delay.
+\end{itemize}
+\end{latin}
+% A short crossed-out line between types Ia and Ib is illegible.
+
+\subsection*{هایپوکلسمی گذرای نوزادی (\en{TNH})}
+\begin{itemize}
+\item \ptmark{ظرف ۳ روز اول} پس از تولد به‌طور طبیعی \en{Ca} سرم کم می‌شود ولی در این بیماران به سرعت برنمی‌گردد.
+\item نوزاد مادری که هایپوپاراتیروئید است \ptarrow\ هایپوکلسمیک.
+\end{itemize}
+
+\subsection*{منیزیم و ترشح \en{PTH}}
+\begin{itemize}
+\item برای ترشح \en{PTH} نیاز به منیزیم هست.
+\item \ptmark{هایپومنیزیمی \ptarrow\ هایپوپارای ثانویه} \ptarrow\ درمان: جایگزینی منیزیم.
+\item بهتر است \en{PTH} سرم زمانی اندازه‌گیری شود که \en{Ca} سرم پایین باشد.
+\end{itemize}
+
+\subsection*{درمان تتانی یا تشنج ناشی از هایپوکلسمی}
+\begin{latin}
+\noindent \textbf{IV calcium gluconate} (1--2 ml/kg of 10\% solution) over 10 minutes.
+\end{latin}
+\begin{itemize}
+\item بررسی قلب با \en{EKG} از نظر \ptmark{برادی‌کاردی}.
+\end{itemize}
+
+\ptpage{۳}
+\subsection*{درمان طولانی‌مدت}
+\begin{itemize}
+\item کلسیم + ویتامین \en{D (1,25)}.
+\item سطح سرمی \en{Ca} \ptarrow\ \en{Lower half of N/L range}.
+\end{itemize}
+
+\subsection*{راشیتیسم}
+\begin{itemize}
+\item نقص در مینرالیزه‌شدن استخوان در کودکان.
+\item در بزرگسالان به آن استئومالاسی می‌گویند.
+\item استخوان نرم است.
+\item \ptmark{متافیز استخوان \en{Wide} می‌شود}.
+\item رشد قدی ناکافی، \ptmark{پای پرانتزی} (دردناک ممکن است باشد).
+\item ضخیم‌شدن مچ دست و زانو.
+\item در \en{X-ray}: متافیز دنده (کستوکندرال) باز شده است.
+\end{itemize}
+
+\subsection*{کمبود ویتامین \en{D}}
+\begin{itemize}
+\item کمبود ویتامین \en{D} تغذیه‌ای.
+\item سوءجذب چربی می‌تواند عامل آن باشد:
+  \begin{itemize}
+  \item بیماری‌های هپاتوبیلیاری، \en{CF}.
+  \end{itemize}
+\item عامل دیگر: نقص در متابولیسم \en{vit D} در کلیه:
+  \begin{itemize}
+  \item نارسایی کلیه، کمبود \en{AR} آنزیم.
+  \end{itemize}
+\item نقص در متابولیسم \en{vit D} در کبد.
+\end{itemize}
+
+\subsection*{\en{Familial hypophosphatemic rickets}}
+\begin{itemize}
+\item \ptmark{کلیه نمی‌تواند فسفات را بازجذب کند}.
+\item فسفات سرم \en{$\downarrow$}، فسفات ادرار \en{$\uparrow$}.
+\item وراثت وابسته به \en{X}؛ چند ژن هم دارد.
+\end{itemize}
+
+\subsection*{بررسی اتیولوژی راشیتیسم}
+\begin{itemize}
+\item ارزیابی مواد معدنی، \en{vit D}.
+\item کمبود تغذیه‌ای \ptarrow\ \ptmark{\en{25-hyd vit D $<8\,\mathrm{ng/ml}$}}.
+\end{itemize}
+
+\subsection*{درمان راشیتیسم}
+\begin{itemize}
+\item کلسیم + \en{vit D}.
+\item در هایپوفسفاتمیک \ptarrow\ فسفات + \en{vit D}.
+\end{itemize}
+
+% Printed stationery: Subject / Year / Month / Date; chapter number 174
+% on each page and handwritten source page numbers 1, 2, 3.
+% Yellow highlighting and circled headings are represented by bold text
+% and section headings. Blank ruled space has no content.
+\ifnum\ParathyroidStandalone=1
+  \let\ParathyroidEnd\enddocument
+\else
+  \let\ParathyroidEnd\relax
+\fi
+\ParathyroidEnd
