@@ -1,0 +1,350 @@
+% !TeX program = xelatex
+% UTF-8; compile from this directory with XeLaTeX.
+% To input in an existing XePersian document, define \FetalGrowthInNotebook.
+% Source: Google Drive Notebook/fetal growth, handwritten pages 1--6.
+% Original JPEGs, in page order:
+% pic01.jpg = 20261013_025113440.jpg
+% pic02.jpg = 20261013_025125569.jpg
+% pic03.jpg = 20261013_025131497.jpg
+% pic04.jpg = 20261013_025141548.jpg
+% pic05.jpg = 20261013_025147113.jpg
+% pic06.jpg = 20261013_025151993.jpg
+\ifdefined\FetalGrowthInNotebook
+  \let\FGfinish\relax
+\else
+  \def\FGfinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=22mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphicx}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{6pt}
+  \setlength{\emergencystretch}{3em}
+  \begin{document}
+\fi
+\providecommand{\FGpage}[1]{\clearpage\section*{صفحهٔ #1}}
+\providecommand{\FGmath}[1]{\lr{\(#1\)}}
+\providecommand{\FGunclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\providecommand{\FGnote}[1]{\textnormal{[یادداشت رونویسی: #1]}}
+\providecommand{\FGimage}[1]{%
+  \IfFileExists{images/#1.jpg}{\includegraphics[width=\textwidth,height=.87\textheight,keepaspectratio]{images/#1.jpg}}%
+  {\includegraphics[width=\textwidth,height=.87\textheight,keepaspectratio]{Ob&Gyn/Obstetrics/fetal growth/images/#1.jpg}}}
+\providecommand{\FGheader}{\textbf{سربرگ چاپی:} \lr{Subject: Year. Month Date. ( )}؛ فیلدهای تاریخ خالی. نشان چاپی پایین صفحه: \lr{PAPCO}.}
+
+\begin{center}\Large\bfseries\lr{Fetal Growth and Surveillance}\end{center}
+رونویسی متن روی شش صفحه، به ترتیب شمارهٔ دست‌نویس. شاخه‌ها و فلش‌ها به صورت فهرست و مراحل متوالی آمده‌اند. عبارت‌ها و اعداد منبع، از جمله اختصارات و موارد خط‌خورده، حفظ شده‌اند؛ خوانش‌های نامطمئن مشخص شده‌اند. تصاویر کامل منبع در پیوست همین فایل آمده‌اند. اثر کم‌رنگ و معکوس نوشته‌های پشت کاغذ متن روی صفحه محسوب نشده است.
+
+\FGpage{۱}
+\FGheader\par
+\textbf{موضوع دست‌نویس سربرگ:} \lr{Fetal Growth and Surveillance}. شمارهٔ پایین صفحه: ۱.
+
+\begin{latin}
+\begin{itemize}
+\item Fetal Growth Restriction (FGR)
+\item Small for Gestational Age (SGA)
+\end{itemize}
+\end{latin}
+پروگنوز \lr{SGA} بهتر از \lr{FGR} است.
+
+\subsection*{تخمین زمان زایمان و سن بارداری}
+تخمین زمان زایمان ۴۰ هفته پس از روز شروع \lr{LMP} است.
+\begin{itemize}
+\item اگر \lr{cycle}های فرد منظم و ۲۸روزه باشند؛ اگر مثلاً ۳۵روزه باشند، باید ۷ روز به \lr{LMP} اضافه نمود.
+\item بهترین روش تعیین سن بارداری سونوگرافی پیش از ۲۰هفتگی است.
+\item دقیق‌ترین حالت: تعیین \lr{Crown Rump length} بین ۱۰–۱۴هفتگی است.
+\item به علاوه \lr{HC} بین ۱۵–۲۰هفتگی.
+\end{itemize}
+
+\subsection*{\lr{SGA} و \lr{FGR}}
+\begin{itemize}
+\item \lr{SAG}: وزن تخمینی جنین و یا وزن تولد جنین پایین‌تر از صدک ۱۰ باشد.
+  \FGnote{در این سطر اختصار به صورت \lr{SAG} نوشته شده است.}
+\item \lr{FGR}: جنین به هر علتی نتوانسته به پتانسیل رشد ژنتیکی خود برسد.
+\item رشد جنین در سونوگرافی‌های متوالی کمتر از حد انتظار است.
+\item این حد به طور دقیق مشخص نیست، بلکه بنا به تجربهٔ فرد است.
+\item نوزاد با \lr{FGR}، پایین است \lr{(ponderal Index)}، \FGmath{(BW/height)}؛ و چربی زیرپوستی کمی دارد.
+\end{itemize}
+
+\textbf{نکته:} بسیاری از \lr{SGA}ها \lr{FGR} نیستند، ولی اغلب آن‌ها صرفاً جنین‌هایی هستند که به طور ژنتیکی کوچک‌اند. برخی از جنین‌های \lr{FGR} دچار محدودیت شده‌اند ولی هنوز به زیر صدک نرسیده‌اند.
+
+\subsection*{فاکتورهای جنینی که رشد جنین را تحت تأثیر قرار می‌دهند}
+\begin{itemize}
+\item ژنتیک جنین مهم‌ترین تعیین‌کنندهٔ رشد آن است.
+\item این ژنتیک بیشتر از مادر به ارث می‌رسد تا پدر.
+\item برخی اختلالات ساختاری در جنین.
+\item برخی بیماری‌ها در مادر: \lr{CKD}.
+\item برخی عفونت‌ها: توکسوپلاسموز، \lr{CMV}، روبلا، مالاریا.
+\end{itemize}
+
+\subsection*{فاکتورهای مادری که رشد جنین را تحت تأثیر قرار می‌دهند}
+\begin{itemize}
+\item تغییرات جزئی در رژیم غذایی تأثیر مختصری دارند، ولی گرسنگی شدید طولانی مؤثر است.
+\item \FGunclear{عبارت مقایسهٔ نژادها؛ خوانش نزدیک به متن: «نژادهای معین به طور نرمال جنین‌های بزرگ‌تری از حد نرمال در افریقایی‌ها رشد می‌دهند».}
+\item رسیدن اکسیژن کافی به جنین بسیار مهم است.
+\item مانند ارتفاع بالا در مادر یا هایپوکسی مزمن (بیماری مادرزادی قلبی).
+\end{itemize}
+
+\FGpage{۲}
+\FGheader\par
+شمارهٔ پایین صفحه: ۲.
+
+\subsection*{ادامهٔ عوامل مادری}
+\begin{itemize}
+\item جنین می‌تواند نسبت به هایپوکسی یک \lr{partial compensation} ایجاد کند.
+\item از طریق هایپرتروفی \lr{placenta}.
+\item مواد مخدر از جمله تنباکو، هروئین، کوکائین و الکل رشد جنین را مختل می‌کنند.
+\item سیگار به طور متوسط \lr{BW} نوزاد را \lr{150 gr} کاهش می‌دهد.
+\end{itemize}
+
+\subsection*{فاکتورهای مرتبط با جفت که رشد جنین را تحت تأثیر قرار می‌دهند}
+\begin{itemize}
+\item کارکرد کافی پلاسنتا وابسته به تهاجم مناسب تروفوبلاستیک است.
+\item این تهاجم در سه‌ماههٔ اول رخ می‌دهد.
+\item در سه‌ماههٔ دوم یک تهاجم ثانویه نیز وجود دارد.
+\item در پره‌اکلامپسی این تهاجم ثانویه مختل شده است.
+\item این اختلال در تهاجم با سونو داپلر قابل تشخیص است.
+\item اختلال در جریان خون با نوزاد \lr{SGA} مرتبط است و نیازمند انجام سونوگرافی سریال می‌باشد.
+\item نارسایی پیشروندهٔ پلاسنتال.
+\item جنین هایپوکسیک، هایپوگلیسمیک، و در برخی مواقع اسیدوتیک.
+\item به طور جبرانی \lr{Hb} بالا می‌رود؛ جریان خون محیطی، روده و کبد کم شده و به سمت مغز، قلب و غدهٔ آدرنال می‌رود.
+\item جنین قد و رشد مغزی نرمال دارد ولی لاغر است.
+\end{itemize}
+
+\subsection*{غربالگری و تشخیص}
+\begin{itemize}
+\item برخی از ویژگی‌های ریسک فاکتور \lr{SGA} در اولین ویزیت مادر باردار قابل شناسایی هستند، ولی برخی در طول بارداری نمایان می‌شوند.
+  \FGnote{یک \lr{SGA} پیش از «ریسک فاکتور» خط خورده است.}
+\end{itemize}
+
+\textbf{ریسک فاکتورهای \lr{SGA}:}
+\begin{itemize}
+\item شرح حال مادر: سن بالاتر از ۴۰ سال، سیگاری بیش از ۱۰ سال، مصرف کوکائین، سابقهٔ قبلی \lr{SGA} در نوزاد قبلی، سابقهٔ قبلی مرده‌زایی، \lr{HTN} مزمن، \lr{DM} و بیماری عروق، اختلال کلیوی، \lr{APS}.
+  \FGnote{عبارت سیگار در منبع به صورت «سیگاری \FGmath{10<} سال» آمده است.}
+\item بارداری فعلی: تهدید به سقط، پره‌اکلامپسی، پلاسنتال ابراپشن، خونریزی غیرقابل توجیهٔ انتپارتوم، نتایج غیرطبیعی شریان رحمی در داپلر، سطح پایین \lr{PAPP-A}، رودهٔ جنین در سونو هایپراکو باشد.
+  \FGunclear{عبارت داخل پرانتز پس از انتپارتوم: «جفت‌ها کنار آمده باشند»؛ احتمال خوانش «جفت‌ها کنار آمده باشه».}
+\item وجود ریسک فاکتورهای بالا.
+\item سونوگرافی سریال از هفتهٔ ۲۶ تا ۲۸ برای تشخیص \lr{fetal growth}.
+\end{itemize}
+\textbf{نوشتهٔ زیر خط پایین صفحه:}
+\begin{latin}
+Plasma Associated Placenta Protein-A
+\end{latin}
+
+\FGpage{۳}
+\FGheader\par
+شمارهٔ پایین صفحه: ۳.
+
+\subsection*{معاینهٔ بالینی}
+\begin{itemize}
+\item تخمین وزن جنین با معاینه غیرقابل اطمینان است.
+\item فوندوس طی هفته‌های ۲۰–۲۴ به حدود ناف می‌رسد.
+\item فوندوس در حدود هفتهٔ ۳۶ به حدود زایفوئید می‌رسد.
+\item از هفتهٔ ۲۶ در هر ویزیت روتین باید ارتفاع فوندوس اندازه‌گیری شود.
+\item از سمفیز پوبیس: \lr{SFH (Symphysis Fundal Height)}.
+\item تقریباً معادل سن بارداری است.
+\item \lr{SFH} زیر صدک ۱۰ هم، یا اگر در اندازه‌گیری سریال افزایش نداشته باشد، اندیکاسیون انجام سونوگرافی است.
+\end{itemize}
+
+\subsection*{سونوگرافی}
+\begin{itemize}
+\item برای تأیید و یا رد تشخیص \lr{SGA} یا \lr{FGR} استفاده می‌شود.
+\item تشخیص قطعی تنها پس از تولد ممکن است.
+\item مواردی که باید گزارش شوند: \lr{HC, HC, FL} (طول فمور)، \lr{EFW}.
+  \FGnote{خوانش اختصار دوم میان \lr{HC} و \lr{AC} نامطمئن است.}
+\item \lr{AC} برای تشخیص \lr{SGA} از بقیه حساس‌تر است.
+\item زیر صدک ۱۰، حساسیت ۸۰ درصد دارد.
+\item خطای \lr{EFW}، \FGmath{\pm15\%} است.
+\end{itemize}
+
+\subsection*{\lr{SGA} یا \lr{FGR}؟}
+\begin{itemize}
+\item سؤال مهمی است اما همیشه نمی‌توانیم پاسخ قطعی آن بدهیم.
+\item جنین‌های زیر صدک ۱۰، ۵۰–۷۰ درصد \lr{SGA} هستند؛ \lr{FGR} نیستند.
+\item افزایش ریسک مرده‌زایی، هایپوکسی و عوارض مربوط به \lr{FGR} است.
+\item تشخیص \lr{SGA} سرراست است ولی در \lr{FGR} ساده نیست.
+\end{itemize}
+
+\textbf{کرایتریا تشخیص قطعی \lr{FGR}:} دو مورد زیر در منبع با آکولاد به هم متصل شده‌اند:
+\begin{itemize}
+\item افت حداقل ۵۰ صدک در \lr{EFW}، و
+\item افزایش مقاومت شریان آمبیلیکال در داپلر.
+\end{itemize}
+یا یکی از معیارهای بیومتریک زیر صدک ۳ باشد.
+
+زمانی که \lr{SGA} یا \lr{FGR} تشخیص داده می‌شود، باید سایر پارامترهای جنین نیز ارزیابی شوند.
+
+\subsection*{کاربرد بالینی}
+جنین با \lr{AC} یا \lr{EFW} زیر صدک ۱۰ باید \lr{Close Observation} شود؛ خواه این جنین \lr{SGA} یا \lr{FGR} یا هر دو باشد.
+
+\FGpage{۴}
+\FGheader\par
+شمارهٔ پایین صفحه: ۴.
+
+\subsection*{مدیریت بالینی}
+\begin{itemize}
+\item اصل اصلی: مانیتور کردن جنین و زایمان در زمان مناسب.
+\item هیچ درمان خاصی اثبات‌شده نیست.
+\end{itemize}
+
+\textbf{گزینه‌ها برای مانیتور کردن جنین:}
+\begin{latin}
+\begin{itemize}
+\item FMCC: Fetal Movement Counting Chart
+\item FCTG: Fetal Cardiotocography
+\item Doppler blood flow studies \(\longrightarrow\) Most Valuable
+\item Amniotic Fluid Volume
+\end{itemize}
+\end{latin}
+
+\subsection*{کاربرد بالینی}
+\begin{enumerate}
+\item مانیتورینگ سریال با سونوگرافی و/یا \lr{SFH}.
+\item تأیید آنکه جنین \lr{SGA} یا \lr{FGR} است.
+\item رد ابنورمالیتی‌های جنین (مگر آنکه پیش از این در هفتهٔ ۲۰ هم انجام شده باشد).
+\item تشخیص اینکه جنین \lr{SGA} است یا \lr{FGR}: انجام سونوگرافی داپلر.
+\item مانیتورینگ با داپلر و \lr{CTG}.
+\item اگر \FGmath{GA<34} است و قصد زایمان دارید، کورتیکواستروئید بدهید.
+\item اگر احتمال \lr{fetal demise} وجود دارد، زایمان را انجام بدهید.
+\end{enumerate}
+
+\subsection*{مانیتورینگ حرکات جنین}
+\begin{itemize}
+\item یک جنین کمتر تغذیه‌شده برای حفظ انرژی حرکات خود را کم می‌کند.
+\item هر کاهش ناگهانی در تعداد حرکات جنین و الگوی آن ممکن است مهم باشد.
+\end{itemize}
+
+\subsection*{کاردیوتوکوگرافی \lr{(CTG)}}
+\begin{itemize}
+\item وضعیت سلامت جنین را در لحظه مشخص می‌کند ولی در \lr{long-term} ارزش کمتری دارد.
+\item \lr{CTG} طی بارداری با \lr{CTG} حین زایمان تفسیر متفاوتی دارد.
+\item حین بارداری، وجود \lr{Acceleration} و نبود \lr{Deceleration} مورد انتظار است.
+\item طی زایمان وجود \lr{Deceleration} می‌تواند نرمال باشد.
+\item کرایتریاهای بررسی \lr{CTG}: \lr{The Dawes Redman Criteria}.
+\item استفادهٔ روتین از \lr{CTG} با بهبود پیامد بالینی همراهی ندارد.
+\item به همین دلیل تنها زمانی استفاده می‌شود که اندیکاسیون وجود داشته باشد، مثل \lr{RFM}.
+  \FGnote{کلمهٔ «کرایتریا» پیش از «اندیکاسیون» خط خورده است.}
+\end{itemize}
+
+\FGpage{۵}
+\FGheader\par
+شمارهٔ پایین صفحه: ۵.
+
+\subsection*{ارزیابی حجم مایع آمنیوتیک}
+\begin{itemize}
+\item بازتوزیع حجم مایعات بدن در جنین طی \lr{FGR} منجر به کاهش جریان خون کلیهٔ جنین و به دنبال آن کاهش ادرار جنین و کاهش حجم مایع آمنیوتیک می‌شود.
+\item وجود الیگوهیدرآمنیوس در نبود \lr{ROM} یافتهٔ کاراکتریستیک \lr{FGR} در سونوگرافی است.
+\item توصیف مایع آمنیوتیک در سونوگرافی:
+  \begin{itemize}
+  \item \lr{MVP: Max Vertical Pool}.
+  \item \lr{AFI: Amniotic Fluid Index}؛ مجموع حجم مایع در ۴ کوادران.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{سونوگرافی داپلر}
+\begin{itemize}
+\item یک \lr{waveform} طبیعی بیانگر این است که جنین \lr{FGR} نیست.
+\item کاهش یا از دست رفتن \lr{End-diastolic flow} بیانگر \lr{high risk} بودن جنین برای هایپوکسی است.
+\item فقدان جریان انتهای دیاستولی \lr{(AEDF)} مطرح‌کنندهٔ خطر مرگ بالا در جنین \lr{FGR} است.
+\item بررسی جریان خون مغزی جنین نیز کمک‌کننده است، خصوصاً در جنین‌های ترم.
+\item در جنین \lr{FGR}، کاهش مقاومت عروق در شریان \lr{MCA}، افزایش جریان خون مغز دیده می‌شود.
+\item به دنبال تشدید هایپوکسی، به دنبال تشدید \lr{FGR}، مقاومت عروق مغزی که به طور جبرانی کاهش پیدا کرده بود مجدداً افزایش می‌یابد.
+\item احتمالاً ثانویه به ادم مغزی.
+\item بررسی جریان خون وریدی برای تعیین زمان زایمان کمک‌کننده است.
+\item داپلر \lr{Ductus Venosus} (وریدی در کبد جنین) به طور غیرمستقیم عملکرد قلب راست جنین را ارزیابی می‌کند.
+\item اگر شکل موج \lr{Ductus Venosus} غیرطبیعی باشد، قویاً مطرح‌کنندهٔ \lr{Fetal Demise} در آینده است.
+\end{itemize}
+
+\subsection*{سریال تغییرات به دنبال هایپوکسی جنینی}
+ترتیب فلش‌ها در منبع:
+\begin{enumerate}
+\item اختلال رشد جنین.
+\item شکل موج غیرطبیعی شریان آمبیلیکال.
+\item افزایش جریان خون مغزی.
+\item جریان غیرطبیعی \lr{DV}.
+\item ریت قلبی غیرطبیعی جنین \lr{(FHR)}.
+\item \lr{Fetal Demise}.
+\end{enumerate}
+
+\textbf{مارکرهایی که از چند هفته قبل از مرگ جنین رخ می‌دهند:}
+\FGunclear{ابتدای جملهٔ عنوان، «مارکرهایی که از چند هفته قبل از مرگ جنین رخ می‌دهند».}
+\begin{itemize}
+\item افزایش \lr{UA PI} (اندکس پالساتیلیتی شریان آمبیلیکال): زودتر از همه رخ می‌دهد.
+\item \lr{AEDF}.
+\item الیگوهیدرآمنیوس.
+\item هایپوکسی.
+\end{itemize}
+
+\FGpage{۶}
+\FGheader\par
+شمارهٔ پایین صفحه: ۶.
+
+\subsection*{استراتژی کلی}
+\begin{itemize}
+\item سونوگرافی داپلر معیار غربالگری اولیهٔ ما می‌باشد.
+\item در جنین با \lr{AEDF} یا فلو کاهش‌یافته: مانیتورینگ با داپلر و \lr{CTG}.
+\item زایمان اگر \lr{CTG} غیرطبیعی و پاتولوژیک شد اندیکاسیون دارد.
+\item اگر \lr{AEDF} در داپلر گزارش شد، به علاوهٔ فلو غیرطبیعی \lr{DV}: بازگشت جریان در انتهای دیاستول.
+\item انتخاب روش زایمان باید بر اساس هر بیمار باشد.
+\item ولی باید بدانیم که ذخیرهٔ جفتی این جنین‌ها بسیار اندک است.
+\item اگر در مانیتورینگ حین زایمان شواهد اختلال در جنین مشاهده شد: \lr{C/S}.
+\item اگر نگرانی جدی دربارهٔ سلامت جنین وجود داشت: \lr{Pre-labour C/S}.
+\item \lr{AEDF} یا جریان بازگشتی انتهای دیاستولی.
+\end{itemize}
+
+\subsection*{عوارض طولانی‌مدت \lr{FGR}}
+\lr{DM-2}، بیماری عروق کرونری، \lr{handycap}، \lr{IQ}، ۵–۱۰ واحد کمتر.
+\FGnote{املای \lr{handycap} مطابق نوشتهٔ منبع است.}
+
+\subsection*{الگوریتم پیگیری جنین \lr{SGA}}
+\FGmath{\mathrm{AC}/\mathrm{EFW}<10\mathrm{th}}
+
+داپلر \lr{(UAD)} (شریان آمبیلیکال). شاخه‌های نمودار به ترتیب زیر هستند:
+
+\paragraph{۱. داپلر نرمال}
+\lr{AFV} (حجم مایع آمنیوتیک) بررسی می‌شود.
+\begin{itemize}
+\item \textbf{\lr{AFV} نرمال:} \lr{UAD, AFV, AC/EFW} هر ۲ هفته.
+\item \textbf{الیگوهیدرآمنیوس:} \lr{UAD} و \lr{AFV} هر هفته؛ \lr{AC, EFW} هر ۲ هفته.
+\item اگر همهٔ بررسی‌ها طبیعی \lr{NL}، زایمان در ۳۷–۳۸.
+\end{itemize}
+
+\paragraph{۲. \lr{RI} (اندکس مقاومت) بالاتر از صدک ۹۵}
+\FGmath{95\mathrm{th}<\mathrm{RI}}
+\begin{itemize}
+\item \lr{AFV} نرمال: \lr{UAD, AFV} هر هفته؛ \lr{AC, EFW} هر ۲ هفته.
+\item اگر همه \lr{NL}، زایمان در ۳۷–۳۸.
+\item الیگو: \lr{CTG} اگر \FGmath{26<GA} هفته.
+  \FGnote{در ابتدای این شاخه \lr{AFV} خط خورده و «الیگو» جایگزین شده است.}
+\item \lr{CTG} نرمال: \lr{AFD, UAD, CTG} هفته‌ای ۲ بار؛ \lr{AC, EFW} هر ۲ هفته.
+  \FGnote{در این شاخه و شاخهٔ \lr{AEDF}، اختصار حجم مایع شبیه \lr{AFD} نوشته شده؛ در شاخه‌های بالاتر \lr{AFV} است.}
+\item \lr{CTG} غیرطبیعی: مشاورهٔ نوزادان، سپس زایمان.
+\end{itemize}
+
+\paragraph{۳. داپلر غیرطبیعی با \lr{AEDF}}
+\begin{itemize}
+\item \lr{AC/EFW} هر ۲ هفته (یادداشت حاشیه).
+\item \lr{AEDF} زیر ۳۴ هفته: بدون اندیکاسیون دیگر تا زایمان؛ \lr{CTG} روزانه؛ \lr{AFD, UAD} دو بار در هفته؛ کورتون.
+  \FGunclear{عبارت پس از «بدون اندیکاسیون دیگر»: «تا زایمان»؛ احتمال خوانش «تأخیر زایمان».}
+\item بالای ۳۴ هفته: زایمان.
+\end{itemize}
+
+\paragraph{۴. \lr{REDF}}
+بستری / \lr{CTG} روزانه / داپلر پیشرفته / استروئید / زایمان \lr{C/S}.
+
+\clearpage
+\section*{پیوست: تصاویر کامل منبع}
+\begin{center}\textbf{\lr{pic01} — صفحهٔ ۱}\par\FGimage{pic01}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic02} — صفحهٔ ۲}\par\FGimage{pic02}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic03} — صفحهٔ ۳}\par\FGimage{pic03}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic04} — صفحهٔ ۴}\par\FGimage{pic04}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic05} — صفحهٔ ۵}\par\FGimage{pic05}\end{center}
+\clearpage
+\begin{center}\textbf{\lr{pic06} — صفحهٔ ۶}\par\FGimage{pic06}\end{center}
+\FGfinish
