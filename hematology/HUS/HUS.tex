@@ -1,0 +1,114 @@
+% !TeX program = xelatex
+% UTF-8 transcription of the two handwritten Persian/English HUS pages.
+% pic01.jpg = 20261013_035538374.jpg (handwritten page 1)
+% pic02.jpg = 20261013_035542932.jpg (handwritten page 2)
+% Source wording and yellow highlights are retained; no medical additions.
+% Compile directly with XeLaTeX, or input in a document using XePersian.
+\newif\ifHUSStandalone
+\ifdefined\settextfont
+  \HUSStandalonefalse
+\else
+  \HUSStandalonetrue
+\fi
+\ifHUSStandalone
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,xcolor,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \begin{document}
+\fi
+\begingroup
+\emergencystretch=2em
+\newcommand{\HUSen}[1]{\lr{#1}}
+\ifdefined\colorbox
+  \newcommand{\HUShl}[1]{\colorbox{yellow!35}{\strut #1}}
+\else
+  \newcommand{\HUShl}[1]{\textbf{#1}}
+\fi
+\newcommand{\HUSpage}[2]{\clearpage\section*{\HUSen{HUS} ـ صفحهٔ #1}%
+  {\footnotesize\HUSen{#2}\par}\medskip}
+
+\HUSpage{۱}{pic01.jpg — 20261013\_035538374.jpg}
+\subsection*{\HUSen{HUS}}
+\begin{itemize}
+\item \HUShl{آنمی همولیتیک میکروآنژیوپاتیک}، \HUShl{ترومبوسایتوپنی}، آسیب حاد کلیه (\HUShl{\HUSen{AKI}}).
+\item شایع‌ترین فرم \HUSen{HUS}: همراه با شیگا توکسین تولیدشده توسط \HUSen{STEC}.
+  \begin{itemize}
+  \item \HUSen{STEC}: \HUSen{Shiga-toxin producing E. coli}.
+  \item \HUSen{STEC-HUS}.
+  \end{itemize}
+\item \HUSen{STEC-HUS}: بیماری اسهالی به صورت پرودرومال.
+  \begin{itemize}
+  \item \HUShl{\HUSen{Hemorrhagic enterocolitis}}.
+  \item \HUSen{Most common}: \HUSen{E. coli O157:H7}.
+  \item غذا و آب آلوده.
+  \end{itemize}
+\item \HUSen{non-STEC-HUS}:
+  \begin{itemize}
+  \item استرپ پنومونیه، \HUSen{HIV}.
+  \item نقص‌های ژنتیکی سیستم کمپلمان، بدخیمی، \HUSen{SLE}، بارداری.
+  \item \HUShl{شدیدتر از \HUSen{STEC-HUS}}.
+  \item \HUShl{بیشتر به سمت \HUSen{CKD} می‌رود}.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{\HUSen{TTP}}
+\begin{itemize}
+\item یک سندرم میکروآنژیوپاتیک مشابه \HUSen{HUS}.
+\item \HUShl{بیشتر درگیری \HUSen{CNS}}، ولی \HUSen{AKI} هم ممکن است دیده شود.
+\item درگیری \HUSen{CNS} در \HUSen{HUS} هم ممکن است؛ افتراق ممکن است سخت باشد.
+\item در \HUSen{TTP}، سطح \HUShl{\HUSen{ADAMTS13}} \HUShl{به شدت پایین است}.
+\end{itemize}
+
+\subsection*{علائم \HUSen{STEC-HUS}}
+\begin{itemize}
+\item بیشتر در کودکان \HUShl{زیر ۵ سال}.
+\item انتروکولیت با اسهال خونی.
+\item \HUShl{سپس \HUSen{7--10} روز}: ضعف، لتارژی، اولیگوری یا آنوری.
+\item در \HUSen{Ph/E}: رنگ‌پریدگی، پتشی، بی‌قراری.
+\end{itemize}
+
+\HUSpage{۲}{pic02.jpg — 20261013\_035542932.jpg}
+\subsection*{ادامهٔ علائم}
+\begin{itemize}
+\item \HUShl{افت حجم به عنوان تظاهر اولیه شایع است}.
+  \begin{itemize}
+  \item برخی بیماران ممکن است \HUSen{overload} باشند.
+  \end{itemize}
+\item هایپرتنشن در بیمار \HUSen{HUS}:
+  \begin{itemize}
+  \item یا به علت \HUSen{overload} مایع.
+  \item یا به علت آسیب کلیه.
+  \end{itemize}
+\item درگیری \HUSen{CNS}: \HUShl{تشنج} (در ۲۵\% بیماران).
+\item سایر درگیری‌ها: پانکراتیت، انفارکت قلبی، پرفوریشن کولون.
+\item در \HUSen{non-STEC-HUS} علائم مشابه است ولی سابقهٔ انتروکولیت اخیر وجود ندارد.
+\item \HUShl{کومبس منفی است در \HUSen{HUS}}.
+\end{itemize}
+
+\subsection*{شواهد \HUSen{HUS}}
+\begin{itemize}
+\item شواهد آنمی همولیتیک میکروآنژیوپاتیک:
+  \begin{itemize}
+  \item \HUSen{PBS}: \HUShl{شیستوسیت}، \HUShl{هلمت سل}، \HUShl{بور سل}.
+  \item آنمی، ترومبوسیتوپنی، \HUSen{$\mathrm{LDH}\uparrow$}، \HUShl{هاپتوگلوبین \HUSen{$\downarrow$}}، \HUShl{بیلی‌روبین غیرمستقیم \HUSen{$\uparrow$}}.
+  \item \HUSen{$\mathrm{AST}\uparrow$}، رتیک \HUSen{$\uparrow$}.
+  \end{itemize}
+\item شواهد آسیب کلیه: \HUSen{$\mathrm{Cr}\uparrow$}، الیگوری، هماچوری، پروتئین‌اوری، پیوری، کست.
+\item دیگر شواهد: \HUShl{لکوسیتوز}، آمیلاز و لیپاز \HUSen{$\uparrow$}.
+\end{itemize}
+
+\subsection*{درمان \HUSen{STEC-HUS}}
+\begin{itemize}
+\item حمایتی: مایع‌درمانی، کنترل \HUSen{BP}، دیالیز، ترانسفوزیون خون.
+\item مایع‌درمانی: سالین ایزوتونیک.
+\item ترانسفوزیون پلاکت: خونریزی فعال، قبل از جراحی.
+\item \HUShl{داروهای ضد اسهال و \HUSen{AB}}: \HUShl{نمی‌دهیم}؛ \HUShl{افزایش ریسک \HUSen{HUS}}.
+\end{itemize}
+
+\endgroup
+\ifHUSStandalone
+  \expandafter\enddocument
+\fi
