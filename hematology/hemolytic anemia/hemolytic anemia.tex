@@ -1,0 +1,131 @@
+% !TeX program = xelatex
+% UTF-8 transcription of all three images in Google Drive Notebook/hemolytic anemia.
+% pic01.jpg = 20261016_225127862.jpg; source page 1.
+% pic02.jpg = 20261016_225134441.jpg; source page 2.
+% pic03.jpg = 20261016_225140709.jpg; source page 3.
+% Source wording and laboratory statements are retained without medical correction.
+% Standalone XeLaTeX document, also suitable for input into a XePersian document.
+\newif\ifHemolyticStandalone
+\ifdefined\settextfont
+  \HemolyticStandalonefalse
+\else
+  \HemolyticStandalonetrue
+\fi
+\ifHemolyticStandalone
+  \documentclass[11pt,a4paper]{article}
+  \usepackage[margin=18mm]{geometry}
+  \usepackage{amsmath,amssymb,array}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \begin{document}
+\fi
+\begingroup
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\emergencystretch=3em
+\newcommand{\HemolyticEn}[1]{\lr{#1}}
+\newcommand{\HemolyticArrow}{\ensuremath{\longleftarrow}}
+
+\begin{latin}
+\textbf{Harrison}\hfill Subject: Hemolytic Anemias -- 100\hfill Date: /\quad/
+\end{latin}
+\section*{دسته‌بندی آنمی‌های همولیتیک}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{0.12\linewidth}|p{0.36\linewidth}|p{0.38\linewidth}|}
+\hline
+ & \textbf{فاکتورهای خارج سلولی} & \textbf{نقص داخل سلولی} \\
+\hline
+ارثی & \HemolyticEn{Familial (atypical) hemolytic uremic syndrome}
+& هموگلوبینوپاتی‌ها؛ آنزیموپاتی‌ها؛ نقص غشا ـ سایتواسکلتون \\
+\hline
+اکتسابی & خودایمنی؛ عفونت‌ها؛ داروها / سموم؛ میکروآنژیوپاتی‌ها
+& \HemolyticEn{PNH} \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{آنمی‌های همولیتیک بر اساس عمده‌ترین محل همولیز}
+\begin{itemize}
+\item \HemolyticEn{Intravascular}
+\item \HemolyticEn{Extravascular}
+\end{itemize}
+
+\subsection*{آنمی همولیتیک}
+\begin{itemize}
+\item \HemolyticEn{Abrupt} \HemolyticArrow{} \HemolyticEn{G6PDD, AIHA}.
+\item \HemolyticEn{Gradual} \HemolyticArrow{} \HemolyticEn{CAD, HS}.
+\end{itemize}
+\begin{latin}
+CAD $\longrightarrow$ Cold Aglutinin Disease
+\end{latin}
+
+\subsection*{افتراق آنمی همولیتیک از سایر آنمی‌ها}
+علائم و نشانه‌های همولیز.
+\begin{itemize}
+\item علامت اصلی در بالین \HemolyticArrow{} زردی.
+\item سایر علائم \HemolyticArrow{} تغییر رنگ ادرار.
+\end{itemize}
+\vfill
+\begin{center}\HemolyticEn{YASHA}\qquad ۱\end{center}
+
+\clearpage
+\begin{latin}
+Subject: 100\hfill Date: /\quad/
+\end{latin}
+\section*{آنمی همولیتیک ـ صفحهٔ ۲}
+\begin{itemize}
+\item در بسیاری از موارد \HemolyticEn{HA} \HemolyticArrow{} اسپلنومگالی.
+\item در برخی موارد \HemolyticEn{HA} \HemolyticArrow{} هپاتومگالی.
+\item در همهٔ موارد \HemolyticEn{HA} شدید مادرزادی \HemolyticArrow{}
+تغییرات اسکلتی ـ به علت فعالیت بیش از حد \HemolyticEn{BM}.
+\end{itemize}
+
+\begin{latin}
+\subsection*{Patient with HA}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\item G.A $\longrightarrow$ Jaundice, Pallor
+\item Ph/E $\longrightarrow$ Splenomegally, Bossing of skull (if severe)
+\item Hb $\longrightarrow$ N/L to very low
+\item MCV, MCH $\longrightarrow$ Usually $\uparrow$
+\item Retic. $\longrightarrow$ Usually $\uparrow$
+\item Bilirubin $\longrightarrow$ Almost always $\uparrow$ (mostly unconjugated)
+\item LDH $\longrightarrow$ $\uparrow$ (up to 10X normal in intravascular hemolysis)
+\item Haptoglobin $\longrightarrow$ Reduced to absent if hemolysis is at least in part intravascular
+\end{enumerate}
+\end{latin}
+
+\subsection*{همولیزی که عمدتاً خارج عروقی باشد}
+\begin{itemize}
+\item افزایش بیلی‌روبین غیرکنژوگهٔ سرم.
+\item افزایش \HemolyticEn{AST} سرم.
+\item افزایش اوروبیلینوژن ادرار و مدفوع.
+\end{itemize}
+\vfill
+\begin{center}\HemolyticEn{YASHA}\qquad ۲\end{center}
+
+\clearpage
+\begin{latin}
+Subject: 100\hfill Date: /\quad/
+\end{latin}
+\section*{همولیزی که عمدتاً داخل عروقی باشد}
+\begin{itemize}
+\item هموگلوبین‌اوری (اغلب همراه با هموسیدرین‌اوری).
+\item هموگلوبین آزاد در سرم.
+\item افزایش \HemolyticEn{LDH} سرم.
+\item کاهش هاپتوگلوبین سرم.
+\item بیلی‌روبین سرم نرمال یا اندکی افزایش‌یافته.
+\end{itemize}
+
+افزایش تعداد رتیکولوسیت‌ها در \HemolyticEn{HA} \HemolyticArrow{}
+افزایش \HemolyticEn{MCV}.
+
+\HemolyticEn{BMA} در تشخیص \HemolyticEn{HA} جایگاهی ندارد.
+\vfill
+\begin{center}\HemolyticEn{YASHA}\qquad ۳\end{center}
+\endgroup
+\ifHemolyticStandalone
+  \expandafter\enddocument
+\fi
