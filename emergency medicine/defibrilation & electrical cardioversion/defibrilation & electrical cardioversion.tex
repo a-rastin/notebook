@@ -1,0 +1,279 @@
+% !TeX program = xelatex
+% UTF-8 transcription of all six source photographs; medical wording and
+% energy settings are retained as written, without clinical corrections.
+% pic01.jpg = 20261016_224117150.jpg (handwritten page 1)
+% pic02.jpg = 20261016_224125758.jpg (handwritten page 2)
+% pic03.jpg = 20261016_224130326.jpg (handwritten page 3)
+% pic04.jpg = 20261016_224136894.jpg (handwritten page 4)
+% pic05.jpg = 20261016_224141932.jpg (handwritten page 5)
+% pic06.jpg = 20261016_224146628.jpg (handwritten page 6)
+% Compile standalone with XeLaTeX, or input into an existing XePersian document.
+\ifdefined\settextfont
+  \def\DefibStandalone{0}
+\else
+  \def\DefibStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\defibpage}[1]{\clearpage\section*{صفحهٔ #1}
+  {\footnotesize\en{Note book \qquad Subject: 23}\par
+  \en{Veor: \qquad Month: \qquad Date:}\par}}
+\newcommand{\defibfooter}[1]{\par\medskip
+  {\footnotesize\en{BAHARE DANESH ASL}\par شمارهٔ دست‌نویس: #1.\par}}
+\newcommand{\defibunclear}[1]{[خوانش نامطمئن: #1]}
+\ifnum\DefibStandalone=1 \begin{document}\fi
+
+\defibpage{۱}
+\noindent\en{Emergency Medicine}
+\section*{\en{Defibrillation and Electrical Cardioversion}}
+\subsection*{۱ ـ دفیبریلیشن}
+استفادهٔ دوز بالا از الکتریسیته.
+\begin{latin}
+\begin{itemize}
+\item In cardiac arrest.
+\item To depolarize the entire myocardium.
+\item To eliminate:
+  \begin{itemize}
+  \item Ventricular fibrillation.
+  \item Nonperfusing ventricular tachycardia.
+  \end{itemize}
+\item So that coordinated contractions can resume.
+\end{itemize}
+\end{latin}
+باید در کنار \en{CPR} بیمار انجام شود.
+
+\subsection*{۲ ـ کاردیوورژن الکتریکی}
+\begin{latin}
+\begin{itemize}
+\item Synchronized electrical impulse.
+\item To convert a still-perfusing tachydysrhythmia back to a normal sinus rhythm.
+\end{itemize}
+\end{latin}
+کاردیوورژن می‌تواند به صورت دارویی یا غیردارویی برای بیماران پایدار
+(\en{stable}) انجام شود.
+
+\subsection*{۳ ـ اندیکاسیون دفیبریلیشن}
+\begin{latin}
+\begin{itemize}
+\item Ventricular fibrillation (VF).
+\item Pulseless ventricular tachycardia (pulseless VT).
+\end{itemize}
+\noindent $\ast$ Is not indicated for:
+\begin{itemize}
+\item Asystole.
+\item Pulseless electrical activity.
+\end{itemize}
+\end{latin}
+\defibfooter{۱}
+
+\defibpage{۲}
+\subsection*{۴ ـ کنتراندیکاسیون دفیبریلیشن}
+\begin{latin}
+\begin{itemize}
+\item Sinus rhythm.
+\item Conscious patients with a pulse.
+\item When there is danger to the operator or others:
+  \begin{itemize}
+  \item Wet patient.
+  \item Wet surrounding.
+  \end{itemize}
+\end{itemize}
+\end{latin}
+
+\subsection*{۵ ـ اندیکاسیون کاردیوورژن الکتریکی}
+\begin{latin}
+\begin{itemize}
+\item Ventricular tachycardia (VT).
+\item Supraventricular tachycardia (SVT).
+\item Atrial flutter.
+\item Atrial fibrillation (AF).
+\end{itemize}
+\end{latin}
+به شرطی که در نتیجهٔ آریتمی \en{unstable} هستند.
+\par\medskip
+اگر در بیماران پایدار کاردیوورژن دارویی جواب نداد، سراغ الکتریکی می‌رویم.
+\begin{latin}
+\noindent $\ast$ Electrical cardioversion should be synchronized.
+\begin{itemize}
+\item Electrical impulse timed with intrinsic QRS complex.
+\item To minimize the risk of ventricular fibrillation (VF).
+\end{itemize}
+\end{latin}
+
+\subsection*{۶ ـ انواع دستگاه‌ها}
+\begin{itemize}
+\item مونوفازیک.
+\item بای‌فازیک.
+\end{itemize}
+\subsection*{۷}
+استفاده از \en{pad} نسبت به \en{paddle} ارجح است.
+\defibfooter{۲}
+
+\defibpage{۳}
+\subsection*{۸}
+بیمار باید به پوزیشن \en{Supine} و در حال \en{CPR} باشد.
+\subsection*{۹}
+برای جلوگیری از سوختگی پوست، جواهرات و اجسام فلزی را جدا کنید.
+\subsection*{۱۰}
+اگر موهای قفسهٔ سینه زیاد است تراشیده شود.
+\subsection*{۱۱}
+بیمار و محیط باید خشک باشد.
+
+\subsection*{۱۲ ـ محل‌های قرار دادن پد/پدل}
+\begin{latin}
+\noindent a) \textbf{Anteroapical position}
+\begin{itemize}
+\item Right of the upper half of the sternum, just below the patient's right clavicle.
+\item Just below and to the left of the left nipple.
+  \begin{itemize}
+  \item In female: just below and to the left side of the breast.
+  \item $\ast$ Do not place it over the breast.
+  \end{itemize}
+\end{itemize}
+\end{latin}
+پوزیشن انتخابی برای بیمار \en{Supine} است.
+\begin{latin}
+\noindent b) \textbf{Anteroposterior position}
+\begin{itemize}
+\item At the left lower sternal border.
+\item Below the left scapula.
+\end{itemize}
+\end{latin}
+
+\subsection*{۱۳}
+اگر بیمار \en{pacemaker} داشت پدها را با حداقل فاصلهٔ ۴ اینچ از دستگاه
+باید قرار داد تا بدان آسیب نرسد.
+\defibfooter{۳}
+
+\defibpage{۴}
+\subsection*{۱۴}
+در موارد ایست قلبی که می‌خواهیم دفیبریلیشن انجام بدهیم، بیهوشی نیاز نیست.
+\subsection*{۱۵ ـ در کاردیوورژن الکتریکی اورژانسی یا الکتیو}
+\begin{latin}
+\noindent Before, during and after the procedure:
+\begin{itemize}
+\item Preparation.
+\item Procedural sedation.
+\item Monitoring.
+\end{itemize}
+\begin{itemize}
+\item \textbf{IV line and a crystalloid fluid drip.}
+\item Procedural sedation (sedation agents + analgesic agents):
+  \begin{itemize}
+  \item Sedative:
+    \begin{itemize}
+    \item Etomidate.
+    \item Propofol.
+    \item Midazolam.
+    \item Ketamine.
+    \end{itemize}
+  \item Analgesic agents:
+    \begin{itemize}
+    \item Fentanyl.
+    \item Morphine.
+    \end{itemize}
+  \end{itemize}
+\item Monitoring:
+  \begin{itemize}
+  \item Cardiac.
+  \item Hemodynamic.
+  \item $\mathrm{SpO}_{2}$.
+  \end{itemize}
+\end{itemize}
+\end{latin}
+
+\subsection*{۱۶ ـ گام به گام تکنیک دفیبریلاسیون دستی}
+\begin{itemize}
+\item \en{CPR} را برای کمتر از \en{10 s} قطع کنید تا ریتم را به صورت چشمی بررسی کنید.
+\end{itemize}
+\defibfooter{۴}
+
+\defibpage{۵}
+\noindent ادامهٔ ۱۶ ـ گام به گام تکنیک دفیبریلاسیون دستی:
+\begin{itemize}
+\item تأیید کنید که ریتم قابل شوک دادن است:
+  \begin{itemize}
+  \item \en{VF}.
+  \item \en{VT} بدون نبض.
+  \end{itemize}
+\item انرژی مناسب را انتخاب کنید:
+\end{itemize}
+\begin{latin}
+\begin{enumerate}
+\item[a)] 150 to 200 J for biphasic truncated exponential waveforms.
+\item[b)] 120 to 200 J for \rl{\defibunclear{\en{trilinear}}} biphasic waveforms.
+% The handwritten adjective appears to read "trilinear"; it is not silently
+% replaced with a different technical term.
+\item[c)] \textbf{If the recommendation is unknown use the max energy available.}
+\item[d)] 360 J for monophasic.
+\end{enumerate}
+\end{latin}
+\noindent $\ast$ در صورت عدم موفقیت یا فیبریلاسیون مجدد از انرژی بالاتری استفاده کنید.
+\begin{itemize}
+\item دستگاه روی \en{Unsynchronized mode} باشد.
+\item \en{Stand clear}.
+\item توقف \en{CPR} به مدت زیر \en{10 s}.
+\item تأیید قابل شوک بودن ریتم.
+\item دادن شوک.
+\item آغاز مجدد \en{CPR}؛ برای بررسی ریتم متوقف نشوید.
+\end{itemize}
+
+\subsection*{۱۷ ـ گام به گام تکنیک کاردیوورژن الکتریکی}
+\begin{itemize}
+\item بیمار آماده شود.
+\item برای بیمار توضیح داده شود.
+\end{itemize}
+\defibfooter{۵}
+
+\defibpage{۶}
+\noindent ادامهٔ ۱۷ ـ گام به گام تکنیک کاردیوورژن الکتریکی:
+\begin{itemize}
+\item بیمار آرامبخشی دریافت کند.
+\item ریتم بیمار دوباره بررسی شود.
+\item دستگاه بر روی \en{Synchronized mode} قرار داده شود.
+\item انرژی مناسب را برای دستگاه انتخاب کنید:
+\end{itemize}
+\begin{latin}
+\begin{enumerate}
+\item[a)] \textbf{Narrow regular rhythms}: 50 to 100 J (Biphasic/Monophasic).
+\item[b)] \textbf{Narrow irregular rhythms}:
+  \begin{itemize}
+  \item 120--200 J for biphasic.
+  \item 200 J for monophasic.
+  \end{itemize}
+\item[c)] \textbf{Wide complex regular rhythms}: 100 J (B/M).
+\end{enumerate}
+\noindent $\ast$ \textbf{Synchronized shocks should not be attempted for wide irregular rhythms.}
+\begin{itemize}
+\item Use unsynchronized defibrillation.
+\end{itemize}
+\end{latin}
+\begin{itemize}
+\item \en{Stand clear}.
+\item تأیید کنید که ریتم قابل شوک دادن است.
+\item در هنگام شوک نگاه اپراتور به بیمار باشد.
+\item ریتم بیمار را بررسی کنید.
+\item اگر کاردیوورژن رخ نداده بود انرژی را بالا برده دوباره شوک می‌دهیم.
+  \begin{itemize}
+  \item اگر تا آخرین حد انرژی کاردیوورژن رخ نداد:
+    \en{Overdrive pacing}.
+  \end{itemize}
+\item اگر بیمار ایست قلبی کرد:
+  \begin{itemize}
+  \item با دفیبریلاتور شوک می‌دهیم.
+  \item \en{CPR} را بلافاصله شروع می‌کنیم.
+  \end{itemize}
+\end{itemize}
+\defibfooter{۶}
+
+\ifnum\DefibStandalone=1
+  \let\DefibEnd\enddocument
+\else
+  \let\DefibEnd\relax
+\fi
+\DefibEnd
