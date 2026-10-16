@@ -1,0 +1,148 @@
+% !TeX program = xelatex
+% UTF-8 transcription: notebook/bone marrow failure syndromes (Google Drive).
+% pic01.jpg = 20261016_222303896.jpg, handwritten page 1, Harrison - 102.
+% pic02.jpg = 20261016_222311393.jpg, handwritten page 2, subject 102.
+% pic03.jpg = 20261016_222316701.jpg, handwritten page 3, subject 102.
+% Original wording, numbering, and the crossed-out entry are retained.
+% Bracketed reading notes identify illegible or uncertain handwriting.
+% Compile directly with XeLaTeX, or input into a XePersian document.
+\newif\ifBMFailureStandalone
+\ifdefined\settextfont
+  \BMFailureStandalonefalse
+\else
+  \BMFailureStandalonetrue
+\fi
+\ifBMFailureStandalone
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=20mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage[normalem]{ulem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \begin{document}
+\fi
+\begingroup
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\emergencystretch=3em
+\newcommand{\BMEn}[1]{\lr{#1}}
+\newcommand{\BMReading}[1]{[خوانش نامطمئن: #1]}
+\newcommand{\BMCrossed}[1]{\ifdefined\sout\sout{#1}\else #1\fi}
+
+\section*{\BMEn{Bone Marrow Failure Syndromes}}
+\BMEn{Harrison -- 102}\hfill صفحهٔ ۱
+
+\begin{enumerate}
+\item بیماری‌های نارسایی مغز استخوان:
+  \begin{itemize}
+  \item \BMEn{Aplastic Anemia}
+  \item \BMEn{Myelodysplastic syndrome (MDS)}
+  \item \BMEn{Pure red cell aplasia (PRCA)}
+  \item \BMEn{Myelophthisis}
+  \end{itemize}
+\item آنمی هایپوپرولیفراتیو ویژگی اصلی این اختلالات است.
+  \begin{itemize}
+  \item ولی پان‌سایتوپنی اختلال شایع‌تری است.
+  \end{itemize}
+\item در نارسایی مغز استخوان علت کم بودن سلول‌های خونی:
+  \begin{itemize}
+  \item \BMEn{Deficient Hematopoiesis}
+  \end{itemize}
+\item علل اختلال مغز استخوان:
+  \begin{itemize}
+  \item عفونت
+  \item التهاب
+  \item بدخیمی
+  \end{itemize}
+\item سندرم‌های نارسایی هماتوپوئتیک بر اساس مورفولوژی غالب مغز استخوان دسته‌بندی می‌شوند.
+\end{enumerate}
+
+\subsection*{آنمی آپلاستیک}
+\begin{enumerate}
+\item \BMEn{Aplastic anemia is}:
+  \begin{itemize}
+  \item \BMEn{Pancytopenia +}
+  \item \BMEn{Bone marrow hypocellularity}
+  \end{itemize}
+\end{enumerate}
+
+\clearpage
+\section*{آنمی آپلاستیک ـ صفحهٔ ۲}
+\BMEn{102}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item \relax [در اصل خط خورده است:]
+  \begin{itemize}
+  \item \BMEn{\BMCrossed{Aplastic anemia}}
+    \begin{itemize}
+    \item \BMEn{\BMCrossed{Acquired}}
+    \item \BMEn{\BMCrossed{Iatrogenic}}
+    \end{itemize}
+  \end{itemize}
+  [یک واژهٔ کوچک دیگر زیر این مدخل کاملاً خط خورده و ناخواناست.]
+\item \BMEn{Types}:
+  \begin{itemize}
+  \item \BMEn{Acquired aplastic anemia}
+  \item \BMEn{Iatrogenic aplasia}
+  \item \BMEn{Marrow hypocellularity after intensive cytotoxic chemotherapy}
+  \item \BMEn{Accidental physical or chemical injury}
+    \begin{itemize}
+    \item \BMEn{Radiation poisoning}
+    \end{itemize}
+  \end{itemize}
+\end{enumerate}
+% The source repeats number 3 after the English Types entry.
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item اختلالات ژنتیکی مانند سندرم فانکونی و دیسکراتوزیس کانژنیتا:
+  \begin{itemize}
+  \item در اوایل کودکی بروز می‌کند.
+  \item آنومالی‌های فیزیکال تیپیک دارند.
+  \end{itemize}
+\item بیماری‌های تلومر و \BMReading{نقاط ... خونی} برخی ژن‌ها:
+% The phrase between "و" and "برخی ژن‌ها" is not reliably legible.
+  \begin{itemize}
+  \item \BMEn{GATA2}
+  \item \BMEn{RUNX1}
+  \item \BMEn{MPL}
+  \item نارسایی مغز استخوان در بالغین نرمال.
+  \end{itemize}
+\item سن تیپیک آنمی آپلاستیک:
+  \begin{itemize}
+  \item \BMEn{low blood counts} با شروع ناگهانی.
+  \item در بالغین جوان که پیش از این نرمال بودند.
+  \end{itemize}
+\item گاهی پیش از آنمی آپلاستیک یک هپاتیت سرونگاتیو رخ می‌دهد.
+\item گاهی افت شاخص‌های خونی متوسط یا ناکامل است.
+  \begin{itemize}
+  \item آنمی، لکوپنی، ترومبوسایتوپنی.
+  \end{itemize}
+\end{enumerate}
+
+\clearpage
+\section*{آنمی آپلاستیک ـ صفحهٔ ۳}
+\BMEn{102}
+\begin{enumerate}
+\setcounter{enumi}{7}
+\item آنمی آپلاستیک با دو اختلال مرتبط است و ممکن است از هم قابل افتراق نباشند:
+  \begin{itemize}
+  \item \BMEn{PNH}
+  \item \BMEn{MDS}
+  \end{itemize}
+\item شیوع \BMEn{AA} پایین است و در مرد و زن به یک میزان رخ می‌دهد.
+\item توزیع سنی آن دو قله دارد:
+  \begin{itemize}
+  \item جوانان ۲۰ ساله.
+  \item کهنسالان.
+  \end{itemize}
+\item بیشتر موارد \BMEn{AA} ایدیوپاتیک هستند.
+\end{enumerate}
+
+\endgroup
+\ifBMFailureStandalone
+  \def\BMFailureFinish{\end{document}}
+\else
+  \let\BMFailureFinish\relax
+\fi
+\BMFailureFinish
