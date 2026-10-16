@@ -1,0 +1,202 @@
+% !TeX program = xelatex
+% UTF-8; compile in this directory with XeLaTeX.
+% To include in an existing XePersian document, define
+% \AllergicDrugReactionsInNotebook before \input{...}.
+% Source: Google Drive Notebook/allergic reactions to drugs (chapter 193).
+% pic01.jpg = 20261016_054507555.jpg; 1vLLxuDuen21yo3EswrrRf5mrkz7A4FeC
+% pic02.jpg = 20261016_054514602.jpg; 1YMB9QoNoH0d79bGntidHopaIvmHuc4rk
+% pic03.jpg = 20261016_054519084.jpg; 1BrPKZ7t3kmzXmi3ceW8qwdo7jl7B08Jp
+% pic04.jpg = 20261016_054524295.jpg; 11lp8WmvI4jP_MzaXf3Q4KDDxqDgSphkT
+% Transcription only: source terminology, classifications, and numbers are
+% retained, including ARD, SJS (4a), and bullous reactions (4d).
+% Highlighting is represented by bold type; arrows by lists and relations.
+\ifdefined\AllergicDrugReactionsInNotebook
+  \let\ADRfinish\relax
+\else
+  \def\ADRfinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=22mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphicx}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+  \setlength{\emergencystretch}{3em}
+  \begin{document}
+\fi
+\begingroup
+\newcommand{\ADRrange}[2]{\lr{#1--#2}}
+\newcommand{\ADRunclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\newcommand{\ADRblank}{\lr{(\hspace{1cm})}}
+\newcommand{\ADRarrow}{\lr{\(\longleftarrow\)}}
+\newcommand{\ADRpage}[1]{\clearpage\section*{تصویر #1}
+  \textbf{سربرگ و حاشیه:} ۱۹۳ ـ؛ \lr{Subject:} (خالی)؛
+  \lr{Date: / /}؛ شمارهٔ صفحه: #1؛ نشان پایین برگه: \lr{YASHA}.\par}
+
+\begin{center}
+  {\Large\bfseries واکنش‌های آلرژیک به داروها ـ ۱۹۳}\par
+  \lr{Nelson 22}
+\end{center}
+
+\section*{تصویر ۱}
+\textbf{سربرگ و حاشیه:} واکنش‌های آلرژیک به داروها ـ ۱۹۳؛
+\lr{Subject: Nelson 22}؛ \lr{Date: / /}؛ شمارهٔ صفحه: ۱؛ \lr{YASHA}.
+
+\subsection*{\lr{Adverse drug reaction (ARD)}}
+\begin{latin}
+\begin{itemize}
+  \item Type A: predictable
+  \item Type B: unpredictable
+\end{itemize}
+\end{latin}
+
+\begin{latin}
+\noindent Type A: Drug Toxicity, Drug interactions, Adverse effects
+\par\noindent\(\longrightarrow\) Are Dose Dependent
+\par\medskip
+\noindent Type B \(\longrightarrow\) Generally dose independent
+\end{latin}
+\begin{itemize}
+  \item عموماً یک پره‌دیسپوزیشن وجود دارد.
+  \item \lr{Idiosyncratic reactions, Allergic reactions, Pseudoallergic reactions}
+\end{itemize}
+
+\begin{itemize}
+  \item آنافیلاکسی \ADRarrow{} \lr{Drug specific IgE Ab}.
+  \item واکنش‌های پوستی تأخیری \ADRarrow{} \lr{Drug specific T cells}.
+  \item واکنش‌های سودوآلرژیک \ADRarrow{} با مکانیسم غیر از \lr{IgE release}،
+  بازوفیل و ماست‌سل فعال می‌شوند.
+  \par مثال: \lr{Vancomycin induced flushing}.
+\end{itemize}
+
+\begin{latin}
+\noindent Drug independent cross-reactive Ags
+\par\noindent\(\longrightarrow\) Cetuximab-induced anaphylaxis
+\end{latin}
+از قبل \lr{IgE} علیه گالاکتوز ـ \lr{\(\alpha\)-1}.
+
+\subsection*{اپیدمیولوژی}
+در بیماران بستری احتمال \lr{ADR}، \lr{9.7\%} و احتمال مرگ به اثر
+\lr{ADR}، \lr{0.32\%} است.
+
+\ADRpage{۲}
+% A small 3 from the underlying sheet is also visible at the lower left.
+واکنش‌های پوستی شایع‌ترین فرم \lr{ADR} هستند.
+\begin{itemize}
+  \item پنی‌سیلین‌ها، \lr{TMP-SMX}.
+\end{itemize}
+\ADRrange{4}{10}\% تمام موارد \lr{ADRs}، آلرژیک هستند.
+
+\subsection*{دسته‌بندی آلرژی‌های دارویی}
+\begin{description}
+  \item[تیپ ۱:] \lr{IgE} \ADRarrow{} دگرانولیشن ماست‌سل و ائوزینوفیل
+  \ADRarrow{} شوک \textbf{آنافیلاکسی، کهیر، آنژیوادم}، برونکواسپاسم
+  \ADRarrow{} ظرف \ADRrange{1}{6} ساعت از مصرف دارو.
+
+  \item[تیپ ۲:] \lr{IgG} و کمپلمان \ADRarrow{} آسیب سلولی ناشی از
+  \lr{IgG} و کمپلمان \ADRarrow{} \textbf{سایتوپنی}
+  \ADRarrow{} \ADRrange{5}{15} روز پس از شروع دارو.
+
+  \item[تیپ ۳:] \lr{IgM} یا \lr{IgG} + کمپلمان یا \lr{FcR}
+  \ADRarrow{} دپوزیشن کمپلکس ایمنی \ADRarrow{} کهیر،
+  \textbf{واسکولیت، سرم سیکنس}.
+  \par \ADRrange{7}{8} روز از شروع دارو برای کهیر و سرم سیکنس؛
+  \ADRrange{7}{21} روز برای واسکولیت.
+
+  \item[تیپ \lr{4a}:] \lr{Th1 (IFN-\(\gamma\))}
+  \ADRarrow{} التهاب مونوسیتیک \ADRarrow{} \textbf{اگزما}
+  \ADRarrow{} \ADRrange{1}{21} روز بعد از شروع دارو.
+
+  \item[تیپ \lr{4b}:] \lr{Th2 (IL-4, IL-5)}
+  \ADRarrow{} التهاب ائوزینوفیلیک \ADRarrow{}
+  اگزانتم ماکولوپاپولر، \textbf{\lr{DRESS}}.
+  \par ۱ تا چند روز برای \lr{MPE} و \ADRrange{2}{6} هفته برای \lr{DRESS}.
+
+  \item[تیپ \lr{4c}:] \lr{T} سایتوتوکسیک \ADRarrow{} مرگ کراتینوسیت
+  \ADRarrow{} اگزانتم ماکولوپاپولر، \textbf{\lr{SJS/TEN}}، اگزانتم پوسچولر.
+  \par \ADRrange{1}{2} روزه برای واکنش‌های خفیف؛
+  \ADRrange{4}{28} روز برای \lr{SJS/TEN}.
+  \par یادداشت حاشیه با شاخه از تیپ \lr{4c}: \lr{fixed drug eruption}.
+
+  \item[تیپ \lr{4d}:] \lr{T cell (IL-8)}
+  \ADRarrow{} التهاب نوتروفیلیک \ADRarrow{} اگزانتم پوسچولر ژنرالیزهٔ حاد
+  \ADRarrow{} \ADRrange{1}{2} روز بعد از شروع.
+\end{description}
+\textbf{حاشیهٔ پایین چپ:} عدد ۳ از برگهٔ زیرین نیز دیده می‌شود.
+
+\ADRpage{۳}
+\begin{itemize}
+  \item \lr{DRESS} \ADRarrow{} تب، ائوزینوفیلی، نارسایی کبد، لنفادنوپاتی، اراپشن پوستی.
+  \item سرم سیکنس \ADRarrow{} تب، کهیر، آرترالژی.
+\end{itemize}
+
+\subsection*{درگیری مولتی‌ارگان}
+\begin{itemize}
+  \item آنافیلاکسی (تیپ ۱) \ADRarrow{} بتالاکتام‌ها، پلاتین‌ها.
+  \item \lr{DRESS} (تیپ \lr{4b}) \ADRarrow{}
+  ضدتشنج‌ها، سولفونامیدها، مینوسایکلین، آلوپورینول.
+  \item سرم سیکنس (تیپ ۳) \ADRarrow{} \lr{infliximab}، سایر \lr{Abs}.
+  \item \lr{SLE} \ADRblank{} \ADRarrow{} هیدرالازین، پروکائینامید، ایزونیازید.
+  \item واسکولیت (تیپ ۳) \ADRarrow{} هیدرالازین، پنی‌سیلامین، پروپیل تیویوراسیل.
+\end{itemize}
+
+\subsection*{درگیری ارگان اسپسیفیک}
+\begin{itemize}
+  \item کلیه \ADRarrow{} نفریت اینترستیشیال، ممبرانوس گلومرولونفریت (تیپ ۳).
+  \par پنی‌سیلین، سولفونامید، طلا، پنی‌سیلامین، آلوپورینول.
+  \item ریه \ADRarrow{} پنومونیت، فیبروز \ADRblank{}.
+  \par نیتروفورانتوئین، \lr{MTX}، بلئومایسین.
+  \item کبد \ADRarrow{} هپاتیت، یرقان کلستاتیک \ADRblank{}.
+  \par فنوتیازون، سولفونامید، پارا آمینوسالیسیلیک اسید.
+  \par \ADRunclear{نام داروی اول: فنوتیازون؛ احتمال خوانش فنوتیازین}.
+  \item هماتولوژیک \ADRarrow{} آنمی همولیتیک، ترومبوسایتوپنی، گرانولوسایتوپنی (تیپ ۲).
+  \par پنی‌سیلین، سولفونامید، \lr{quinine}.
+  \item لوپوس پوستی \ADRblank{} \ADRarrow{} هیدروکلروتیازید، \lr{CCB}، \lr{ACEI}.
+  \item \lr{SJS} (تیپ \lr{4a})؛ \lr{\(<10\%\)}
+  \ADRarrow{} سولفونامیدها، ضدتشنج‌ها، \lr{NSAID}، آلوپورینول.
+\end{itemize}
+
+\ADRpage{۴}
+\subsection*{ادامهٔ درگیری ارگان اسپسیفیک}
+\begin{itemize}
+  \item اگزانتم \ADRblank{} \ADRarrow{} آلوپورینول، متالاپیرون، ضدتشنج،
+  سولفونامید، آمینوپنی‌سیلین.
+  \par \ADRunclear{نام داروی دوم: متالاپیرون}.
+  \item کهیر (تیپ ۱) \ADRarrow{} بتالاکتام، پلاتین.
+  \item \lr{fixed drug eruption} \ADRarrow{} پلاک‌های پیگمنته، راجعه در محل قبلی
+  (تیپ \lr{4c}).
+  \par تتراسایکلین، سولفونامید، \lr{NSAID}، کاربامازپین.
+  \item پوسچول (تیپ \lr{4d}) \ADRarrow{} \lr{CS}، سیرولیموس، \lr{CCB}، فوروزماید،
+  ونکومایسین، آنتی‌بیوتیک‌ها.
+  \item بولوس (تیپ \lr{4d}) \ADRarrow{} فوروزماید، ونکومایسین، \lr{ACEI}، پنی‌سیلامین.
+\end{itemize}
+
+\subsection*{تشخیص}
+\begin{itemize}
+  \item تست پوستی سریع و حساس برای ارزیابی وجود \lr{IgE}.
+  \par برای پنی‌سیلین \lr{\(\checkmark\)}، سایر آنتی‌بیوتیک‌ها \lr{\(\times\)}.
+  \par منفی شدن آن ردکننده نیست.
+  \item تست کومبس مستقیم و غیرمستقیم \ADRarrow{} اغلب به آنتی‌بیوتیک در زمینهٔ دارو مثبت می‌شود.
+  \item سطح سرمی تریپتاز \ADRarrow{} به دنبال دگرانولیشن ماست‌سل
+  \lr{\(\uparrow\)} می‌رود.
+  \item \lr{Patch test} \ADRarrow{} دقیق‌ترین تست برای درماتیت تماسی با داروها.
+  \item \lr{Graded drug challenge} \ADRarrow{} اگر \lr{N/L} باشد یعنی فرد به آن دارو
+  قطعاً حساسیت ندارد.
+\end{itemize}
+
+% Full originals preserve the source layout, marginal marks, and uncertain writing.
+\IfFileExists{images/pic01.jpg}
+  {\def\ADRimagepath{images/}}
+  {\def\ADRimagepath{pediatrics/ped-immunology/allergic reactions to drugs/images/}}
+\newcommand{\ADRoriginal}[1]{\clearpage\begin{center}
+  \textbf{تصویر اصلی \lr{#1}}\par\smallskip
+  \includegraphics[width=\textwidth,height=0.89\textheight,keepaspectratio]{\ADRimagepath pic#1.jpg}
+\end{center}}
+\ADRoriginal{01}
+\ADRoriginal{02}
+\ADRoriginal{03}
+\ADRoriginal{04}
+\endgroup
+\ADRfinish
