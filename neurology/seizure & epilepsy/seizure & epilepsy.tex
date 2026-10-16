@@ -1,0 +1,226 @@
+% !TeX program = xelatex
+% UTF-8; standalone XeLaTeX/XePersian, or input into a XePersian document.
+% Faithful transcription; medical statements have not been revised.
+% Google Drive: Notebook/seizure & epilepsy (six handwritten pages).
+% pic01.jpg = 20261016_205412191.jpg
+% pic02.jpg = 20261016_205420764.jpg
+% pic03.jpg = 20261016_205425083.jpg
+% pic04.jpg = 20261016_205430161.jpg
+% pic05.jpg = 20261016_205434052.jpg
+% pic06.jpg = 20261016_205438438.jpg
+\ifdefined\settextfont
+  \def\SeizureStandalone{0}
+\else
+  \def\SeizureStandalone{1}
+  \documentclass[11pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \setlist[itemize]{itemsep=2pt,topsep=3pt,parsep=0pt}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\szarrow}{\ensuremath{\leftarrow}}
+\newcommand{\szunclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\newcommand{\szpage}[2]{%
+  \clearpage\section*{۵ ـ تشنج و صرع — صفحهٔ #1}
+  {\footnotesize\noindent\en{#2}\par
+  \noindent\en{Subject:} ۵ ـ تشنج و صرع\hfill\en{Date: / /}\par
+  \noindent\en{Sat.\quad Sun.\quad Mon.\quad Tue.\quad Thu.\quad Wed.\quad Fri.}\par}
+  \medskip}
+\ifnum\SeizureStandalone=1 \begin{document}\fi
+
+\szpage{۱}{pic01.jpg — 20261016\_205412191.jpg}
+\begin{center}\szunclear{بسمه تعالی}\end{center}
+\subsection*{تشنج پارشیل}
+\begin{itemize}
+  \item پارشیل ساده \szarrow{} هوشیاری به طور کامل حفظ شده.
+  \item پارشیل کمپلکس \szarrow{} با اختلال هوشیاری همراه است.
+\end{itemize}
+\subsection*{پارشیل ساده}
+\begin{itemize}
+  \item موجب اختلال حرکتی، حسی، روانی یا اتونوم می‌شوند.
+  \item بدون اختلال هوشیاری.
+  \item در \en{EEG} امواج غیرطبیعی در ناحیهٔ محدودی از کورتکس.
+  \item اگر تشنج‌های کانونی از نقطهٔ محدودی آغاز شده مثل انگشتان، سپس به مناطق دیگر گسترش یابد \szarrow{} \en{Jacksonian Marsh}.
+  \item سایر تظاهرات:
+  \begin{itemize}
+    \item تغییر حس سوماتیک: پارستزی.
+    \item اختلالات بینایی: مشاهدهٔ نور، توهم بینایی.
+    \item اختلالات تعادلی: احساس سقوط، سرگیجه.
+    \item اختلال اتونوم: تپش قلب، سیخ شدن موها.
+  \end{itemize}
+  \item اگر منشأ حمله لوب فرونتال یا تمپورال باشد \szarrow{} اختلال حافظه حین حمله \szarrow{} آفازی بعد از حمله.
+\end{itemize}
+\subsection*{پارشیل کمپلکس}
+\begin{itemize}
+  \item منشأ: بخش تحتانی و داخلی لوب تمپورال / مناطق مجاور آن در لوب فرونتال.
+  \item تظاهرات: تغییر گذرای هوشیاری (مهم‌ترین)؛ بیمار اتفاقات حین حمله را به خاطر ندارد ولی شروع حمله را ممکن است / توهم بویایی در شروع حمله (اورا).
+  \item اورا چند ثانیه تا چند دقیقه طول می‌کشد (به طور کلی).
+  \item اتوماتیسم: حرکات غیرارادی حین حمله یا بلافاصله پس از آن.
+  \begin{itemize}
+    \item بیمار آن را به خاطر نمی‌آورد.
+    \item نگاه‌کردن، ضربه‌زدن آرام با دست‌ها، جویدن، قورت‌دادن، ملچ‌ملچ‌کردن لب‌ها، زیر لب حرف‌زدن.
+  \end{itemize}
+  \item معمولاً در حملات لوب تمپورال.
+\end{itemize}
+
+\szpage{۲}{pic02.jpg — 20261016\_205420764.jpg}
+\begin{itemize}
+  \item \en{EEG}: در بین حملات \en{N/L} یا امواج سوزنی و نوک‌تیز.
+  \begin{itemize}
+    \item در حین حمله هم ممکن است \en{N/L} باشد.
+  \end{itemize}
+\end{itemize}
+\subsection*{تشنج پارشیل با انتشار ثانویه}
+\begin{itemize}
+  \item ممکن است حمله به هر دو نیمکره انتشار یافته و جنرالیزه شود \szarrow{} حمله تونیک ـ کلونیک است.
+  \item معمولاً به دنبال یک حمله پارشیل ساده با منشأ لوب فرونتال.
+  \item \en{Postictal Todd's Paralysis}:
+  فلج تاد: فلج ایجادشده بعد از حملهٔ تشنج فوکال یا جنرالیزه.
+  \begin{itemize}
+    \item ضعف، فلج، گذرا، خودمحدودشونده.
+  \end{itemize}
+\end{itemize}
+\subsection*{درمان تشنج‌های پارشیل}
+\begin{itemize}
+  \item به یک اندازه مؤثر هستند.
+  \item کاربامازپین یا فنی‌توئین \szarrow{} تشنج‌های پارشیل و تشنج‌های پارشیلی که جنرالیزه می‌شوند.
+  \item کاربامازپین \szarrow{} باید ۲–۳ بار در روز مصرف شود.
+  \begin{itemize}
+    \item رابطه بین دوز و سطح سرمی و سطح توکسیک: خطی \szarrow{} مزیت.
+  \end{itemize}
+  \item فنی‌توئین کینتیک اشباعی دارد.
+  \item عوارض: لکوپنی، آنمی آپلاستیک، هپاتوتوکسیسیته.
+  \item فنی‌توئین:
+  \begin{itemize}
+    \item مصرف یک بار در روز / \en{hL: 24–36 h}.
+    \item مصرف طولانی: رویش موی اضافی، خشن‌شدن چهره، هایپرتروفی لثه.
+    \item به همین دلیل در بیماران جوان نمی‌دهیم.
+    \item سطح درمانی: \en{10–20 $\mu$g/mL}.
+    \item در صورت مصرف تزریقی: نباید در محلول قندی انفوزیون شود \szarrow{} رسوب می‌کند.
+  \end{itemize}
+  \item سایر داروها: لاموتریژین، گاباپنتین، توپیرامات، تیاگابین، فنوباربیتال.
+\end{itemize}
+
+\szpage{۳}{pic03.jpg — 20261016\_205425083.jpg}
+\subsection*{لاموتریژین}
+\begin{itemize}
+  \item معمولاً به صورت تک‌دارویی.
+  \item صرع پارشیل / سندرم‌های صرعی (\en{JME}، سندرم لنوکس گاستو).
+  \item عوارض: راش پوستی / تشدید میوکلونوس در \en{JME} / بالا بردن خلق و بیداری.
+  \item تداخلات: اگر دارو را به والپروات اضافه می‌کنیم باید دوز دارو کمتر باشد.
+\end{itemize}
+\subsection*{گاباپنتین}
+\begin{itemize}
+  \item در بیمارانی که دچار عوارض سایر داروها هستند.
+  \item به عنوان داروی کمکی / عدم تداخل دارویی با سایر داروها.
+\end{itemize}
+\subsection*{فنوباربیتال}
+\begin{itemize}
+  \item اگر در دسترس جایگزین بهتری وجود نداشته باشد.
+  \item عوارض: خواب‌آلودگی در بزرگسالان، بیش‌فعالی در کودکان، تغییر شناختی.
+\end{itemize}
+\begin{itemize}
+  \item داروی انتخابی تشنج‌های پارشیل \szarrow{} کاربامازپین.
+  \item تظاهر کلاسیک تشنج پارشیل ساده \szarrow{} حرکات تونیک ـ کلونیک در یک سمت بدن.
+  \begin{itemize}
+    \item معمولاً صورت، گردن، اندام‌ها.
+  \end{itemize}
+  \item ۲۰–۳۰\% بیماران صرع به درمان طبی مقاوم هستند.
+  \item شایع‌ترین اندیکاسیون جراحی: صرع لوب تمپورال.
+  \item بخش انترومدیال لوب تمپورال یا به طور محدودتر هیپوکامپ و آمیگدال برداشته می‌شود.
+\end{itemize}
+
+\szpage{۴}{pic04.jpg — 20261016\_205430161.jpg}
+\subsection*{تشنج ابسنس}
+\begin{itemize}
+  \item در ردهٔ تشنج‌های ژنرالیزهٔ اولیه.
+  \item شروع در سن ۴–۸ سالگی یا اوایل نوجوانی.
+  \item تظاهرات: از دست دادن ناگهانی هوشیاری برای ۵–۱۰ ثانیه.
+  \begin{itemize}
+    \item کنترل اندام‌ها از دست نمی‌رود.
+    \item خیره‌شدن چشم‌ها.
+    \item عدم وجود فاز \en{postictal}.
+  \end{itemize}
+  \item علائم خفیف حرکتی: پلک‌زدن سریع، جویدن، پرش کوتاه و سریع دست.
+  \item تا صدها حمله در روز \szarrow{} افت تحصیلی.
+  \item هایپرونتیلاسیون \szarrow{} بروز حملات.
+  \begin{itemize}
+    \item امواج غیرطبیعی در \en{EEG}.
+  \end{itemize}
+  \item \en{EEG}: امواج سوزنی جمعی دوطرفه با فرکانس ۳ \szarrow{} \en{Spike and Wave}.
+\end{itemize}
+\subsection*{نوع آتیپیک تشنج ابسنس}
+\begin{itemize}
+  \item اختلال هوشیاری طولانی‌تر.
+  \item بارزتر بودن علائم حرکتی.
+  \item مشخص‌نبودن زمان شروع و خاتمهٔ تشنج.
+  \item متفاوت‌بودن \en{EEG}.
+  \item معمولاً اختلالات ساختاری منتشر مغز وجود دارند.
+  \item پاسخ بد به درمان.
+\end{itemize}
+\subsection*{درمان تشنج ابسنس}
+\begin{itemize}
+  \item اتوسوکسیماید، اسید والپروات.
+  \item درمان کمکی: استازولاماید.
+\end{itemize}
+
+\szpage{۵}{pic05.jpg — 20261016\_205434052.jpg}
+\subsection*{اتوسوکسیماید}
+\begin{itemize}
+  \item خط اول ابسنس ساده / \en{hL: 30–40 h} / سطح پلاسما: \en{50–100 $\mu$g/mL}.
+  \item در درمان حرکات تونیک ـ کلونیک و موضعی بی‌اثر است.
+  \item عوارض: به ندرت سرکوب \en{BM} \szarrow{} \en{CBC} دوره‌ای لازم است.
+\end{itemize}
+\subsection*{والپروات سدیم}
+\begin{itemize}
+  \item تشنج ابسنس / داروی انتخابی در بیمارانی که مخلوطی از انواع حملات صرع دارند.
+  \item در موارد ابسنس + تونیک ـ کلونیک داروی انتخابی است.
+\end{itemize}
+\subsection*{تشنج تونیک کلونیک جنرالیزه (گرندمال)}
+\begin{itemize}
+  \item ناگهانی، بدون اورا و علائم هشداردهنده؛ برخی بیماران چند ساعت قبل از حمله علائم انذار (پرودرومال) دارند.
+  \item شایع‌ترین علت: اختلالات متابولیک.
+\end{itemize}
+\subsubsection*{مراحل}
+\begin{enumerate}[label=\en{\alph*)}]
+  \item تونیک: عدم هوشیاری، انقباض تونیک عضلات به مدت ۱۰–۳۰ ثانیه.
+  صدای فریاد یا جیغ به دلیل انقباض عضلهٔ تنفسی، سیانوز، افزایش فعالیت سمپاتیک (میدریاز، \en{RR $\uparrow$}، \en{BP $\uparrow$}).
+  \item کلونیک: انقباض و انبساط متناوب عضلات / زیر ۱ دقیقه.
+  \item کوما: بیمار بدون پاسخ / عضلات شل / تنفس صدادار (استریدور) به دلیل ترشح زیاد بزاق / بی‌اختیاری ادرار و مدفوع / حدود ۵ دقیقه.
+  \item بهبودی: چند دقیقه تا چند ساعت / بیمار تدریجاً به هوش می‌آید.
+  کنفیوژن پس از تشنج / سردرد، خستگی و درد عضلانی تا چند ساعت.
+\end{enumerate}
+\begin{itemize}
+  \item اگر بیمار ضایعات عصبی داشته باشد \szarrow{} اختلال هوشیاری پس از تشنج ساعت‌ها طول می‌کشد.
+  \item والپروات \szarrow{} خط اول درمان.
+\end{itemize}
+
+\szpage{۶}{pic06.jpg — 20261016\_205438438.jpg}
+\subsection*{اندیکاسیون‌های والپروات سدیم}
+\begin{itemize}
+  \item ژنرالیزهٔ اولیّهٔ تونیک ـ کلونیک: خط اول.
+  \begin{itemize}
+    \item سپس لاموتریژین، کاربامازپین، فنی‌توئین.
+  \end{itemize}
+  \item حملات صرع ایدیوپاتیک.
+  \item برخی تشنج‌های پارشیل (ثانویه ژنرالیزه).
+  \item ابسنس، میوکلونیک، آتونیک.
+  \item داروی انتخابی بیماران سندرم‌های صرعی جنرالیزه که مخلوطی از انواع حملات صرع دارند.
+\end{itemize}
+\subsection*{عوارض سدیم والپروات}
+\begin{itemize}
+  \item سمیت کبدی، سرکوب \en{BM} \szarrow{} هر دو قابل برگشت.
+  \item بیماری کبدی و سابقهٔ سرکوب \en{BM} \szarrow{} کنتراندیکاسیون تجویز سدیم والپروات.
+  \item نارسایی کبدی کشندهٔ غیرقابل بازگشت:
+  \begin{itemize}
+    \item یک عارضهٔ ایدیوسینکراتیک / در کودکان کمتر از ۲ سال.
+  \end{itemize}
+\end{itemize}
+\subsection*{تشنج آتونیک}
+% The source ends at this heading; no explanatory text follows it.
+% All six sheets include the printed Date/Subject/weekday labels reproduced above.
+% Handwritten page numbers 1--6 are preserved in the page headings.
+\ifnum\SeizureStandalone=1 \expandafter\enddocument\fi
