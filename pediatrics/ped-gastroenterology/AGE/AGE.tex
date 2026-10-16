@@ -1,0 +1,200 @@
+% !TeX program = xelatex
+% UTF-8. Standalone: xelatex AGE.tex from this directory.
+% To include in an existing XePersian document, define \AGEInNotebook first.
+% Source: Google Drive Notebook/acute GE; original JPEGs in filename order.
+% pic01.jpg = 20261016_055028904.jpg (1FTd7wLbx5m2r1QIt5toz2Vh99KgIL_4f)
+% pic02.jpg = 20261016_055037299.jpg (1aYugvnxNA-NzZ9UrUlYzRzs02sFvKYpz)
+% pic03.jpg = 20261016_055042293.jpg (16UjY-v_PonqHYKIlfhCsXQwDhazNhnjq)
+\ifdefined\AGEInNotebook
+  \let\AGEFinish\relax
+\else
+  \def\AGEFinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=22mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphicx}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+  \setlength{\emergencystretch}{3em}
+  \begin{document}
+\fi
+\providecommand{\AGEPage}[1]{\clearpage\section*{تصویر #1}}
+\providecommand{\AGEMath}[1]{\mbox{\lr{\(#1\)}}}
+\providecommand{\AGEArrow}{\lr{\(\longleftarrow\)}}
+\providecommand{\AGEImagePath}{images/}
+\IfFileExists{images/pic01.jpg}{}{%
+  \renewcommand{\AGEImagePath}{pediatrics/ped-gastroenterology/AGE/images/}}
+
+\begin{center}
+{\Large\bfseries \lr{Acute GE in children}}\par
+\lr{Nelson 22 --- 387}
+\end{center}
+\textbf{یادداشت رونویسی:} متن، اعداد، اختصارات، حاشیه‌ها و اصلاحات سه تصویر به ترتیب حفظ شده‌اند؛ فلش‌های دست‌نویس به صورت فهرست و رابطه بازنویسی شده‌اند. تصاویر کامل در پیوست آمده‌اند. سربرگ چاپی هر سه صفحه \lr{Subject:} و \lr{Date: / /}، و نشان چاپی پایین هر سه صفحه \lr{YASHA} است.
+
+\section*{تصویر ۱}
+\textbf{سربرگ دست‌نویس:} \lr{387 --- Acute GE in children}؛ \lr{Subject: Nelson 22}؛ شمارهٔ پایین صفحه: ۱.
+
+\subsection*{درمان \lr{GE} حاد}
+\begin{itemize}
+\item ری‌هایدریشن \AGEArrow{} \lr{ORS} مین تننس + جایگزینی مایع \lr{loss} طی استفراغ و اسهال.
+\item شیردهی ادامه پیدا کند.
+\item تغذیهٔ مناسب سن، بدون هیچ‌گونه محدودیت باید \lr{ASAP} بعد از رفع دهیدریشن آغاز شود.
+\item در کشورهای در حال توسعه مکمل \lr{Zinc}.
+\end{itemize}
+
+\subsection*{هیدریشن}
+\begin{itemize}
+\item باید سریعاً ارزیابی شود و ظرف حداکثر ۴–۶ ساعت رفع گردد.
+\item اگر تهوع وجود دارد مقادیر بسیار کم متعدد بدهیم. هر دفعه \lr{5 mL}.
+\item هر وقت تحمل داشت دوز آن را بالا ببریم.
+\end{itemize}
+
+\lr{ORS}:
+\begin{latin}
+75 mEq Na, 64 mEq Cl, 20 mEq K,
+
+75 mmol glucose/L
+\end{latin}
+اسمولاریتهٔ کل \lr{ORS}، \lr{245 mOsm/L} است.
+
+چای، آبمیوه، \ldots{} منابع مناسبی برای رهیدریشن نیستند چون سدیم ندارند.
+
+\begin{itemize}
+\item درصد کمی از کودکان در ابتدا ممکن است نیازمند مایع \lr{IV} باشند ولی \lr{ORS} خوراکی بسیار بهتر است.
+\item شوک، \lr{LOC}، ایلئوس، اینتوساسپشن، عدم تحمل کربوهیدرات، تهوع شدید، حجم مدفوع زیاد
+\par (\AGEMath{>10\,\mathrm{mL/kg/h}}).
+\end{itemize}
+
+\subsection*{تغذیهٔ روده‌ای و انتخاب رژیم غذایی}
+\begin{itemize}
+\item شیردهی ادامه پیدا کند.
+\item تغذیهٔ مناسب سن بدون محدودیت.
+\item کربوهیدرات پیچیده.
+\item میوهٔ تازه.
+\item گوشت بدون چربی.
+\item ماست.
+\item سبزیجات.
+\end{itemize}
+
+\AGEPage{۲}
+\textbf{سربرگ دست‌نویس:} ۳۸۷؛ موضوع خالی؛ شمارهٔ پایین صفحه: ۲.
+
+\begin{itemize}
+\item غذاهای چرب و قندها ساده: \AGEMath{\times}.
+\item میزان پروتئین مورد نیاز در اسهال: \lr{2--3 g/kg/day}.
+\item اگر شیرخشک استفاده می‌کند نباید رقیق شود یا به نوع بدون لاکتوز تغییر یابد.
+\item اکثر کودکان توانایی تحمل شیر و لاکتوز طی \lr{AGE} را دارند.
+\item قطع شیر و جایگزینی با فرم بدون لاکتوز غیرضروری است.
+\item با این وجود مقدار لاکتوز موجود در رژیم غذایی نباید بیش از \lr{5 g/kg/day} باشد.
+\end{itemize}
+
+\subsection*{نحوهٔ درمان دهیدریشن}
+\subsubsection*{\lr{Some dehydration}}
+\textbf{رهیدریشن:}
+\begin{latin}
+Infants and Children: ORS, 75 mL/kg over 3--4 h
+
+Continue breastfeeding
+
+After 4 h, give food q3--4 h
+\end{latin}
+\textbf{اصلاح دست‌نویس:} در دوز \lr{75 mL/kg}، واحد اولیه خط خورده و \lr{mL} بالای آن نوشته شده است.
+
+\textbf{جایگزینی \lr{loss}:}
+\begin{latin}
+Infants and Children:
+
+\( <2 \) yr old: 50--100 mL ORS for each episode
+
+up to \(\sim500\) mL/day
+
+\(\geq2\) yr old: 100--200 mL ORS for each episode
+
+up to \(\sim1\) L/day
+\end{latin}
+\textbf{حاشیهٔ \lr{each episode}:} اسهال و استفراغ.
+
+\subsubsection*{\lr{Severe dehydration}}
+\textbf{\lr{Rehydration}:}
+\begin{latin}
+Malnourished infants \(\longleftarrow\) Frequent boluses of 5--10 mL/kg
+\end{latin}
+\textbf{تا ۵ سال:}
+\begin{latin}
+20--30 mL/kg isotonic saline over 30--60 min
+\end{latin}
+\textbf{حاشیه:} بدون مالنوتریشن.
+
+تا زمانی که پرفیوژن \lr{OK} شود.
+\begin{latin}
+70 mL/kg over 2.5--5 hr
+\end{latin}
+
+اگر \lr{IV} نشد، \lr{ORS} با \lr{NG} بدهیم:
+\begin{latin}
+20 mL/kg/h \(\times\) 6 h
+\end{latin}
+
+الکترولیت و دکستروز بر اساس نتایج آزمایش.
+
+\AGEPage{۳}
+\textbf{سربرگ دست‌نویس:} ۳۸۷؛ موضوع خالی؛ شمارهٔ پایین صفحه: ۳.
+
+\subsection*{جایگزینی \lr{loss}}
+\begin{latin}
+\( <10 \) kg (\( <2 \) y): 50--100 mL ORS per each episode
+
+Adolescents and adults
+
+\(\longrightarrow\) Ad Libitum
+
+\(\longrightarrow\) As above
+\end{latin}
+
+\subsection*{مکمل \lr{Zinc}}
+\begin{itemize}
+\item در کشورهای در حال توسعه.
+\item هر کودکان با سن بالای ۶ ماه با اسهال حاد در مناطق در ریسک.
+\end{itemize}
+\begin{latin}
+Oral Zinc (20 mg/day) \(\longrightarrow\) \rl{گایدلاین}
+\end{latin}
+دوز ۵ و ۱۰ هم به همان اندازه مؤثر بوده‌اند.
+\begin{itemize}
+\item برای ۱۰–۱۴ روز.
+\item نقش آن در کودک \lr{well-nourished} مشخص نیست.
+\end{itemize}
+
+\subsection*{اندانسترون}
+یک دوز قرص حل‌شونده زیر زبان بدهیم.
+\begin{latin}
+\(\longrightarrow\) 2 mg (8--15 kg), 4 mg (16--30), 8 mg (\(>31\))
+\end{latin}
+\textbf{یادداشت رونویسی دوز:} در دست‌نوشته، واحد وزن فقط در بازهٔ اول آمده است؛ علامت بازهٔ آخر به صورت «\lr{31<}» نوشته شده است.
+
+اکثر بیماران به درمان ضد تهوع نیاز ندارند.
+
+\subsection*{ضد موتیلیتی‌ها (لوپراماید)}
+در دیسانتری ممنوع است.
+
+در سایر مدالیته هم اغلب جایگاهی ندارند. (اسهال حاد)
+
+\clearpage
+\section*{پیوست: تصاویر اصلی}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.84\textheight,keepaspectratio]{\AGEImagePath pic01.jpg}
+\end{center}
+\clearpage
+\subsection*{\lr{pic02.jpg}}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.87\textheight,keepaspectratio]{\AGEImagePath pic02.jpg}
+\end{center}
+\clearpage
+\subsection*{\lr{pic03.jpg}}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.87\textheight,keepaspectratio]{\AGEImagePath pic03.jpg}
+\end{center}
+\AGEFinish
