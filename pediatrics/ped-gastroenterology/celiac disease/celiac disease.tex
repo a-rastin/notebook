@@ -1,0 +1,265 @@
+% !TeX program = xelatex
+% UTF-8; compile from this directory with XeLaTeX.
+% Define \CeliacInNotebook before inputting into an existing XePersian document.
+% Source: Google Drive Notebook/celiac disease, Nelson, 364.2.
+% pic01.jpg = 20261016_224616431.jpg (1TuzxzeljYat1DfMFDqtDulwzG75wvR19)
+% pic02.jpg = 20261016_224628679.jpg (1MBbjiDRlUSPleKy1ZywGTD3OQB7mQgps)
+% pic03.jpg = 20261016_224633056.jpg (14buu0boevI3xVMBEcKSP1aN9XcN0Wx7v)
+% pic04.jpg = 20261016_224640417.jpg (11enmqqIf5ZqMbPcflIby7QCSQXq_q0pr)
+% pic05.jpg = 20261016_224644486.jpg (1JTR8MGNV4QBYp4FGdi96W-4RiA_ipLWi)
+% pic06.jpg = 20261016_224649872.jpg (1mzqFpid1bcbdEtelAvquWEWsBrkK9nZU)
+\ifdefined\CeliacInNotebook
+  \let\CeliacFinish\relax
+\else
+  \def\CeliacFinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=22mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphicx}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+  \setlength{\emergencystretch}{3em}
+  \begin{document}
+\fi
+\providecommand{\CeliacPage}[1]{\clearpage\section*{تصویر #1}}
+\providecommand{\CeliacArrow}{\lr{\(\longleftarrow\)}}
+\providecommand{\CeliacUnclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\providecommand{\CeliacImagePath}{images/}
+\IfFileExists{images/pic01.jpg}{}{%
+  \renewcommand{\CeliacImagePath}{pediatrics/ped-gastroenterology/celiac disease/images/}}
+
+\begin{center}
+{\Large\bfseries \lr{Celiac Disease}}\par
+نلسون اصلی --- \lr{364.2}
+\end{center}
+\textbf{یادداشت رونویسی:} متن شش تصویر به ترتیب شمارهٔ دست‌نویس برگه‌ها (۱ تا ۶) آمده است. شاخه‌ها و فلش‌ها با فهرست و پیکان حفظ شده‌اند؛ اصلاح روی متن و خوانش نامطمئن مشخص است. این متن رونویسی منبع است. در سربرگ تصویر ۱، \lr{Subject: Celiac Disease} و در تصاویر ۲ تا ۶، \lr{CD} و \lr{Subject: 364.2} نوشته شده است. در هر شش برگه، \lr{Date: / /} خالی و نشان چاپی پایین برگه \lr{YASHA} است. تصاویر کامل در پیوست آمده‌اند.
+
+\section*{تصویر ۱}
+\begin{latin}
+CD is a immune mediated systemic disorder.
+\begin{itemize}
+\item CD \(\longrightarrow\) CD specific Abs.
+\item CD \(\longrightarrow\) Human leukocyte Ag (HLA):
+  \begin{itemize}
+  \item HLA-DQ2
+  \item HLA-DQ8
+  \end{itemize}
+\end{itemize}
+\end{latin}
+
+\subsection*{تظاهرات بالینی و اختلالات همراه}
+\begin{itemize}
+\item تظاهرات بالینی در افراد مختلف تا حد زیادی متفاوت است.
+\item علائم روده‌ای در کودکانی که بیماری آن‌ها ظرف ۲ سال نخست زندگی کشف می‌شود، شایع‌تر هستند:
+  \begin{itemize}
+  \item \lr{FTT}
+  \item \lr{Chronic diarrhea, Vomiting, Ab distention}
+  \item \lr{Muscle wasting, Anorexia, Irritability}
+  \end{itemize}
+\item علائم کمتر شایع \CeliacArrow{} یبوست \CeliacArrow{} ممکن است با انتوساسپشن مراجعه کنند.
+\item برخی بیماران صرفاً سرولوژی مثبت دارند بدون علائم روده. این بیماران می‌توانند در بقیهٔ ارگان‌ها علائم داشته باشند.
+\item \lr{CD} می‌تواند همهٔ ارگان‌های بدن را درگیر کند.
+\end{itemize}
+
+\CeliacPage{۲}
+\begin{itemize}
+\item یکی از شایع‌ترین علائم خارج روده‌ای \CeliacArrow{} \lr{IDA}؛ که معمولاً به درمان با آهن پاسخ نمی‌دهد.
+\item استئوپوروز می‌تواند در آن‌ها دیده شود که برخلاف بزرگسالان، در کودکان با رعایت رژیم غذایی قابل برگشت است.
+\end{itemize}
+
+\subsection*{دیگر علائم خارج روده‌ای \lr{CD}}
+\begin{itemize}
+\item کوتاهی قد.
+\item تأخیر در بلوغ.
+\item آرتریت.
+\item آرترالژی.
+\item نوروپاتی محیطی.
+\item \lr{Aphthous stomatitis}.
+\item صرع، همراه کلسیفیکاسیون اکسیپیتال دوطرفه.
+\item هایپوپلازی مینای دندان.
+\item افزایش ایزولهٔ آنزیم‌های کبدی.
+\end{itemize}
+
+\subsection*{\lr{Silent CD}}
+\begin{itemize}
+\item بدون علامت است.
+\item در اقوام درجه یک بیماران \lr{CD}.
+\item افراد مبتلا به بیماری‌های مرتبط با \lr{CD}.
+\item بیوپسی روده \CeliacArrow{} آسیب شدید مخاط مطرح‌کنندهٔ \lr{CD}.
+\end{itemize}
+
+\subsection*{\lr{Potential CD}}
+سرولوژی مثبت ولی بیوپسی منفی.
+
+\CeliacPage{۳}
+\subsection*{تظاهرات خارج روده‌ای \lr{CD}}
+\subsubsection*{\lr{a)} هماتولوژیک}
+\begin{itemize}
+\item آنمی \CeliacArrow{} فقر آهن، \lr{B\textsubscript{9}}، \lr{B\textsubscript{12}}.
+\item ترومبوسیتوز و هاول ژولی بادی \CeliacArrow{} هایپواسپلنیسم.
+\item خونریزی \CeliacArrow{} فقر \lr{vit K}.
+\item نادر: ترومبوسایتوپنی به علت فقر \lr{B\textsubscript{9}}.
+\end{itemize}
+
+\subsubsection*{\lr{b)} اندوکراین}
+\begin{itemize}
+\item آمنوره.
+\item نازایی.
+\item تأخیر در بلوغ.
+\end{itemize}
+علل مشترک سه مورد بالا (براکت در منبع): سوءتغذیه، اختلال محور هیپوتالاموس–هیپوفیز، اختلال ایمنی.
+\begin{itemize}
+\item هایپرپارا ثانویه \CeliacArrow{} هایپوکلسمی ناشی از سوءجذب کلسیم و \lr{vit D}.
+\end{itemize}
+
+\subsubsection*{\lr{c)} پوستی}
+\begin{itemize}
+\item پتشی و اکیموز \CeliacArrow{} فقر \lr{vit K}، ترومبوسایتوپنی (نادر).
+\item ادم \CeliacArrow{} هایپوپروتئینمی.
+\item درماتیت هرپتی‌فرم \CeliacArrow{} \lr{Epidermal tTG autoAb}.
+\item درماتیت و هایپرکراتوز فولیکولار \CeliacArrow{} سوءجذب \lr{vit A} و \lr{vit B}.
+\end{itemize}
+\textbf{اصلاح دست‌نویس در منبع:} حرف پس از \lr{vit} در مورد آخر خط خورده و \lr{B} بالای آن نوشته شده است.
+
+\subsubsection*{\lr{d)} عضلات}
+آتروفی، تتانی، ضعف.
+
+\subsubsection*{\lr{e)} نورولوژیک}
+\begin{itemize}
+\item نوروپاتی محیطی \CeliacArrow{} فقر \lr{B\textsubscript{12}} و تیامین، اختلال ایمنی.
+\item آتاکسی \CeliacArrow{} آسیب مخچه و ستون خلفی.
+\item تشنج \CeliacArrow{} عامل ناشناخته.
+\item دمیلینیزن \CeliacArrow{} سیستم ایمنی.
+\end{itemize}
+
+\CeliacPage{۴}
+\subsubsection*{\lr{f)} کبدی}
+\begin{itemize}
+\item افزایش آنزیم‌ها.
+\item هپاتیت خودایمن.
+\end{itemize}
+براکت مشترک در منبع: هپاتیت خودایمن لنفوسیتیک.
+
+\subsubsection*{\lr{g)} اسکلتی}
+\begin{itemize}
+\item استئوپوروز، استئوپنی، استئومالاسی.
+\item سوءجذب \lr{vit D} و کلسیم، هایپرپارا ثانویه؛ التهاب مزمن.
+\item استئوآرتروپاتی \CeliacArrow{} علت ناشناخته.
+\item پاتولوژیک فرکچر.
+\end{itemize}
+
+\subsubsection*{\lr{h)} روانی}
+\begin{itemize}
+\item اضطراب.
+\item اسکیزوفرنی.
+\end{itemize}
+
+\subsection*{در این افراد تست \lr{CD} باید انجام شود:}
+\begin{latin}
+\begin{itemize}
+\item Metabolic bone disorders
+\item Unexplained neurological symptoms
+\item Unexplained subfertility or recurrent miscarriage
+\item \(\uparrow\) Liver Enzymes with unknown cause
+\item Dental Enamel defects
+\item Selective IgA deficiency
+\item Syndrome:
+  \begin{itemize}
+  \item Down
+  \item Turner
+  \item William
+  \end{itemize}
+\end{itemize}
+\end{latin}
+
+\CeliacPage{۵}
+\subsection*{در این افراد تست \lr{CD} توصیه می‌شود:}
+\begin{latin}
+\begin{itemize}
+\item Persistant unexplained GI symptoms
+\item FTT
+\item Prolonged fatigue
+\item Unexplained weight loss
+\item Severe or persistant mouth ulcers
+\item DM type 1
+\item Unexplained Iron, B\textsubscript{9}, B\textsubscript{12} deficiency
+\item Autoimmune thyroid disease
+\item IBS
+\item First degree relatives of people with CD
+\item Dermatitis herpetiformis
+\end{itemize}
+\end{latin}
+
+\subsection*{طیف بالینی \lr{CD}}
+\begin{itemize}
+\item سیمپتوماتیک.
+\item سایلنت.
+\item \lr{Latent}.
+\item \lr{Potential}.
+\end{itemize}
+
+\subsection*{بیماری‌هایی که شانس بروز \lr{CD} در آن‌ها بالاتر از نرمال است:}
+\lr{DM1}، آدیسون، سندرم شوگرن، \lr{RA}، کلانژیت خودایمن، بیماری خودایمنی تیروئید، هپاتیت خودایمن.
+\begin{latin}
+\begin{itemize}
+\item Primary biliary cholangitis
+\end{itemize}
+\end{latin}
+
+\CeliacPage{۶}
+\subsection*{شروع ارزیابی بیمار با شک به \lr{CD}}
+\begin{itemize}
+\item \lr{anti-TG2 IgA Ab}
+\item \lr{total IgA}
+\end{itemize}
+\begin{itemize}
+\item اگر سطح آنتی‌بادی بالا بود، ارجاع به گوارش اطفال.
+\item در بیمار با \lr{Selective IgA deficiency} \CeliacArrow{} سطح \lr{IgG} را بررسی می‌کنیم.
+\end{itemize}
+
+\subsection*{آنتی‌بادی مثبت}
+\begin{itemize}
+\item سطح آن کمتر از ۱۰ برابر نرمال برای سن \CeliacArrow{} اندوسکوپی + بیوپسی.
+\item سطح آن ۱۰ برابر و بالاتر از نرمال برای سن \CeliacArrow{} \lr{HLA + EMA}:
+  \begin{latin}
+  if EMA Ab + and DQ2 or DQ8 +
+  \end{latin}
+  \CeliacArrow{} تأیید تشخیص \lr{CD} بدون اندوسکوپی.
+\end{itemize}
+
+در افراد بدون علامت که در ریسک بالای \lr{CD} قرار دارند، بررسی \lr{CD} حتماً باید با اندوسکوپی و بیوپسی باشد.
+
+\clearpage
+\section*{پیوست: تصاویر اصلی}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\CeliacImagePath pic01.jpg}
+\end{center}
+\clearpage
+\section*{تصویر اصلی ۲}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\CeliacImagePath pic02.jpg}
+\end{center}
+\clearpage
+\section*{تصویر اصلی ۳}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\CeliacImagePath pic03.jpg}
+\end{center}
+\clearpage
+\section*{تصویر اصلی ۴}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\CeliacImagePath pic04.jpg}
+\end{center}
+\clearpage
+\section*{تصویر اصلی ۵}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\CeliacImagePath pic05.jpg}
+\end{center}
+\clearpage
+\section*{تصویر اصلی ۶}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\CeliacImagePath pic06.jpg}
+\end{center}
+\CeliacFinish
