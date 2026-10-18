@@ -1,0 +1,187 @@
+% !TeX program = xelatex
+% UTF-8. Standalone: compile this file with XeLaTeX.
+% To input into an existing XePersian document, define
+% \AnaphylaxisInNotebook before \input{...}.
+% Source: Google Drive Notebook/anaphylaxis, handwritten chapter 81.
+% pic01.jpg: 20261018_200147403.jpg; 1FDMqXYYPAOUCwst7U77q157eVcogxqWL
+% pic02.jpg: 20261018_200151593.jpg; 1avYZX4CrM0r0JRNZi274Km6qV_LaDT-6
+% pic03.jpg: 20261018_200201658.jpg; 1Qjg35WVFxeLAMTNwX0TKEPQMYrLGFuEQ
+% pic04.jpg: 20261018_200206021.jpg; 1UGIqKSsJfY4K_D7OHmxrO27oJRQx04zj
+% Transcription, not a medical revision. Source values and terminology retained.
+% Highlighted text is bold; branching arrows are represented by lists.
+% Illegible deletions and uncertain readings are explicitly marked.
+% Printed guide numerals 1--9 occur down the margin of every source sheet.
+\ifdefined\AnaphylaxisInNotebook
+  \let\ANfinish\relax
+\else
+  \def\ANfinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=20mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{4pt}
+  \setlength{\emergencystretch}{3em}
+  \setlist[itemize]{itemsep=1pt,parsep=1pt,topsep=3pt}
+  \begin{document}
+\fi
+\begingroup
+\newcommand{\ANarrow}{\lr{\(\longleftarrow\)}}
+\newcommand{\ANrange}[2]{\lr{#1--#2}}
+\newcommand{\ANunclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\newcommand{\ANdeleted}{[واژهٔ خط‌خورده، ناخوانا]}
+\newcommand{\ANheader}[2]{%
+  \section*{تصویر #1}
+  {\footnotesize\lr{Subject:} #2\par
+  \lr{Year:}\enspace (خالی)؛ \lr{Month:}\enspace (خالی)؛
+  \lr{Date:}\enspace (خالی)؛ شمارهٔ دست‌نویس پایین برگه: #1.\par
+  شماره‌های چاپی حاشیه: \lr{1, 2, 3, 4, 5, 6, 7, 8, 9}.\par}}
+
+\ANheader{۱}{۸۱ ـ کهیر، آنژیوادم، آنافیلاکسی}
+
+\begin{itemize}
+  \item کهیر از درم عبور نمی‌کند ولی آنژیوادم عبور می‌کند.
+  \item کهیر و آنژیوادم به دنبال آزاد شدن مدیاتورهای التهابی ایجاد می‌شوند
+  \ANarrow{} از ماست‌سل‌ها.
+  \item آنافیلاکسی: به دنبال فعال شدن مسیر \lr{IgE} بر روی ماست‌سل‌ها.
+  \item آنافیلاکتوئید ریکشن \ANarrow{} مکانیسم‌های غیرایمنی
+  \ANarrow{} آزاد شدن مدیاتورهای التهابی.
+  \item آنافیلاتوکسین‌ها \ANarrow{} \lr{\(C_{3a}, C_{5a}\)}
+  \ANarrow{} \textbf{آزاد شدن هیستامین به مسیر غیرایمنی}.
+  \begin{itemize}
+    \item در سرم سیکنس ایجاد می‌شوند.
+    \item عفونت، نئوپلاسم، روماتولوژی.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{کهیر و آنژیوادم}
+\begin{itemize}
+  \item حاد \ANarrow{} \textbf{کمتر از ۶ هفته}.
+  \item مزمن \ANarrow{} راجعه، اینترمیتنت، روزانه.
+  \item فیزیکال \ANarrow{} فشار، سرما، گرما، فعالیت، ویبریشن، خورشید.
+  \item مکانیسم \lr{IgE} در کهیر حاد بیشتر است تا مزمن.
+  \item شایع‌ترین علت کهیر حاد در اطفال \ANarrow{} \textbf{بیماری‌های ویروسی}.
+  \item ۴۰\% موارد کهیر مزمن \ANarrow{} \lr{IgG} وجود دارد که به \lr{IgE} می‌چسبد.
+  \item شایع‌ترین کهیر فیزیکال \ANarrow{} \textbf{درماتوگرافیسم}
+  \ANarrow{} \ANdeleted{} \textbf{\lr{IgE}} مدیتد.
+\end{itemize}
+
+\subsection*{کهیر کولینرژیک}
+\begin{itemize}
+  \item مدور، \ANrange{1}{3} میلی‌متر با حاشیهٔ اریتماتو.
+  \item به دنبال افزایش دمای مرکزی بدن.
+  \item در جوانان شایع است.
+  \item ورزش، حمام گرم، استرس روانی.
+  \item اگر علائم تنفسی داشته باشد \ANarrow{} آنافیلاکسی به دنبال فعالیت.
+\end{itemize}
+
+\clearpage
+\ANheader{۲}{۸۱ ـ}
+
+\subsection*{کهیر ناشی از سرما}
+\begin{itemize}
+  \item چند دقیقه بعد از مواجهه / یا به دنبال گرم شدن.
+  \item تورم لب‌ها به دنبال مایعات سرد.
+  \item ۲ فرم دارد: اکتسابی، خانوادگی.
+  \item فرم شدید: \textbf{شوک به دنبال شنا کردن}.
+\end{itemize}
+
+\subsection*{آنژیوادم ارثی \lr{(HAE)}}
+\begin{itemize}
+  \item وراثت \textbf{\lr{AD}}، \textbf{کمبود مهارکنندهٔ \lr{\(C_1\)} ـ استراز}.
+  \item اپیزودهای راجعهٔ غیرقابل پیش‌بینی تورم.
+  \begin{itemize}
+    \item صورت، اندام‌ها، ژنیتالیا، شکم، فارنکس، اوروفارنکس.
+    \item به دنبال تروما.
+  \end{itemize}
+  \item علت مرگ: آسفیکسی به دنبال تورم لارنژیال.
+  \item به ندرت کنار آنژیوادم ممکن است کهیر داشته باشند.
+  \item \textbf{تورم با \lr{OCS} یا آنتی‌هیستامین رفع نمی‌شود}.
+  \item انواع:
+  \begin{itemize}
+    \item تیپ \lr{I} \ANarrow{} ۸۵\% بیماران؛ میزان \ANdeleted{} تولید کم است.
+    \item تیپ \lr{II} \ANarrow{} ۱۵\% بیماران؛ مهارکننده خراب است.
+  \end{itemize}
+  \item تست غربالگری اولیه \ANarrow{} سطح \lr{\(C_4\)}
+  \lr{\(\downarrow\)} (نرمال).
+  % The handwritten parenthesis reads "نرمال"; retained without correction.
+  \item در حملهٔ حاد \lr{HAE} \ANarrow{} سطح \lr{\(C_2\)}
+  \lr{\(\downarrow\)} است.
+  \item بعضی بیماران مهارکنندهٔ نرمال دارند \ANarrow{}
+  این دسته از بیماران \ANunclear{بیشتر \lr{F XII}؛ عدد رومی بازنویسی شده است}.
+  \item درمان:
+  \begin{itemize}
+    \item حملهٔ حاد.
+    \item پروفیلاکسی \ANarrow{} کنسانترهٔ مهارکنندهٔ \lr{\(C_1\)}.
+    \item مهارکننده (بلاک‌کنندهٔ خاص) برادی‌کینین.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{کهیر}
+\begin{itemize}
+  \item ضایعهٔ برآمده، اریتماتو، مرکز \lr{pale}، به شدت خارش‌دار.
+  \item معمولاً تا \textbf{\ANrange{1}{2} ساعت}، حداکثر تا
+  \textbf{۲۴ ساعت} محو می‌شوند.
+\end{itemize}
+
+\clearpage
+\ANheader{۳}{۸۱ ـ}
+
+\begin{itemize}
+  \item \textbf{آنژیوادم خارش‌دار نیست} ولی ممکن است کمی دردناک باشد.
+  \begin{itemize}
+    \item بیشتر از \lr{24 h} باقی می‌ماند.
+  \end{itemize}
+  \item ۹۰\% بیماران آنافیلاکسی \ANarrow{} با تظاهرات پوستی شروع می‌شود.
+\end{itemize}
+
+\subsection*{تشخیص آنافیلاکسی}
+شروع حاد علائم با درگیری پوست یا مخاط + یکی از موارد زیر:
+\begin{itemize}
+  \item دیسترس تنفسی.
+  \item کاهش فشار خون.
+  \item اختلال \lr{End-organ}.
+\end{itemize}
+
+\begin{itemize}
+  \item بیماران با آنژیوادم راجعه که کهیر ندارند \ANarrow{} بررسی از نظر \lr{HAE}.
+  \item سطح سرمی تریپتاز \ANarrow{} \lr{1--1.5 h} پس از آنافیلاکسی بالا می‌رود.
+  \begin{itemize}
+    \item سطح \lr{N/L} ردکنندهٔ آنافیلاکسی نیست.
+  \end{itemize}
+\end{itemize}
+
+\subsection*{\lr{Muckle-Wells Synd}}
+\begin{itemize}
+  \item اختلال خودالتهابی با وراثت \textbf{\lr{AD}}.
+  \item \textbf{کهیر اپیزودیک در شیرخوارگی}.
+  \item \textbf{کری حسی عصبی}.
+  \item \textbf{آمیلوئیدوز، آرترالژی، ابنورمالیتی اسکلتی}.
+\end{itemize}
+
+\subsection*{\lr{Schnitzler Synd}}
+\textbf{کهیر مزمن}، \textbf{ماکروگلوبولین‌اوری}، درد استخوانی، آنمی،
+تب، خستگی، کاهش وزن.
+% Source spelling "ماکروگلوبولین اوری" is retained.
+
+\subsection*{درمان}
+\begin{itemize}
+  \item \textbf{آنتی‌هیستامین} \ANarrow{} اگر جواب نداد:
+  \textbf{\lr{CS}} کوتاه‌مدت.
+  \item نسل \lr{II} آنتی \lr{\(H_1\)} \ANarrow{}
+  ستیریزین، لوراتادین، فکسوفنادین، دسلوراتادین، لووستیریزین.
+  \item آنتی \lr{\(H_2\)} \ANarrow{} فاموتیدین، سایمتیدین.
+\end{itemize}
+
+\clearpage
+\ANheader{۴}{۸۱ ـ}
+
+۱۵\% موارد آنافیلاکسی \ANarrow{} بای‌فازیک هستند
+\ANarrow{} \textbf{\lr{4--6 h} بعد}.
+% The time is written as adjacent 4 and 6 followed by h; read as 4--6 h.
+
+\endgroup
+\ANfinish
