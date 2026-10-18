@@ -1,0 +1,115 @@
+% !TeX program = xelatex
+% UTF-8. Compile in this directory with XeLaTeX.
+% Define \SSInNotebook before \input to include in an existing XePersian document.
+% Source: Google Drive Notebook/SS, handwritten pages 1--2.
+% pic01.jpg = 20261018_200457752.jpg; 1XPNn99A7G1ZCiLqPpSHSCUVs0BvD_rvL
+% pic02.jpg = 20261018_200503007.jpg; 1vn2jPXBaSdY8C98yVVp5YpasGVADcNYB
+% Source wording, abbreviations, and findings are retained without clinical revision.
+% Bold type represents highlighting; arrows preserve the source relationships.
+\ifdefined\SSInNotebook
+  \let\SSfinish\relax
+\else
+  \def\SSfinish{\end{document}}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=20mm]{geometry}
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphicx}
+  \usepackage{enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{DejaVu Sans}}
+  \setlatintextfont{DejaVu Serif}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+  \setlength{\emergencystretch}{3em}
+  \setlist[itemize]{itemsep=3pt,topsep=3pt}
+  \begin{document}
+\fi
+\begingroup
+\newcommand{\SSarrow}{\lr{\(\longleftarrow\)}}
+\newcommand{\SSrange}[2]{\lr{#1--#2}}
+\newcommand{\SSheader}[1]{%
+  \begin{center}
+    {\Large\bfseries\lr{Serum Sickness} ـ ۸۲}\par
+    \small\lr{Subject: Serum Sickness}\quad
+    \lr{Year:}\quad\lr{Month:}\quad\lr{Date:}\par
+    صفحهٔ #1
+  \end{center}}
+
+\SSheader{۱}
+
+\subsection*{اتیولوژی}
+واکنش ازدیاد حساسیت \textbf{تیپ \lr{III}}.
+
+دارو یا آنتی‌سرم: به‌عنوان آنتی‌ژن شناخته شدن و علیه آن \lr{Ab}
+\SSarrow{} تشکیل \textbf{کمپلکس \lr{Ag-Ab}}
+\SSarrow{} رسوب در عروق و ارگان‌های تصفیه‌کننده
+\SSarrow{} آبشار کمپلمان را فعال می‌کند
+\SSarrow{} نوتروفیل‌ها فعال
+\SSarrow{} افزایش نفوذپذیری عروق
+\SSarrow{} آسیب بافتی.
+
+\subsection*{اپیدمیولوژی}
+امروزه کمتر دیده می‌شود.
+
+عوامل شایع \lr{SS}:
+\begin{itemize}
+  \item فرآورده‌های خونی، آنتی‌ونوم‌ها، آنتی‌تیموسیت گلوبولین.
+  \item برخی داروها \SSarrow{}
+  \textbf{پنی‌سیلین، سولفونامیدها، تیازیدها}، \ldots
+\end{itemize}
+
+\subsection*{تظاهرات بالینی \lr{SS}}
+\textbf{\SSrange{7}{21} روز} پس از ورود دارو یا عامل حساسیت‌زا ایجاد می‌شود.
+در افرادی که از قبل حساس شده‌اند: \textbf{\SSrange{1}{4} روزه}.
+
+\textbf{تظاهرات کلاسیک: تب، آرترالژی پلی‌آرتیکولار، لنفادنوپاتی، درگیری پوستی.}
+
+\begin{itemize}
+  \item انواع درگیری پوست: اورتیکاریا، آنژیوادم، اریتم مولتی‌فرم،
+  راش موربیلی‌فرم، پالپبل پورپورا؛
+  \lr{serpiginous rash} \SSarrow{} روی دست و پا.
+  \item درگیری‌های کمتر شایع: کاردیت، گلومرولونفریت، سندرم گیلن‌باره،
+  انسفالومیلیت، نوریت پریفرال.
+\end{itemize}
+
+\subsection*{یافته‌های آزمایشگاه}
+\begin{itemize}
+  \item \textbf{افزایش \lr{ESR}، ترومبوسایتوز}.
+  \item \textbf{افت کمپلمان} \lr{(\(C_3, C_4\))}.
+  \item بیوپسی پوست \SSarrow{} \textbf{تجمع آنتی‌بادی}:
+  \lr{\(\mathrm{IgM},\ \mathrm{IgA},\ \mathrm{IgE}\ \text{or}\ C_3\)}.
+  \item شواهد \SSarrow{} \textbf{هماچوری و پروتئین‌اوری}.
+\end{itemize}
+
+\medskip
+{\footnotesize شماره‌های چاپی سطرهای برگه: \lr{1, 2, 3, 4, 5, 6, 7, 8}.\par}
+
+\clearpage
+\SSheader{۲}
+
+\subsection*{درمان}
+\begin{itemize}
+  \item خودمحدودشونده / \textbf{ظرف \SSrange{1}{2} هفته}.
+  \item \textbf{آنتی‌هیستامین} (برای خارش)،
+  \textbf{\lr{NSAID}} (برای درد مفاصل) و (تب).
+  \item در موارد شدید \SSarrow{} گلوکوکورتیکوئید سیستمیک.
+\end{itemize}
+
+\medskip
+{\footnotesize شماره‌های چاپی سطرهای برگه: \lr{1, 2, 3, 4, 5, 6, 7, 8, 9}.\par}
+
+% Original images retain all handwriting, printed labels, and layout marks.
+\IfFileExists{images/pic01.jpg}
+  {\def\SSimagepath{images/}}
+  {\def\SSimagepath{pediatrics/ped-immunology/SS/images/}}
+\newcommand{\SSoriginal}[1]{%
+  \clearpage
+  \begin{center}
+    \textbf{تصویر اصلی \lr{#1}}\par\smallskip
+    \includegraphics[width=\textwidth,height=0.91\textheight,keepaspectratio]{\SSimagepath pic#1.jpg}
+  \end{center}}
+\SSoriginal{01}
+\SSoriginal{02}
+
+\endgroup
+\SSfinish
