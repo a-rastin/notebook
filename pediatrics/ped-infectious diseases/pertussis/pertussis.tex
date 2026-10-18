@@ -1,0 +1,108 @@
+% !TeX program = xelatex
+% UTF-8; standalone XeLaTeX/XePersian transcription.
+% Source: Google Drive / Notebook / pertussis, in filename/page order.
+% images/pic01.jpg = 20261018_193949333.jpg (1ulbEfK2B2aEZNIPAsO0mCwrEkMEeH7qE)
+% images/pic02.jpg = 20261018_193953633.jpg (1bCdL0lNql2qLXtgcptvBnGwfOFZtctEi)
+% Source wording, abbreviations, numbers, corrections and deleted text are retained.
+% Arrows are represented by lists or the relation command below.
+% The source's abbreviated thousands in the WBC range are expanded to full digits.
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{xepersian}
+\settextfont{Amiri}
+\setlatintextfont{DejaVu Serif}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{3em}
+\setlist[itemize]{itemsep=3pt,topsep=3pt,leftmargin=*}
+\newcommand{\en}[1]{\lr{#1}}
+\newcommand{\hl}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
+\newcommand{\rel}{\enspace\lr{\(\longleftarrow\)}\enspace}
+\newcommand{\sheet}[1]{%
+  \section*{تصویر #1: ۱۰۸ ـ پرتوسیس}
+  {\small شمارهٔ دست‌نویس پایین برگه: #1؛ نشان چاپی: \en{GNOTE}.\par}}
+
+\begin{document}
+
+\sheet{۱}
+{\small نوشته‌های چاپی بالای برگه: \en{Date:}\quad\en{Subject:}\par}
+
+\begin{itemize}
+\item سیاه‌سرفه (\en{Whooping cough}) \rel بوردتلا پرتوسیس.
+\begin{itemize}
+\item دورهٔ انکوبیشن \rel \hl{۷ تا ۱۰ روز}.
+\item بیشترین احتمال انتقال \rel \hl{۲ هفتهٔ اول سرفه‌ها}.
+\item سن شایع \rel زیر ۶ ماه که هنوز واکسن نزده‌اند.
+\end{itemize}
+\end{itemize}
+
+\subsection*{کلینیک تیپیک}
+\hl{کودک ۱ تا ۱۰ ساله}.
+
+فازهای بیماری:
+\begin{itemize}
+\item[\en{a)}] کاتارال: علائم غیراختصاصی (تب خفیف) \rel \hl{۱ تا ۲ هفته}.
+\item[\en{b)}] پاروکسیسمال: سرفه‌های شدید \rel \hl{۲ تا ۴ هفته}.
+
+سرفه حین بازدم، استفراغ به دنبال سرفه.
+\item[\en{c)}] کانوالسنت: بهبودی تدریجی \rel \hl{۶ تا ۸ هفته}.
+\end{itemize}
+
+\begin{itemize}
+\item در نوزادان اولین علامت ممکن است \hl{آپنه} باشد.
+\item در شیرخواران:
+\begin{itemize}
+\item آسیب مغزی ناشی از هایپوکسی.
+\item عفونت باکتریال ثانویه.
+\end{itemize}
+\item در نوجوانان \rel برونشیت طول‌کشیده.
+\end{itemize}
+
+\subsection*{تشخیص بیماری}
+\hl{کشت، \en{PCR}}.
+
+\begin{itemize}
+\item در ۸۰\% بیماران \hl{لنفوسیتوز} وجود دارد.
+\en{WBC} \rel \hl{۲۰٬۰۰۰ تا ۵۰٬۰۰۰}.
+\item در تصویربرداری:
+\begin{itemize}
+\item آتلکتازی سگمنتال می‌دهد.
+\item انفیلتراسیون پری‌هیلار \rel شبیه پنومونی وایرال.
+\end{itemize}
+\end{itemize}
+
+\clearpage
+\sheet{۲}
+
+\subsection*{درمان}
+\begin{itemize}
+\item \hl{ماکرولید} (آزیترو، کلاریترو، اریترو).
+\begin{itemize}
+\item \hl{به نوزادان آزیترو} می‌دهیم.
+\item اریترو به نوزادان \rel استنوز پیلور.
+\end{itemize}
+\item درمان در فاز کاتارال \rel ظرف ۳ تا ۴ روز نازوفارنکس را پاک می‌کند.
+\item درمان در فاز پاروکسیسمال \rel دورهٔ بیماری را تغییر نمی‌دهد ولی از انتشار به سایر کودکان جلوگیری می‌کند.
+\item در بالای ۲ ماه \rel تریمتوپریم ـ سولفامتوکسازول می‌توانیم بدهیم.
+
+{\small\textcolor{gray}{اصلاح دست‌نویس در همین سطر: \sout{سال}؛ «ماه» بالای آن نوشته شده است.}}
+\end{itemize}
+
+\subsection*{واکسن}
+\begin{itemize}
+\item در ۲، ۴، ۶، ۱۵ تا ۱۸ ماهگی، ۴ تا ۶ سالگی، ۱۱ تا ۱۲ سالگی.
+\item در هر بارداری یک دوز بوستر در سه‌ماههٔ سوم.
+\end{itemize}
+
+\subsection*{پروفیلاکسی پس از مواجهه}
+آزیترو ۵ روز / کلاریترو یا اریترو ۷ تا ۱۴ روز.
+
+{\small\textcolor{gray}{\textbf{سطر خط‌خورده در منبع:}
+\sout{اگر زیر ۷ سال} \rel \sout{یک دوز واکسن اگر واکسن نگرفته}.
+[خوانش عبارت پایانی این سطر خط‌خورده نامطمئن است.]}}
+
+\end{document}
