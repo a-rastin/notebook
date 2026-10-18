@@ -1,0 +1,151 @@
+% !TeX program = xelatex
+% UTF-8 transcription of all four source pages, in handwritten page order.
+% pic01.jpg = 20261018_200736262.jpg
+% pic02.jpg = 20261018_200742299.jpg
+% pic03.jpg = 20261018_200752843.jpg
+% pic04.jpg = 20261018_200758563.jpg
+% Compile directly with XeLaTeX, or input into a document using xepersian.
+% Source wording, units, abbreviations, numbering and arrow relationships retained.
+\ifdefined\settextfont
+  \def\PAStandalone{0}
+\else
+  \def\PAStandalone{1}
+  \documentclass[12pt,a4paper]{article}
+  \usepackage[margin=2cm]{geometry}
+  \usepackage{amsmath,amssymb,xcolor,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+% Bold preserves the source's highlighted and circled emphasis without
+% requiring a color package when this file is included in another document.
+\newcommand{\PAhl}[1]{\textbf{#1}}
+\newcommand{\PAarrow}{\en{$\longleftarrow$}}
+\newcommand{\PApage}[2]{%
+  \clearpage
+  \section*{\en{Pulmonary Anatomy} ـ صفحهٔ #1}
+  {\footnotesize\en{Date: #2}\quad\en{Subject:} ۳\quad\en{Page}\par}}
+\newcommand{\PAfooter}{%
+  \par\medskip{\footnotesize نوری \en{$\star$ NOURI} ـ تأسیس ۱۳۳۲\par}}
+% The small printed stationery date in the footer is a low-resolution reading.
+\ifnum\PAStandalone=1 \begin{document}\fi
+
+\PApage{۱}{Radiology}
+\begin{enumerate}[label=\arabic*.,leftmargin=*,itemsep=0.6em]
+\item تمام خطوط سفیدی که در ریه در \en{CXR} دیده می‌شوند \PAhl{عروق خونی} هستند.
+\item برونش‌ها در \en{CXR} عموماً غیر قابل رؤیت هستند.
+\item هایلوم سمت چپ کمی از هایلوم سمت راست بالاتر است.
+\item هیچ‌کدام از پلورهای ویسرال و پریتال در \en{CXR} طبیعی قابل رؤیت نیستند.
+  \begin{itemize}
+  \item به جز زمانی که دو پلور روی هم \en{fissure}ها را می‌سازند.
+  \end{itemize}
+\item در \en{Upright CXR} عروق قاعدهٔ ریه بزرگ‌تر از عروق رأس ریه هستند.
+\item
+  \begin{latin}
+  Order $\longrightarrow$ Upright Frontal CXR + Upright Left lateral CXR
+  \end{latin}
+\item \PAhl{ستون فقرات توراسیک در حالت طبیعی از بالا به پایین تیره‌تر دیده می‌شود.}
+  \begin{itemize}
+  \item اگر به هم بخورد \PAarrow\ \PAhl{\en{Spine Sign}}.
+  \end{itemize}
+\item \en{Key areas on the lateral CXR}
+  \begin{latin}
+  \begin{enumerate}[label=\arabic*),itemsep=0.2em]
+  \item The retrosternal clear space
+  \item The hilar region
+  \item The fissures
+  \item The thoracic spine
+  \item The diaphragm and posterior costophrenic sulci
+  \end{enumerate}
+  \end{latin}
+\end{enumerate}
+\PAfooter
+
+\PApage{۲}{\textemdash}
+\begin{enumerate}[label=\arabic*.,leftmargin=*,itemsep=0.6em]
+\setcounter{enumi}{8}
+\item \PAhl{\en{Lucent Crescent}}
+  \begin{itemize}
+  \item پشت استرنوم.
+  \item قدام سایهٔ آئورت صعودی.
+  \item درون آن \en{ant. mediastinal mass}.
+  \end{itemize}
+\item
+  \begin{latin}
+  Hilar mass in lateral view $\longrightarrow$ Enlargement of hilar lymph nodes.
+  \end{latin}
+\item
+  \begin{latin}
+  Fissures in lateral view $\longrightarrow$ Major and Minor fissures may be visible.
+  \par $\longrightarrow$ Smooth fine white lines.
+  \end{latin}
+  \begin{itemize}
+  \item در نمای فرونتال صرفاً فیشور مینور دیده می‌شود.
+  \end{itemize}
+\item ضخیم شدن فیشورها:
+  \begin{itemize}
+  \item فیبروز.
+  \item تجمع مایع.
+  \item همراه با سایر علائم وجود مایع در قفسهٔ سینه همراه است:
+    \begin{itemize}
+    \item \PAhl{\en{Kerley B lines}}.
+    \item \en{Pleural Effusions}.
+    \end{itemize}
+  \item اگر همراه نبود، فیبروز محتمل‌تر است.
+  \end{itemize}
+\item در ستون فقرات توراسیک ارتفاع دیسک‌ها نسبت به بالایی افزایش می‌یابد یا ثابت می‌ماند.
+\item دژنریشن دیسک:
+  \begin{itemize}
+  \item کم شدن ارتفاع دیسک.
+  \item \PAhl{تشکیل زوائد استخوانی (استئوفیت) در مارژین بادی مهره}.
+  \end{itemize}
+\end{enumerate}
+\PAfooter
+
+\PApage{۳}{\textemdash}
+\begin{enumerate}[label=\arabic*.,leftmargin=*,itemsep=0.6em]
+\setcounter{enumi}{14}
+\item \en{Compression Fracture}:
+  \begin{itemize}
+  \item معمولاً به دنبال استئوپوروز.
+  \item ارتفاع مهره کم می‌شود.
+  \item به طور عمومی در ابتدا مهرهٔ بالایی آسیب می‌بیند.
+  \end{itemize}
+\item زاویهٔ کاستو‌فرنیک:
+  \begin{itemize}
+  \item طی پلورال افیوژن پر می‌شود.
+  \item حدود \en{75 ml} مایع نیاز است \PAarrow\ در نمای لترال.
+  \item \en{250--300 ml} \PAarrow\ در نمای فرونتال.
+  \end{itemize}
+\item سی‌تی اسکن ریه:
+  \begin{itemize}
+  \item \en{Lung Window}: پارانشیم ریه، آناتومی برونش‌ها.
+  \item \en{Mediastinal Window}: مدیاستن، هایلوم، پلور.
+  \item \en{Bone Window}: ساختارهای استخوانی.
+  \end{itemize}
+\item نماهای سی‌تی اسکن ریه \PAarrow\ ساژیتال، کرونال، ترنس‌ورس (آگزیال).
+\item در \en{CT Scan} ریه می‌توان شریان را از ورید افتراق داد.
+\item قطر برونش‌ها کوچک‌تر از شریان ریوی همراهشان است.
+  \begin{itemize}
+  \item در \underline{برونشکتازی} برعکس می‌شود \PAarrow\ \PAhl{\en{Signet-ring Sign}}.
+  \end{itemize}
+\item \en{Aorto-pulmonary Window}:
+  \begin{itemize}
+  \item \PAhl{فضای زیر قوس آئورت و بالای شریان ریوی}.
+  \item محل مهمی برای دیدن \PAhl{لنفادنوپاتی}.
+  \end{itemize}
+\end{enumerate}
+\PAfooter
+
+\PApage{۴}{\textemdash}
+\begin{enumerate}[label=\arabic*.,leftmargin=*,itemsep=0.6em]
+\setcounter{enumi}{21}
+\item حداکثر ضخامت فیشورها \PAarrow\ \en{2 cm}.
+% The source explicitly writes ۲cm; the unit is transcribed, not corrected.
+\item فیشور ماژور لوب فوقانی را از تحتانی در ریهٔ چپ و لوب فوقانی را از میانی در ریهٔ راست جدا می‌کند.
+\item فیشور مینور به صورت عرضی حرکت می‌کند؛ به همین دلیل در \en{CT} هوریزنتال دیده نمی‌شود.
+\end{enumerate}
+\PAfooter
+
+\ifnum\PAStandalone=1 \expandafter\enddocument\fi
