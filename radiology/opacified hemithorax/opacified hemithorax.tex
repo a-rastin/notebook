@@ -1,0 +1,100 @@
+% !TeX program = xelatex
+% UTF-8 transcription of both handwritten source pages; medical claims are
+% preserved as written, without editorial correction.
+% pic01.jpg = 20261019_080913068.jpg (page 1)
+% pic02.jpg = 20261019_080918409.jpg (page 2)
+% Compile with XeLaTeX, or input into a document already using xepersian.
+\ifdefined\settextfont
+  \def\OHStandalone{0}
+\else
+  \def\OHStandalone{1}
+  \documentclass[11pt,a4paper]{article}
+  \usepackage[margin=1.8cm]{geometry}
+  \usepackage{amsmath,amssymb,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \setlength{\parindent}{0pt}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\OHarrow}{\en{$\longleftarrow$}}
+\newcommand{\OHheader}{%
+  {\footnotesize\en{Note book\qquad Subject: 6\qquad
+  Veor: \_\_\_\quad Month: \_\_\_\quad Date: \_\_\_}\par}}
+\newcommand{\OHfooter}[1]{%
+  \par\medskip{\footnotesize\en{BAHAR DANESH ASL}\hfill #1\par}}
+\ifnum\OHStandalone=1 \begin{document}\fi
+
+\OHheader
+\section*{\en{Opacified Hemithorax}}
+\begin{enumerate}[label=\arabic*.,leftmargin=*,itemsep=0.45em]
+\item علل همی‌توراکس اوپاک
+  \begin{itemize}[nosep]
+  \item آتلکتازی تمام یک ریه
+  \item یک \en{PE} بزرگ
+  \item پنومونی تمام یک ریه
+  \item پنومونکتومی (نادر)
+  \end{itemize}
+
+\item آتلکتازی تمام یک ریه
+  \begin{itemize}[nosep]
+  \item به علت انسداد کامل برونش اصلی چپ یا راست.
+  \item علت شایع براساس سن:
+    \begin{itemize}[nosep]
+    % The far left of this handwritten branch touches the photograph edge.
+    \item افراد مسن \OHarrow\ بدخیمی \OHarrow\ کارسینوم برونکوژنیک
+    \item افراد جوان \OHarrow\ موکوس پلاگ بر اثر آسم
+    \item کودکان \OHarrow\ آسپیراسیون جسم خارجی
+    \item بیماران شدیداً بیمار \OHarrow\ موکوس پلاگ
+    \end{itemize}
+  \end{itemize}
+
+\item \en{PE} شدید
+  \begin{itemize}[nosep]
+  \item می‌تواند به علت تجمع اگزودا، ترانسودا یا خون باشد.
+  \item شدت زیاد مایع منجر به فشرده شدن ریه می‌شود.
+  \item بدخیمی علت شایع است:
+    \begin{itemize}[nosep]
+    \item کارسینوم برونکوژنیک
+    \item متاستاز
+    \end{itemize}
+  \item \en{CHF} معمولاً \en{PE} آن‌قدر شدیدی نمی‌دهد که منجر به آتلکتازی شود.
+  \end{itemize}
+\end{enumerate}
+
+\medskip
+\noindent $\star$ در یک \textbf{بزرگسال} با \textbf{همی‌توراکس اوپاک}،
+\textbf{بدون \en{air bronchogram}} و \textbf{بدون شیفت} ساختارهای توراکس
+\OHarrow\ شک به کارسینوم برونکوژنیک انسداددهنده.
+\begin{latin}
+\noindent $\longrightarrow$ To R/O $\Rightarrow$ \textbf{CT}
+\end{latin}
+\OHfooter{۱}
+
+\clearpage
+\OHheader
+\begin{enumerate}[label=\arabic*.,leftmargin=*,itemsep=0.65em]
+\setcounter{enumi}{3}
+\item پنومونی کامل یک ریه
+  \begin{itemize}[itemsep=0.35em]
+  \item اگزودای التهابی فضای هوایی را پر می‌کند.
+    \begin{latin}
+    \noindent $\longrightarrow$ Consolidation and opacification of the lung.
+    \end{latin}
+  \item هیچ‌گونه شیفتی به سمت یا در خلاف پنومونی رخ نمی‌دهد.
+  \item \textbf{ممکن است الگوی \en{air bronchogram} دیده شود.}
+  \end{itemize}
+
+\item پنومونکتومی
+  \begin{itemize}[itemsep=0.35em]
+  \item دندهٔ ۵ یا ۶ طرف درگیر برداشته شده است.
+  \item کلیپس فلزی در محل هایلوم دیده می‌شود.
+  \item ظرف دو هفته فضای خالی با مایع پر می‌شود.
+  \item ظرف ۴ ماه فیبروز تشکیل می‌شود.
+  \item قلب و تراشه به طرف آن شیفت پیدا می‌کنند.
+  \item معاینهٔ فیزیکی مشابه آتلکتازی است.
+  \end{itemize}
+\end{enumerate}
+\OHfooter{۲}
+
+\ifnum\OHStandalone=1 \expandafter\enddocument\fi
