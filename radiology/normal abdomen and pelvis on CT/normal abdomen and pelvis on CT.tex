@@ -1,0 +1,113 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% Complete transcription, preserving source numbering and branch relationships.
+% pic01.jpg = 20261019_081859071.jpg (handwritten page 1)
+% pic02.jpg = 20261019_081904478.jpg (handwritten page 2)
+% Compile directly with XeLaTeX, or input into a XePersian document.
+\ifdefined\settextfont
+  \def\NAPCTStandalone{0}
+\else
+  \def\NAPCTStandalone{1}
+  \documentclass[11pt,a4paper]{article}
+  \usepackage[margin=1.8cm]{geometry}
+  \usepackage{amsmath,amssymb,enumitem}
+  \usepackage{xepersian}
+  \IfFontExistsTF{Amiri}{\settextfont{Amiri}}{\settextfont{FreeSerif}}
+  \setlatintextfont{FreeSerif}
+  \pagestyle{empty}
+\fi
+\providecommand{\en}[1]{\lr{#1}}
+\newcommand{\NAPCThead}{%
+  \noindent\en{Note book}\hfill\en{Subject 14}\par
+  \noindent\en{Veor:}\hfill\en{Month:}\hfill\en{Date:}\par\medskip}
+% The printed notebook field reads "Veor:".
+\newcommand{\NAPCTfoot}[1]{\par\bigskip\noindent
+  \en{BAHARE DANESH ASL}\hfill #1\par}
+\newcommand{\NAPCTarrow}{\en{$\longleftarrow$}\;}
+\ifnum\NAPCTStandalone=1 \begin{document}\fi
+
+\NAPCThead
+\begin{latin}
+\section*{Normal abdomen and pelvis on CT:}
+\end{latin}
+
+\noindent ۱- در بیماران با \en{$\mathrm{Cr}>1.5\,\mathrm{mg/dl}$}
+\NAPCTarrow کنتراست ید منجر به \en{ATN} می‌شود.
+\begin{itemize}
+  \item \en{DM}، \en{MM}، دهیدریشن
+  \item غالباً برگشت‌پذیر است.
+\end{itemize}
+
+\noindent ۲- \en{ATN} در نتیجه کنتراست ید وابسته به دوز است.
+\par\bigskip
+
+\noindent ۳- افراد مبتلا به آسم ریسک بالاتری برای حساسیت به ماده کنتراست دارند.
+\begin{itemize}
+  \item استروئید، دیفن هیدرامین، سایمتیدین
+\end{itemize}
+
+\noindent ۴- در \en{CT} ها شکم کنتراست خوراکی می‌دهیم بجز:
+\begin{itemize}
+  \item تروما \NAPCTarrow باریوم سولفات
+  \item سنگ
+  \item آسیب عروق
+\end{itemize}
+
+\noindent ۵- اگر شک به پرفوریشن داشته باشیم از ماده خوراکی گاستروگرافین استفاده می‌کنیم.
+\par\bigskip
+
+\noindent ۶- اندیکاسیون‌ها کنتراست خوراکی برای \en{CT} شکم و لگن
+\begin{itemize}
+  \item اغلب کیس‌های درد شکم غیرتروماتیک
+  \item \en{IBD}
+  \item آسیب شکم و لگن
+  \item مشخص کردن محل پرفوریشن و فیستول
+\end{itemize}
+\NAPCTfoot{۱}
+
+\clearpage
+\NAPCThead
+
+\noindent ۷- اندیکاسیون کنتراست وریدی
+\begin{itemize}
+  \item شکم و لگن
+    \begin{itemize}
+      \item ارزیابی وجود توده بدخیم
+      \item تروما
+      \item تشخیص آنوریسم و دایسکشن آئورت
+      \item درد شکم (آپاندیسیت)
+    \end{itemize}
+  \item قفسه سینه
+    \begin{itemize}
+      \item \en{CT} آنژیوگرافی ریه (\en{CT-PA}) برای آمبولی ریه
+      \item بررسی توده یا آدنوپاتی مدیاستن
+      \item تشخیص آنوریسم و دایسکشن آئورت
+      \item تشخیص بیماری‌های پلور (بدخیمی، آمپیم)
+      \item ارزیابی شریان‌های کرونری
+    \end{itemize}
+\end{itemize}
+
+\noindent ۸- اندیکاسیون عدم استفاده از کنتراست وریدی
+\begin{itemize}
+  \item شکم و لگن
+    \begin{itemize}
+      \item \en{CT} کولونوگرافی
+      \item جستجو برای سنگ حالب
+    \end{itemize}
+  \item قفسه سینه
+    \begin{itemize}
+      \item \en{HRCT}
+      \item تایید ندول ریوی دیده شده در گرافی ساده
+      \item بررسی پنوموتوراکس و پنومومدیاستن
+      \item کلسیم اسکورینگ شریان‌ها کرونری
+      \item حساسیت به کنتراست یا نارسایی کلیوی
+    \end{itemize}
+\end{itemize}
+\NAPCTfoot{۲}
+
+\ifnum\NAPCTStandalone=1
+  \def\NAPCTfinish{\end{document}}
+\else
+  \let\NAPCTfinish\relax
+\fi
+\NAPCTfinish
