@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ED NeuroCare CDSS — Acute Headache Evaluation &amp; Management</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .step-card-transition {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-indigo-600 selection:text-white">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-40 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
+      <!-- Brand & System Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center shadow-md border border-indigo-400/30 shrink-0">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <h1 class="text-base sm:text-lg font-bold tracking-tight text-white">ED NeuroCare CDSS — Acute Headache Evaluation &amp; Management</h1>
+            <span class="text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">Evidence-Based 2026</span>
+          </div>
+          <p class="text-xs text-slate-400 hidden sm:block">Point-of-Care Triage, Secondary Red-Flag Workup, &amp; Stratified Pharmacotherapy Decision Support</p>
+        </div>
+      </div>
+
+      <!-- Physician Badge & Action Buttons -->
+      <div class="flex items-center gap-2.5 flex-wrap">
+        <div class="hidden md:flex items-center gap-2 bg-slate-800/90 border border-slate-700 px-3 py-1.5 rounded-lg text-xs text-slate-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="font-medium">Dr. Z. Valaei, MD — Emergency Medicine</span>
+        </div>
+
+        <button onclick="openResetModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-rose-950/80 text-slate-200 hover:text-rose-200 border border-slate-700 hover:border-rose-700 transition cursor-pointer">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+          </svg>
+          Reset Patient
+        </button>
+
+        <button onclick="openChartModal()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm border border-indigo-400/30 transition cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" />
+          </svg>
+          Export / Copy ED Chart Note
+          <span id="orderCountBadge" class="ml-1 px-1.5 py-0.2 bg-white/20 rounded-full text-[10px]">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN TABS NAVIGATION -->
+    <div class="bg-slate-950/70 border-t border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto no-scrollbar gap-1 pt-1">
+        <button onclick="switchTab('tab1')" id="btn-tab1" class="tab-btn flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg border-b-2 border-indigo-400 bg-slate-900 text-white whitespace-nowrap transition cursor-pointer">
+          <span class="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center text-xs font-bold">1</span>
+          Step-by-Step ED Triage Algorithm
+        </button>
+        <button onclick="switchTab('tab2')" id="btn-tab2" class="tab-btn flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg border-b-2 border-transparent text-slate-400 hover:text-slate-200 whitespace-nowrap transition cursor-pointer">
+          <span class="w-5 h-5 rounded-full bg-rose-500/20 text-rose-300 flex items-center justify-center text-xs font-bold">2</span>
+          Red Flag &amp; "Cannot-Miss" Differential (16)
+        </button>
+        <button onclick="switchTab('tab3')" id="btn-tab3" class="tab-btn flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg border-b-2 border-transparent text-slate-400 hover:text-slate-200 whitespace-nowrap transition cursor-pointer">
+          <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xs font-bold">3</span>
+          Acute Treatment &amp; Order Builder
+        </button>
+        <button onclick="switchTab('tab4')" id="btn-tab4" class="tab-btn flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-t-lg border-b-2 border-transparent text-slate-400 hover:text-slate-200 whitespace-nowrap transition cursor-pointer">
+          <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center text-xs font-bold">4</span>
+          Quick Reference, Imaging &amp; MOH Guide
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PERSISTENT LIVE PATIENT SUMMARY & ACTIVE ALERTS BAR -->
+  <section class="bg-white border-b border-slate-200 shadow-sm sticky top-[101px] sm:top-[105px] z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+          </svg>
+          Live Patient Status:
+        </span>
+        <div id="liveTriageBadge" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-300">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          Triage In Progress (0/7 Steps Evaluated)
+        </div>
+        <div id="liveSafetyBadge" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          0 Comorbidity Contraindications Active
+        </div>
+        <div id="liveDifferentialBadge" class="hidden items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-50 text-rose-700 border border-rose-200">
+          0 Diagnoses Pinned
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs">
+        <span class="text-slate-500 hidden lg:inline">Active Orders Selected:</span>
+        <button onclick="openChartModal()" class="font-semibold text-indigo-600 hover:text-indigo-800 underline decoration-indigo-300 underline-offset-2 cursor-pointer" id="liveOrdersSummary">
+          None selected — Click to view chart builder
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN WORKSPACE CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- =====================================================================
+         TAB 1: INTERACTIVE 7-STEP ED TRIAGE ALGORITHM
+         ===================================================================== -->
+    <div id="tab1" class="tab-panel space-y-6">
+      <!-- Intro Banner & Quick Controls -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase bg-indigo-100 text-indigo-800">Algorithm 1</span>
+            <h2 class="text-lg font-bold text-slate-900">Emergency Evaluation of the Adult with New Nontraumatic Headache</h2>
+          </div>
+          <p class="text-sm text-slate-600 mt-1">
+            Step sequentially or toggle any clinical question below. Abnormal neurologic exam findings remain the <strong>single best clinical predictor</strong> of intracranial pathology.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0 flex-wrap">
+          <button onclick="markAllStepsNo()" class="px-3 py-2 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition cursor-pointer">
+            Mark All Steps "NO" (Low-Risk Primary)
+          </button>
+          <button onclick="clearAllSteps()" class="px-3 py-2 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition cursor-pointer">
+            Clear Triage Answers
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Overall Triage Outcome Banner -->
+      <div id="triageMasterBanner" class="hidden rounded-xl border p-4 sm:p-5 shadow-sm"></div>
+
+      <!-- 7-Step Interactive Wizard List -->
+      <div class="space-y-4">
+
+        <!-- STEP 1: THUNDERCLAP HEADACHE -->
+        <div id="stepCard-1" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-1" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">1</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Does the patient report a sudden, severe "thunderclap" headache?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">SAH (~8%) &amp; RCVS</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Severe, persistent headache reaching maximal intensity within a few seconds to minutes (or &lt;1 hour) after onset. Contrast with migraine, which gradually builds over 1–2 hours.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(1, 'yes')" id="btn-step1-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(1, 'no')" id="btn-step1-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 1 YES Expansion -->
+          <div id="stepContent-1" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5 space-y-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <!-- SAH & RCVS Clinical Workup -->
+              <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-bold text-rose-900 flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+                    Immediate Thunderclap Workup Protocol
+                  </h4>
+                  <span class="text-[11px] font-bold uppercase px-2 py-0.5 rounded bg-rose-100 text-rose-800">Critical Action</span>
+                </div>
+                <ul class="text-xs text-slate-700 space-y-2 list-disc pl-4">
+                  <li><strong>Subarachnoid Hemorrhage (SAH):</strong> Present in ~8% of ED thunderclap headaches. Look for syncope/near-syncope at onset, neck pain/meningismus, diplopia, retinal/subhyaloid hemorrhage, or CN III palsy (unilateral dilated poorly reactive pupil).</li>
+                  <li><strong>Reversible Cerebral Vasoconstriction Syndrome (RCVS):</strong> 2nd most common cause of thunderclap headache. Presence of <strong>&ge;3 recurrent short thunderclap headaches</strong> over days to weeks strongly suggests RCVS. Common triggers: exertion, emotional stress, cough, pregnancy, vasoactive drugs, hot/cold exposure.</li>
+                  <li><strong>Other Thunderclap Etiologies:</strong> Cervical artery dissection, cerebral venous sinus thrombosis, pituitary apoplexy, acute angle-closure glaucoma, unruptured aneurysm, colloid cyst of 3rd ventricle, hypertensive emergency.</li>
+                </ul>
+                <div class="pt-2 flex flex-wrap gap-2">
+                  <button onclick="toggleQuickOrder('STAT Noncontrast Head CT (Thunderclap / SAH Rule-Out)')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition cursor-pointer">+ Order STAT Noncontrast Head CT</button>
+                  <button onclick="toggleQuickOrder('Head & Neck CTA w/ IV Contrast (Aneurysm / RCVS / Dissection)')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 transition cursor-pointer">+ Order Head/Neck CTA</button>
+                </div>
+              </div>
+
+              <!-- Interactive 6-Hour CT Rule & Traumatic LP Resolver -->
+              <div class="bg-white rounded-lg border border-indigo-200 p-4 shadow-sm space-y-3">
+                <h4 class="text-sm font-bold text-indigo-950 flex items-center justify-between">
+                  <span>Interactive 6-Hour CT Rule &amp; Traumatic LP Resolver</span>
+                  <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">Sub-Tool</span>
+                </h4>
+                <div class="space-y-2.5 text-xs">
+                  <div>
+                    <label class="font-semibold text-slate-700 block mb-1">1. Time from exact symptom onset to Noncontrast Head CT:</label>
+                    <div class="grid grid-cols-2 gap-2">
+                      <button onclick="updateSAHCalc('time', 'under6')" id="sah-time-under6" class="px-3 py-2 rounded border border-slate-300 bg-slate-50 font-semibold text-slate-700 hover:bg-indigo-50 transition cursor-pointer">&lt; 6 Hours (Expert Read)</button>
+                      <button onclick="updateSAHCalc('time', 'over6')" id="sah-time-over6" class="px-3 py-2 rounded border border-indigo-500 bg-indigo-50 font-semibold text-indigo-900 transition cursor-pointer">&ge; 6 Hours or Unknown</button>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="font-semibold text-slate-700 block mb-1">2. Noncontrast Head CT Result:</label>
+                    <div class="grid grid-cols-2 gap-2">
+                      <button onclick="updateSAHCalc('ct', 'normal')" id="sah-ct-normal" class="px-3 py-2 rounded border border-indigo-500 bg-indigo-50 font-semibold text-indigo-900 transition cursor-pointer">Normal / Negative</button>
+                      <button onclick="updateSAHCalc('ct', 'positive')" id="sah-ct-positive" class="px-3 py-2 rounded border border-slate-300 bg-slate-50 font-semibold text-slate-700 hover:bg-rose-50 transition cursor-pointer">Positive for Blood</button>
+                    </div>
+                  </div>
+                  <div id="sahCalcOutput" class="p-3 rounded-lg bg-amber-50 border border-amber-300 text-amber-950 font-medium leading-relaxed">
+                    <strong>Action Required:</strong> Because CT was obtained &ge;6 hours after headache onset (or timing is uncertain) and is normal, <strong>perform a Lumbar Puncture (LP)</strong>. Measure opening pressure, RBC count in tubes 1–4, and xanthochromia.
+                  </div>
+                </div>
+
+                <!-- Collapsible Traumatic LP Pearl Box -->
+                <details class="text-xs bg-slate-50 rounded-lg border border-slate-200 p-2.5">
+                  <summary class="font-bold text-slate-800 cursor-pointer select-none">How to Distinguish Traumatic LP vs. True SAH (Click to expand)</summary>
+                  <ol class="mt-2 space-y-1.5 list-decimal pl-4 text-slate-700">
+                    <li><strong>Opening Pressure:</strong> &gt;20 cm H2O suggests a pathologic process.</li>
+                    <li><strong>RBC Clearing (Tubes 1 to 4):</strong> Clearing of blood is <strong>ONLY reliable</strong> if the late/final collecting tube RBC count <strong>approaches ZERO</strong>. <em>Clinical Tip:</em> Waste several mL of CSF between the first and last tubes (safe because 10 mL of CSF is produced every 20–30 minutes).</li>
+                    <li><strong>Xanthochromia:</strong> Presence strongly suggests true SAH (though false positives can occur).</li>
+                    <li><strong>Repeat LP Cephalad:</strong> Repeat LP one intervertebral level cephalad (no higher than L3/L4) or under fluoroscopic guidance; normal repeat CSF makes SAH less likely.</li>
+                    <li><strong>Persistent Ambiguity:</strong> Obtain cerebrovascular imaging — <strong>Head MRI w/ &amp; w/o contrast + Craniocervical MRA</strong> (preferred) OR <strong>Head CT w/ contrast + Craniocervical CTA</strong>, and consult Neurology/Neurosurgery.</li>
+                  </ol>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: MENINGITIS OR ENCEPHALITIS -->
+        <div id="stepCard-2" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-2" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">2</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Does the patient have symptoms suggestive of meningitis and/or encephalitis?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">CNS Infection</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Fever (&gt;38&deg;C), meningismus, acute rash (petechiae/purpura or erythema migrans), or confusion/lethargy (may be sole finding in older adults; meningismus is less sensitive &gt;60 yrs; Lyme meningitis often lacks severe findings).
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(2, 'yes')" id="btn-step2-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(2, 'no')" id="btn-step2-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 2 YES Expansion -->
+          <div id="stepContent-2" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5 space-y-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <!-- Immediate Antimicrobial Protocol -->
+              <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm space-y-3">
+                <h4 class="text-sm font-bold text-rose-900">Immediate CNS Infection Sequence (Do Not Delay Antibiotics)</h4>
+                <ol class="text-xs text-slate-700 space-y-2 list-decimal pl-4">
+                  <li><strong>Step A — STAT Blood Cultures:</strong> Draw two sets of blood cultures immediately prior to antimicrobials.</li>
+                  <li><strong>Step B — Empiric Antimicrobials (+/- IV Dexamethasone):</strong> Institute immediately before imaging or LP.
+                    <ul class="list-disc pl-4 mt-1 space-y-1 text-slate-600">
+                      <li>Add <strong>IV Acyclovir</strong> if Herpes Simplex Encephalitis is a consideration (confusion, temporal lobe signs, seizures).</li>
+                      <li>Add <strong>IV Doxycycline</strong> if tick-borne disease (Rocky Mountain spotted fever, anaplasmosis, Lyme) is suspected.</li>
+                      <li>Consider fungal (cryptococcal) and tuberculous meningitis in immunocompromised hosts.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Step C — Determine if Head CT is Mandatory Before LP:</strong> Use the 6-criteria checklist on the right. In the absence of these 6 criteria, <strong>do NOT delay LP to await a Head CT</strong>.</li>
+                </ol>
+                <div class="pt-1 flex flex-wrap gap-2">
+                  <button onclick="toggleQuickOrder('STAT Blood Cultures x2 + Empiric Meningitis Antimicrobials (+/- IV Dexamethasone)')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white transition cursor-pointer">+ Order Blood Cultures &amp; Empiric Antibiotics</button>
+                  <button onclick="toggleQuickOrder('Empiric IV Acyclovir (Suspected HSV Encephalitis)')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 transition cursor-pointer">+ Add IV Acyclovir</button>
+                </div>
+              </div>
+
+              <!-- Interactive Mandatory Head CT Before LP Checklist -->
+              <div class="bg-white rounded-lg border border-indigo-200 p-4 shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-bold text-indigo-950">Mandatory Head CT Before LP Checklist (6 Criteria)</h4>
+                  <span id="lpCtCountBadge" class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">0 / 6 Present</span>
+                </div>
+                <p class="text-xs text-slate-600">Check any feature present in this patient:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <label class="flex items-start gap-2 p-2 rounded border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" onchange="evaluateLPChecklist()" class="lp-ct-check mt-0.5 rounded text-indigo-600" value="Immunocompromised state (HIV, immunosuppressants, transplant)" />
+                    <span><strong>Immunocompromised state</strong> (HIV, immunosuppressive therapy, transplant)</span>
+                  </label>
+                  <label class="flex items-start gap-2 p-2 rounded border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" onchange="evaluateLPChecklist()" class="lp-ct-check mt-0.5 rounded text-indigo-600" value="History of active CNS disease (stroke, mass lesion, abscess)" />
+                    <span><strong>Active CNS disease</strong> (acute stroke, mass lesion, abscess)</span>
+                  </label>
+                  <label class="flex items-start gap-2 p-2 rounded border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" onchange="evaluateLPChecklist()" class="lp-ct-check mt-0.5 rounded text-indigo-600" value="New-onset seizure (within 1 week of presentation)" />
+                    <span><strong>New-onset seizure</strong> (within 1 week of presentation)</span>
+                  </label>
+                  <label class="flex items-start gap-2 p-2 rounded border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" onchange="evaluateLPChecklist()" class="lp-ct-check mt-0.5 rounded text-indigo-600" value="Papilledema on funduscopic exam" />
+                    <span><strong>Papilledema</strong> (note: venous pulsations = normal ICP)</span>
+                  </label>
+                  <label class="flex items-start gap-2 p-2 rounded border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" onchange="evaluateLPChecklist()" class="lp-ct-check mt-0.5 rounded text-indigo-600" value="Abnormal / decreased level of consciousness" />
+                    <span><strong>Abnormal level of consciousness</strong> (obtundation/confusion)</span>
+                  </label>
+                  <label class="flex items-start gap-2 p-2 rounded border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                    <input type="checkbox" onchange="evaluateLPChecklist()" class="lp-ct-check mt-0.5 rounded text-indigo-600" value="Focal neurologic deficit" />
+                    <span><strong>Focal neurologic deficit</strong> on examination</span>
+                  </label>
+                </div>
+                <div id="lpChecklistResult" class="p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-medium">
+                  <strong>0 Criteria Present:</strong> Safe to proceed <strong>directly to Lumbar Puncture</strong> (with opening pressure) after blood cultures and empiric antibiotics. Do NOT delay LP for cranial CT.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: CARBON MONOXIDE EXPOSURE -->
+        <div id="stepCard-3" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-3" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">3</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Is there clinical concern for Carbon Monoxide (CO) exposure?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">Toxic Exposure</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Drowsiness, occurrence in winter or following power outage, smoke/fume inhalation from engines or fuel-based heaters, multiple household members/coworkers sick simultaneously, or headache resolving rapidly in ED away from source.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(3, 'yes')" id="btn-step3-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(3, 'no')" id="btn-step3-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 3 YES Expansion -->
+          <div id="stepContent-3" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5">
+            <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm space-y-3">
+              <h4 class="text-sm font-bold text-rose-900">Immediate Carbon Monoxide Toxicity Protocol</h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-700">
+                <ul class="space-y-1.5 list-disc pl-4">
+                  <li><strong>Immediate Therapy:</strong> Administer <strong>100% High-Flow Oxygen</strong> via non-rebreather mask immediately.</li>
+                  <li><strong>Diagnostic Confirmation:</strong> Measure <strong>Carboxyhemoglobin concentration with Co-oximetry</strong> using a blood gas sample.</li>
+                  <li><strong>Severity Spectrum:</strong> Mild/moderate exposure causes malaise, nausea, dizziness; severe exposure causes coma, seizures, myocardial ischemia, and cherry-red macula on fundoscopy.</li>
+                </ul>
+                <div class="p-3 rounded-lg bg-amber-50 border border-amber-300 text-amber-950 space-y-1">
+                  <div class="font-bold uppercase tracking-wide text-[11px] text-amber-800">Critical Diagnostic Pitfall</div>
+                  <p>Standard pulse oximetry (<strong>SpO2</strong>) <strong>CANNOT</strong> differentiate carboxyhemoglobin from oxyhemoglobin (gives falsely normal readings). Furthermore, arterial <strong>PaO2</strong> on ABG is normal because it measures dissolved oxygen in plasma, not hemoglobin-bound O2.</p>
+                </div>
+              </div>
+              <div class="pt-1 flex flex-wrap gap-2">
+                <button onclick="toggleQuickOrder('100% High-Flow Oxygen via Non-Rebreather Mask STAT (Suspected CO Toxicity)')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white transition cursor-pointer">+ Order 100% High-Flow O2 STAT</button>
+                <button onclick="toggleQuickOrder('Co-Oximetry Carboxyhemoglobin Level on Blood Gas + 12-Lead ECG')" class="px-3 py-1.5 rounded-md text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition cursor-pointer">+ Order Co-Oximetry Carboxyhemoglobin &amp; ECG</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: OCULAR OR TEMPORAL ARTERY SYMPTOMS -->
+        <div id="stepCard-4" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-4" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">4</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Does the patient have ocular symptoms or temporal artery abnormalities?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">Sight-Threatening</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Vision loss, eye pain, halos around light, blurred vision (possibly transient), red/tearing eye, temporal artery tenderness/nodularity, or jaw claudication.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(4, 'yes')" id="btn-step4-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(4, 'no')" id="btn-step4-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 4 YES Expansion -->
+          <div id="stepContent-4" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+              <!-- Acute Angle-Closure Glaucoma -->
+              <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm flex flex-col justify-between space-y-3">
+                <div class="space-y-2">
+                  <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold uppercase text-[10px]">Ophthalmic Emergency</span>
+                  <h4 class="text-sm font-bold text-slate-900">Acute Angle-Closure Glaucoma</h4>
+                  <p class="text-slate-600">Unilateral eye pain, red/tearing eye, decreased vision, halos, nausea/vomiting (can mimic migraine).</p>
+                  <p class="text-slate-800 font-medium"><strong>Exam:</strong> Red injected conjunctiva (ciliary flush), <strong>"steamy" edematous cornea</strong>, fixed mid-dilated pupil (4–6 mm), firm globe, <strong>IOP often &gt;30 mmHg</strong>.</p>
+                  <p class="text-rose-700 font-semibold">Do NOT delay treatment with unnecessary brain imaging!</p>
+                </div>
+                <button onclick="toggleQuickOrder('STAT Intraocular Pressure (Tonometry) + Emergent Ophthalmology Consult (Angle-Closure Glaucoma)')" class="w-full px-3 py-2 rounded-md font-semibold bg-rose-600 hover:bg-rose-500 text-white transition cursor-pointer">+ Order STAT Tonometry (IOP) &amp; Ophtho</button>
+              </div>
+
+              <!-- Giant Cell Arteritis -->
+              <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm flex flex-col justify-between space-y-3">
+                <div class="space-y-2">
+                  <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-bold uppercase text-[10px]">Age &ge; 50 Years</span>
+                  <h4 class="text-sm font-bold text-slate-900">Giant Cell Arteritis (GCA)</h4>
+                  <p class="text-slate-600">Patient &ge;50 yrs with new headache (often temporal), abrupt visual disturbances (transient monocular vision loss), jaw claudication, fever.</p>
+                  <p class="text-slate-800 font-medium"><strong>Exam:</strong> Palpable, nodular, tender, or diminished-pulse temporal arteries; elevated ESR and CRP.</p>
+                </div>
+                <button onclick="toggleQuickOrder('STAT ESR & CRP + High-Dose IV/PO Glucocorticoids (Suspected Giant Cell Arteritis)')" class="w-full px-3 py-2 rounded-md font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition cursor-pointer">+ Order STAT ESR/CRP &amp; Steroids</button>
+              </div>
+
+              <!-- Idiopathic Intracranial Hypertension -->
+              <div class="bg-white rounded-lg border border-indigo-200 p-4 shadow-sm flex flex-col justify-between space-y-3">
+                <div class="space-y-2">
+                  <span class="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-bold uppercase text-[10px]">Elevated ICP</span>
+                  <h4 class="text-sm font-bold text-slate-900">Idiopathic Intracranial Hypertension (IIH)</h4>
+                  <p class="text-slate-600">Overweight/obese female of childbearing age; intermittent visual decline, flashes, diplopia, tinnitus.</p>
+                  <p class="text-slate-800 font-medium"><strong>Exam:</strong> Papilledema, CN VI palsy (abducens), visual field cut. Perform <strong>Brain MRI w/ &amp; w/o contrast (+ MRV)</strong> BEFORE LP with opening pressure.</p>
+                </div>
+                <button onclick="toggleQuickOrder('Brain MRI w/ & w/o Contrast + MRV followed by LP w/ Opening Pressure (Suspected IIH)')" class="w-full px-3 py-2 rounded-md font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition cursor-pointer">+ Order Brain MRI/MRV &rarr; LP</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5: NEW UNEXPLAINED NEUROLOGIC DEFICIT OR PAPILLEDEMA -->
+        <div id="stepCard-5" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-5" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">5</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Does the patient have a new, unexplained neurologic deficit or papilledema?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">Single Best Predictor</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Hemiparesis, hemibody numbness, speech impairment/aphasia, Horner syndrome (ptosis, miosis), ataxia/gait impairment, pronator drift, visual field cut, CN palsies, or papilledema.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(5, 'yes')" id="btn-step5-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(5, 'no')" id="btn-step5-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 5 YES Expansion -->
+          <div id="stepContent-5" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5 space-y-4">
+            <!-- POC Glucose Alert -->
+            <div class="bg-amber-50 border border-amber-300 rounded-lg p-3 flex items-center justify-between gap-3 flex-wrap">
+              <div class="flex items-center gap-2.5 text-xs text-amber-950">
+                <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold uppercase">First Action</span>
+                <span><strong>Check Point-of-Care Fingerstick Glucose STAT:</strong> Hypoglycemia causes both altered mental status and focal neurologic deficits mimicking stroke.</span>
+              </div>
+              <button onclick="toggleQuickOrder('Point-of-Care Fingerstick Blood Glucose STAT')" class="px-2.5 py-1 rounded text-xs font-semibold bg-amber-700 hover:bg-amber-600 text-white transition cursor-pointer">+ Order POC Glucose</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs">
+              <!-- Cervical Artery Dissection vs Structural/Mass/ICP -->
+              <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm space-y-3">
+                <h4 class="text-sm font-bold text-slate-900">Targeted Neurovascular &amp; Brain Imaging Pathways</h4>
+                <div class="space-y-2.5 text-slate-700">
+                  <div class="p-2.5 rounded bg-slate-50 border border-slate-200">
+                    <div class="font-bold text-rose-800">A. Neck Pain and/or Horner Syndrome &rarr; Suspect Cervical Artery Dissection</div>
+                    <p class="mt-1">Horner syndrome (miosis, ptosis, anhidrosis) occurs in <strong>38–47% of carotid</strong> and up to <strong>19% of vertebral</strong> dissections. Only 3.2% (carotid) to 9% (vertebral) have thunderclap onset; ~60% have ischemia/infarction.</p>
+                    <p class="mt-1 font-semibold text-indigo-900">Workup: Noncontrast Head CT followed by Head &amp; Neck CTA w/ IV contrast (or MRI/MRA w/ &amp; w/o contrast) from the thoracic inlet to Circle of Willis.</p>
+                  </div>
+                  <div class="p-2.5 rounded bg-slate-50 border border-slate-200">
+                    <div class="font-bold text-indigo-900">B. Focal Deficit or Papilledema &rarr; Mass, Stroke, Abscess, Hydrocephalus</div>
+                    <p class="mt-1"><strong>1st-Line:</strong> Head MRI without and with contrast (or Noncontrast Head CT initially if MRI not immediately available to exclude hemorrhage/hydrocephalus/mass effect).<br/>
+                    <strong>Renal Impairment Rule (eGFR &lt;30 &amp; not on dialysis):</strong> MRI without contrast is preferred over CT without contrast.</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <button onclick="toggleQuickOrder('Noncontrast Head CT + Head & Neck CTA w/ IV Contrast (Thoracic Inlet to Circle of Willis)')" class="px-3 py-1.5 rounded-md font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition cursor-pointer">+ Order CT + Head/Neck CTA</button>
+                  <button onclick="toggleQuickOrder('Brain MRI w/ & w/o IV Contrast (Focal Deficit / Papilledema Evaluation)')" class="px-3 py-1.5 rounded-md font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 transition cursor-pointer">+ Order Brain MRI w/ &amp; w/o Contrast</button>
+                </div>
+              </div>
+
+              <!-- Positive vs Negative Neurologic Phenomena Table -->
+              <div class="bg-white rounded-lg border border-slate-200 p-4 shadow-sm space-y-3">
+                <h4 class="text-sm font-bold text-slate-900 flex items-center justify-between">
+                  <span>Distinguishing Migraine Aura vs. Destructive Lesion</span>
+                  <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-700">UpToDate Table 5</span>
+                </h4>
+                <p class="text-slate-600">Never assume a focal deficit is migraine aura unless identical deficits occurred with prior migraines.</p>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="p-3 rounded-lg bg-emerald-50/70 border border-emerald-200">
+                    <div class="font-bold text-emerald-900 mb-1">Positive Phenomena (Excitatory)</div>
+                    <p class="text-[11px] text-emerald-800 mb-2">Suggests <strong>Migraine Aura</strong> or <strong>Seizure</strong> (gradual spread over minutes):</p>
+                    <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                      <li><strong>Visual:</strong> Scintillations, flashing lights, zigzag lines (fortification spectra)</li>
+                      <li><strong>Somatosensory:</strong> Paresthesias (pins and needles, tingling)</li>
+                    </ul>
+                  </div>
+                  <div class="p-3 rounded-lg bg-rose-50/70 border border-rose-200">
+                    <div class="font-bold text-rose-900 mb-1">Negative Phenomena (Loss of Function)</div>
+                    <p class="text-[11px] text-rose-800 mb-2">Suggests <strong>Destructive Lesion</strong> (Stroke, Hemorrhage, Mass):</p>
+                    <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                      <li><strong>Visual:</strong> Complete loss of vision, dark/black visual field cut</li>
+                      <li><strong>Somatosensory:</strong> Complete numbness / loss of sensation</li>
+                      <li><strong>Motor:</strong> True weakness, hemiparesis, paralysis, aphasia</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 6: PREGNANT (>=20 WEEKS) OR POSTPARTUM -->
+        <div id="stepCard-6" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-6" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">6</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Is the patient pregnant (&ge;20 weeks) or postpartum (up to 6 weeks)?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">Preeclampsia / CVT / PRES</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Preeclampsia/eclampsia must be considered in every pregnant woman &ge;20 weeks gestation and up to 6 weeks postpartum.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(6, 'yes')" id="btn-step6-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(6, 'no')" id="btn-step6-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 6 YES Expansion -->
+          <div id="stepContent-6" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5">
+            <div class="bg-white rounded-lg border border-rose-200 p-4 shadow-sm space-y-3 text-xs">
+              <h4 class="text-sm font-bold text-rose-900">Pregnancy &amp; Postpartum Secondary Headache Differential &amp; Workup</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-slate-700">
+                <div class="p-3 rounded bg-rose-50/60 border border-rose-200">
+                  <div class="font-bold text-rose-900">1. Preeclampsia / Eclampsia &amp; PRES</div>
+                  <p class="mt-1">Most common dangerous cause. Presents with hypertension, proteinuria, visual symptoms, hyperreflexia, or seizure up to 6 weeks postpartum. Overlaps with PRES.</p>
+                </div>
+                <div class="p-3 rounded bg-indigo-50/60 border border-indigo-200">
+                  <div class="font-bold text-indigo-900">2. Cerebral Venous Thrombosis (CVT)</div>
+                  <p class="mt-1">Especially common in the postpartum hypercoagulable state. Variable headache, seizures, papilledema, or non-arterial focal deficits. Also consider Pituitary Apoplexy &amp; RCVS.</p>
+                </div>
+                <div class="p-3 rounded bg-amber-50/60 border border-amber-200">
+                  <div class="font-bold text-amber-900">3. Postdural Puncture / Intracranial Hypotension</div>
+                  <p class="mt-1">Headache worse within 15 min of standing and relieved lying flat (from spinal/epidural anesthesia OR spontaneous dural tear during labor pushing).</p>
+                </div>
+              </div>
+              <div class="pt-1 flex flex-wrap gap-2">
+                <button onclick="toggleQuickOrder('STAT BP Monitoring + Urinalysis/Urine Protein:Cr + CBC/CMP/LFTs + OB Consult (Preeclampsia Workup)')" class="px-3 py-1.5 rounded-md font-semibold bg-rose-600 hover:bg-rose-500 text-white transition cursor-pointer">+ Order Preeclampsia Workup &amp; OB Consult</button>
+                <button onclick="toggleQuickOrder('Brain MRI w/o Contrast + MR Venography (MRV) (Postpartum CVT / PRES Rule-Out)')" class="px-3 py-1.5 rounded-md font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition cursor-pointer">+ Order Brain MRI + MRV</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 7: OTHER HIGH-RISK SECONDARY FEATURES -->
+        <div id="stepCard-7" class="step-card-transition bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div id="stepBadge-7" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-slate-200">7</div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-base font-bold text-slate-900">Does the patient have any other clinical features suggestive of a dangerous secondary cause?</h3>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">High-Risk History / Signs</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                  Age &ge;50 yrs, active cancer, HIV/immunosuppression, anticoagulants, exertional onset, positional headache, recent head/neck trauma, or sympathomimetic/IV drug use.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+              <button onclick="setStepStatus(7, 'yes')" id="btn-step7-yes" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-rose-50 hover:border-rose-300 transition cursor-pointer">YES</button>
+              <button onclick="setStepStatus(7, 'no')" id="btn-step7-no" class="px-4 py-2 rounded-lg text-xs font-bold border border-slate-300 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 transition cursor-pointer">NO</button>
+            </div>
+          </div>
+
+          <!-- Step 7 YES Expansion -->
+          <div id="stepContent-7" class="hidden border-t border-rose-200 bg-rose-50/40 p-4 sm:p-5 space-y-3">
+            <p class="text-xs font-semibold text-slate-700">Select the specific secondary risk factor(s) present to view tailored UpToDate imaging and workup recommendations:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="Age >=50 yrs with new or progressively worsening headache -> Brain MRI w/ & w/o contrast (or Noncontrast CT) + ESR/CRP for GCA" />
+                <div>
+                  <div class="font-bold text-slate-900">Age &ge; 50 Years (New or Progressively Worsening)</div>
+                  <p class="text-slate-600 mt-0.5">High risk for mass lesion, subdural hematoma, or Giant Cell Arteritis. <strong>Workup:</strong> Head MRI w/ &amp; w/o contrast (or Noncontrast CT if MRI unavailable) + ESR/CRP.</p>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="History of Cancer / Neoplasm -> Brain MRI w/ & w/o contrast (evaluate for metastases or leptomeningeal disease)" />
+                <div>
+                  <div class="font-bold text-slate-900">Active Cancer / History of Malignancy</div>
+                  <p class="text-slate-600 mt-0.5">Concern for intracranial metastases, hemorrhage into tumor, or leptomeningeal disease. <strong>Workup:</strong> Head MRI w/ &amp; w/o contrast.</p>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="HIV / Immunosuppression -> Brain MRI w/ & w/o contrast followed by LP (toxoplasmosis, CNS lymphoma, abscess, cryptococcal meningitis)" />
+                <div>
+                  <div class="font-bold text-slate-900">HIV or Immunosuppressed State (Glucocorticoids, Transplant)</div>
+                  <p class="text-slate-600 mt-0.5">High risk for toxoplasmosis, CNS lymphoma, abscess, cryptococcal meningitis. <strong>Workup:</strong> Head MRI w/ &amp; w/o contrast; if negative for mass effect, perform LP (opening pressure + cryptococcal Ag).</p>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="Anticoagulant / Antiplatelet Therapy or Recent Trauma -> STAT Noncontrast Head CT (rule out SDH/EDH/IPH)" />
+                <div>
+                  <div class="font-bold text-slate-900">Anticoagulant Use (Warfarin &gt; DOACs) or Minor Trauma</div>
+                  <p class="text-slate-600 mt-0.5">Elevated risk of subdural hematoma (can present weeks after minor trauma) or IPH. Also consider CVT if anticoagulated for prior VTE. <strong>Workup:</strong> STAT Noncontrast Head CT.</p>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="Exertional Onset (exercise, sexual intercourse, cough/Valsalva) -> Evaluate for SAH, RCVS, Cervical Dissection, or Posterior Fossa Mass" />
+                <div>
+                  <div class="font-bold text-slate-900">Exertional Onset (Exercise, Intercourse, Cough/Valsalva)</div>
+                  <p class="text-slate-600 mt-0.5">Rapid onset with exercise/intercourse raises concern for SAH, RCVS, or carotid dissection. Cough/Valsalva exacerbation suggests elevated ICP/brain tumor.</p>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="Positional Headache -> Orthostatic (worse standing <15m) = Spontaneous Intracranial Hypotension; Resolves lying flat w/ confusion = Colloid Cyst of 3rd Ventricle" />
+                <div>
+                  <div class="font-bold text-slate-900">Positional / Orthostatic Headache</div>
+                  <p class="text-slate-600 mt-0.5">Worse within 15 min of standing &amp; resolves lying flat = <strong>Spontaneous Intracranial Hypotension</strong> (CSF leak). Intermittent positional headache with confusion = <strong>Colloid Cyst of 3rd Ventricle</strong>.</p>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-slate-200 shadow-sm cursor-pointer hover:border-indigo-300 md:col-span-2">
+                <input type="checkbox" onchange="updateStep7Factors()" class="step7-check mt-0.5 rounded text-indigo-600" value="Illicit Drug Use -> Cocaine/Methamphetamine (ICH/ischemic stroke); IV Drug Use (Brain Abscess even without fever)" />
+                <div>
+                  <div class="font-bold text-slate-900">Illicit Drug Use (Cocaine, Methamphetamine, or IV Drug Use)</div>
+                  <p class="text-slate-600 mt-0.5">Sympathomimetics increase risk of stroke and intracranial hemorrhage. <strong>IV drug use</strong> raises high suspicion for <strong>Brain Abscess even in the absence of fever</strong> (perform Brain MRI w/ &amp; w/o contrast).</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         TAB 2: RED FLAG & "CANNOT-MISS" DIFFERENTIAL ENGINE (16 DIAGNOSES)
+         ===================================================================== -->
+    <div id="tab2" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase bg-rose-100 text-rose-800">UpToDate Table 2</span>
+              <h2 class="text-lg font-bold text-slate-900">"Cannot-Miss" Diagnoses in the ED Patient with Acute or Severe Headache</h2>
+            </div>
+            <p class="text-sm text-slate-600 mt-1">Filter all 16 life- or vision-threatening secondary headache diagnoses by clinical presentation or pin suspected entities to your ED Chart Note.</p>
+          </div>
+          <!-- Search Input -->
+          <div class="relative w-full md:w-72">
+            <input type="text" id="diagSearchInput" oninput="renderDiagnoses()" placeholder="Search diagnosis, sign, or test..." class="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+          </div>
+        </div>
+
+        <!-- Symptom Filter Pills -->
+        <div class="flex flex-wrap gap-1.5 pt-1" id="diagFilterContainer">
+          <button onclick="setDiagFilter('ALL')" data-filter="ALL" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white transition cursor-pointer">All Diagnoses (16)</button>
+          <button onclick="setDiagFilter('thunderclap')" data-filter="thunderclap" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Thunderclap / Sudden</button>
+          <button onclick="setDiagFilter('meningismus')" data-filter="meningismus" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Fever / Meningismus</button>
+          <button onclick="setDiagFilter('visual')" data-filter="visual" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Visual / Eye Signs</button>
+          <button onclick="setDiagFilter('neck')" data-filter="neck" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Neck Pain / Horner</button>
+          <button onclick="setDiagFilter('seizure')" data-filter="seizure" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Seizure / Altered Mental Status</button>
+          <button onclick="setDiagFilter('papilledema')" data-filter="papilledema" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Papilledema / High ICP</button>
+          <button onclick="setDiagFilter('positional')" data-filter="positional" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Positional / Orthostatic</button>
+          <button onclick="setDiagFilter('anticoag')" data-filter="anticoag" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Trauma / Anticoagulants</button>
+          <button onclick="setDiagFilter('valsalva')" data-filter="valsalva" class="diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Exertion / Cough / Valsalva</button>
+        </div>
+      </div>
+
+      <!-- 16 Diagnoses Grid -->
+      <div id="diagnosesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </div>
+
+    <!-- =====================================================================
+         TAB 3: ACUTE HEADACHE TREATMENT & ORDER BUILDER
+         ===================================================================== -->
+    <div id="tab3" class="tab-panel hidden space-y-6">
+
+      <!-- Clinical Rule & Opioid Stewardship Banners -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 flex items-start gap-3 shadow-sm">
+          <svg class="w-5 h-5 text-amber-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+          <div class="text-xs text-amber-950 leading-relaxed">
+            <span class="font-bold uppercase tracking-wider text-amber-900 block mb-0.5">Diagnostic Caveat (Pope &amp; Edlow)</span>
+            <strong>Favorable response to analgesics or triptans does NOT predict a benign etiology</strong> of headache and must NEVER dissuade performance of neuroimaging or lumbar puncture when indicated by history or exam.
+          </div>
+        </div>
+
+        <div class="bg-rose-50 border border-rose-300 rounded-xl p-4 flex items-start gap-3 shadow-sm">
+          <svg class="w-5 h-5 text-rose-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          <div class="text-xs text-rose-950 leading-relaxed">
+            <span class="font-bold uppercase tracking-wider text-rose-900 block mb-0.5">Opioid &amp; Barbiturate Stewardship</span>
+            <strong>Avoid opioids (e.g., IV hydromorphone) and barbiturates (butalbital):</strong> They are significantly less effective than prochlorperazine + diphenhydramine or triptans, increase 7-day ED return visits, and carry the highest risk of Medication Overuse Headache (MOH).
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP A: SELECT CLINICAL PRESENTATION / SCENARIO -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <h2 class="text-base sm:text-lg font-bold text-slate-900">1. Select Clinical Headache Scenario</h2>
+          <span class="text-xs text-slate-500">Click any scenario to load evidence-based regimens</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5" id="scenarioButtons">
+          <button onclick="setTreatmentScenario('ed_migraine')" id="scen-ed_migraine" class="scen-btn p-3 rounded-xl border-2 border-indigo-600 bg-indigo-50/70 text-left transition cursor-pointer">
+            <div class="text-xs font-bold uppercase text-indigo-700">Scenario 1</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">Acute Migraine (ED Severe)</div>
+            <div class="text-[11px] text-slate-600 mt-1">Parenteral antiemetics, SC sumatriptan, ketorolac + IV dexamethasone</div>
+          </button>
+
+          <button onclick="setTreatmentScenario('status_migrainosus')" id="scen-status_migrainosus" class="scen-btn p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition cursor-pointer">
+            <div class="text-xs font-bold uppercase text-slate-500">Scenario 2</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">Status Migrainosus (&gt;72h)</div>
+            <div class="text-[11px] text-slate-600 mt-1">IV fluids + dopamine blocker + ketorolac, IV DHE 45, valproate, nerve blocks</div>
+          </button>
+
+          <button onclick="setTreatmentScenario('outpatient_migraine')" id="scen-outpatient_migraine" class="scen-btn p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition cursor-pointer">
+            <div class="text-xs font-bold uppercase text-slate-500">Scenario 3</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">Mild–Mod Migraine / Gepants</div>
+            <div class="text-[11px] text-slate-600 mt-1">Stratified care: NSAIDs, Triptan+NSAID, Gepants, Lasmiditan, Neuromodulation</div>
+          </button>
+
+          <button onclick="setTreatmentScenario('cluster')" id="scen-cluster" class="scen-btn p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition cursor-pointer">
+            <div class="text-xs font-bold uppercase text-slate-500">Scenario 4</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">Acute Cluster Headache</div>
+            <div class="text-[11px] text-slate-600 mt-1">100% O2 (12–15 L/min), SC/IN triptan + Immediate Verapamil &amp; Prednisone bridge</div>
+          </button>
+
+          <button onclick="setTreatmentScenario('undifferentiated')" id="scen-undifferentiated" class="scen-btn p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition cursor-pointer">
+            <div class="text-xs font-bold uppercase text-slate-500">Scenario 5</div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5">Undifferentiated ED Headache</div>
+            <div class="text-[11px] text-slate-600 mt-1">Parenteral NSAID + Dopamine antagonist + Diphenhydramine / GON block</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP B: REAL-TIME PATIENT SAFETY & CONTRAINDICATION ENGINE -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-3">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span>2. Patient Safety &amp; Comorbidity Contraindication Engine</span>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-900">Real-Time Guardrails</span>
+            </h2>
+            <p class="text-xs text-slate-600 mt-0.5">Check any patient factor below to automatically adjust doses and flag contraindicated medications across all regimens:</p>
+          </div>
+          <button onclick="clearComorbidities()" class="text-xs font-semibold text-slate-500 hover:text-slate-800 underline cursor-pointer">Clear Comorbidities</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5 text-xs">
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-cv" onchange="onComorbidityChange()" class="mt-0.5 rounded text-rose-600" />
+            <span><strong>CAD, Stroke, PVD, Prinzmetal Angina, or Uncontrolled HTN</strong> <span class="block text-[11px] text-rose-600">Blocks Triptans &amp; Ergots/DHE</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-aura" onchange="onComorbidityChange()" class="mt-0.5 rounded text-rose-600" />
+            <span><strong>Hemiplegic or Brainstem Aura Migraine</strong> <span class="block text-[11px] text-rose-600">Blocks Triptans &amp; Ergots/DHE</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-preg" onchange="onComorbidityChange()" class="mt-0.5 rounded text-rose-600" />
+            <span><strong>Pregnant or Breastfeeding</strong> <span class="block text-[11px] text-rose-600">Blocks Valproate, Ergots/DHE, Topiramate</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-qt" onchange="onComorbidityChange()" class="mt-0.5 rounded text-amber-600" />
+            <span><strong>Prolonged QTc (&gt;500 ms) or Long QT Risk</strong> <span class="block text-[11px] text-amber-700">Flags Chlorpromazine, Haloperidol, Droperidol, Ondansetron</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-renal" onchange="onComorbidityChange()" class="mt-0.5 rounded text-amber-600" />
+            <span><strong>Age &gt;65 yrs, Weight &lt;50 kg, or Renal Impairment</strong> <span class="block text-[11px] text-amber-700">Adjusts Ketorolac to 15 mg IV; warns on NSAIDs</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-lp" onchange="onComorbidityChange()" class="mt-0.5 rounded text-rose-600" />
+            <span><strong>Hemorrhage Not Excluded / Pending LP</strong> <span class="block text-[11px] text-rose-600">Withholds ALL NSAIDs / Ketorolac / Aspirin</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-triptan24" onchange="onComorbidityChange()" class="mt-0.5 rounded text-rose-600" />
+            <span><strong>Triptan or Ergot Taken in Last 24 Hours</strong> <span class="block text-[11px] text-rose-600">Blocks DHE/Ergots &amp; alternate Triptans for 24h</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-copd" onchange="onComorbidityChange()" class="mt-0.5 rounded text-amber-600" />
+            <span><strong>Severe COPD</strong> <span class="block text-[11px] text-amber-700">Warns against 100% O2 (hypercapnia / CO2 narcosis risk)</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-prop" onchange="onComorbidityChange()" class="mt-0.5 rounded text-amber-600" />
+            <span><strong>Taking Propranolol</strong> <span class="block text-[11px] text-amber-700">Increases Rizatriptan levels by 70% (reduce dose to 5 mg)</span></span>
+          </label>
+
+          <label class="flex items-start gap-2 p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" id="ci-cyp" onchange="onComorbidityChange()" class="mt-0.5 rounded text-rose-600" />
+            <span><strong>Potent CYP3A4 Inhibitor (Azoles, Clarithromycin, Ritonavir)</strong> <span class="block text-[11px] text-rose-600">Blocks Eletriptan (72h) &amp; DHE/Ergots</span></span>
+          </label>
+        </div>
+
+        <!-- Active Contraindication Alert Box -->
+        <div id="activeContraindicationAlerts" class="hidden p-3.5 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-900 space-y-1"></div>
+      </div>
+
+      <!-- STEP C: DYNAMIC TREATMENT REGIMENS & ORDER CARDS -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Left 2 Columns: Dynamic Medication Cards -->
+        <div class="lg:col-span-2 space-y-4" id="treatmentRegimenContainer"></div>
+
+        <!-- Right Column: Active Order Set & Prescription Cart -->
+        <div class="space-y-4">
+          <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm sticky top-[165px] space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">Active ED Order Set &amp; Rx Cart</h3>
+                <p class="text-xs text-slate-500">Selected diagnostic &amp; therapeutic orders</p>
+              </div>
+              <span id="cartCountPill" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800">0 items</span>
+            </div>
+
+            <div id="orderCartList" class="space-y-2 max-h-80 overflow-y-auto custom-scrollbar text-xs">
+              <div class="text-slate-400 italic py-4 text-center">No orders selected yet. Click "+ Add to Order Set" on any diagnostic workup or medication card.</div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+              <button onclick="openChartModal()" class="w-full py-2.5 px-4 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm transition cursor-pointer">
+                Generate &amp; Copy Complete ED Chart Note
+              </button>
+              <button onclick="clearOrders()" class="w-full py-1.5 px-3 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-600 transition cursor-pointer">
+                Clear Selected Orders
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =====================================================================
+         TAB 4: QUICK REFERENCE TABLES, NEUROIMAGING MATRIX & MOH GUIDE
+         ===================================================================== -->
+    <div id="tab4" class="tab-panel hidden space-y-6">
+
+      <!-- SECTION 1: INTERACTIVE NEUROIMAGING SELECTOR MATRIX -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase bg-indigo-100 text-indigo-800">ACR &amp; UpToDate Guidance</span>
+            <h2 class="text-lg font-bold text-slate-900 mt-1">ED Neuroimaging Modality &amp; Contrast Selection Matrix</h2>
+            <p class="text-xs sm:text-sm text-slate-600">Includes radiation dose benchmarks and renal impairment (eGFR &lt;30 mL/min/1.73m&sup2;) rules.</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono bg-slate-100 px-3 py-2 rounded-lg border border-slate-200 shrink-0">
+            <span><strong>Head CT:</strong> ~2 mSv</span>
+            <span class="text-slate-300">|</span>
+            <span><strong>Head CTA:</strong> ~4–5 mSv</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-900 text-white">
+                <th class="p-3 rounded-tl-lg font-semibold">Suspected Clinical Scenario</th>
+                <th class="p-3 font-semibold">1st-Line Preferred Modality</th>
+                <th class="p-3 font-semibold">Alternative / Urgent ED Option</th>
+                <th class="p-3 rounded-tr-lg font-semibold">Key Clinical &amp; LP Sequencing Pearls</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Thunderclap Headache / Suspected SAH</td>
+                <td class="p-3"><span class="font-semibold text-indigo-700">Noncontrast Head CT</span></td>
+                <td class="p-3">If CT (+) or ambiguous LP: <strong>Head CTA</strong> or <strong>MRA</strong> or Catheter Angiography</td>
+                <td class="p-3">If high-quality CT obtained <strong>&lt;6 hours</strong> from onset &amp; read normal by expert radiologist, LP is NOT needed. If <strong>&ge;6 hours</strong> &amp; CT normal &rarr; perform LP.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Neck Pain or Horner Syndrome (Cervical Artery Dissection)</td>
+                <td class="p-3"><span class="font-semibold text-indigo-700">Noncontrast Head CT + Head &amp; Neck CTA w/ IV Contrast</span></td>
+                <td class="p-3"><strong>Head &amp; Neck MRI + MRA w/ &amp; w/o IV Contrast</strong> (equivalent accuracy: Sens 50–80%, Spec 67–99%)</td>
+                <td class="p-3">Must extend from <strong>carotid/vertebral artery origins at the thoracic inlet to the Circle of Willis</strong> at the skull base.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Focal Neurologic Deficit, Papilledema, or Elevated ICP</td>
+                <td class="p-3"><span class="font-semibold text-indigo-700">Head MRI without and with IV Contrast</span></td>
+                <td class="p-3"><strong>Noncontrast Head CT</strong> initially if MRI unavailable (to exclude hemorrhage/hydrocephalus/mass effect prior to LP)</td>
+                <td class="p-3">If <strong>eGFR &lt;30 mL/min/1.73m&sup2;</strong> (not on dialysis): <strong>Noncontrast MRI is preferred over Noncontrast CT</strong>. In IIH, perform brain imaging BEFORE LP.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Cerebral Venous Sinus Thrombosis (CVT)</td>
+                <td class="p-3"><span class="font-semibold text-indigo-700">Head MRI + MR Venography (MRV)</span></td>
+                <td class="p-3"><strong>Head CT + CT Venography (CTV) w/ IV Contrast</strong></td>
+                <td class="p-3">Suspect in postpartum patients, hypercoagulable states, OCP users, or focal deficits not matching an arterial territory.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Age &gt;50 yrs, Active Cancer, or HIV / Immunosuppression</td>
+                <td class="p-3"><span class="font-semibold text-indigo-700">Head MRI without and with IV Contrast</span></td>
+                <td class="p-3"><strong>Noncontrast Head CT</strong> first if MRI delayed; CT w/ &amp; w/o contrast is 2nd-line only if MRI contraindicated</td>
+                <td class="p-3">In HIV/immunosuppressed patients with nondiagnostic MRI and no mass effect, perform LP (opening pressure, cryptococcal antigen, leptomeningeal cytology).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Orbital / Periorbital Pain, Ophthalmoplegia, or Cavernous Sinus</td>
+                <td class="p-3"><span class="font-semibold text-indigo-700">MRI of Head and Orbits w/ &amp; w/o Contrast</span></td>
+                <td class="p-3">If Acute Angle-Closure Glaucoma suspected: <strong>Immediate Tonometry (IOP)</strong>, NOT neuroimaging</td>
+                <td class="p-3">Odontogenic headache is better evaluated with <strong>CT</strong> acutely; uncomplicated sinonasal headache is evaluated via outpatient nasal endoscopy.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-emerald-800">Typical Migraine / Low-Risk Primary Headache (Normal Neuro Exam)</td>
+                <td class="p-3"><span class="font-semibold text-emerald-700">No Routine Neuroimaging Indicated</span></td>
+                <td class="p-3">Outpatient follow-up</td>
+                <td class="p-3">AAN meta-analysis: Abnormalities present in only <strong>2.4%</strong> of headache patients with normal neuro exam, and <strong>0.4%</strong> of typical migraineurs with normal exam.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 2: MEDICATION OVERUSE HEADACHE (MOH) & CARDIAC / QTc SAFETY -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Medication Overuse Headache (MOH) Discharge Educator -->
+        <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+          <div>
+            <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase bg-amber-100 text-amber-900">Discharge Counseling</span>
+            <h3 class="text-base font-bold text-slate-900 mt-1">Medication Overuse Headache (MOH) Risk Stratification</h3>
+            <p class="text-xs text-slate-600">Educate all ED headache patients at discharge to prevent chronic rebound headache.</p>
+          </div>
+
+          <div class="space-y-2.5 text-xs">
+            <div class="p-3 rounded-lg bg-rose-50 border border-rose-200">
+              <div class="flex items-center justify-between font-bold text-rose-900">
+                <span>HIGHEST RISK FOR MOH</span>
+                <span class="px-2 py-0.5 rounded bg-rose-200 text-rose-950 text-[10px]">Avoid / Strictly Limit</span>
+              </div>
+              <p class="mt-1 text-slate-700"><strong>Opioids</strong>, <strong>Butalbital-containing combination analgesics</strong>, and <strong>Aspirin-Acetaminophen-Caffeine combinations</strong>.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-amber-50 border border-amber-200">
+              <div class="flex items-center justify-between font-bold text-amber-900">
+                <span>INTERMEDIATE TO HIGH RISK</span>
+                <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-950 text-[10px]">Limit &lt; 10 Days / Month</span>
+              </div>
+              <p class="mt-1 text-slate-700"><strong>All Triptans</strong> (sumatriptan, eletriptan, rizatriptan, zolmitriptan, etc.) and <strong>Ergotamine preparations</strong>. Must be limited to <strong>fewer than 10 days per month</strong>.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-200">
+              <div class="flex items-center justify-between font-bold text-emerald-900">
+                <span>LOWEST RISK (POTENTIALLY PROTECTIVE)</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-950 text-[10px]">Limit &lt; 15 Days / Month</span>
+              </div>
+              <p class="mt-1 text-slate-700"><strong>Simple NSAIDs</strong> (ibuprofen, naproxen, diclofenac, ketorolac) and <strong>Acetaminophen</strong>. Limit to <strong>&lt;15 days per month</strong>. NSAIDs may actually protect against chronic migraine in patients with &lt;10 headache days/month.</p>
+            </div>
+          </div>
+
+          <button onclick="toggleQuickOrder('Discharge Counseling: Limit Triptans to <10 days/mo & NSAIDs/Acetaminophen to <15 days/mo to prevent Medication Overuse Headache (MOH)')" class="w-full py-2 px-3 rounded-lg text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 transition cursor-pointer">
+            + Add MOH Prevention Instructions to ED Chart Note
+          </button>
+        </div>
+
+        <!-- QTc Prolongation, Antiemetics & Cluster Monitoring Rules -->
+        <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-4">
+          <div>
+            <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase bg-rose-100 text-rose-800">Pharmacovigilance</span>
+            <h3 class="text-base font-bold text-slate-900 mt-1">Cardiac ECG Monitoring &amp; Drug Interaction Rules</h3>
+            <p class="text-xs text-slate-600">Critical safety checkpoints for parenteral antiemetics, triptans, and cluster prophylaxis.</p>
+          </div>
+
+          <div class="space-y-2.5 text-xs text-slate-700">
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">1. QT-Prolonging Antiemetics (Chlorpromazine, Haloperidol, Droperidol, Ondansetron)</div>
+              <p class="mt-1">Can cause dose-dependent QTc prolongation and torsades de pointes. Avoid if congenital Long QT or persistent <strong>QTc &gt;500 ms</strong>. If used, obtain <strong>ECG at baseline and 2–3 hours post-dosing</strong>. Note: <strong>Ondansetron &amp; Granisetron</strong> cause headache as an adverse effect; guidelines recommend against IV granisetron for migraine.</p>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">2. Triptan Washout &amp; Drug Interactions</div>
+              <ul class="list-disc pl-4 mt-1 space-y-1">
+                <li><strong>24-Hour Rule:</strong> Never administer a triptan within 24 hours of ergotamine/DHE or a different triptan.</li>
+                <li><strong>Propranolol + Rizatriptan:</strong> Propranolol increases rizatriptan levels by <strong>70%</strong> &rarr; reduce rizatriptan dose (use 5 mg).</li>
+                <li><strong>CYP3A4 Inhibitors + Eletriptan / DHE:</strong> Do not use eletriptan within <strong>72 hours</strong> of potent CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir).</li>
+                <li><strong>SSRIs / SNRIs + Triptans:</strong> Added risk of serotonin syndrome is very low to nonexistent; may co-prescribe if needed with patient counseling and monitoring. Avoid MAOIs.</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900">3. Cluster Headache Verapamil &amp; Lithium Monitoring</div>
+              <p class="mt-1"><strong>Verapamil:</strong> Obtain pretreatment ECG and <strong>mandatory ECG after every dose increment above 480 mg/day</strong> (up to 960 mg/day) to screen for heart block/bradycardia.<br/>
+              <strong>Lithium Carbonate:</strong> Target plasma level <strong>0.6–0.8 mEq/L</strong> (max 1.2 mEq/L); monitor baseline ECG (if &gt;40 yrs or CV risk), thyroid, renal, and liver function.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- =====================================================================
+       MODAL 1: EXPORT / COPY ED CHART NOTE MODAL
+       ===================================================================== -->
+  <div id="chartModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 backdrop-blur-xs p-4">
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-3xl w-full overflow-hidden flex flex-col max-h-[90vh]">
+      <div class="bg-slate-900 text-white px-5 py-4 flex items-center justify-between">
+        <div>
+          <h3 class="text-base font-bold">Structured ED Headache Clinical Decision Note</h3>
+          <p class="text-xs text-slate-400">Auto-generated from Triage Algorithm, Differential, Contraindications, and Selected Orders</p>
+        </div>
+        <button onclick="closeChartModal()" class="text-slate-400 hover:text-white p-1 rounded-lg cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="p-5 overflow-y-auto flex-1 space-y-3">
+        <textarea id="chartNoteTextarea" rows="16" class="w-full p-3.5 rounded-xl border border-slate-300 font-mono text-xs text-slate-800 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 leading-relaxed"></textarea>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-5 py-3.5 flex items-center justify-between gap-3 flex-wrap">
+        <span id="copyConfirmText" class="text-xs font-semibold text-emerald-600 opacity-0 transition">Copied to clipboard!</span>
+        <div class="flex items-center gap-2">
+          <button onclick="closeChartModal()" class="px-4 py-2 rounded-lg text-xs font-semibold bg-slate-200 hover:bg-slate-300 text-slate-700 transition cursor-pointer">Close</button>
+          <button onclick="copyChartNote()" class="px-4 py-2 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm transition cursor-pointer">Copy Note to Clipboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL 2: RESET PATIENT CONFIRMATION MODAL (No native confirm() used)
+       ===================================================================== -->
+  <div id="resetModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 backdrop-blur-xs p-4">
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-md w-full p-5 space-y-4">
+      <div class="flex items-start gap-3">
+        <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Reset Patient Encounter?</h3>
+          <p class="text-xs text-slate-600 mt-1">This will clear all 7 triage steps, comorbidity checkboxes, pinned diagnoses, and selected ED medication/diagnostic orders.</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button onclick="closeResetModal()" class="px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer">Cancel</button>
+        <button onclick="confirmResetPatient()" class="px-4 py-2 rounded-lg text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white shadow-sm transition cursor-pointer">Yes, Reset Encounter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl border border-slate-700">
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span id="toastMessage">Order updated</span>
+  </div>
+
+  <!-- =====================================================================
+       APPLICATION LOGIC & CLINICAL DATA
+       ===================================================================== -->
+  <script>
+    // --- APPLICATION STATE ---
+    const state = {
+      activeTab: 'tab1',
+      steps: { 1: null, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null },
+      sahCalc: { time: 'over6', ct: 'normal' },
+      lpCriteria: [],
+      step7Factors: [],
+      diagFilter: 'ALL',
+      pinnedDiagnoses: [],
+      scenario: 'ed_migraine',
+      comorbidities: {
+        cv: false,
+        aura: false,
+        preg: false,
+        qt: false,
+        renal: false,
+        lp: false,
+        triptan24: false,
+        copd: false,
+        prop: false,
+        cyp: false
+      },
+      selectedOrders: []
+    };
+
+    // --- 16 CANNOT-MISS DIAGNOSES DATASET (UpToDate Table) ---
+    const cannotMissDiagnoses = [
+      {
+        id: 'sah',
+        name: 'Subarachnoid Hemorrhage (SAH)',
+        badge: 'Vascular / Hemorrhagic',
+        tags: ['thunderclap', 'meningismus', 'neck', 'visual', 'seizure', 'valsalva'],
+        history: 'Thunderclap onset (maximal intensity within seconds to minutes); severe pain at onset; transient loss of consciousness / syncope; severe neck pain; diplopia; family history of SAH; polycystic kidney or connective tissue disease.',
+        exam: 'Meningismus, nausea and vomiting, retinal or subhyaloid hemorrhage, unilateral dilated poorly reactive pupil (CN III palsy from expanding aneurysm). Exam may be normal in misdiagnosed patients!',
+        workup: 'Noncontrast Head CT STAT. If obtained <6h of onset and read normal by expert radiologist -> SAH ruled out. If >=6h and CT normal -> Perform LP (opening pressure, RBC count tubes 1–4, xanthochromia). If positive -> Head CTA/MRA and Neurosurgery consult.'
+      },
+      {
+        id: 'rcvs',
+        name: 'Reversible Cerebral Vasoconstriction Syndrome (RCVS)',
+        badge: '2nd Most Common Thunderclap',
+        tags: ['thunderclap', 'valsalva', 'seizure', 'visual'],
+        history: 'Thunderclap headaches of short duration that recur over days to weeks (>=3 episodes strongly suggests RCVS); recurrent triggers: exertion, emotional stress, cough, sexual intercourse, pregnancy/postpartum, vasoactive drugs, or hot/cold exposure.',
+        exam: 'Initially normal exam or neurologic deficits from underlying ischemic stroke, convexity SAH, or cerebral edema.',
+        workup: 'Noncontrast Head CT + LP (to exclude aneurysmal SAH) + Cranial CTA or MRA (demonstrates multifocal segmental "string-of-beads" cerebral arterial vasoconstriction).'
+      },
+      {
+        id: 'dissection',
+        name: 'Cervical Artery Dissection (Carotid / Vertebral)',
+        badge: 'Neurovascular',
+        tags: ['neck', 'thunderclap', 'visual', 'anticoag', 'valsalva'],
+        history: 'Recent head or neck trauma (even minor) or chiropractic neck manipulation; prominent unilateral neck pain; new acute dizziness, tinnitus; headache different from prior migraines (~10% present with pain only).',
+        exam: 'Horner syndrome (ptosis, miosis, anhidrosis — seen in 38–47% of carotid and 0–19% of vertebral dissections); nystagmus; cervical bruit; cranial neuropathies; TIA or stroke signs (~60%).',
+        workup: 'Noncontrast Head CT followed by Head & Neck CTA w/ IV contrast OR Head & Neck MRI/MRA w/ & w/o contrast extending from carotid/vertebral origins at thoracic inlet to Circle of Willis.'
+      },
+      {
+        id: 'cvt',
+        name: 'Cerebral Vein & Dural Sinus Thrombosis (CVT)',
+        badge: 'Venous Thrombotic',
+        tags: ['seizure', 'papilledema', 'visual', 'anticoag', 'thunderclap'],
+        history: 'Risk factors for VTE (postpartum state, pregnancy, oral contraceptives, hypercoagulable disorder); highly variable headache presentation; new seizure.',
+        exam: 'Neurologic deficits not consistent with an arterial territory; seizure; papilledema; encephalopathy.',
+        workup: 'Brain MRI w/ & w/o contrast + MR Venography (MRV) OR Head CT + CT Venography (CTV) with IV contrast.'
+      },
+      {
+        id: 'pres',
+        name: 'Hypertensive Encephalopathy / PRES',
+        badge: 'Hypertensive / Postpartum',
+        tags: ['seizure', 'visual', 'papilledema'],
+        history: 'Insidious-onset headache accompanied by seizures, visual symptoms (blurred vision, cortical blindness), and nausea/vomiting; overlaps with preeclampsia up to 6 weeks postpartum.',
+        exam: 'Severe hypertension (DBP >=120 mmHg or severe relative to patient baseline); papilledema and retinal hemorrhage; encephalopathy; hematuria and proteinuria.',
+        workup: 'Brain MRI (shows posterior parieto-occipital vasogenic edema), urinalysis, blood pressure control, and preeclampsia evaluation if pregnant/postpartum.'
+      },
+      {
+        id: 'meningitis',
+        name: 'Meningitis / Encephalitis',
+        badge: 'CNS Infection',
+        tags: ['meningismus', 'seizure', 'neck'],
+        history: 'Ill-appearing; fever (>38°C); neck pain or stiffness; confusion or lethargy (may be sole finding in older adults). Concomitant sinus/mastoid/ear infection. Note: Lyme meningitis often lacks severe findings.',
+        exam: 'Fever, meningismus (less sensitive >60 yrs), altered mental status, seizure, cranial nerve palsies, petechiae/purpura (meningococcemia) or erythema migrans (Lyme).',
+        workup: 'STAT Blood Cultures -> Immediate Empiric Antibiotics (+/- IV Dexamethasone, IV Acyclovir for HSV, IV Doxycycline for tick-borne) -> Check 6 CT criteria; if absent, proceed immediately to LP.'
+      },
+      {
+        id: 'abscess',
+        name: 'Brain Abscess',
+        badge: 'Infectious Mass',
+        tags: ['papilledema', 'seizure', 'meningismus', 'neck'],
+        history: 'Acute or gradual headache; recent history of bacteremia, head/neck/sinus/dental/otic infection, immunosuppression/HIV, or IV drug use.',
+        exam: 'Fever is OFTEN ABSENT; papilledema; focal or cranial neurologic deficits developing days to weeks after headache onset; depressed mental status.',
+        workup: 'Head MRI without and with IV contrast (ring-enhancing lesion with restricted diffusion), blood cultures, Neurosurgery and Infectious Disease consultation (avoid LP if mass effect).'
+      },
+      {
+        id: 'tumor',
+        name: 'Brain Tumor (Primary or Metastatic)',
+        badge: 'Intracranial Mass',
+        tags: ['papilledema', 'valsalva', 'seizure', 'visual'],
+        history: 'History of cancer; new headache in patient >50 yrs; headache exacerbated by cough, Valsalva, and maneuvers that increase ICP; can be sudden onset if bleeding into tumor; nausea/vomiting.',
+        exam: 'Papilledema; new-onset seizure; depressed mental status; focal neurologic deficits (weakness, sensory loss, aphasia, visual field cuts).',
+        workup: 'Head MRI without and with IV contrast (or Noncontrast Head CT initially if acute hemorrhage/hydrocephalus suspected).'
+      },
+      {
+        id: 'sdh',
+        name: 'Intracranial Extra-Axial Hematoma (Subdural / Epidural)',
+        badge: 'Hemorrhagic / Trauma',
+        tags: ['anticoag', 'seizure', 'papilledema'],
+        history: 'History of head trauma (even minor; subdural hematoma can present weeks after trauma); use of oral anticoagulants (warfarin > DOACs) or antiplatelet medications.',
+        exam: 'Coma; progressive decline in mental status; posterior fossa hematoma presents with vomiting, anisocoria, dysphagia, CN palsies, nuchal rigidity, and ataxia.',
+        workup: 'STAT Noncontrast Head CT + Immediate reversal of coagulopathy and Neurosurgery consultation.'
+      },
+      {
+        id: 'iph',
+        name: 'Intraparenchymal Hemorrhage (IPH)',
+        badge: 'Hemorrhagic Stroke',
+        tags: ['thunderclap', 'anticoag', 'seizure'],
+        history: 'Headache usually sudden in onset; use of anticoagulant medications or sympathomimetic illicit drugs (cocaine, methamphetamine); chronic hypertension.',
+        exam: 'Findings on neurologic examination depend on site of hemorrhage (occasionally examination may be unremarkable initially).',
+        workup: 'STAT Noncontrast Head CT, blood pressure management, and anticoagulant reversal.'
+      },
+      {
+        id: 'colloid',
+        name: 'Colloid Cyst of the Third Ventricle',
+        badge: 'Obstructive Hydrocephalus',
+        tags: ['positional', 'thunderclap', 'seizure', 'papilledema'],
+        history: 'Positional headache that may resolve upon lying flat; intermittent severe paroxysms; confusion.',
+        exam: 'Altered mental status with headache; risk of sudden acute obstructive hydrocephalus and herniation.',
+        workup: 'Noncontrast Head CT and Brain MRI + Neurosurgery consultation.'
+      },
+      {
+        id: 'iih',
+        name: 'Idiopathic Intracranial Hypertension (IIH)',
+        badge: 'Pseudotumor Cerebri',
+        tags: ['papilledema', 'visual', 'valsalva'],
+        history: 'Overweight or obese female of childbearing age; intermittent visual symptoms (decline in vision, flashes, transient visual obscurations, diplopia); pulsatile tinnitus.',
+        exam: 'Papilledema; sixth cranial nerve (abducens) palsy causing horizontal diplopia; visual field cut.',
+        workup: 'Brain MRI w/ & w/o contrast + MRV first (to rule out mass or venous thrombosis), followed by LP showing elevated opening pressure (>20–25 cm H2O) with normal CSF.'
+      },
+      {
+        id: 'sih',
+        name: 'Spontaneous Intracranial Hypotension (SIH)',
+        badge: 'Low CSF Pressure / Leak',
+        tags: ['positional', 'valsalva', 'neck'],
+        history: 'Severe orthostatic headache upon standing (often within 15 minutes) that resolves with lying flat; Valsalva/cough exacerbates headache; tinnitus; neck pain; nausea/vomiting; postpartum dural tear or prior LP.',
+        exam: 'Neurologic examination is often normal, though wide range of possible findings (including CN VI palsy) can occur.',
+        workup: 'Brain MRI with IV contrast (shows diffuse pachymeningeal enhancement, brain sagging, subdural fluid collections); treated with conservative care or epidural blood patch.'
+      },
+      {
+        id: 'glaucoma',
+        name: 'Acute Narrow-Angle Glaucoma',
+        badge: 'Ophthalmic Emergency',
+        tags: ['visual', 'thunderclap'],
+        history: 'Eye pain; red or tearing eye; decreased vision; halos around lights; nausea and vomiting (can closely mimic migraine and be intermittent).',
+        exam: 'Red, injected conjunctiva (ciliary flush); "steamy" edematous cornea; fixed, mid-dilated pupil (4 to 6 mm); firm globe; elevated intraocular pressure (IOP often >30 mmHg).',
+        workup: 'Immediate Intraocular Pressure (IOP) measurement via tonometry and STAT Ophthalmology consultation. Do NOT delay treatment for unnecessary brain CT!'
+      },
+      {
+        id: 'gca',
+        name: 'Giant Cell Arteritis (Temporal Arteritis)',
+        badge: 'Age >= 50 / Vision Loss',
+        tags: ['visual'],
+        history: 'Patient 50 years or older with new headache (often temporal), abrupt-onset visual disturbances (transient monocular vision loss / amaurosis fugax), jaw claudication, fever, weight loss, or polymyalgia rheumatica.',
+        exam: 'Palpable, nodular, tender, or diminished-pulse temporal arteries; fever; elevated ESR and/or CRP.',
+        workup: 'STAT ESR and CRP + Immediate high-dose systemic glucocorticoids (do not wait for temporal artery biopsy/ultrasound if visual symptoms are present).'
+      },
+      {
+        id: 'co',
+        name: 'Carbon Monoxide (CO) Toxicity',
+        badge: 'Environmental Poisoning',
+        tags: ['seizure'],
+        history: 'History of CO exposure (winter heating, generators, enclosed smoke/fumes); others at same household or worksite affected simultaneously; headache resolves or declines rapidly when away from CO source.',
+        exam: 'Mild/moderate exposure causes malaise, nausea, dizziness; severe exposure produces coma, seizures, myocardial ischemia, and cherry-red macula on fundoscopy.',
+        workup: 'Immediate 100% High-Flow Oxygen via non-rebreather mask + Confirm with Co-oximetry Carboxyhemoglobin concentration on blood gas (standard SpO2 and PaO2 are normal!).'
+      }
+    ];
+
+    // --- TREATMENT SCENARIOS & MEDICATIONS DATASET ---
+    function getScenarioMedications(scenario) {
+      const c = state.comorbidities;
+      const ketorolacDose = c.renal ? '15 mg IV (Dose-adjusted for Age >65, Wt <50 kg, or Renal Impairment)' : '30 mg IV or 60 mg IM';
+
+      if (scenario === 'ed_migraine') {
+        return [
+          {
+            category: '1st-Line Parenteral Antiemetics / Dopamine Receptor Blockers',
+            subtitle: 'Suggested initial ED therapy (monotherapy or combined). Always co-administer IV diphenhydramine to prevent akathisia and acute dystonic reactions.',
+            items: [
+              {
+                id: 'prochlorperazine',
+                name: 'Prochlorperazine 10 mg IV or IM + Diphenhydramine 12.5–25 mg IV',
+                badge: '1st-Line Preferred',
+                orderText: 'Prochlorperazine 10 mg IV + Diphenhydramine 12.5–25 mg IV (Infuse over 15 min for Acute Migraine)',
+                evidence: 'RCTs show IV prochlorperazine (10 mg) + diphenhydramine is equal or superior to IV metoclopramide or SC sumatriptan (pain reduction at 80 min), and significantly superior to IV hydromorphone (1 mg) for 48-hour sustained relief without rescue medication.',
+                status: c.qt ? 'caution' : 'safe',
+                warning: c.qt ? 'Monitor QTc if multiple QT-prolonging agents are active.' : ''
+              },
+              {
+                id: 'metoclopramide',
+                name: 'Metoclopramide 10 mg IV + Diphenhydramine 12.5–25 mg IV',
+                badge: '1st-Line Preferred (NNT = 4)',
+                orderText: 'Metoclopramide 10 mg IV + Diphenhydramine 12.5–25 mg IV (Acute Migraine)',
+                evidence: 'Pooled meta-analysis OR 2.84 vs placebo; NNT = 4 for significant pain reduction. Does not prolong QT interval to the degree of butyrophenones/chlorpromazine.',
+                status: 'safe',
+                warning: ''
+              },
+              {
+                id: 'chlorpromazine',
+                name: 'Chlorpromazine 0.1 mg/kg (or 12.5 mg) Slow IV Infusion',
+                badge: 'NNT = 2 at 60 min',
+                orderText: 'Chlorpromazine 0.1 mg/kg (or 12.5 mg) slow IV infusion (max rate 1 mg/min; max cumulative dose 25 mg) + Normal Saline Bolus',
+                evidence: 'ED RCT (n=128) showed NNT = 2 for significant improvement in pain, nausea, photophobia, and phonophobia at 60 min and lower 24h recurrence. Watch for postural hypotension and drowsiness.',
+                status: c.qt ? 'blocked' : 'caution',
+                warning: c.qt ? 'CONTRAINDICATED / AVOID: QTc >500 ms or Long QT risk (causes dose-dependent QT prolongation & torsades).' : 'Obtain baseline & 2–3h post-dose ECG if QT risk factors present; monitor BP for orthostatic hypotension.'
+              }
+            ]
+          },
+          {
+            category: '1st-Line Parenteral Migraine-Specific & NSAID Options',
+            subtitle: 'Can be given alone or combined with an antiemetic.',
+            items: [
+              {
+                id: 'sumatriptan_sc',
+                name: 'Sumatriptan 6 mg Subcutaneous Injection',
+                badge: 'Fastest Onset Triptan',
+                orderText: 'Sumatriptan 6 mg Subcutaneous Injection (May repeat x1 after 1 hr if needed; max 12 mg/24h)',
+                evidence: 'Fastest-acting triptan. Note: A 3 mg or 4 mg SC dose may be tried in patients intolerant of 6 mg. In an RCT of 639 patients, repeating a second 6 mg SC dose at 60 min in initial non-responders provided little additional benefit. Common transient side effects (<30 min): chest pressure, flushing, warmth.',
+                status: (c.cv || c.aura || c.triptan24) ? 'blocked' : 'safe',
+                warning: (c.cv || c.aura || c.triptan24) ? 'CONTRAINDICATED: Avoid in CAD, stroke, PVD, uncontrolled HTN, hemiplegic/brainstem aura migraine, or within 24h of ergots/another triptan.' : ''
+              },
+              {
+                id: 'ketorolac_ed',
+                name: 'Ketorolac ' + ketorolacDose,
+                badge: 'Parenteral NSAID',
+                orderText: 'Ketorolac ' + ketorolacDose + ' (Acute Migraine)',
+                evidence: 'Systematic review of 8 RCTs confirmed parenteral ketorolac efficacy comparable to IN sumatriptan, IV prochlorperazine, and IV DHE + metoclopramide.',
+                status: c.lp ? 'blocked' : (c.renal || c.preg ? 'caution' : 'safe'),
+                warning: c.lp ? 'WITHHOLD NSAIDs: Intracranial hemorrhage not yet excluded or Lumbar Puncture pending!' : (c.renal ? 'Dose reduced to 15 mg IV due to age >65, weight <50 kg, or renal impairment.' : '')
+              }
+            ]
+          },
+          {
+            category: 'Mandatory Recurrence Prevention Prior to ED Discharge',
+            subtitle: 'Parenteral glucocorticoid prevents early 24–72 hour headache relapse (does NOT speed immediate relief).',
+            items: [
+              {
+                id: 'dexamethasone_ed',
+                name: 'Dexamethasone 4 mg IV (or IM) Single Dose',
+                badge: 'Prevents 24–72h Relapse (NNT = 9)',
+                orderText: 'Dexamethasone 4 mg IV x 1 dose (To prevent early 24–72h migraine recurrence)',
+                evidence: 'Meta-analysis of 7 ED trials (n=738): reduces 24–72h recurrence (RR 0.74, NNT = 9). A 2023 RCT (n=209) proved 4 mg IV is just as effective as 16 mg IV for 48h sustained relief (34% vs 41%) with minimal adverse effects. Note: Oral glucocorticoids are NOT effective for recurrence prevention.',
+                status: 'safe',
+                warning: 'Avoid frequent repeated use to prevent glucocorticoid toxicity.'
+              }
+            ]
+          }
+        ];
+      }
+
+      if (scenario === 'status_migrainosus') {
+        return [
+          {
+            category: 'Status Migrainosus (>72 Hours) Core Parenteral Bundle',
+            subtitle: 'Debilitating migraine lasting >72 hours requires IV hydration, dopamine antagonist, parenteral NSAID, and escalation to DHE, valproate, or peripheral nerve blocks.',
+            items: [
+              {
+                id: 'status_combo',
+                name: 'IV Crystalloid Fluids + Prochlorperazine 10 mg IV (or Metoclopramide 10 mg IV) + Diphenhydramine 25 mg IV + Ketorolac ' + (c.renal ? '15 mg IV' : '30 mg IV'),
+                badge: 'Initial Combination Bundle',
+                orderText: 'NS 1000 mL IV Bolus + Prochlorperazine 10 mg IV + Diphenhydramine 25 mg IV + Ketorolac ' + (c.renal ? '15 mg IV' : '30 mg IV') + ' + Dexamethasone 4 mg IV',
+                evidence: 'Reverses migraine-induced gastric stasis/dehydration while targeting central dopaminergic, inflammatory, and trigeminovascular pathways. Add Dexamethasone 4 mg IV to prevent relapse.',
+                status: c.lp ? 'blocked' : 'safe',
+                warning: c.lp ? 'Hold Ketorolac component if hemorrhage or LP is still under consideration.' : ''
+              },
+              {
+                id: 'dhe_iv',
+                name: 'Dihydroergotamine (DHE 45) 1 mg IV + Metoclopramide 10 mg IV',
+                badge: 'Intractable / Refractory Escalation',
+                orderText: 'Dihydroergotamine (DHE 45) 1 mg IV + Metoclopramide 10 mg IV (Intractable Migraine / Status Migrainosus)',
+                evidence: 'Systematic review of 11 RCTs: parenteral DHE + metoclopramide is as or more effective than valproate, ketorolac, or meperidine. Always co-administer an antiemetic with IV DHE.',
+                status: (c.cv || c.aura || c.preg || c.triptan24 || c.cyp) ? 'blocked' : 'safe',
+                warning: (c.cv || c.aura || c.preg || c.triptan24 || c.cyp) ? 'CONTRAINDICATED: Do not give within 24h of triptans, or in pregnancy, CAD/HTN/PVD, hemiplegic/brainstem aura, or with potent CYP3A4 inhibitors.' : 'Verify no triptan use within the past 24 hours prior to administration.'
+              },
+              {
+                id: 'valproate_iv',
+                name: 'Sodium Valproate 500 to 1000 mg IV over 5–10 minutes',
+                badge: 'Non-Vasoconstrictive Escalation',
+                orderText: 'Sodium Valproate 800 mg (500–1000 mg) IV infused over 5–10 min (max rate 10 mg/kg/min)',
+                evidence: 'ED RCT (n=99) showed single-dose IV sodium valproate 800 mg superior to IV ibuprofen 800 mg at 2h. Safe in cardiovascular disease when DHE/triptans are contraindicated.',
+                status: c.preg ? 'blocked' : 'safe',
+                warning: c.preg ? 'ABSOLUTELY CONTRAINDICATED IN PREGNANCY (high risk of teratogenicity / neural tube defects).' : 'Adverse effects include transient nausea, vomiting, and tremor.'
+              },
+              {
+                id: 'gon_block',
+                name: 'Bilateral Greater Occipital Nerve (GON) Block w/ 0.5% Bupivacaine (or Intranasal 4% Lidocaine SPG Block)',
+                badge: 'Refractory Interventional Rescue',
+                orderText: 'Bilateral Greater Occipital Nerve (GON) Block with 0.5% Bupivacaine',
+                evidence: 'In a sham-controlled ED trial of patients with persistent migraine >=1h after IV metoclopramide, bilateral GON block achieved 31% complete headache freedom at 30 min vs 0% with sham. Contraindications: local anesthetic allergy, open skull defect, overlying skin infection.',
+                status: c.preg ? 'caution' : 'safe',
+                warning: c.preg ? 'Pregnancy is a relative contraindication to peripheral nerve blocks per UpToDate.' : ''
+              }
+            ]
+          }
+        ];
+      }
+
+      if (scenario === 'outpatient_migraine') {
+        const rizatriptanDose = c.prop ? '5 mg PO/ODT (Reduced by 50% due to concurrent Propranolol)' : '10 mg (5–10 mg) PO or ODT';
+        return [
+          {
+            category: 'Stratified Care: Triptans & Triptan + NSAID Combinations',
+            subtitle: 'Combining a triptan with an NSAID is more effective than either class alone. Treat early (<1 hr) before cutaneous allodynia develops (15% relief once allodynic vs 97% non-allodynic).',
+            items: [
+              {
+                id: 'sumatriptan_naproxen',
+                name: 'Sumatriptan 85 mg + Naproxen Sodium 500 mg PO (or Sumatriptan 100 mg + Naproxen 500 mg)',
+                badge: '1st-Line Moderate–Severe',
+                orderText: 'Sumatriptan 85 mg / Naproxen sodium 500 mg PO at onset (or Sumatriptan 100 mg PO + Naproxen sodium 500 mg PO)',
+                evidence: 'Cochrane meta-analysis & RCTs (~3000 patients): superior 2-hour pain relief and 2-to-24-hour sustained pain-free response compared to either sumatriptan or naproxen monotherapy.',
+                status: (c.cv || c.aura || c.triptan24 || c.lp) ? 'blocked' : 'safe',
+                warning: (c.cv || c.aura || c.triptan24 || c.lp) ? 'Contraindicated due to active CV/aura/24h triptan or NSAID/bleeding restriction.' : 'Limit triptan use to <10 days/month to prevent MOH.'
+              },
+              {
+                id: 'eletriptan_riza',
+                name: 'Eletriptan 40 mg PO OR Rizatriptan ' + rizatriptanDose,
+                badge: 'Highest Oral Triptan Efficacy',
+                orderText: 'Eletriptan 40 mg PO (or Rizatriptan ' + rizatriptanDose + ') at migraine onset',
+                evidence: '2024 BMJ Network Meta-Analysis (137 trials, ~90,000 patients) ranked eletriptan, rizatriptan, sumatriptan, and zolmitriptan highest for 2-hour complete pain relief (Eletriptan OR 2.15 vs naproxen, OR 2.61 vs ubrogepant). Note: Naratriptan 2.5 mg & Frovatriptan 2.5 mg have the slowest onset and lowest side effects.',
+                status: (c.cv || c.aura || c.triptan24 || c.cyp) ? 'blocked' : (c.prop ? 'caution' : 'safe'),
+                warning: c.cyp ? 'Eletriptan is CONTRAINDICATED within 72h of potent CYP3A4 inhibitors.' : (c.prop ? 'Propranolol increases rizatriptan levels by 70%; use 5 mg max single dose.' : '')
+              },
+              {
+                id: 'nonoral_triptans',
+                name: 'Non-Oral Triptans for Severe Nausea/Vomiting: Sumatriptan 20 mg IN Spray (or 10 mg w/ DDM, or 22 mg IN Powder) or Zolmitriptan 5 mg IN',
+                badge: 'Bypasses Gastric Stasis',
+                orderText: 'Sumatriptan 20 mg Intranasal Spray (1 spray in 1 nostril; may repeat x1 at 2h, max 40 mg/24h)',
+                evidence: 'Avoids poor oral absorption from migraine-induced gastric stasis. Zolmitriptan IN (5 mg) has a lower incidence of unpleasant taste than sumatriptan IN.',
+                status: (c.cv || c.aura || c.triptan24) ? 'blocked' : 'safe',
+                warning: (c.cv || c.aura || c.triptan24) ? 'Contraindicated in CV disease, hemiplegic/brainstem aura, or within 24h of ergots.' : ''
+              }
+            ]
+          },
+          {
+            category: 'Cardiovascular-Safe Migraine-Specific Options: Gepants (CGRP Antagonists) & Lasmiditan',
+            subtitle: 'Preferred when triptans are ineffective, poorly tolerated, or contraindicated due to cardiovascular risk factors.',
+            items: [
+              {
+                id: 'gepants',
+                name: 'Ubrogepant 50–100 mg PO | Rimegepant 75 mg ODT | Zavegepant 10 mg Intranasal Spray',
+                badge: 'Safe in Cardiovascular Disease',
+                orderText: 'Rimegepant 75 mg ODT x 1 dose (or Ubrogepant 100 mg PO; or Zavegepant 10 mg IN spray x1 if nauseated)',
+                evidence: 'Small-molecule CGRP antagonists lack vasoconstrictor activity. Ubrogepant is also effective when taken during the pre-headache prodrome (46% vs 29% free of mod-severe headache at 24h). Zavegepant 10 mg IN provides rapid non-oral relief in nauseated patients.',
+                status: 'safe',
+                warning: 'Post-marketing surveillance note: rare cases of new/worsening hypertension or Raynaud phenomenon reported within 1 week of initiation.'
+              },
+              {
+                id: 'lasmiditan',
+                name: 'Lasmiditan 50 mg, 100 mg, or 200 mg PO Single Dose',
+                badge: 'Selective 5-HT1F Agonist (No Vasoconstriction)',
+                orderText: 'Lasmiditan 100 mg PO x 1 dose (Max 1 dose per 24h; NO driving or operating machinery for at least 8 hours)',
+                evidence: 'Lacks vasoconstrictor activity; safe in cardiovascular risk. No benefit from taking a second dose for the same attack (max 1 dose/24h).',
+                status: 'caution',
+                warning: 'MANDATORY COUNSELING: Causes dose-dependent dizziness/somnolence; patient MUST NOT drive or operate machinery for at least 8 hours after dosing.'
+              }
+            ]
+          },
+          {
+            category: 'Simple Analgesics (Mild Attacks) & Noninvasive Neuromodulation',
+            subtitle: 'First-line for mild attacks without vomiting or for patients preferring nonpharmacologic therapy.',
+            items: [
+              {
+                id: 'simple_nsaid',
+                name: 'Diclofenac Potassium 50 mg Oral Powder Solution | Ibuprofen 400–600 mg | Naproxen 275–825 mg | Acetaminophen 1000 mg',
+                badge: '1st-Line Mild Migraine',
+                orderText: 'Diclofenac potassium 50 mg oral powder packet mixed in water (or Naproxen sodium 550 mg PO + Metoclopramide 10 mg PO)',
+                evidence: 'Powdered diclofenac potassium (50 mg) in water produces more rapid 2-hour pain relief than tablets. Indomethacin 50 mg rectal suppository is an option for nauseated patients.',
+                status: c.lp ? 'blocked' : 'safe',
+                warning: c.lp ? 'Withhold NSAIDs if hemorrhage/LP is pending (Acetaminophen 1000 mg may be used).' : ''
+              },
+              {
+                id: 'neuromodulation',
+                name: 'Noninvasive Neuromodulation: Remote Electrical Neuromodulation (REN Armband) | Supraorbital TNS | sTMS | nVNS',
+                badge: 'Non-Pharmacologic / Drug-Intolerant',
+                orderText: 'Prescription for Remote Electrical Neuromodulation (REN) armband or Supraorbital Trigeminal Nerve Stimulator (eTNS)',
+                evidence: 'REN armband (37% 2h pain freedom vs 18% sham), Supraorbital eTNS (ACME trial: -3.46 vs -1.78 VAS reduction), Single-pulse TMS (effective in migraine with aura; CONTRAINDICATED in epilepsy), and nVNS (PRESTO trial).',
+                status: 'safe',
+                warning: 'Note: Single-pulse Transcranial Magnetic Stimulation (sTMS) is contraindicated in patients with epilepsy.'
+              }
+            ]
+          }
+        ];
+      }
+
+      if (scenario === 'cluster') {
+        return [
+          {
+            category: 'Step 1: Immediate Acute Cluster Headache Abortive Therapy',
+            subtitle: 'Attacks peak within minutes and last <1–2 hours with ipsilateral autonomic signs (tearing, miosis, ptosis, rhinorrhea). Treat immediately!',
+            items: [
+              {
+                id: 'cluster_o2',
+                name: '100% Oxygen at 12 to 15 L/min via Non-Rebreather Facial Mask for 15 Minutes (Patient Sitting Upright)',
+                badge: '1st-Line Choice (78% Response at 15 min)',
+                orderText: '100% Oxygen at 12–15 L/min via Non-Rebreather Mask for 15 minutes with patient in sitting, upright position',
+                evidence: 'Double-blind RCT (JAMA, n=76): 12 L/min pure O2 for 15 min achieved pain-free/adequate relief at 15 min in 78% of attacks vs 20% with air placebo. May increase up to 15 L/min if needed. Avoid frequent repetitive overuse in short periods.',
+                status: c.copd ? 'blocked' : 'safe',
+                warning: c.copd ? 'CONTRAINDICATED IN SEVERE COPD: Risk of severe hypercapnia and CO2 narcosis! Use triptan or intranasal lidocaine instead.' : 'Continue inhalation for full 15 minutes to prevent attack return.'
+              },
+              {
+                id: 'cluster_triptan',
+                name: 'Sumatriptan 6 mg SC Injection OR Intranasal Sumatriptan 20 mg / Zolmitriptan 5 mg (CONTRALATERAL Nostril)',
+                badge: '1st-Line Pharmacologic (75% Pain-Free in 20 min)',
+                orderText: 'Sumatriptan 6 mg SC (or Sumatriptan 20 mg IN / Zolmitriptan 5 mg IN administered into nostril CONTRALATERAL to pain)',
+                evidence: 'SC sumatriptan 6 mg renders ~75% of patients pain-free within 20 min (repeat no sooner than 2h; max 12 mg/24h). CRITICAL ADMINISTRATION PEARL: Intranasal triptans must be sprayed CONTRALATERAL to the headache side because the ipsilateral nostril has rhinorrhea/congestion.',
+                status: (c.cv || c.triptan24) ? 'blocked' : 'safe',
+                warning: (c.cv || c.triptan24) ? 'Contraindicated in ischemic CV disease, stroke, uncontrolled HTN, or within 24h of ergots.' : 'Administer IN spray into the CONTRALATERAL nostril.'
+              },
+              {
+                id: 'cluster_lidocaine',
+                name: '2nd-Line Abortive: Intranasal 4% Lidocaine (1 mL IPSILATERAL) | IV DHE 1 mg | Octreotide 100 mcg SC',
+                badge: 'Alternative Abortive (Safe in CV Disease)',
+                orderText: 'Intranasal Lidocaine 4% topical solution (1 mL applied IPSILATERAL to pain with head extended 45° and rotated 30–40° toward symptomatic side)',
+                evidence: 'Intranasal 4% lidocaine is applied IPSILATERAL to pain (head extended 45 deg, rotated 30–40 deg to painful side). Subcutaneous octreotide 100 mcg (52% vs 36% response at 30m) and IV DHE 1 mg are additional options.',
+                status: 'safe',
+                warning: 'Unlike IN triptans (contralateral), IN lidocaine is applied IPSILATERAL to the pain side to reach the sphenopalatine fossa.'
+              }
+            ]
+          },
+          {
+            category: 'Step 2: Mandatory Cluster Headache Prophylaxis & Transitional Bridge (Start Without Delay)',
+            subtitle: 'Acute therapy does NOT shorten the cluster bout. Start preventive therapy immediately at the onset of a cluster episode.',
+            items: [
+              {
+                id: 'cluster_verapamil_bridge',
+                name: 'Chronic Cluster (<3 mo remission) or Bout >=4 Weeks: Verapamil 80 mg TID (240 mg/d) + Oral Prednisone 100 mg Daily Bridge Taper',
+                badge: '1st-Line Preventive + Rapid Bridge',
+                orderText: 'Start Verapamil 80 mg PO TID (240 mg/day; titrate by 120 mg q14d; baseline ECG & mandatory ECG for doses >480 mg/day) + Prednisone 100 mg PO daily x 3–5 days, then taper by 10–20 mg every 3 days',
+                evidence: 'Verapamil is the preventive drug of choice (target 240–480 mg/d, up to 960 mg/d). Because verapamil takes 2–3 weeks to work, co-administer oral Prednisone (100 mg daily x 3–5 days, then taper by 10–20 mg q3d) OR perform an ipsilateral Greater Occipital Nerve (GON) steroid/anesthetic block.',
+                status: 'safe',
+                warning: 'MANDATORY ECG RULE: Obtain baseline ECG and repeat ECG after every dose increment above 480 mg/day to monitor for heart block/bradycardia. Taper verapamil over 2–4 weeks when bout ends; never stop abruptly.'
+              },
+              {
+                id: 'cluster_short_prednisone',
+                name: 'Episodic Cluster Bout <4 Weeks & Infrequent: Oral Prednisone 100 mg Daily Monotherapy Taper',
+                badge: 'Short Bout Monotherapy (<4 Weeks)',
+                orderText: 'Prednisone 100 mg PO once daily for 3 days, followed by taper decreasing by 10 mg every 3rd day',
+                evidence: '70–80% response rate; rapidly suppresses attacks for short bouts lasting <4 weeks without requiring long-term verapamil titration.',
+                status: 'safe',
+                warning: ''
+              },
+              {
+                id: 'cluster_alternatives',
+                name: 'Refractory / Alternative Preventives: Galcanezumab 300 mg SC Monthly | Lithium Carbonate | Topiramate',
+                badge: '2nd-Line Preventives',
+                orderText: 'Galcanezumab 300 mg SC (three consecutive 100 mg injections) at bout onset then monthly until bout ends',
+                evidence: 'Galcanezumab 300 mg SC is FDA-approved for episodic cluster headache (>1 mo bouts). Lithium (target 0.6–0.8 mEq/L, max 1.2 mEq/L) or Topiramate (25 mg/d titrated to 100 mg/d) are alternatives.',
+                status: c.preg ? 'caution' : 'safe',
+                warning: c.preg ? 'Topiramate and Lithium carry fetal risks in pregnancy.' : ''
+              }
+            ]
+          }
+        ];
+      }
+
+      // Default: Undifferentiated Primary Headache in the ED
+      return [
+        {
+          category: 'Empiric ED Management of Severe Undifferentiated Primary Headache',
+          subtitle: 'For low-risk ED patients whose headache does not clearly meet criteria for migraine or cluster after secondary causes are excluded.',
+          items: [
+            {
+              id: 'undiff_combo',
+              name: 'Ketorolac ' + (c.renal ? '15 mg IV' : '15 to 30 mg IV') + ' + Prochlorperazine 10 mg IV + Diphenhydramine 12.5 mg IV (or Benztropine 1 mg)',
+              badge: '1st-Line Empiric ED Regimen',
+              orderText: 'Ketorolac ' + (c.renal ? '15 mg IV' : '15–30 mg IV') + ' + Prochlorperazine 10 mg IV + Diphenhydramine 12.5 mg IV (Undifferentiated Primary Headache)',
+              evidence: 'Relieves severe pain and allows return to baseline mental function without opioid sedation. Haloperidol 2.5–5 mg IV or Chlorpromazine 0.1 mg/kg IV are alternatives to prochlorperazine.',
+              status: c.lp ? 'blocked' : 'safe',
+              warning: c.lp ? 'CRITICAL: Withhold Ketorolac/NSAIDs in any patient for whom hemorrhagic cause or Lumbar Puncture is still being considered!' : ''
+            },
+            {
+              id: 'undiff_acetaminophen',
+              name: 'Acetaminophen 1000 mg PO or IV',
+              badge: 'Safe When LP / Bleed Pending',
+              orderText: 'Acetaminophen 1000 mg PO/IV x 1 dose',
+              evidence: 'Reasonable initial full dose if not already taken by the patient; safe when NSAIDs are withheld pending LP.',
+              status: 'safe',
+              warning: ''
+            },
+            {
+              id: 'undiff_gon',
+              name: 'Occipital Nerve Block OR Dihydroergotamine 1 mg IV (if migrainous features present)',
+              badge: 'Refractory Undifferentiated Rescue',
+              orderText: 'Greater Occipital Nerve Block with local anesthetic (Refractory Undifferentiated Primary Headache)',
+              evidence: 'Systematic reviews show peripheral nerve blocks provide effective analgesia for undifferentiated primary headaches in the ED.',
+              status: 'safe',
+              warning: ''
+            }
+          ]
+        }
+      ];
+    }
+
+    // --- TAB NAVIGATION ---
+    function switchTab(tabId) {
+      state.activeTab = tabId;
+      document.querySelectorAll('.tab-panel').forEach(el => el.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-indigo-400', 'bg-slate-900', 'text-white');
+        btn.classList.add('border-transparent', 'text-slate-400');
+      });
+      const activeBtn = document.getElementById('btn-' + tabId);
+      activeBtn.classList.remove('border-transparent', 'text-slate-400');
+      activeBtn.classList.add('border-indigo-400', 'bg-slate-900', 'text-white');
+    }
+
+    // --- TAB 1: TRIAGE ALGORITHM FUNCTIONS ---
+    function setStepStatus(stepNum, status) {
+      state.steps[stepNum] = status;
+      const card = document.getElementById('stepCard-' + stepNum);
+      const badge = document.getElementById('stepBadge-' + stepNum);
+      const yesBtn = document.getElementById('btn-step' + stepNum + '-yes');
+      const noBtn = document.getElementById('btn-step' + stepNum + '-no');
+      const content = document.getElementById('stepContent-' + stepNum);
+
+      // Reset classes
+      card.classList.remove('border-rose-400', 'border-emerald-300', 'border-slate-200');
+      badge.classList.remove('bg-rose-600', 'text-white', 'bg-emerald-600', 'bg-slate-100', 'text-slate-700');
+      yesBtn.className = 'px-4 py-2 rounded-lg text-xs font-bold border transition cursor-pointer ';
+      noBtn.className = 'px-4 py-2 rounded-lg text-xs font-bold border transition cursor-pointer ';
+
+      if (status === 'yes') {
+        card.classList.add('border-rose-400');
+        badge.classList.add('bg-rose-600', 'text-white');
+        yesBtn.className += 'border-rose-600 bg-rose-600 text-white shadow-xs';
+        noBtn.className += 'border-slate-300 bg-white text-slate-600 hover:bg-emerald-50';
+        content.classList.remove('hidden');
+      } else if (status === 'no') {
+        card.classList.add('border-emerald-300');
+        badge.classList.add('bg-emerald-600', 'text-white');
+        yesBtn.className += 'border-slate-300 bg-white text-slate-600 hover:bg-rose-50';
+        noBtn.className += 'border-emerald-600 bg-emerald-600 text-white shadow-xs';
+        content.classList.add('hidden');
+      } else {
+        card.classList.add('border-slate-200');
+        badge.classList.add('bg-slate-100', 'text-slate-700');
+        yesBtn.className += 'border-slate-300 bg-white text-slate-700 hover:bg-rose-50';
+        noBtn.className += 'border-slate-300 bg-white text-slate-700 hover:bg-emerald-50';
+        content.classList.add('hidden');
+      }
+
+      updateTriageMasterSummary();
+    }
+
+    function markAllStepsNo() {
+      for (let i = 1; i <= 7; i++) {
+        setStepStatus(i, 'no');
+      }
+      showToast('All 7 Triage Steps marked "NO" — Cleared for Primary Headache Pathway');
+    }
+
+    function clearAllSteps() {
+      for (let i = 1; i <= 7; i++) {
+        setStepStatus(i, null);
+      }
+      document.querySelectorAll('.lp-ct-check').forEach(cb => cb.checked = false);
+      document.querySelectorAll('.step7-check').forEach(cb => cb.checked = false);
+      evaluateLPChecklist();
+      updateStep7Factors();
+      updateTriageMasterSummary();
+      showToast('Triage steps cleared');
+    }
+
+    function updateSAHCalc(field, val) {
+      state.sahCalc[field] = val;
+      const tUnder = document.getElementById('sah-time-under6');
+      const tOver = document.getElementById('sah-time-over6');
+      const cNorm = document.getElementById('sah-ct-normal');
+      const cPos = document.getElementById('sah-ct-positive');
+
+      tUnder.className = state.sahCalc.time === 'under6'
+        ? 'px-3 py-2 rounded border border-indigo-500 bg-indigo-50 font-semibold text-indigo-900 transition cursor-pointer'
+        : 'px-3 py-2 rounded border border-slate-300 bg-slate-50 font-semibold text-slate-700 hover:bg-indigo-50 transition cursor-pointer';
+      tOver.className = state.sahCalc.time === 'over6'
+        ? 'px-3 py-2 rounded border border-indigo-500 bg-indigo-50 font-semibold text-indigo-900 transition cursor-pointer'
+        : 'px-3 py-2 rounded border border-slate-300 bg-slate-50 font-semibold text-slate-700 hover:bg-indigo-50 transition cursor-pointer';
+
+      cNorm.className = state.sahCalc.ct === 'normal'
+        ? 'px-3 py-2 rounded border border-indigo-500 bg-indigo-50 font-semibold text-indigo-900 transition cursor-pointer'
+        : 'px-3 py-2 rounded border border-slate-300 bg-slate-50 font-semibold text-slate-700 hover:bg-indigo-50 transition cursor-pointer';
+      cPos.className = state.sahCalc.ct === 'positive'
+        ? 'px-3 py-2 rounded border border-rose-600 bg-rose-50 font-semibold text-rose-900 transition cursor-pointer'
+        : 'px-3 py-2 rounded border border-slate-300 bg-slate-50 font-semibold text-slate-700 hover:bg-rose-50 transition cursor-pointer';
+
+      const out = document.getElementById('sahCalcOutput');
+      if (state.sahCalc.ct === 'positive') {
+        out.className = 'p-3 rounded-lg bg-rose-100 border border-rose-300 text-rose-950 font-medium leading-relaxed';
+        out.innerHTML = '<strong>SAH Confirmed on CT:</strong> Immediately obtain <strong>Head CTA / MRA or Catheter Angiography</strong> to identify cerebral aneurysm/AVM, initiate neuroprotective BP/nimodipine protocol, and consult <strong>Neurosurgery STAT</strong>.';
+      } else if (state.sahCalc.time === 'under6') {
+        out.className = 'p-3 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-950 font-medium leading-relaxed';
+        out.innerHTML = '<strong>6-Hour CT Rule Met:</strong> High-quality Noncontrast Head CT obtained &lt;6 hours from symptom onset and interpreted as normal by an expert radiologist <strong>excludes aneurysmal SAH without requiring a Lumbar Puncture</strong>. Consider RCVS or cervical dissection if recurrent/triggered.';
+      } else {
+        out.className = 'p-3 rounded-lg bg-amber-50 border border-amber-300 text-amber-950 font-medium leading-relaxed';
+        out.innerHTML = '<strong>Action Required (&ge;6 Hours):</strong> Because CT was obtained &ge;6 hours after headache onset (or timing is uncertain) and is normal, <strong>perform a Lumbar Puncture (LP)</strong>. Measure opening pressure, RBC count in tubes 1–4, and xanthochromia. Withhold NSAIDs until LP is complete.';
+      }
+    }
+
+    function evaluateLPChecklist() {
+      const checked = Array.from(document.querySelectorAll('.lp-ct-check:checked')).map(el => el.value);
+      state.lpCriteria = checked;
+      const badge = document.getElementById('lpCtCountBadge');
+      const res = document.getElementById('lpChecklistResult');
+
+      if (checked.length === 0) {
+        badge.className = 'text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800';
+        badge.textContent = '0 / 6 Present';
+        res.className = 'p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-medium';
+        res.innerHTML = '<strong>0 Criteria Present:</strong> Safe to proceed <strong>directly to Lumbar Puncture</strong> (with opening pressure) after blood cultures and empiric antibiotics. Do NOT delay LP for cranial CT.';
+      } else {
+        badge.className = 'text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800';
+        badge.textContent = checked.length + ' / 6 Present (CT Required)';
+        res.className = 'p-3 rounded-lg bg-rose-50 border border-rose-300 text-rose-950 text-xs font-medium';
+        res.innerHTML = '<strong>MANDATORY HEAD CT BEFORE LP:</strong> Patient has ' + checked.length + ' high-risk criterion/criteria. Draw STAT blood cultures and give <strong>empiric antimicrobials (+/- dexamethasone/acyclovir) FIRST</strong>, then perform Noncontrast Head CT prior to LP. If CT shows mass effect/edema contraindicating LP, admit to ICU and consult Neurology &amp; ID.';
+      }
+    }
+
+    function updateStep7Factors() {
+      state.step7Factors = Array.from(document.querySelectorAll('.step7-check:checked')).map(el => el.value);
+      updateTriageMasterSummary();
+    }
+
+    function updateTriageMasterSummary() {
+      const vals = Object.values(state.steps);
+      const answeredCount = vals.filter(v => v !== null).length;
+      const yesSteps = Object.entries(state.steps).filter(([k, v]) => v === 'yes').map(([k]) => Number(k));
+      const allNo = answeredCount === 7 && yesSteps.length === 0;
+
+      const liveBadge = document.getElementById('liveTriageBadge');
+      const banner = document.getElementById('triageMasterBanner');
+
+      const stepNames = {
+        1: 'Thunderclap (SAH/RCVS)',
+        2: 'Meningitis/Encephalitis',
+        3: 'CO Exposure',
+        4: 'Ocular/GCA/IIH',
+        5: 'Neuro Deficit/Papilledema',
+        6: 'Pregnant/Postpartum',
+        7: 'High-Risk Secondary Factor'
+      };
+
+      if (yesSteps.length > 0) {
+        const labels = yesSteps.map(n => stepNames[n]).join(', ');
+        liveBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-800 border border-rose-300';
+        liveBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-rose-600 animate-ping"></span> HIGH-RISK SECONDARY HEADACHE (' + yesSteps.length + ' Red Flag Pathway' + (yesSteps.length > 1 ? 's' : '') + ')';
+
+        banner.className = 'rounded-xl border border-rose-300 bg-rose-50 p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4';
+        banner.innerHTML = `
+          <div class="space-y-1">
+            <div class="text-xs font-bold uppercase tracking-wider text-rose-800">High-Risk Secondary Headache Alert</div>
+            <div class="text-sm sm:text-base font-bold text-rose-950">Urgent Diagnostic Workup Required for: ${labels}</div>
+            <p class="text-xs text-rose-900">Complete targeted neuroimaging / LP / laboratory evaluation below. Remember: pain relief from analgesics or triptans does NOT exclude a secondary life-threatening cause.</p>
+          </div>
+          <button onclick="switchTab('tab2')" class="px-3.5 py-2 rounded-lg text-xs font-bold bg-rose-700 hover:bg-rose-600 text-white shrink-0 transition cursor-pointer">
+            View 16 "Cannot-Miss" Differentials &rarr;
+          </button>
+        `;
+        banner.classList.remove('hidden');
+      } else if (allNo) {
+        liveBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300';
+        liveBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-600"></span> Cleared: Low-Risk Primary Headache (7/7 Negative)';
+
+        banner.className = 'rounded-xl border border-emerald-300 bg-emerald-50 p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4';
+        banner.innerHTML = `
+          <div class="space-y-1">
+            <div class="text-xs font-bold uppercase tracking-wider text-emerald-800">All 7 Secondary Red-Flag Steps Negative</div>
+            <div class="text-sm sm:text-base font-bold text-emerald-950">Low Risk for Dangerous Secondary Headache — Routine ED Neuroimaging Not Needed</div>
+            <p class="text-xs text-emerald-900">In patients with a normal neurologic/ophthalmologic exam and no high-risk history, neuroimaging yield is ~0.4% (migraine) to 2.4%. Proceed to Acute Primary Headache Pharmacotherapy.</p>
+          </div>
+          <button onclick="switchTab('tab3')" class="px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-700 hover:bg-emerald-600 text-white shrink-0 transition cursor-pointer">
+            Open Acute Treatment &amp; Order Builder &rarr;
+          </button>
+        `;
+        banner.classList.remove('hidden');
+      } else {
+        liveBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-300';
+        liveBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-slate-400"></span> Triage In Progress (${answeredCount}/7 Steps Evaluated)`;
+        banner.classList.add('hidden');
+      }
+    }
+
+    // --- TAB 2: 16 CANNOT-MISS DIAGNOSES ENGINE ---
+    function setDiagFilter(filterKey) {
+      state.diagFilter = filterKey;
+      document.querySelectorAll('.diag-pill').forEach(btn => {
+        if (btn.dataset.filter === filterKey) {
+          btn.className = 'diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white transition cursor-pointer';
+        } else {
+          btn.className = 'diag-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer';
+        }
+      });
+      renderDiagnoses();
+    }
+
+    function togglePinDiagnosis(diagName) {
+      const idx = state.pinnedDiagnoses.indexOf(diagName);
+      if (idx === -1) {
+        state.pinnedDiagnoses.push(diagName);
+        showToast('Pinned to Differential: ' + diagName);
+      } else {
+        state.pinnedDiagnoses.splice(idx, 1);
+        showToast('Removed from Differential: ' + diagName);
+      }
+      renderDiagnoses();
+      updateTopSummaryBar();
+    }
+
+    function renderDiagnoses() {
+      const query = (document.getElementById('diagSearchInput')?.value || '').toLowerCase().trim();
+      const grid = document.getElementById('diagnosesGrid');
+
+      const filtered = cannotMissDiagnoses.filter(d => {
+        const matchesFilter = state.diagFilter === 'ALL' || d.tags.includes(state.diagFilter);
+        const matchesSearch = !query ||
+          d.name.toLowerCase().includes(query) ||
+          d.history.toLowerCase().includes(query) ||
+          d.exam.toLowerCase().includes(query) ||
+          d.workup.toLowerCase().includes(query);
+        return matchesFilter && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full bg-white rounded-xl border border-slate-200 p-8 text-center text-sm text-slate-500">No diagnoses match your current filter. Try selecting "All Diagnoses (16)".</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map((d, idx) => {
+        const isPinned = state.pinnedDiagnoses.includes(d.name);
+        return `
+          <div class="bg-white rounded-xl border ${isPinned ? 'border-rose-500 ring-2 ring-rose-500/20' : 'border-slate-200'} p-4 sm:p-5 shadow-sm flex flex-col justify-between gap-3 transition">
+            <div class="space-y-2.5">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200">${d.badge}</span>
+                  <h3 class="text-base font-bold text-slate-900 mt-1">${d.name}</h3>
+                </div>
+                <button onclick="togglePinDiagnosis('${d.name.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-xs font-semibold border transition cursor-pointer shrink-0 ${isPinned ? 'bg-rose-600 text-white border-rose-600' : 'bg-slate-50 hover:bg-rose-50 text-slate-700 hover:text-rose-700 border-slate-200'}">
+                  ${isPinned ? 'Pinned to Note' : '+ Pin to Differential'}
+                </button>
+              </div>
+
+              <div class="text-xs space-y-2 text-slate-700 pt-1">
+                <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
+                  <span class="font-bold text-slate-900 block mb-0.5">High-Risk History:</span>
+                  ${d.history}
+                </div>
+                <div class="p-2.5 rounded-lg bg-amber-50/50 border border-amber-200/80">
+                  <span class="font-bold text-amber-950 block mb-0.5">Suggestive Clinical Exam Findings:</span>
+                  ${d.exam}
+                </div>
+                <div class="p-2.5 rounded-lg bg-indigo-50/60 border border-indigo-200/80">
+                  <span class="font-bold text-indigo-950 block mb-0.5">ED Diagnostic Workup &amp; Action:</span>
+                  ${d.workup}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // --- TAB 3: TREATMENT & CONTRAINDICATION ENGINE ---
+    function setTreatmentScenario(scenKey) {
+      state.scenario = scenKey;
+      document.querySelectorAll('.scen-btn').forEach(btn => {
+        btn.className = 'scen-btn p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition cursor-pointer';
+      });
+      const active = document.getElementById('scen-' + scenKey);
+      if (active) {
+        active.className = 'scen-btn p-3 rounded-xl border-2 border-indigo-600 bg-indigo-50/70 text-left transition cursor-pointer';
+      }
+      renderTreatmentRegimens();
+    }
+
+    function onComorbidityChange() {
+      state.comorbidities.cv = document.getElementById('ci-cv').checked;
+      state.comorbidities.aura = document.getElementById('ci-aura').checked;
+      state.comorbidities.preg = document.getElementById('ci-preg').checked;
+      state.comorbidities.qt = document.getElementById('ci-qt').checked;
+      state.comorbidities.renal = document.getElementById('ci-renal').checked;
+      state.comorbidities.lp = document.getElementById('ci-lp').checked;
+      state.comorbidities.triptan24 = document.getElementById('ci-triptan24').checked;
+      state.comorbidities.copd = document.getElementById('ci-copd').checked;
+      state.comorbidities.prop = document.getElementById('ci-prop').checked;
+      state.comorbidities.cyp = document.getElementById('ci-cyp').checked;
+
+      renderContraindicationBanner();
+      renderTreatmentRegimens();
+      updateTopSummaryBar();
+    }
+
+    function clearComorbidities() {
+      ['cv', 'aura', 'preg', 'qt', 'renal', 'lp', 'triptan24', 'copd', 'prop', 'cyp'].forEach(k => {
+        document.getElementById('ci-' + k).checked = false;
+      });
+      onComorbidityChange();
+      showToast('Patient comorbidity filters cleared');
+    }
+
+    function renderContraindicationBanner() {
+      const c = state.comorbidities;
+      const alerts = [];
+      if (c.cv) alerts.push('<strong>Cardiovascular / Uncontrolled HTN:</strong> All Triptans, Dihydroergotamine (DHE), and Ergotamine are CONTRAINDICATED due to coronary/cerebral vasoconstriction. Prefer Dopamine antagonists, Ketorolac, Valproate, Gepants (Ubrogepant/Rimegepant/Zavegepant), or Lasmiditan.');
+      if (c.aura) alerts.push('<strong>Hemiplegic or Brainstem Aura Migraine:</strong> Triptans and Ergots/DHE are CONTRAINDICATED due to theoretical cerebral vasoconstriction risk.');
+      if (c.preg) alerts.push('<strong>Pregnancy / Postpartum:</strong> Sodium Valproate (teratogenic), Ergots/DHE (hypertonic uterine contractions/vasospasm), and Topiramate are CONTRAINDICATED.');
+      if (c.qt) alerts.push('<strong>Prolonged QTc (&gt;500 ms) / Long QT Risk:</strong> Avoid Chlorpromazine, Haloperidol, Droperidol, and Ondansetron (risk of torsades de pointes). If used, obtain baseline and 2–3h post-dose ECG.');
+      if (c.renal) alerts.push('<strong>Age &gt;65 yrs / Weight &lt;50 kg / Renal Impairment:</strong> Parenteral Ketorolac dose automatically reduced to <strong>15 mg IV</strong>.');
+      if (c.lp) alerts.push('<strong>Hemorrhage Not Excluded / Pending LP:</strong> WITHHOLD all NSAIDs (Ketorolac, Ibuprofen, Naproxen, Aspirin) until hemorrhage is ruled out and LP is completed.');
+      if (c.triptan24) alerts.push('<strong>Triptan or Ergot in Last 24h:</strong> Do NOT administer DHE/ergotamine or a different triptan within 24 hours.');
+      if (c.copd) alerts.push('<strong>Severe COPD:</strong> Avoid high-flow 100% inhaled oxygen in cluster headache due to risk of severe hypercapnia and CO2 narcosis.');
+      if (c.prop) alerts.push('<strong>Concurrent Propranolol:</strong> Increases Rizatriptan serum concentration by 70% — reduce Rizatriptan dose to 5 mg.');
+      if (c.cyp) alerts.push('<strong>Potent CYP3A4 Inhibitor:</strong> Eletriptan (for 72h) and DHE/Ergots are CONTRAINDICATED.');
+
+      const box = document.getElementById('activeContraindicationAlerts');
+      if (alerts.length === 0) {
+        box.classList.add('hidden');
+        box.innerHTML = '';
+      } else {
+        box.classList.remove('hidden');
+        box.innerHTML = `<div class="font-bold uppercase tracking-wider text-[11px] text-rose-800 mb-1">Active Pharmacotherapy Safety Guardrails (${alerts.length}):</div>` +
+          alerts.map(a => `<div class="flex items-start gap-1.5"><span>&bull;</span><span>${a}</span></div>`).join('');
+      }
+    }
+
+    function renderTreatmentRegimens() {
+      const groups = getScenarioMedications(state.scenario);
+      const container = document.getElementById('treatmentRegimenContainer');
+
+      container.innerHTML = groups.map(group => `
+        <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-3.5">
+          <div>
+            <h3 class="text-base font-bold text-slate-900">${group.category}</h3>
+            <p class="text-xs text-slate-600 mt-0.5">${group.subtitle}</p>
+          </div>
+          <div class="space-y-3">
+            ${group.items.map(item => {
+              const isSelected = state.selectedOrders.includes(item.orderText);
+              let borderClass = 'border-slate-200 bg-slate-50/50';
+              let statusBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">${item.badge}</span>`;
+
+              if (item.status === 'blocked') {
+                borderClass = 'border-rose-300 bg-rose-50/60 opacity-90';
+                statusBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-rose-600 text-white">CONTRAINDICATED</span>`;
+              } else if (item.status === 'caution') {
+                borderClass = 'border-amber-300 bg-amber-50/50';
+                statusBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-200 text-amber-950">Caution / Adjusted</span>`;
+              }
+
+              return `
+                <div class="p-3.5 rounded-xl border ${borderClass} space-y-2 transition">
+                  <div class="flex items-start justify-between gap-3 flex-wrap sm:flex-nowrap">
+                    <div class="space-y-1">
+                      <div class="flex items-center gap-2 flex-wrap">
+                        ${statusBadge}
+                        <h4 class="text-sm font-bold text-slate-900">${item.name}</h4>
+                      </div>
+                      <p class="text-xs text-slate-600 leading-relaxed">${item.evidence}</p>
+                      ${item.warning ? `<div class="text-xs font-semibold ${item.status === 'blocked' ? 'text-rose-700' : 'text-amber-800'} pt-0.5">${item.warning}</div>` : ''}
+                    </div>
+                    <button onclick="toggleQuickOrder('${item.orderText.replace(/'/g, "\\'")}')" class="px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition cursor-pointer ${
+                      isSelected
+                        ? 'bg-emerald-600 text-white shadow-xs'
+                        : item.status === 'blocked'
+                        ? 'bg-rose-100 text-rose-800 border border-rose-300 hover:bg-rose-200'
+                        : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-xs'
+                    }">
+                      ${isSelected ? '✓ In Order Set' : item.status === 'blocked' ? 'Blocked (Override)' : '+ Add to Order Set'}
+                    </button>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // --- ORDER SET & CHART NOTE BUILDER ---
+    function toggleQuickOrder(orderStr) {
+      const idx = state.selectedOrders.indexOf(orderStr);
+      if (idx === -1) {
+        state.selectedOrders.push(orderStr);
+        showToast('Added order: ' + orderStr.slice(0, 48) + (orderStr.length > 48 ? '...' : ''));
+      } else {
+        state.selectedOrders.splice(idx, 1);
+        showToast('Removed order');
+      }
+      renderOrderCart();
+      renderTreatmentRegimens();
+      updateTopSummaryBar();
+    }
+
+    function clearOrders() {
+      state.selectedOrders = [];
+      renderOrderCart();
+      renderTreatmentRegimens();
+      updateTopSummaryBar();
+      showToast('Order cart cleared');
+    }
+
+    function renderOrderCart() {
+      const list = document.getElementById('orderCartList');
+      const pill = document.getElementById('cartCountPill');
+      pill.textContent = state.selectedOrders.length + (state.selectedOrders.length === 1 ? ' item' : ' items');
+
+      if (state.selectedOrders.length === 0) {
+        list.innerHTML = `<div class="text-slate-400 italic py-4 text-center">No orders selected yet. Click "+ Add to Order Set" on any diagnostic workup or medication card.</div>`;
+        return;
+      }
+
+      list.innerHTML = state.selectedOrders.map((ord, i) => `
+        <div class="flex items-start justify-between gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <span class="font-medium text-slate-800 leading-snug">${i + 1}. ${ord}</span>
+          <button onclick="toggleQuickOrder('${ord.replace(/'/g, "\\'")}')" class="text-slate-400 hover:text-rose-600 shrink-0 cursor-pointer" title="Remove">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function updateTopSummaryBar() {
+      const activeCiCount = Object.values(state.comorbidities).filter(Boolean).length;
+      const safetyBadge = document.getElementById('liveSafetyBadge');
+      if (activeCiCount === 0) {
+        safetyBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200';
+        safetyBadge.textContent = '0 Comorbidity Contraindications Active';
+      } else {
+        safetyBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300';
+        safetyBadge.textContent = activeCiCount + ' Comorbidity Guardrail' + (activeCiCount > 1 ? 's' : '') + ' Active';
+      }
+
+      const diffBadge = document.getElementById('liveDifferentialBadge');
+      if (state.pinnedDiagnoses.length > 0) {
+        diffBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-50 text-rose-700 border border-rose-200';
+        diffBadge.textContent = state.pinnedDiagnoses.length + ' Diagnosis Pinned';
+      } else {
+        diffBadge.className = 'hidden';
+      }
+
+      const countBadge = document.getElementById('orderCountBadge');
+      countBadge.textContent = state.selectedOrders.length;
+
+      const summaryBtn = document.getElementById('liveOrdersSummary');
+      if (state.selectedOrders.length === 0) {
+        summaryBtn.textContent = 'None selected — Click to open ED Chart Note';
+      } else {
+        summaryBtn.textContent = state.selectedOrders.length + ' order(s) ready — Click to export ED Chart Note';
+      }
+    }
+
+    // --- CHART NOTE GENERATION & CLIPBOARD ---
+    function generateChartNoteText() {
+      const now = new Date().toLocaleString();
+      const stepLabels = {
+        1: 'Step 1 (Thunderclap Headache / SAH & RCVS Screening)',
+        2: 'Step 2 (Suspected Meningitis / Encephalitis Screening)',
+        3: 'Step 3 (Carbon Monoxide Exposure Screening)',
+        4: 'Step 4 (Ocular / Acute Glaucoma / GCA / IIH Screening)',
+        5: 'Step 5 (New Unexplained Neurologic Deficit / Papilledema)',
+        6: 'Step 6 (Pregnancy >=20 wks / Postpartum Screening)',
+        7: 'Step 7 (Additional Secondary Red-Flag Risk Factors)'
+      };
+
+      const triageLines = Object.entries(state.steps).map(([k, v]) => {
+        const statusStr = v === 'yes' ? 'POSITIVE (YES)' : v === 'no' ? 'Negative (No)' : 'Not yet documented';
+        return `  - ${stepLabels[k]}: ${statusStr}`;
+      });
+
+      if (state.steps[1] === 'yes') {
+        triageLines.push(`    * SAH 6-Hour CT Rule Assessment: Onset ${state.sahCalc.time === 'under6' ? '<6 hours' : '>=6 hours/unknown'}, Noncontrast Head CT: ${state.sahCalc.ct.toUpperCase()}`);
+      }
+      if (state.steps[2] === 'yes') {
+        triageLines.push(`    * Mandatory CT-Before-LP Criteria Present (${state.lpCriteria.length}/6): ${state.lpCriteria.length ? state.lpCriteria.join('; ') : 'None (proceed directly to LP after blood cultures & empiric antibiotics)'}`);
+      }
+      if (state.steps[7] === 'yes' && state.step7Factors.length > 0) {
+        triageLines.push(`    * Specific High-Risk Factors: ${state.step7Factors.join(' | ')}`);
+      }
+
+      const ciLabels = {
+        cv: 'CAD / Stroke / PVD / Uncontrolled HTN (Triptans & Ergots Contraindicated)',
+        aura: 'Hemiplegic or Brainstem Aura Migraine (Triptans & Ergots Contraindicated)',
+        preg: 'Pregnant or Breastfeeding (Valproate, Ergots/DHE, Topiramate Contraindicated)',
+        qt: 'Prolonged QTc >500ms / Long QT Risk (Avoid QT-prolonging antiemetics)',
+        renal: 'Age >65 / Wt <50kg / Renal Impairment (Ketorolac reduced to 15 mg IV)',
+        lp: 'Intracranial Hemorrhage / LP Pending (NSAIDs Withheld)',
+        triptan24: 'Triptan or Ergot Use Within Last 24 Hours',
+        copd: 'Severe COPD (Avoid unsupervised 100% O2 hypercapnia risk)',
+        prop: 'Concurrent Propranolol (Rizatriptan dose reduced by 50%)',
+        cyp: 'Potent CYP3A4 Inhibitor (Eletriptan & Ergots Contraindicated)'
+      };
+      const activeCis = Object.entries(state.comorbidities).filter(([_, val]) => val).map(([k]) => `  - ${ciLabels[k]}`);
+
+      const pinnedLines = state.pinnedDiagnoses.length > 0
+        ? state.pinnedDiagnoses.map(d => `  - ${d}`).join('\n')
+        : '  - None specifically pinned (see Triage Evaluation above)';
+
+      const orderLines = state.selectedOrders.length > 0
+        ? state.selectedOrders.map((o, idx) => `  ${idx + 1}. ${o}`).join('\n')
+        : '  - No diagnostic or medication orders selected yet.';
+
+      return [
+        '========================================================================',
+        'EMERGENCY DEPARTMENT CLINICAL DECISION SUPPORT NOTE — ACUTE HEADACHE',
+        'Attending Physician: Dr. Z. Valaei, MD | Generated: ' + now,
+        '========================================================================',
+        '',
+        '1. ED SECONDARY HEADACHE RED-FLAG TRIAGE EVALUATION (7-STEP ALGORITHM):',
+        ...triageLines,
+        '',
+        '2. PINNED DIFFERENTIAL DIAGNOSES UNDER CONSIDERATION:',
+        pinnedLines,
+        '',
+        '3. PATIENT SAFETY & CONTRAINDICATION PROFILE:',
+        activeCis.length > 0 ? activeCis.join('\n') : '  - No active comorbidity contraindications selected.',
+        '',
+        '4. SELECTED ED DIAGNOSTIC WORKUP, MEDICATIONS & DISCHARGE ORDERS:',
+        orderLines,
+        '',
+        '5. CLINICAL DECISION PEARLS & DISCHARGE SAFETY:',
+        '  - Favorable response to analgesics or triptans does NOT exclude secondary etiology.',
+        '  - Opioids and barbiturates avoided per AAN/AHS Choosing Wisely & UpToDate guidelines.',
+        '  - Medication Overuse Headache (MOH) Prevention: Limit triptans/ergots to <10 days/month',
+        '    and simple NSAIDs/acetaminophen to <15 days/month.',
+        '========================================================================'
+      ].join('\n');
+    }
+
+    function openChartModal() {
+      const textarea = document.getElementById('chartNoteTextarea');
+      textarea.value = generateChartNoteText();
+      const modal = document.getElementById('chartModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeChartModal() {
+      const modal = document.getElementById('chartModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function copyChartNote() {
+      const textarea = document.getElementById('chartNoteTextarea');
+      textarea.select();
+      textarea.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        const msg = document.getElementById('copyConfirmText');
+        msg.classList.remove('opacity-0');
+        setTimeout(() => msg.classList.add('opacity-0'), 2500);
+        showToast('ED Chart Note copied to clipboard');
+      } catch (err) {
+        showToast('Please press Ctrl+C / Cmd+C to copy');
+      }
+    }
+
+    // --- RESET MODAL FUNCTIONS ---
+    function openResetModal() {
+      const modal = document.getElementById('resetModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeResetModal() {
+      const modal = document.getElementById('resetModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function confirmResetPatient() {
+      clearAllSteps();
+      clearComorbidities();
+      state.pinnedDiagnoses = [];
+      state.selectedOrders = [];
+      state.diagFilter = 'ALL';
+      if (document.getElementById('diagSearchInput')) {
+        document.getElementById('diagSearchInput').value = '';
+      }
+      renderDiagnoses();
+      renderOrderCart();
+      renderTreatmentRegimens();
+      updateTopSummaryBar();
+      closeResetModal();
+      switchTab('tab1');
+      showToast('Patient encounter reset');
+    }
+
+    // --- TOAST HELPER ---
+    let toastTimer = null;
+    function showToast(message) {
+      const banner = document.getElementById('toastBanner');
+      const msg = document.getElementById('toastMessage');
+      msg.textContent = message;
+      banner.classList.remove('hidden');
+      banner.classList.add('flex');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
+      }, 2600);
+    }
+
+    // --- INITIALIZE ON LOAD ---
+    window.onload = function () {
+      renderDiagnoses();
+      renderTreatmentRegimens();
+      renderOrderCart();
+      updateTopSummaryBar();
+    };
+  </script>
+</body>
+</html>
