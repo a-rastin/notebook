@@ -4,6 +4,15 @@
 % pic02.jpg: 20261018_193635071.jpg (1chW7HknhuL3qk1RWZ9_4IYOQAGiklAYJ)
 % Clinical statements, abbreviations, and doses are transcribed, not corrected.
 % The illegible crossed-out word on page 1 is explicitly marked below.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifOMStandalone
+\ifdefined\settextfont
+  \OMStandalonefalse
+\else
+  \OMStandalonetrue
+\fi
+\ifOMStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=18mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -18,17 +27,25 @@
 \setlist[itemize]{itemsep=5pt,topsep=4pt,leftmargin=*}
 \newcommand{\en}[1]{\lr{#1}}
 \newcommand{\hl}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
-\newcommand{\sheet}[1]{%
+\newcommand{\OMsheet}[1]{%
   \section*{تصویر #1}
   {\small سربرگ: ۱۰۵ ـ اوتیت مدیا؛ شمارهٔ پایین برگه: #1؛
   نشان چاپی پایین برگه: \en{GNOTE}.\par}}
 
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\OMsheet}[1]{%
+  \section*{تصویر #1}
+  {\small سربرگ: ۱۰۵ ـ اوتیت مدیا؛ شمارهٔ پایین برگه: #1؛
+  نشان چاپی پایین برگه: \en{GNOTE}.\par}}
+
 \begin{center}
 {\Large\bfseries ۱۰۵ ـ اوتیت مدیا}
 \end{center}
 
-\sheet{۱}
+\OMsheet{۱}
 {\small نوشته‌های چاپی بالای برگه: \en{Date:}\quad\en{Subject:}\par}
 
 \begin{itemize}
@@ -71,7 +88,7 @@
 \end{itemize}
 
 \clearpage
-\sheet{۲}
+\OMsheet{۲}
 
 \begin{itemize}
 \item درمان:
@@ -91,4 +108,6 @@
 \item \hl{شایع‌ترین عارضهٔ \en{AOM}، \en{OME} است}.
 \end{itemize}
 
+\ifOMStandalone
 \end{document}
+\fi

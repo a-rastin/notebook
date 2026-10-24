@@ -192,26 +192,28 @@
 \section*{تصاویر منبع}
 \begin{center}
 \textbf{تصویر ۱}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic01.jpg}
+\IfFileExists{images/pic01.jpg}{\gdef\GDMOimagebase{images/}}%
+  {\gdef\GDMOimagebase{Ob&Gyn/Oobstetrics/GDM/images/}}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\GDMOimagebase pic01.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۲}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic02.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\GDMOimagebase pic02.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۳}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic03.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\GDMOimagebase pic03.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۴}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic04.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\GDMOimagebase pic04.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۵}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic05.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\GDMOimagebase pic05.jpg}
 \end{center}
 \GDMfinish

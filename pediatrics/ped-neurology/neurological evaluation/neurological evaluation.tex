@@ -7,6 +7,15 @@
 % pic04.jpg = 20261016_210554543.jpg (18LH4MYPpGOxSYwebWDd2K0VzrSnFxDjR)
 % pic05.jpg = 20261016_210559216.jpg (1Yw_2Us935PI923k8BlNrQQFkZF9Zl25p)
 % pic06.jpg = 20261016_210603428.jpg (1Ymd-AyOcamAdKVr6zElkfBZ2YAltzt3y)
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifPedNeuroEvalStandalone
+\ifdefined\settextfont
+  \PedNeuroEvalStandalonefalse
+\else
+  \PedNeuroEvalStandalonetrue
+\fi
+\ifPedNeuroEvalStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -30,6 +39,21 @@
   (خانه‌های تاریخ خالی‌اند). شماره‌های چاپی سطرها: ۱ تا ۹.
   \par\endgroup}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+% (Each \providecommand must carry a full body: a body-less \providecommand
+% consumes the following token as its definition and corrupts the document.)
+\providecommand{\marktext}[1]{\colorbox{yellow!30}{\strut #1}}
+\providecommand{\uncertain}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+\providecommand{\pagehead}[1]{%
+  \section*{تصویر #1}
+  \begingroup\small
+  \en{Subject:} ۱۷۹\quad
+  \en{Year:}\quad\en{Month:}\quad\en{Date:}
+  (خانه‌های تاریخ خالی‌اند). شماره‌های چاپی سطرها: ۱ تا ۹.
+  \par\endgroup}
+
 \begin{center}
 {\Large\bfseries ۱۷۹ ـ ارزیابی‌های نورولوژیک}
 \end{center}
@@ -276,4 +300,6 @@
   \item \en{Diffuse slow wave activity}: متابولیک انسفالوپاتی، افزایش \en{ICP}.
 \end{itemize}
 شمارهٔ دست‌نویس پایین صفحه: ۶.
+\ifPedNeuroEvalStandalone
 \end{document}
+\fi

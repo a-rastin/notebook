@@ -6,6 +6,15 @@
 % pic03.jpg: 20261016_112159636.jpg — 1w_A346migDSid6UYX_pnsMwlep0K1AES
 % pic04.jpg: 20261016_112204944.jpg — 1xSYoOuC9kqf06CJsJuLNGvPCCnShXvAB
 % Values and statements are transcribed from the notes, without clinical correction.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifSepsisMeningitisStandalone
+\ifdefined\settextfont
+  \SepsisMeningitisStandalonefalse
+\else
+  \SepsisMeningitisStandalonetrue
+\fi
+\ifSepsisMeningitisStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=18mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -22,18 +31,31 @@
 \newcommand{\en}[1]{\lr{#1}}
 \newcommand{\marktext}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
 \newcommand{\uncertain}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
-\newcommand{\sheet}[1]{%
+\newcommand{\Sepsissheet}[1]{%
   \section*{تصویر #1}
   {\small سربرگ: \en{Subject:} ۹۵ ـ سپسیس و مننژیت؛
   \en{Year:}\quad\en{Month:}\quad\en{Date:}؛
   شمارهٔ دست‌نویس پایین برگه: #1.\par}}
 
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+% (Each \providecommand must carry a full body: a body-less \providecommand
+% consumes the following token as its definition and corrupts the document.)
+\providecommand{\marktext}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
+\providecommand{\uncertain}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+\providecommand{\Sepsissheet}[1]{%
+  \section*{تصویر #1}
+  {\small سربرگ: \en{Subject:} ۹۵ ـ سپسیس و مننژیت؛
+  \en{Year:}\quad\en{Month:}\quad\en{Date:}؛
+  شمارهٔ دست‌نویس پایین برگه: #1.\par}}
+
 \begin{center}
 {\Large\bfseries ۹۵ ـ سپسیس و مننژیت}
 \end{center}
 
-\sheet{۱}
+\Sepsissheet{۱}
 {\small یادداشت‌های کوچک کنار \en{Year} و \en{Month} در سربرگ تصویر اول:
 \uncertain{۴۴؛ ۴۲؛ چند رقم و خط کوتاهِ ناخوانا}.\par}
 
@@ -73,7 +95,7 @@
 \end{itemize}
 
 \clearpage
-\sheet{۲}
+\Sepsissheet{۲}
 \begin{itemize}
   \item اکثر نوزادان مبتلا به سپسیس \marktext{زودرس هستند}؛
   علائم غیر اختصاصی قلبی ـ ریوی: \marktext{تاکی‌پنه، سیانوز}.
@@ -115,7 +137,7 @@
 \end{itemize}
 
 \clearpage
-\sheet{۳}
+\Sepsissheet{۳}
 \begin{itemize}
   \item در نوزاد با وزن بسیار پایین: خطر نومونی با پاتوژن‌های فلور نرمال واژن؛
   اوره‌آپلاسما اوره‌آلیتیکوم، مایکوپلاسما هومینیس.
@@ -154,7 +176,7 @@
 \end{itemize}
 
 \clearpage
-\sheet{۴}
+\Sepsissheet{۴}
 \begin{itemize}
   \item آرتریت: گونوکوک، استاف اورئوس، کاندیدا، گرم منفی‌ها.
   \item \en{UTI}: باکتری‌های \marktext{گرم منفی}.
@@ -170,4 +192,6 @@
   \end{itemize}
 \end{itemize}
 
+\ifSepsisMeningitisStandalone
 \end{document}
+\fi

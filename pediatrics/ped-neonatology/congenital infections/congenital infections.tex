@@ -11,6 +11,15 @@
 % pic07.jpg = 20261016_114532757.jpg (1A1TLSwihE4qpvIbYDnYOTWmfrMROva5w)
 % pic08.jpg = 20261016_114537767.jpg (1Xj7v9zzpaNLH_Z2jexrpJSxF1li3Y5Pq)
 % pic09.jpg = 20261016_114540949.jpg (1kcATN4m2fxNAMookCmqarBOmzOWteCOk)
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifCongenitalInfectionsStandalone
+\ifdefined\settextfont
+  \CongenitalInfectionsStandalonefalse
+\else
+  \CongenitalInfectionsStandalonetrue
+\fi
+\ifCongenitalInfectionsStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=18mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -27,12 +36,19 @@
 \newcommand{\en}[1]{\lr{#1}}
 \newcommand{\hl}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
 \newcommand{\unclear}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
-\newcommand{\sheet}[1]{\section*{تصویر #1}\begingroup\small
+\newcommand{\CIsheet}[1]{\section*{تصویر #1}\begingroup\small
 سربرگ: \en{Subject:} ۹۶ ـ عفونت‌های همراه با تولد؛
 \en{Year:}\quad\en{Month:}\quad\en{Date:}؛ شمارهٔ پایین برگه: #1.\par\endgroup}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\CIsheet}[1]{\section*{تصویر #1}\begingroup\small
+سربرگ: \en{Subject:} ۹۶ ـ عفونت‌های همراه با تولد؛
+\en{Year:}\quad\en{Month:}\quad\en{Date:}؛ شمارهٔ پایین برگه: #1.\par\endgroup}
+
 \begin{center}{\Large\bfseries عفونت‌های همراه با تولد}\end{center}
-\sheet{۱}
+\CIsheet{۱}
 \begin{itemize}
 \item عفونت همراه با تولد: \hl{طی بارداری از طریق جفت} به جنین انتقال می‌یابد.
 \item پاتوژن‌های شایع عفونت‌های همراه با تولد: توکسوپلاسما، روبلا، \en{CMV}، \en{HSV}، \en{VZV}، سیفلیس مادرزادی، پارووویروس، \en{HIV}، \en{HBV}، نایسریا گنوره، زیکا ویروس، کلامیدیا، \en{TB}.
@@ -58,7 +74,7 @@
 \item علائم کلاسیک: \hl{هیدروسفالی}، \hl{کوریورتینیت}، \hl{اینتراکرانیال کلسیفیکیشن}.
 \end{itemize}
 \clearpage
-\sheet{۲}
+\CIsheet{۲}
 \begin{itemize}
 \item نوزادان بیمار نسبتاً جثه‌شان کوچک هستند.
 \begin{itemize}
@@ -91,7 +107,7 @@
 \item \hl{ابتلا پس از ماه ۴ حاملگی معمولاً نقصی ایجاد نمی‌کند}.
 \end{itemize}
 \clearpage
-\sheet{۳}
+\CIsheet{۳}
 \subsection*{روبلا ـ ادامه}
 \begin{itemize}
 \item شایع‌ترین تظاهرات:
@@ -123,7 +139,7 @@
 \item \hl{ریسک انتقال به جنین مستقل از سن حاملگی است}.
 \end{itemize}
 \clearpage
-\sheet{۴}
+\CIsheet{۴}
 \subsection*{\en{CMV} ـ ادامه}
 \begin{itemize}
 \item هرچه مادر در سن بارداری پایین‌تری مبتلا شود، علامت‌های نوزاد شدیدتر خواهد بود.
@@ -148,7 +164,7 @@
 \item اگر مادر مبتلا باشد و زایمان طبیعی انجام دهد، با احتمال حدود ۵۰\% نوزاد مبتلا می‌شود.
 \end{itemize}
 \clearpage
-\sheet{۵}
+\CIsheet{۵}
 \subsection*{\en{HSV} ـ ادامه}
 \begin{itemize}
 \item علائم عفونت ظرف \hl{۵ تا ۷ روز} پس از تولد ظاهر می‌شود (تا ۴ هفتهٔ اول).
@@ -171,7 +187,7 @@
 \item علائم: \hl{ارگانومگالی}، \hl{لنفادنوپاتی}، \hl{ترومبوسیتوپنی}، \hl{آنمی همولیتیک}، راش پوستی، استئوکندریت، ضایعات خاص عصبی، \en{snuffles}.
 \end{itemize}
 \clearpage
-\sheet{۶}
+\CIsheet{۶}
 \subsection*{سیفلیس همراه با تولد ـ ادامه}
 \begin{itemize}
 \item اگر درمان نشوند، ممکن است علائم را پس از \hl{۲ سالگی} نشان دهند:
@@ -193,7 +209,7 @@
 \end{itemize}
 \end{itemize}
 \clearpage
-\sheet{۷}
+\CIsheet{۷}
 \subsection*{سیفلیس همراه با تولد ـ ادامه}
 \begin{itemize}
 \item تست مادر و نوزاد باید از یک نوع باشد.
@@ -222,7 +238,7 @@
 \item درگیری چشم‌ها معمولاً \hl{دوطرفه} است.
 \end{itemize}
 \clearpage
-\sheet{۸}
+\CIsheet{۸}
 \subsection*{نایسریا گنوره ـ ادامه}
 \begin{itemize}
 \item اگر درمان نشود، قرنیه و اتاقک قدامی را درگیر می‌کند؛ کوری.
@@ -243,7 +259,7 @@
 \item \hl{آدنوپاتی نمی‌دهد}؛ قرنیه را درگیر نمی‌کند.
 \end{itemize}
 \clearpage
-\sheet{۹}
+\CIsheet{۹}
 \subsection*{کلامیدیا ـ ادامه}
 \begin{itemize}
 \item نومونی: ظرف \hl{۲ تا ۱۹ هفته پس از تولد}؛ معمولاً \hl{بدون تب} است.
@@ -260,4 +276,6 @@
 \end{itemize}
 \item پروفیلاکسی موضعی که برای همهٔ نوزادان انجام می‌شود، از کلامیدیا جلوگیری نمی‌کند.
 \end{itemize}
+\ifCongenitalInfectionsStandalone
 \end{document}
+\fi

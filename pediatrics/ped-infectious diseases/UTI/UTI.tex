@@ -6,6 +6,15 @@
 % pic03.jpg = 20261016_054825482.jpg (1JyDvpEmn7SitGxhlRQOC9xgoTqThlxgz)
 % pic04.jpg = 20261016_054831568.jpg (15xhm3sEd4bEROGVVYDSMEz6H8X_ehi9q)
 % pic05.jpg = 20261016_054836686.jpg (13UV1On3K9tcPHLzZiiveflQkRYkFdpvl)
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifPedUTIStandalone
+\ifdefined\settextfont
+  \PedUTIStandalonefalse
+\else
+  \PedUTIStandalonetrue
+\fi
+\ifPedUTIStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -24,16 +33,27 @@
 \newcommand{\yes}{\(\checkmark\)}
 \newcommand{\no}{\(\times\)}
 \newcommand{\reading}[1]{[خوانش نامطمئن: #1]}
-\newcommand{\pagehead}[1]{%
+\newcommand{\UTIpagehead}[1]{%
   \section*{تصویر #1 ـ ۵۷۵ ـ \en{UTI}}
   {\small سربرگ چاپی: \en{Subject:}\quad\en{Date: / /} (خالی).
   پابرگ چاپی: \en{YASHA}؛ شمارهٔ دست‌نویس صفحه: #1.}\par}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\yes}{\(\checkmark\)}
+\providecommand{\no}{\(\times\)}
+\providecommand{\reading}[1]{[خوانش نامطمئن: #1]}
+\providecommand{\UTIpagehead}[1]{%
+  \section*{تصویر #1 ـ ۵۷۵ ـ \en{UTI}}
+  {\small سربرگ چاپی: \en{Subject:}\quad\en{Date: / /} (خالی).
+  پابرگ چاپی: \en{YASHA}؛ شمارهٔ دست‌نویس صفحه: #1.}\par}
+
 \begin{center}
 {\Large\bfseries ۵۷۵ ـ \en{UTI}}\par
 \end{center}
 
-\pagehead{۱}
+\UTIpagehead{۱}
 \subsection*{درمان \en{UTI} ـ درمان سیستیت حاد}
 \begin{itemize}
 \item باید سریعاً درمان شود تا از تبدیل آن به پیلونفریت جلوگیری کنیم.
@@ -58,7 +78,7 @@
 \end{itemize}
 
 \clearpage
-\pagehead{۲}
+\UTIpagehead{۲}
 \begin{itemize}
 \item طول درمان: ۳–۵ روز برای سیستیت؛ ۷–۱۰ روز برای پیلونفریت بدون عارضه.
 \item اندیکاسیون برای بررسی بیشتر:
@@ -80,7 +100,7 @@
 \end{itemize}
 
 \clearpage
-\pagehead{۳}
+\UTIpagehead{۳}
 \subsection*{اندیکاسیون‌های تصویربرداری برای شیرخوار با \en{UTI} تب‌دار}
 \begin{itemize}
 \item همه سونوگرافی انجام بدهند.
@@ -142,7 +162,7 @@
 \end{center}
 
 \clearpage
-\pagehead{۴}
+\UTIpagehead{۴}
 \subsection*{پروفیلاکسی}
 کدام بیماری‌ها پس از اپیزود اول \en{UTI} تب‌دار از \en{AB} پروفیلاکسی سود می‌برند؟ البته در برخی اندیکاسیون‌ها:
 \begin{itemize}
@@ -174,7 +194,7 @@
 \end{itemize}
 
 \clearpage
-\pagehead{۵}
+\UTIpagehead{۵}
 \begin{itemize}
 \item زیر ۲ سال باید با سونداژ نمونه گرفته شود.
 \item \en{bag} ارزش ندارد، مگر منفی باشد.
@@ -217,4 +237,6 @@
 \sourceimage{۴}{pic04.jpg}
 \clearpage
 \sourceimage{۵}{pic05.jpg}
+\ifPedUTIStandalone
 \end{document}
+\fi

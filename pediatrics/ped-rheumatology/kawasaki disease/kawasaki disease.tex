@@ -4,6 +4,15 @@
 % pic01.jpg: 20261018_192653057.jpg; 1XkA0FOD7GLNMG3YGfMi3YcVEbpIjdsIP
 % pic02.jpg: 20261018_192657094.jpg; 1MTUAdgESDzT4Q7wAfOiM8ohujirpvWGO
 % pic03.jpg: 20261018_192703082.jpg; 12x6-kDxlWsYzClULWJ-arw1-6BIQNmE5
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifKawasakiStandalone
+\ifdefined\settextfont
+  \KawasakiStandalonefalse
+\else
+  \KawasakiStandalonetrue
+\fi
+\ifKawasakiStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -22,6 +31,13 @@
 \newcommand{\up}{\ensuremath{\uparrow}}
 \newcommand{\pagehead}[1]{\section*{صفحهٔ دست‌نویس #1}}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\hi}[1]{\colorbox{yellow!35}{\strut #1}}
+\providecommand{\up}{\ensuremath{\uparrow}}
+\providecommand{\pagehead}[1]{\section*{صفحهٔ دست‌نویس #1}}
+
 \begin{center}
 {\Large\bfseries ۸۸ ـ کاوازاکی}\\[3pt]
 \en{Kawasaki disease}
@@ -166,4 +182,6 @@
 \textbf{تصویر ۳}\par
 \includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\imagebase pic03.jpg}
 \end{center}
+\ifKawasakiStandalone
 \end{document}
+\fi

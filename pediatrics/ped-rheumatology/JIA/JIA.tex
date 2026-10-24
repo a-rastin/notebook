@@ -11,6 +11,15 @@
 % pic03.jpg = 20261018_192809528.jpg (1pjQgdJDESkfhVugMo1veFLs6VpYCkVWm)
 % pic04.jpg = 20261018_192814024.jpg (1NftOpJpTbjZg4j3UplDPIRTw70ZxlBrD)
 % These replace the previously occupied pic03/pic04 filenames as requested.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifJIAStandalone
+\ifdefined\settextfont
+  \JIAStandalonefalse
+\else
+  \JIAStandalonetrue
+\fi
+\ifJIAStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -32,6 +41,13 @@
 \newcommand{\unclear}[1]{[خوانش نامطمئن: #1]}
 \newcommand{\pagehead}[1]{\section*{صفحهٔ دست‌نویس #1}}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\up}{\ensuremath{\uparrow}}
+\providecommand{\dn}{\ensuremath{\downarrow}}
+\providecommand{\pagehead}[1]{\section*{صفحهٔ دست‌نویس #1}}
+
 \begin{center}
 {\Large\bfseries \en{146 -- JIA}}\\[3pt]
 \en{Nelson [22]}
@@ -412,4 +428,6 @@
 \textbf{تصویر 6}\par
 \includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\imagebase pic06.jpg}
 \end{center}
+\ifJIAStandalone
 \end{document}
+\fi

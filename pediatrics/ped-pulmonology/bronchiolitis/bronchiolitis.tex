@@ -3,6 +3,15 @@
 % Source: Google Drive / Notebook / bronchiolitis, in filename order.
 % pic01.jpg: 20261016_053954660.jpg; Drive ID 1UeJwKWqkku5k7GiCjJ2n57mvu6QKfxZg
 % pic02.jpg: 20261016_054002256.jpg; Drive ID 14YDal05WnoQMoKt9G8sW1Z1Xqcs2vu1P
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifBronchiolitisStandalone
+\ifdefined\settextfont
+  \BronchiolitisStandalonefalse
+\else
+  \BronchiolitisStandalonetrue
+\fi
+\ifBronchiolitisStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath}
@@ -25,6 +34,18 @@
   \endgroup\par}
 
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\bmix}[1]{\lr{#1}}
+\providecommand{\bheader}[1]{%
+  \section*{تصویر #1}
+  \textbf{موضوع:} ۲۰۹ ـ برونشیولیت\par
+  \begingroup\small
+  سربرگ چاپی: \bmix{Subject:}\quad\bmix{Year:}\quad\bmix{Month:}\quad\bmix{Date:}
+  (خانه‌های تاریخ خالی‌اند). شماره‌های چاپی سطرها: ۱ تا ۹.
+  \endgroup\par}
+
 \begin{center}
   {\Large\bfseries ۲۰۹ ـ برونشیولیت}\par
   \bmix{Bronchiolitis}
@@ -125,4 +146,6 @@
   \textbf{تصویر ۲}\par
   \includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\bimagebase pic02.jpg}
 \end{center}
+\ifBronchiolitisStandalone
 \end{document}
+\fi

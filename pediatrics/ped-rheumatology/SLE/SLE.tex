@@ -8,6 +8,15 @@
 % pic05.jpg = 20261018_192927411.jpg (1u_ZqO-VYMpcDIR_3X7nrddewdiAlNMj5)
 % Printed stationery on all pages: Subject:, Year:, Month:, Date:;
 % numbered writing guides 1--9. Handwritten subject: SLE -- 90.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifSLEStandalone
+\ifdefined\settextfont
+  \SLEStandalonefalse
+\else
+  \SLEStandalonetrue
+\fi
+\ifSLEStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -26,6 +35,13 @@
 \newcommand{\up}{\ensuremath{\uparrow}}
 \newcommand{\pagehead}[1]{\section*{صفحهٔ دست‌نویس #1}}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\dn}{\ensuremath{\downarrow}}
+\providecommand{\up}{\ensuremath{\uparrow}}
+\providecommand{\pagehead}[1]{\section*{صفحهٔ دست‌نویس #1}}
+
 \begin{center}
 {\Large\bfseries \en{SLE -- 90}}
 \end{center}
@@ -144,4 +160,6 @@
 \item در بیماران با نفریت لوپوسی و سربریت شدید، بد است.
 \item پیوند کلیه می‌شود انجام داد.
 \end{itemize}
+\ifSLEStandalone
 \end{document}
+\fi

@@ -23,7 +23,10 @@
 \providecommand{\LeukemiaUnclear}[1]{\textbf{[خوانش نامطمئن: #1]}}
 \providecommand{\LeukemiaPage}[1]{\clearpage\section*{تصویر #1}}
 \providecommand{\LeukemiaMath}[1]{\lr{\(#1\)}}
-\providecommand{\LeukemiaImagePath}{images/}
+% Dual-base image path: works standalone (from this folder) and inside the
+% notebook build (from the repository root).
+\IfFileExists{images/pic01.jpg}{\gdef\LeukemiaImagePath{images/}}%
+  {\gdef\LeukemiaImagePath{pediatrics/ped-hematology & oncology/leukemia/images/}}
 
 \begin{center}
 {\Large\bfseries لوسمی ـ ۵۴۴}\par

@@ -6,6 +6,15 @@
 % previous-pic03.jpg: 20261016_054309081.jpg; Drive ID 1qEVbBRAp5zvDl0cy0eaCCvrevT5Vc-OR
 % previous-pic04.jpg: 20261016_054315003.jpg; Drive ID 15x7ZmR1aKXMEMNJbTVQU3pNL6n29d1Lp
 % previous-pic05.jpg: 20261016_054319779.jpg; Drive ID 13WfVwFf74y2IvqDFBFEfJ1u00jgzayN2
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifAsthmaStandalone
+\ifdefined\settextfont
+  \AsthmaStandalonefalse
+\else
+  \AsthmaStandalonetrue
+\fi
+\ifAsthmaStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -29,6 +38,18 @@
   \par\endgroup}
 
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\amix}[1]{\lr{#1}}
+\providecommand{\aread}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+\providecommand{\ahead}[1]{%
+  \section*{تصویر #1}
+  \begingroup\small
+  سربرگ: ۱۸۵؛ \amix{Subject:}\quad\amix{Date: / /} (تاریخ خالی).
+  نشان چاپی پایین برگه: \amix{YASHA}؛ شمارهٔ دست‌نویس پایین: #1.
+  \par\endgroup}
+
 \begin{center}
 {\Large\bfseries آسم کودکان ـ ۱۸۵}\par
 \amix{Nelson 22}
@@ -493,4 +514,6 @@ Dicrease in spirometry or peak expiratory flow rate (PEFR).
 \aoriginal{۵}{pic05.jpg}
 \clearpage
 \aoriginal{۶}{pic06.jpg}
+\ifAsthmaStandalone
 \end{document}
+\fi

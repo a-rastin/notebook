@@ -13,6 +13,15 @@
 % pic09.jpg = 20261016_053246263.jpg
 % pic10.jpg = 20261016_053251503.jpg
 % pic11.jpg = 20261016_053254457.jpg
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifCongenitalAcyanoticStandalone
+\ifdefined\settextfont
+  \CongenitalAcyanoticStandalonefalse
+\else
+  \CongenitalAcyanoticStandalonetrue
+\fi
+\ifCongenitalAcyanoticStandalone
 \documentclass[12pt,a4paper]{article}
 \usepackage[margin=22mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -29,6 +38,15 @@
 \newcommand{\Cut}{\textbf{[ادامه در لبهٔ عکس بریده شده است]}}
 \newcommand{\Page}[1]{\clearpage\section*{تصویر #1 ـ فصل ۴۷۵}}
 \begin{document}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\E}[1]{\lr{#1}}
+\providecommand{\M}[1]{\lr{\(#1\)}}
+\providecommand{\U}[1]{\textbf{[خوانش نامطمئن: #1]}}
+\providecommand{\Cut}{\textbf{[ادامه در لبهٔ عکس بریده شده است]}}
+\providecommand{\Page}[1]{\clearpage\section*{تصویر #1 ـ فصل ۴۷۵}}
+
 \begin{center}
 {\Large\bfseries بیماری‌های مادرزادی آسیانوتیک: شانت‌های چپ به راست}\par
 \E{Nelson 22}\par
@@ -251,10 +269,14 @@ Small Secundum ASD and minimal \(L\to R\) shunt without RVE
 \item سپتوم بین‌بطنی سالم است.
 \end{itemize}
 
+% Dual-base image path: works standalone (from this folder) and inside the
+% notebook build (from the repository root).
+\IfFileExists{images/pic01.jpg}{\gdef\CAimagebase{images/}}%
+  {\gdef\CAimagebase{pediatrics/ped-cardiology/congenital acyanotic diseases/images/}}
 \newcommand{\Original}[2]{%
   \clearpage\subsection*{تصویر #1 ـ اصل دست‌نویس}%
   \begin{center}%
-  \includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{images/pic#2.jpg}%
+  \includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\CAimagebase pic#2.jpg}%
   \end{center}}
 \Original{۱}{01}
 \Original{۲}{02}
@@ -267,4 +289,6 @@ Small Secundum ASD and minimal \(L\to R\) shunt without RVE
 \Original{۹}{09}
 \Original{۱۰}{10}
 \Original{۱۱}{11}
+\ifCongenitalAcyanoticStandalone
 \end{document}
+\fi

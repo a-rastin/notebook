@@ -1,3 +1,20 @@
+% Body-only transcription: helper macros must exist before the body. Included
+% in the notebook build via index.tex (it has no standalone preamble).
+% The handwritten pages live in images/ as pic-01.jpg ... pic-06.jpg; the
+% \VURpage calls cite the original Google Drive filenames, so the image shown
+% for each page is taken in order from images/pic-NN.jpg.
+\IfFileExists{images/pic-01.jpg}{\gdef\VURimagebase{images/}}%
+  {\gdef\VURimagebase{pediatrics/ped-nephrology/VUR/images/}}
+\newcounter{VURimage}
+\providecommand{\VURpage}[2]{%
+  \clearpage\section*{صفحهٔ #1}%
+  \stepcounter{VURimage}%
+  \edef\VURimgname{\VURimagebase pic-\ifnum\value{VURimage}<10 0\fi\arabic{VURimage}.jpg}%
+  \IfFileExists{\VURimgname}%
+    {\begin{center}\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\VURimgname}\end{center}}%
+    {\par\noindent\textcolor{red!65!black}{[تصویر صفحهٔ #1 در دسترس نیست]}}}
+\providecommand{\VURunclear}[1]{\textcolor{red!65!black}{[خوانش نامطمئن: #1]}}
+
 \chapter{رفلاکس وزیکویورترال}
 
 \VURpage{۱}{20261005\_024348639.jpg}

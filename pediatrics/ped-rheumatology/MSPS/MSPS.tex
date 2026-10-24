@@ -5,6 +5,15 @@
 % images/pic02.jpg = 20261018_193213092.jpg (1zm3hfiWdJPZOzoTeZDhUTGjFbmBL0Ely)
 % Printed writing-guide labels on both images: 1, 2, 3, 4, 5, 6, 7, 8, 9.
 % Handwritten footer numbers on the two images: ۱ and ۳, respectively.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifMSPSStandalone
+\ifdefined\settextfont
+  \MSPSStandalonefalse
+\else
+  \MSPSStandalonetrue
+\fi
+\ifMSPSStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=18mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -20,12 +29,21 @@
 \newcommand{\en}[1]{\lr{#1}}
 \newcommand{\hl}[1]{\colorbox{yellow!45}{\strut #1}}
 \newcommand{\arr}{\lr{\(\leftarrow\)}}
-\newcommand{\sourcehead}{%
+\newcommand{\MSPSsourcehead}{%
   \noindent\en{Subject:} ۹۲ ـ سندرم‌های درد اسکلتی عضلانی\par
   \noindent\en{Year: \ldots\qquad Month: \ldots\qquad Date: \ldots}\par
   \smallskip\hrule\medskip}
 \begin{document}
-\sourcehead
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\arr}{\lr{\(\leftarrow\)}}
+\providecommand{\MSPSsourcehead}{%
+  \noindent\en{Subject:} ۹۲ ـ سندرم‌های درد اسکلتی عضلانی\par
+  \noindent\en{Year: \ldots\qquad Month: \ldots\qquad Date: \ldots}\par
+  \smallskip\hrule\medskip}
+
+\MSPSsourcehead
 
 \subsection*{درد رشد}
 \begin{itemize}
@@ -57,7 +75,7 @@
 \noindent ۱
 
 \clearpage
-\sourcehead
+\MSPSsourcehead
 \subsection*{هایپرموبیلیتی خوش‌خیم}
 \begin{itemize}
 \item علائم \arr{} درد اسکلتی عضلانی ثانویه به دامنهٔ حرکت بالای مفاصل؛ درد می‌تواند در روز یا شب باشد.
@@ -73,4 +91,6 @@
 \end{itemize}
 \vfill
 \noindent ۳
+\ifMSPSStandalone
 \end{document}
+\fi

@@ -216,26 +216,28 @@
 \section*{پیوست: تصاویر اصلی}
 \begin{center}
 \textbf{تصویر ۱}\par
-\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{images/pic01.jpg}
+\IfFileExists{images/pic01.jpg}{\gdef\Rhythmimagebase{images/}}%
+  {\gdef\Rhythmimagebase{pediatrics/ped-cardiology/disturbance of the rate and rhythm/images/}}
+\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\Rhythmimagebase pic01.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۲}\par
-\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{images/pic02.jpg}
+\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\Rhythmimagebase pic02.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۳}\par
-\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{images/pic03.jpg}
+\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\Rhythmimagebase pic03.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۴}\par
-\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{images/pic04.jpg}
+\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\Rhythmimagebase pic04.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر ۵}\par
-\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{images/pic05.jpg}
+\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{\Rhythmimagebase pic05.jpg}
 \end{center}
 \DisturbanceFinish

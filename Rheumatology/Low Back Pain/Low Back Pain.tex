@@ -249,26 +249,28 @@ S\textsubscript{2}--S\textsubscript{3}--S\textsubscript{4} & Sacral pain, poster
 \clearpage
 \begin{center}
 \textbf{تصویر 1}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic01.jpg}
+\IfFileExists{images/pic01.jpg}{\gdef\LBPimagebase{images/}}%
+  {\gdef\LBPimagebase{Rheumatology/Low Back Pain/images/}}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\LBPimagebase pic01.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر 2}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic02.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\LBPimagebase pic02.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر 3}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic03.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\LBPimagebase pic03.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر 4}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic04.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\LBPimagebase pic04.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{تصویر 5}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic05.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\LBPimagebase pic05.jpg}
 \end{center}
 \LBPfinish

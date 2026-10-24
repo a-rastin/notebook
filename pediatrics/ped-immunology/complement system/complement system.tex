@@ -131,17 +131,19 @@
 \section*{\u062a\u0635\u0627\u0648\u06cc\u0631 \u0645\u0646\u0628\u0639}
 \begin{center}
 \textbf{\u062a\u0635\u0648\u06cc\u0631 1}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic01.jpg}
+\IfFileExists{images/pic01.jpg}{\gdef\Complimagebase{images/}}%
+  {\gdef\Complimagebase{pediatrics/ped-immunology/complement system/images/}}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\Complimagebase pic01.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{\u062a\u0635\u0648\u06cc\u0631 2}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic02.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\Complimagebase pic02.jpg}
 \end{center}
 \clearpage
 \begin{center}
 \textbf{\u062a\u0635\u0648\u06cc\u0631 3}\par
-\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{images/pic03.jpg}
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{\Complimagebase pic03.jpg}
 \end{center}
 
 \Complementfinish

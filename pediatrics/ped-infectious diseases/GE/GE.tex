@@ -4,6 +4,15 @@
 % images/pic01.jpg = 20261018_194117353.jpg (1ru3bJ5jpMrl4UW4xzEymw_dlAeKTKo0S)
 % images/pic02.jpg = 20261018_194121455.jpg (189RXDGlVgvon-AOsn-1biv72CvdM_o3m)
 % Source wording, numbers, arrows, highlighting and legible deleted text retained.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifGEStandalone
+\ifdefined\settextfont
+  \GEStandalonefalse
+\else
+  \GEStandalonetrue
+\fi
+\ifGEStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=20mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -20,7 +29,7 @@
 \newcommand{\en}[1]{\lr{#1}}
 \newcommand{\rel}{\enspace\lr{\(\longleftarrow\)}\enspace}
 \newcommand{\hl}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
-\newcommand{\sheet}[1]{%
+\newcommand{\GEsheet}[1]{%
   \section*{گاستروانتریت ـ تصویر #1}
   {\small سربرگ چاپی: \en{Date:}\quad\en{/ /}\quad\en{Subject:}
   \quad\en{Sat. Sun. Mon. Tue. Thu. Wed. Fri.}\par
@@ -28,7 +37,17 @@
 
 \begin{document}
 
-\sheet{۱}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\rel}{\enspace\lr{\(\longleftarrow\)}\enspace}
+\providecommand{\GEsheet}[1]{%
+  \section*{گاستروانتریت ـ تصویر #1}
+  {\small سربرگ چاپی: \en{Date:}\quad\en{/ /}\quad\en{Subject:}
+  \quad\en{Sat. Sun. Mon. Tue. Thu. Wed. Fri.}\par
+  موضوع دست‌نویس: گاستروانتریت؛ شمارهٔ دست‌نویس پایین برگه: #1.\par}}
+
+\GEsheet{۱}
 \section*{مقایسهٔ گاستروانتریت ویروسی و باکتریال}
 
 \subsection*{دوز عفونی}
@@ -96,7 +115,7 @@
 \end{itemize}
 
 \clearpage
-\sheet{۲}
+\GEsheet{۲}
 
 \subsection*{درمان}
 \begin{itemize}
@@ -106,4 +125,6 @@
   \hl{کلستریدیوم دیفیسیل}.
 \end{itemize}
 
+\ifGEStandalone
 \end{document}
+\fi

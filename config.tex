@@ -1,3 +1,5 @@
+\usepackage{xcolor} % colours for \hl (yellow highlights) and \unclear
+
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{xltabular}
@@ -12,6 +14,14 @@
   \addbibresource{references.bib}
 \usepackage{xepersian}
 
+% XePersian requires an explicit Persian text font; fall back like the topic
+% fragments do (Amiri → FreeSerif → DejaVu Sans).
+\IfFontExistsTF{Amiri}{\settextfont{Amiri}}{%
+  \IfFontExistsTF{FreeSerif}{\settextfont{FreeSerif}}{\settextfont{DejaVu Sans}}}
+\IfFontExistsTF{DejaVu Serif}{\setlatintextfont{DejaVu Serif}}{%
+  \IfFontExistsTF{FreeSerif}{\setlatintextfont{FreeSerif}}{\setlatintextfont{DejaVu Sans}}}
+
+
 
 \renewcommand{\contentsname}{فهرست مطالب}
 \renewcommand{\listtablename}{فهرست جدول‌ها}
@@ -25,3 +35,75 @@
 
 \newcommand{\FrontMatterNumbering}{\pagenumbering{harfi}\pagestyle{thesis}}
 \newcommand{\MainMatterNumbering}{\pagenumbering{arabic}\pagestyle{thesis}}
+
+% --- notebook build glue -----------------------------------------------------
+% \pagestyle{thesis} (used by \FrontMatterNumbering) is not provided by
+% XePersian, so define a minimal one: empty header, centred page number.
+\makeatletter
+\def\ps@thesis{%
+  \let\@oddhead\@empty\let\@evenhead\@empty%
+  \def\@oddfoot{\hss\footnotesize\thepage\hss}%
+  \let\@evenfoot\@oddfoot%
+}
+\makeatother
+% Hook referenced in main.tex before the bibliography chapter (kept as a
+% no-op placeholder so the layout stays neutral).
+\providecommand{\ChapterStart}{}
+
+% --- per-file InNotebook flags ------------------------------------------------
+% index.tex sets a per-file <X>InNotebook flag before \input of each topic file
+% whose dual-mode guard checks it (\ifdefined\<X>InNotebook). Define every flag
+% used by the current index.tex as a no-op, so the guards take the
+% "already inside the notebook" branch instead of re-running their standalone
+% preamble mid-document (which ends the book early via \end{document}).
+% When index.tex is regenerated with a new topic, add its flag here too.
+\providecommand{\AbortionInNotebook}{}
+\providecommand{\AGEInNotebook}{}
+\providecommand{\AllergicDrugReactionsInNotebook}{}
+\providecommand{\AllergicRhinitisInNotebook}{}
+\providecommand{\AnaphylaxisInNotebook}{}
+\providecommand{\AnemiaHyperbilirubinemiaInNotebook}{}
+\providecommand{\CAPInNotebook}{}
+\providecommand{\CarbohydrateDisordersInNotebook}{}
+\providecommand{\CeliacInNotebook}{}
+\providecommand{\ComplementInNotebook}{}
+\providecommand{\CommonColdInNotebook}{}
+\providecommand{\DKAInNotebook}{}
+\providecommand{\DisturbanceInNotebook}{}
+\providecommand{\ElectrolyteDisordersInNotebook}{}
+\providecommand{\EmergencyContraceptionInNotebook}{}
+\providecommand{\FWLSInNotebook}{}
+\providecommand{\FUOInNotebook}{}
+\providecommand{\FeverInNotebook}{}
+\providecommand{\FeverOlderInNotebook}{}
+\providecommand{\FeverRashInNotebook}{}
+\providecommand{\FetalDiseasesInNotebook}{}
+\providecommand{\FetalGrowthInNotebook}{}
+\providecommand{\GDMInNotebook}{}
+\providecommand{\GERDInNotebook}{}
+\providecommand{\HTNInNotebook}{}
+\providecommand{\HypernatremiaInNotebook}{}
+\providecommand{\IDMInNotebook}{}
+\providecommand{\IntussusceptionInNotebook}{}
+\providecommand{\LBPInNotebook}{}
+\providecommand{\LeukemiaInNotebook}{}
+\providecommand{\LymphadenopathyInNotebook}{}
+\providecommand{\LymphocyteDisordersInNotebook}{}
+\providecommand{\MaternalDiseasesInNotebook}{}
+\providecommand{\NECInNotebook}{}
+\providecommand{\NeonatalRespiratoryInNotebook}{}
+\providecommand{\NeonatalSeizuresInNotebook}{}
+\providecommand{\NeonateEvaluationInNotebook}{}
+\providecommand{\RDSInNotebook}{}
+\providecommand{\SSInNotebook}{}
+\providecommand{\STIInNotebook}{}
+\providecommand{\SplenomegalyInNotebook}{}
+
+% \marktext marks a key phrase transcribed from highlighted/boxed handwriting in
+% the source pages (used by neurology/headache; body-only file, so the parent
+% must supply it). Same visual convention as the sibling topic files.
+\providecommand{\marktext}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
+
+% main.tex uses \phantomsection before the bibliography, but hyperref is not
+% loaded in this XePersian setup; provide a no-op so the anchor line is harmless.
+\providecommand{\phantomsection}{}

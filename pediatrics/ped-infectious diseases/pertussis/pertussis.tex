@@ -6,6 +6,15 @@
 % Source wording, abbreviations, numbers, corrections and deleted text are retained.
 % Arrows are represented by lists or the relation command below.
 % The source's abbreviated thousands in the WBC range are expanded to full digits.
+% Dual-mode guard: compiles standalone with XeLaTeX, or is \input from the
+% XePersian notebook (main.tex) where its local preamble below is skipped.
+\newif\ifPertussisStandalone
+\ifdefined\settextfont
+  \PertussisStandalonefalse
+\else
+  \PertussisStandalonetrue
+\fi
+\ifPertussisStandalone
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=18mm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -22,13 +31,21 @@
 \newcommand{\en}[1]{\lr{#1}}
 \newcommand{\hl}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{yellow!40}{\strut #1}\endgroup}
 \newcommand{\rel}{\enspace\lr{\(\longleftarrow\)}\enspace}
-\newcommand{\sheet}[1]{%
+\newcommand{\Pertussissheet}[1]{%
   \section*{تصویر #1: ۱۰۸ ـ پرتوسیس}
   {\small شمارهٔ دست‌نویس پایین برگه: #1؛ نشان چاپی: \en{GNOTE}.\par}}
 
 \begin{document}
 
-\sheet{۱}
+\fi
+
+% Helper macros used inside the body must exist in notebook mode too.
+\providecommand{\rel}{\enspace\lr{\(\longleftarrow\)}\enspace}
+\providecommand{\Pertussissheet}[1]{%
+  \section*{تصویر #1: ۱۰۸ ـ پرتوسیس}
+  {\small شمارهٔ دست‌نویس پایین برگه: #1؛ نشان چاپی: \en{GNOTE}.\par}}
+
+\Pertussissheet{۱}
 {\small نوشته‌های چاپی بالای برگه: \en{Date:}\quad\en{Subject:}\par}
 
 \begin{itemize}
@@ -76,7 +93,7 @@
 \end{itemize}
 
 \clearpage
-\sheet{۲}
+\Pertussissheet{۲}
 
 \subsection*{درمان}
 \begin{itemize}
@@ -105,4 +122,6 @@
 \sout{اگر زیر ۷ سال} \rel \sout{یک دوز واکسن اگر واکسن نگرفته}.
 [خوانش عبارت پایانی این سطر خط‌خورده نامطمئن است.]}}
 
+\ifPertussisStandalone
 \end{document}
+\fi
